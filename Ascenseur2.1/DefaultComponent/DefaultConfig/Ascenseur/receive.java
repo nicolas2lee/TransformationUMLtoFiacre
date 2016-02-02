@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: receive
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/receive.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event receive() 
 public class receive extends RiJEvent implements AnimatedEvent {
     
-    public static final int receive_Ascenseur_id = 2629;		//## ignore 
+    public static final int receive_Ascenseur_id = 2628;		//## ignore 
     
     
     // Constructors

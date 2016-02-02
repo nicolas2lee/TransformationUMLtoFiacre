@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: receiveCabinMoved
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/receiveCabinMoved.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event receiveCabinMoved() 
 public class receiveCabinMoved extends RiJEvent implements AnimatedEvent {
     
-    public static final int receiveCabinMoved_Ascenseur_id = 2640;		//## ignore 
+    public static final int receiveCabinMoved_Ascenseur_id = 2639;		//## ignore 
     
     
     // Constructors

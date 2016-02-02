@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Winch
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Winch.java
 *********************************************************************/
 
@@ -39,6 +39,10 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     protected RiJThread m_thread;		//## ignore 
     
     public Reactive reactive;		//## ignore 
+    
+    protected Winch.p_win_con_C p_win_con;		//## ignore 
+    
+    protected Winch.p_win_cab_C p_win_cab;		//## ignore 
     
     protected int frein;		//## attribute frein 
     
@@ -80,6 +84,11 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     //## statechart_method 
     public boolean isIn(int state) {
         return reactive.isIn(state);
+    }
+    
+    //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
     }
     
     //## statechart_method 
@@ -133,11 +142,54 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         
         m_thread = new RiJThread("Winch");
         reactive = new Reactive(m_thread);
+        initRelations(m_thread);
         }
         finally {
             animInstance().notifyMethodExit();
         }
         
+    }
+    
+    //## auto_generated 
+    public Winch.p_win_con_C getP_win_con() {
+        return p_win_con;
+    }
+    
+    //## auto_generated 
+    public Winch.p_win_con_C get_p_win_con() {
+        return p_win_con;
+    }
+    
+    //## auto_generated 
+    public Winch.p_win_con_C newP_win_con() {
+        p_win_con = new Winch.p_win_con_C();
+        return p_win_con;
+    }
+    
+    //## auto_generated 
+    public void deleteP_win_con() {
+        p_win_con=null;
+    }
+    
+    //## auto_generated 
+    public Winch.p_win_cab_C getP_win_cab() {
+        return p_win_cab;
+    }
+    
+    //## auto_generated 
+    public Winch.p_win_cab_C get_p_win_cab() {
+        return p_win_cab;
+    }
+    
+    //## auto_generated 
+    public Winch.p_win_cab_C newP_win_cab() {
+        p_win_cab = new Winch.p_win_cab_C();
+        return p_win_cab;
+    }
+    
+    //## auto_generated 
+    public void deleteP_win_cab() {
+        p_win_cab=null;
     }
     
     //## operation receiveStopFromController() 
@@ -149,7 +201,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation receiveStopFromController() 
         System.out.println("receive stop info from controller system");  
-        itsControllerSys.gen (new readyToOpenDoor());
+        getP_win_con().gen (new readyToOpenDoor());
         //#]
         }
         finally {
@@ -167,7 +219,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendBrakeToCabin() 
         System.out.println("Tell cabin to brake");
-        itsCabin.gen(new braked());
+        getP_win_cab().gen(new braked());
         //#]
         }
         finally {
@@ -185,7 +237,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendBrakedToController() 
         System.out.println("Tell system controller that the cabin is braked");
-        itsControllerSys.gen(new braked());
+        getP_win_con().gen(new braked());
         //#]
         }
         finally {
@@ -203,7 +255,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendGoDownToCabin() 
         System.out.println("Tell winch control the cabin which is moved down");
-        itsCabin.gen(new moveCabinDown());
+        getP_win_cab().gen(new moveCabinDown());
         //#]
         }
         finally {
@@ -221,7 +273,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendGoUpToCabin() 
         System.out.println("Tell winch control the cabin which is moved up");
-        itsCabin.gen(new moveCabinUp());
+        getP_win_cab().gen(new moveCabinUp());
         //#]
         }
         finally {
@@ -342,6 +394,16 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     public void _clearItsControllerSys() {
         animInstance().notifyRelationCleared("itsControllerSys");
         itsControllerSys = null;
+    }
+    
+    //## auto_generated 
+    protected void initRelations(RiJThread p_thread) {
+        p_win_con = newP_win_con();
+        p_win_cab = newP_win_cab();
+        if(getP_win_con() != null)
+           getP_win_con().connectWinch(this);
+        if(getP_win_cab() != null)
+           getP_win_cab().connectWinch(this);
     }
     
     //## auto_generated 
@@ -758,6 +820,60 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
         public AnimInstance animInstance() { 
             return Winch.this.animInstance(); 
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_win_con_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_win_con_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectWinch(Winch) 
+        public void connectWinch(Winch part) {
+            //#[ operation connectWinch(Winch) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_win_cab_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_win_cab_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectWinch(Winch) 
+        public void connectWinch(Winch part) {
+            //#[ operation connectWinch(Winch) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
         }
         
     }

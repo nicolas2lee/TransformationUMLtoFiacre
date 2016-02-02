@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: braked
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/braked.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event braked() 
 public class braked extends RiJEvent implements AnimatedEvent {
     
-    public static final int braked_Ascenseur_id = 2631;		//## ignore 
+    public static final int braked_Ascenseur_id = 2630;		//## ignore 
     
     
     // Constructors

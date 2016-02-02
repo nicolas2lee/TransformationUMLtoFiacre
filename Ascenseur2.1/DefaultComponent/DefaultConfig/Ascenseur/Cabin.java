@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Cabin
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Cabin.java
 *********************************************************************/
 
@@ -40,7 +40,13 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     
     public Reactive reactive;		//## ignore 
     
+    protected Cabin.p_cab_con_C p_cab_con;		//## ignore 
+    
+    protected Cabin.p_cab_win_C p_cab_win;		//## ignore 
+    
     protected int Set_Button;		//## attribute Set_Button 
+    
+    protected int currentFloor = 0;		//## attribute currentFloor 
     
     protected ControllerSys itsControllerSys;		//## link itsControllerSys 
     
@@ -76,6 +82,11 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     //## statechart_method 
     public boolean isIn(int state) {
         return reactive.isIn(state);
+    }
+    
+    //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
     }
     
     //## statechart_method 
@@ -129,11 +140,54 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         
         m_thread = new RiJThread("Cabin");
         reactive = new Reactive(m_thread);
+        initRelations(m_thread);
         }
         finally {
             animInstance().notifyMethodExit();
         }
         
+    }
+    
+    //## auto_generated 
+    public Cabin.p_cab_con_C getP_cab_con() {
+        return p_cab_con;
+    }
+    
+    //## auto_generated 
+    public Cabin.p_cab_con_C get_p_cab_con() {
+        return p_cab_con;
+    }
+    
+    //## auto_generated 
+    public Cabin.p_cab_con_C newP_cab_con() {
+        p_cab_con = new Cabin.p_cab_con_C();
+        return p_cab_con;
+    }
+    
+    //## auto_generated 
+    public void deleteP_cab_con() {
+        p_cab_con=null;
+    }
+    
+    //## auto_generated 
+    public Cabin.p_cab_win_C getP_cab_win() {
+        return p_cab_win;
+    }
+    
+    //## auto_generated 
+    public Cabin.p_cab_win_C get_p_cab_win() {
+        return p_cab_win;
+    }
+    
+    //## auto_generated 
+    public Cabin.p_cab_win_C newP_cab_win() {
+        p_cab_win = new Cabin.p_cab_win_C();
+        return p_cab_win;
+    }
+    
+    //## auto_generated 
+    public void deleteP_cab_win() {
+        p_cab_win=null;
     }
     
     //## operation sendCabinBrakedToController() 
@@ -145,7 +199,7 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendCabinBrakedToController() 
         System.out.println("send cabin braked to controller system");  
-        itsControllerSys.gen (new braked());
+        getP_cab_con().gen (new braked());
         //#]
         }
         finally {
@@ -163,7 +217,7 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendInfoToControllerSys() 
         System.out.println("Send floor to controller system");  
-        itsControllerSys.gen (new receiveFloorAndCloseDoor());
+        getP_cab_con().gen (new receiveFloorAndCloseDoor());
         //#]
         }
         finally {
@@ -181,7 +235,7 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendMovedDownToController() 
         System.out.println("Send cabin moved down to controller system");  
-        itsControllerSys.gen (new receiveCabinMoved());
+        getP_cab_con().gen (new receiveCabinMoved());
         //#]
         }
         finally {
@@ -199,7 +253,7 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendMovedUpToController() 
         System.out.println("Send cabin moved up to controller system");  
-        itsControllerSys.gen (new receiveCabinMoved());
+        getP_cab_con().gen (new receiveCabinMoved());
         //#]
         }
         finally {
@@ -216,6 +270,16 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     //## auto_generated 
     public void setSet_Button(int p_Set_Button) {
         Set_Button = p_Set_Button;
+    }
+    
+    //## auto_generated 
+    public int getCurrentFloor() {
+        return currentFloor;
+    }
+    
+    //## auto_generated 
+    public void setCurrentFloor(int p_currentFloor) {
+        currentFloor = p_currentFloor;
     }
     
     //## auto_generated 
@@ -300,6 +364,16 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     public void _clearItsWinch() {
         animInstance().notifyRelationCleared("itsWinch");
         itsWinch = null;
+    }
+    
+    //## auto_generated 
+    protected void initRelations(RiJThread p_thread) {
+        p_cab_con = newP_cab_con();
+        p_cab_win = newP_cab_win();
+        if(getP_cab_con() != null)
+           getP_cab_con().connectCabin(this);
+        if(getP_cab_win() != null)
+           getP_cab_win().connectCabin(this);
     }
     
     //## auto_generated 
@@ -755,6 +829,60 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         }
         
     }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_cab_con_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_cab_con_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectCabin(Cabin) 
+        public void connectCabin(Cabin part) {
+            //#[ operation connectCabin(Cabin) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_cab_win_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_cab_win_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectCabin(Cabin) 
+        public void connectCabin(Cabin part) {
+            //#[ operation connectCabin(Cabin) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
@@ -781,6 +909,7 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     public void addAttributes(AnimAttributes msg) {
         
         msg.add("Set_Button", Set_Button);
+        msg.add("currentFloor", currentFloor);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {

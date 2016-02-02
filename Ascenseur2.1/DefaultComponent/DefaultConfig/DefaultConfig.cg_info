@@ -2,16 +2,16 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 
 - m_fileModifyTime = { IRPYRawContainer 
 	- size = 7;
-	- value = "DefaultComponent/DefaultConfig/Ascenseur/Ascenseur_pkgClass.java" 1.5.2016::10:30:43
-	"DefaultComponent/DefaultConfig/Ascenseur/Button_ex.java" 1.18.2016::17:14:22
-	"DefaultComponent/DefaultConfig/Ascenseur/Cabin.java" 11.30.2015::14:45:51
-	"DefaultComponent/DefaultConfig/Ascenseur/ControllerSys.java" 11.30.2015::14:55:45
-	"DefaultComponent/DefaultConfig/Ascenseur/Door.java" 11.23.2015::16:14:36
-	"DefaultComponent/DefaultConfig/Ascenseur/Sensor.java" 11.23.2015::16:14:37
-	"DefaultComponent/DefaultConfig/Ascenseur/Winch.java" 11.30.2015::14:45:51
+	- value = "DefaultComponent/DefaultConfig/Ascenseur/Ascenseur_pkgClass.java" 2.2.2016::22:50:34
+	"DefaultComponent/DefaultConfig/Ascenseur/Button_ex.java" 2.2.2016::20:55:53
+	"DefaultComponent/DefaultConfig/Ascenseur/Cabin.java" 2.2.2016::22:22:43
+	"DefaultComponent/DefaultConfig/Ascenseur/ControllerSys.java" 2.2.2016::22:46:50
+	"DefaultComponent/DefaultConfig/Ascenseur/Door.java" 2.2.2016::20:50:55
+	"DefaultComponent/DefaultConfig/Ascenseur/Sensor.java" 2.2.2016::22:50:34
+	"DefaultComponent/DefaultConfig/Ascenseur/Winch.java" 2.2.2016::20:50:55
 	
 }
-- size = 8;
+- size = 9;
 - hElement = { IHandle 
 	- _m2Class = "ICodeGenConfigInfo";
 	- _filename = "DefaultComponent.cmp";
@@ -20,7 +20,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "DefaultComponent\\DefaultConfig";
 	- _id = GUID d7093f2b-9b60-4d04-9b49-e314d28638e0;
 }
-- genTime = 1.18.2016::17:14:22;
+- genTime = 2.2.2016::22:50:34;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Ascenseur.sbs";
@@ -29,7 +29,16 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "Winch";
 	- _id = GUID 4100fad3-8a6c-42a3-b1c4-73653268a489;
 }
-- genTime = 1.5.2016::10:30:44;
+- genTime = 2.2.2016::21:14:19;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Ascenseur.sbs";
+	- _subsystem = "Ascenseur";
+	- _class = "";
+	- _name = "Sensor";
+	- _id = GUID 969d671d-410e-4e58-8cd7-0d783043b3d9;
+}
+- genTime = 2.2.2016::22:50:34;
 - hElement = { IHandle 
 	- _m2Class = "ISubsystem";
 	- _filename = "Ascenseur.sbs";
@@ -38,7 +47,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "Ascenseur";
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 }
-- genTime = 1.18.2016::17:14:22;
+- genTime = 2.2.2016::22:50:34;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Ascenseur.sbs";
@@ -47,7 +56,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "ControllerSys";
 	- _id = GUID 6ecc5215-0d36-4666-ab23-1f1bbff27f4b;
 }
-- genTime = 1.5.2016::10:30:44;
+- genTime = 2.2.2016::22:46:50;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Ascenseur.sbs";
@@ -56,7 +65,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "Button_ex";
 	- _id = GUID cfdbd468-9b0a-4b02-a6e8-c1d7f9056fe0;
 }
-- genTime = 1.18.2016::17:14:22;
+- genTime = 2.2.2016::21:14:19;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Ascenseur.sbs";
@@ -65,16 +74,16 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "Cabin";
 	- _id = GUID b74dcd11-5881-4f98-9671-41f970aff4e3;
 }
-- genTime = 1.5.2016::10:30:44;
+- genTime = 2.2.2016::22:22:44;
 - hElement = { IHandle 
-	- _m2Class = "IClass";
-	- _filename = "Ascenseur.sbs";
-	- _subsystem = "Ascenseur";
+	- _m2Class = "*";
+	- _filename = "";
+	- _subsystem = "";
 	- _class = "";
-	- _name = "Sensor";
+	- _name = "";
 	- _id = GUID c8114614-8d2e-458c-bddc-c544447dd33a;
 }
-- genTime = 1.5.2016::10:30:44;
+- genTime = 2.2.2016::22:40:24;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Ascenseur.sbs";
@@ -83,5 +92,5 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "Door";
 	- _id = GUID 55834a34-0f15-4328-b7ed-965b86fcf991;
 }
-- genTime = 1.5.2016::10:30:44;
+- genTime = 2.2.2016::21:14:19;
 

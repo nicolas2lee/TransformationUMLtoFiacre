@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: goUp
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/goUp.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event goUp() 
 public class goUp extends RiJEvent implements AnimatedEvent {
     
-    public static final int goUp_Ascenseur_id = 2624;		//## ignore 
+    public static final int goUp_Ascenseur_id = 2623;		//## ignore 
     
     
     // Constructors

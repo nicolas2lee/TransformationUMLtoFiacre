@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: moveCabinDown
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/moveCabinDown.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event moveCabinDown() 
 public class moveCabinDown extends RiJEvent implements AnimatedEvent {
     
-    public static final int moveCabinDown_Ascenseur_id = 2638;		//## ignore 
+    public static final int moveCabinDown_Ascenseur_id = 2637;		//## ignore 
     
     
     // Constructors

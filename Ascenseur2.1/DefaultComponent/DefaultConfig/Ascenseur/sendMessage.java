@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: sendMessage
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/sendMessage.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event sendMessage() 
 public class sendMessage extends RiJEvent implements AnimatedEvent {
     
-    public static final int sendMessage_Ascenseur_id = 2627;		//## ignore 
+    public static final int sendMessage_Ascenseur_id = 2626;		//## ignore 
     
     
     // Constructors

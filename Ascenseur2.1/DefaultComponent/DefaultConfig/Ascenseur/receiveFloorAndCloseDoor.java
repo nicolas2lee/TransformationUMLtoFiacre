@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: receiveFloorAndCloseDoor
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/receiveFloorAndCloseDoor.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event receiveFloorAndCloseDoor() 
 public class receiveFloorAndCloseDoor extends RiJEvent implements AnimatedEvent {
     
-    public static final int receiveFloorAndCloseDoor_Ascenseur_id = 2637;		//## ignore 
+    public static final int receiveFloorAndCloseDoor_Ascenseur_id = 2636;		//## ignore 
     
     
     // Constructors

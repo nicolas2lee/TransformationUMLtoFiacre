@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: ControllerSys
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/ControllerSys.java
 *********************************************************************/
 
@@ -40,13 +40,29 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     public Reactive reactive;		//## ignore 
     
+    protected ControllerSys.p_con_btn_C p_con_btn;		//## ignore 
+    
+    protected ControllerSys.p_con_sen_C p_con_sen;		//## ignore 
+    
+    protected ControllerSys.p_con_door_C p_con_door;		//## ignore 
+    
+    protected ControllerSys.p_con_win_C p_con_win;		//## ignore 
+    
+    protected ControllerSys.p_con_cab_C p_con_cab;		//## ignore 
+    
+    protected int currentFloor = 0;		//## attribute currentFloor 
+    
+    protected String exBtnDirection;		//## attribute exBtnDirection 
+    
+    protected int exBtnFloor;		//## attribute exBtnFloor 
+    
+    protected boolean isBusy = false;		//## attribute isBusy 
+    
     protected Button_ex itsButton_ex;		//## link itsButton_ex 
     
     protected Cabin itsCabin;		//## link itsCabin 
     
     protected Door itsDoor;		//## link itsDoor 
-    
-    protected Sensor itsSensor;		//## link itsSensor 
     
     protected Winch itsWinch;		//## link itsWinch 
     
@@ -83,6 +99,11 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     //## statechart_method 
     public boolean isIn(int state) {
         return reactive.isIn(state);
+    }
+    
+    //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
     }
     
     //## statechart_method 
@@ -136,11 +157,117 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
         m_thread = new RiJThread("ControllerSys");
         reactive = new Reactive(m_thread);
+        initRelations(m_thread);
         }
         finally {
             animInstance().notifyMethodExit();
         }
         
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_btn_C getP_con_btn() {
+        return p_con_btn;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_btn_C get_p_con_btn() {
+        return p_con_btn;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_btn_C newP_con_btn() {
+        p_con_btn = new ControllerSys.p_con_btn_C();
+        return p_con_btn;
+    }
+    
+    //## auto_generated 
+    public void deleteP_con_btn() {
+        p_con_btn=null;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_sen_C getP_con_sen() {
+        return p_con_sen;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_sen_C get_p_con_sen() {
+        return p_con_sen;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_sen_C newP_con_sen() {
+        p_con_sen = new ControllerSys.p_con_sen_C();
+        return p_con_sen;
+    }
+    
+    //## auto_generated 
+    public void deleteP_con_sen() {
+        p_con_sen=null;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_door_C getP_con_door() {
+        return p_con_door;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_door_C get_p_con_door() {
+        return p_con_door;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_door_C newP_con_door() {
+        p_con_door = new ControllerSys.p_con_door_C();
+        return p_con_door;
+    }
+    
+    //## auto_generated 
+    public void deleteP_con_door() {
+        p_con_door=null;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_win_C getP_con_win() {
+        return p_con_win;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_win_C get_p_con_win() {
+        return p_con_win;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_win_C newP_con_win() {
+        p_con_win = new ControllerSys.p_con_win_C();
+        return p_con_win;
+    }
+    
+    //## auto_generated 
+    public void deleteP_con_win() {
+        p_con_win=null;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_cab_C getP_con_cab() {
+        return p_con_cab;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_cab_C get_p_con_cab() {
+        return p_con_cab;
+    }
+    
+    //## auto_generated 
+    public ControllerSys.p_con_cab_C newP_con_cab() {
+        p_con_cab = new ControllerSys.p_con_cab_C();
+        return p_con_cab;
+    }
+    
+    //## auto_generated 
+    public void deleteP_con_cab() {
+        p_con_cab=null;
     }
     
     //## operation closeDoor() 
@@ -152,7 +279,7 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation closeDoor() 
         System.out.println("Tell door to close");
-        itsDoor.gen (new CloseDoor());
+        getP_con_door().gen (new CloseDoor());
         //#]
         }
         finally {
@@ -170,26 +297,7 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation openDoor() 
         System.out.println("Tell door to open");
-        itsDoor.gen (new OpenDoor());
-        //#]
-        }
-        finally {
-            animInstance().notifyMethodExit();
-        }
-        
-    }
-    
-    //## operation runWinch() 
-    public void runWinch() {
-        try {
-            animInstance().notifyMethodEntered("runWinch",
-               new ArgData[] {
-               });
-        
-        //#[ operation runWinch() 
-        System.out.println("Controller system going to launch winch"); 
-        itsWinch.gen(new goUp());     
-        
+        getP_con_door().gen (new OpenDoor());
         //#]
         }
         finally {
@@ -207,7 +315,7 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendStopToWinch() 
         System.out.println("Tell Winch cabin arrived");
-        itsWinch.gen(new stopFromController());
+        getP_con_win().gen(new stopFromController());
         //#]
         }
         finally {
@@ -225,13 +333,53 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation sendToWinchToStop() 
         System.out.println("Tell Winch to stop");
-        itsWinch.gen(new stop());
+        getP_con_win().gen(new stop());
         //#]
         }
         finally {
             animInstance().notifyMethodExit();
         }
         
+    }
+    
+    //## auto_generated 
+    public int getCurrentFloor() {
+        return currentFloor;
+    }
+    
+    //## auto_generated 
+    public void setCurrentFloor(int p_currentFloor) {
+        currentFloor = p_currentFloor;
+    }
+    
+    //## auto_generated 
+    public String getExBtnDirection() {
+        return exBtnDirection;
+    }
+    
+    //## auto_generated 
+    public void setExBtnDirection(String p_exBtnDirection) {
+        exBtnDirection = p_exBtnDirection;
+    }
+    
+    //## auto_generated 
+    public int getExBtnFloor() {
+        return exBtnFloor;
+    }
+    
+    //## auto_generated 
+    public void setExBtnFloor(int p_exBtnFloor) {
+        exBtnFloor = p_exBtnFloor;
+    }
+    
+    //## auto_generated 
+    public boolean getIsBusy() {
+        return isBusy;
+    }
+    
+    //## auto_generated 
+    public void setIsBusy(boolean p_isBusy) {
+        isBusy = p_isBusy;
     }
     
     //## auto_generated 
@@ -361,48 +509,6 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    public Sensor getItsSensor() {
-        return itsSensor;
-    }
-    
-    //## auto_generated 
-    public void __setItsSensor(Sensor p_Sensor) {
-        itsSensor = p_Sensor;
-        if(p_Sensor != null)
-            {
-                animInstance().notifyRelationAdded("itsSensor", p_Sensor);
-            }
-        else
-            {
-                animInstance().notifyRelationCleared("itsSensor");
-            }
-    }
-    
-    //## auto_generated 
-    public void _setItsSensor(Sensor p_Sensor) {
-        if(itsSensor != null)
-            {
-                itsSensor.__setItsControllerSys(null);
-            }
-        __setItsSensor(p_Sensor);
-    }
-    
-    //## auto_generated 
-    public void setItsSensor(Sensor p_Sensor) {
-        if(p_Sensor != null)
-            {
-                p_Sensor._setItsControllerSys(this);
-            }
-        _setItsSensor(p_Sensor);
-    }
-    
-    //## auto_generated 
-    public void _clearItsSensor() {
-        animInstance().notifyRelationCleared("itsSensor");
-        itsSensor = null;
-    }
-    
-    //## auto_generated 
     public Winch getItsWinch() {
         return itsWinch;
     }
@@ -442,6 +548,25 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     public void _clearItsWinch() {
         animInstance().notifyRelationCleared("itsWinch");
         itsWinch = null;
+    }
+    
+    //## auto_generated 
+    protected void initRelations(RiJThread p_thread) {
+        p_con_btn = newP_con_btn();
+        p_con_sen = newP_con_sen();
+        p_con_door = newP_con_door();
+        p_con_win = newP_con_win();
+        p_con_cab = newP_con_cab();
+        if(getP_con_btn() != null)
+           getP_con_btn().connectControllerSys(this);
+        if(getP_con_sen() != null)
+           getP_con_sen().connectControllerSys(this);
+        if(getP_con_door() != null)
+           getP_con_door().connectControllerSys(this);
+        if(getP_con_win() != null)
+           getP_con_win().connectControllerSys(this);
+        if(getP_con_cab() != null)
+           getP_con_cab().connectControllerSys(this);
     }
     
     //## auto_generated 
@@ -628,9 +753,6 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("4");
             doorClosed_exit();
-            //#[ transition 4 
-            runWinch();
-            //#]
             receiveRequest_entDef();
             animInstance().notifyTransitionEnded("4");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -787,12 +909,44 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int receiveRequestTakegotoOpenDoorDirectly() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("8");
+            receiveRequest_exit();
+            //#[ transition 8 
+            System.out.println("ready to open"); 
+            gen (new readyToOpenDoor());
+            //#]
+            cabinBraked_entDef();
+            animInstance().notifyTransitionEnded("8");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public int WaitTakereceiveFromButton_Ex() {
+            receiveFromButton_Ex params = (receiveFromButton_Ex) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("5");
             Wait_exit();
             //#[ transition 5 
-             runWinch();
+            //System.out.println(isBusy);       
+            System.out.println(currentFloor);
+            exBtnDirection=params.requestedDirection;
+            exBtnFloor=params.requestedFloor;     
+            if (currentFloor < exBtnFloor){
+            	getP_con_win().gen(new goUp());     
+            	getP_con_sen().gen(new toMeasure());
+            }else{
+            	if (currentFloor == exBtnFloor) {
+            		//open the door         
+            		System.out.println(this);
+            		gen (new gotoOpenDoorDirectly());
+            	}else{
+            		getP_con_win().gen(new goDown());   
+            		getP_con_sen().gen(new toMeasure());
+            	}
+            }
             //#]
             receiveRequest_entDef();
             animInstance().notifyTransitionEnded("5");
@@ -964,6 +1118,10 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
                 {
                     res = receiveRequestTakereceiveCabinMoved();
                 }
+            else if(event.isTypeOf(gotoOpenDoorDirectly.gotoOpenDoorDirectly_Ascenseur_id))
+                {
+                    res = receiveRequestTakegotoOpenDoorDirectly();
+                }
             
             return res;
         }
@@ -1041,6 +1199,141 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         }
         
     }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_con_btn_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_con_btn_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectControllerSys(ControllerSys) 
+        public void connectControllerSys(ControllerSys part) {
+            //#[ operation connectControllerSys(ControllerSys) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_con_sen_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_con_sen_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectControllerSys(ControllerSys) 
+        public void connectControllerSys(ControllerSys part) {
+            //#[ operation connectControllerSys(ControllerSys) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_con_door_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_con_door_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectControllerSys(ControllerSys) 
+        public void connectControllerSys(ControllerSys part) {
+            //#[ operation connectControllerSys(ControllerSys) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_con_win_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_con_win_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectControllerSys(ControllerSys) 
+        public void connectControllerSys(ControllerSys part) {
+            //#[ operation connectControllerSys(ControllerSys) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_con_cab_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_con_cab_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectControllerSys(ControllerSys) 
+        public void connectControllerSys(ControllerSys part) {
+            //#[ operation connectControllerSys(ControllerSys) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
@@ -1066,13 +1359,16 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
+        msg.add("exBtnFloor", exBtnFloor);
+        msg.add("exBtnDirection", exBtnDirection);
+        msg.add("currentFloor", currentFloor);
+        msg.add("isBusy", isBusy);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
         msg.add("itsButton_ex", false, true, itsButton_ex);
         msg.add("itsWinch", false, true, itsWinch);
-        msg.add("itsSensor", false, true, itsSensor);
         msg.add("itsDoor", false, true, itsDoor);
         msg.add("itsCabin", false, true, itsCabin);
     }

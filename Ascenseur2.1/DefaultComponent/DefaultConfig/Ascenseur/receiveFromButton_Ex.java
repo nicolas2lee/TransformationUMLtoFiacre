@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: receiveFromButton_Ex
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/receiveFromButton_Ex.java
 *********************************************************************/
 
@@ -24,16 +24,23 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## package Ascenseur 
 
 
-//## event receiveFromButton_Ex() 
+//## event receiveFromButton_Ex(int,String) 
 public class receiveFromButton_Ex extends RiJEvent implements AnimatedEvent {
     
-    public static final int receiveFromButton_Ex_Ascenseur_id = 2636;		//## ignore 
+    public static final int receiveFromButton_Ex_Ascenseur_id = 2635;		//## ignore 
     
+    public int requestedFloor;
+    public String requestedDirection;
     
     // Constructors
     
     public  receiveFromButton_Ex() {
         lId = receiveFromButton_Ex_Ascenseur_id;
+    }
+    public  receiveFromButton_Ex(int p_requestedFloor, String p_requestedDirection) {
+        lId = receiveFromButton_Ex_Ascenseur_id;
+        requestedFloor = p_requestedFloor;
+        requestedDirection = p_requestedDirection;
     }
     
     public boolean isTypeOf(long id) {
@@ -56,9 +63,13 @@ public class receiveFromButton_Ex extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
+          msg.add("requestedFloor", requestedFloor);
+          msg.add("requestedDirection", requestedDirection);
     }
     public String toString() {
           String s="receiveFromButton_Ex(";      
+          s += "requestedFloor=" + AnimInstance.animToString(requestedFloor) + " ";
+          s += "requestedDirection=" + AnimInstance.animToString(requestedDirection) + " ";
           s += ")";
           return s;
     }

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: readyToOpenDoor
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/readyToOpenDoor.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event readyToOpenDoor() 
 public class readyToOpenDoor extends RiJEvent implements AnimatedEvent {
     
-    public static final int readyToOpenDoor_Ascenseur_id = 2642;		//## ignore 
+    public static final int readyToOpenDoor_Ascenseur_id = 2641;		//## ignore 
     
     
     // Constructors

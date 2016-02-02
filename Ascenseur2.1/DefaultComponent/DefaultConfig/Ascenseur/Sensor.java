@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Sensor
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Sensor.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 
 //## class Sensor 
-public class Sensor implements RiJActive, RiJStateConcept, Animated {
+public class Sensor implements RiJStateConcept, Animated {
     
     //#[ ignore
     // Instrumentation attributes (Animation)
@@ -36,16 +36,17 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
     public static AnimClass animClassSensor = new AnimClass("Ascenseur.Sensor",false);
     //#]
     
-    protected RiJThread m_thread;		//## ignore 
-    
     public Reactive reactive;		//## ignore 
     
-    protected ControllerSys itsControllerSys;		//## link itsControllerSys 
+    protected Sensor.p_sen_con_C p_sen_con;		//## ignore 
+    
+    protected Sensor.p_sen_con_1_C p_sen_con_1;		//## ignore 
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int NotDetected=1;
-    public static final int Detected=2;
+    public static final int Idle=1;
+    public static final int Detecting=2;
+    public static final int Detected=3;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -73,6 +74,11 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
     }
     
     //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
+    }
+    
+    //## statechart_method 
     public boolean isCompleted(int state) {
         return reactive.isCompleted(state);
     }
@@ -93,23 +99,8 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
     }
     
     //## statechart_method 
-    public void cancelEvent(RiJEvent event) {
-        m_thread.cancelEvent(event);
-    }
-    
-    //## statechart_method 
     public int takeEvent(RiJEvent event) {
         return reactive.takeEvent(event);
-    }
-    
-    //## statechart_method 
-    public void run() {
-        m_thread.run();
-    }
-    
-    //## statechart_method 
-    public void start() {
-        m_thread.start(this);
     }
     
     // Constructors
@@ -121,13 +112,55 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
                new ArgData[] {
                });
         
-        m_thread = new RiJThread("Sensor");
-        reactive = new Reactive(m_thread);
+        reactive = new Reactive(p_thread);
+        initRelations(p_thread);
         }
         finally {
             animInstance().notifyMethodExit();
         }
         
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_C getP_sen_con() {
+        return p_sen_con;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_C get_p_sen_con() {
+        return p_sen_con;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_C newP_sen_con() {
+        p_sen_con = new Sensor.p_sen_con_C();
+        return p_sen_con;
+    }
+    
+    //## auto_generated 
+    public void deleteP_sen_con() {
+        p_sen_con=null;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_1_C getP_sen_con_1() {
+        return p_sen_con_1;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_1_C get_p_sen_con_1() {
+        return p_sen_con_1;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_1_C newP_sen_con_1() {
+        p_sen_con_1 = new Sensor.p_sen_con_1_C();
+        return p_sen_con_1;
+    }
+    
+    //## auto_generated 
+    public void deleteP_sen_con_1() {
+        p_sen_con_1=null;
     }
     
     //## operation sendCabinArrived() 
@@ -138,8 +171,7 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
                });
         
         //#[ operation sendCabinArrived() 
-        System.out.println("Send cabin arrived to controller system");
-        itsControllerSys.gen (new detected());
+        getP_sen_con().gen(new detected());
         //#]
         }
         finally {
@@ -149,55 +181,19 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    public ControllerSys getItsControllerSys() {
-        return itsControllerSys;
-    }
-    
-    //## auto_generated 
-    public void __setItsControllerSys(ControllerSys p_ControllerSys) {
-        itsControllerSys = p_ControllerSys;
-        if(p_ControllerSys != null)
-            {
-                animInstance().notifyRelationAdded("itsControllerSys", p_ControllerSys);
-            }
-        else
-            {
-                animInstance().notifyRelationCleared("itsControllerSys");
-            }
-    }
-    
-    //## auto_generated 
-    public void _setItsControllerSys(ControllerSys p_ControllerSys) {
-        if(itsControllerSys != null)
-            {
-                itsControllerSys.__setItsSensor(null);
-            }
-        __setItsControllerSys(p_ControllerSys);
-    }
-    
-    //## auto_generated 
-    public void setItsControllerSys(ControllerSys p_ControllerSys) {
-        if(p_ControllerSys != null)
-            {
-                p_ControllerSys._setItsSensor(this);
-            }
-        _setItsControllerSys(p_ControllerSys);
-    }
-    
-    //## auto_generated 
-    public void _clearItsControllerSys() {
-        animInstance().notifyRelationCleared("itsControllerSys");
-        itsControllerSys = null;
+    protected void initRelations(RiJThread p_thread) {
+        p_sen_con = newP_sen_con();
+        p_sen_con_1 = newP_sen_con_1();
+        if(getP_sen_con() != null)
+           getP_sen_con().connectSensor(this);
+        if(getP_sen_con_1() != null)
+           getP_sen_con_1().connectSensor(this);
     }
     
     //## auto_generated 
     public boolean startBehavior() {
         boolean done = false;
         done = reactive.startBehavior();
-        if(done)
-            {
-                start();
-            }
         return done;
     }
     
@@ -235,9 +231,14 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
-                case NotDetected:
+                case Idle:
                 {
-                    NotDetected_add(animStates);
+                    Idle_add(animStates);
+                }
+                break;
+                case Detecting:
+                {
+                    Detecting_add(animStates);
                 }
                 break;
                 case Detected:
@@ -262,9 +263,14 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
-                case NotDetected:
+                case Idle:
                 {
-                    res = NotDetected_takeEvent(id);
+                    res = Idle_takeEvent(id);
+                }
+                break;
+                case Detecting:
+                {
+                    res = Detecting_takeEvent(id);
                 }
                 break;
                 case Detected:
@@ -279,8 +285,13 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void NotDetected_add(AnimStates animStates) {
-            animStates.add("ROOT.NotDetected");
+        public void Idle_add(AnimStates animStates) {
+            animStates.add("ROOT.Idle");
+        }
+        
+        //## statechart_method 
+        public void Detecting_add(AnimStates animStates) {
+            animStates.add("ROOT.Detecting");
         }
         
         //## statechart_method 
@@ -314,25 +325,7 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void NotDetectedEnter() {
-        }
-        
-        //## statechart_method 
         public void DetectedEnter() {
-        }
-        
-        //## statechart_method 
-        public int NotDetectedTakecabinArrived() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            NotDetected_exit();
-            //#[ transition 1 
-            sendCabinArrived();
-            //#]
-            Detected_entDef();
-            animInstance().notifyTransitionEnded("1");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
         }
         
         //## statechart_method 
@@ -341,9 +334,7 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void NotDetected_exit() {
-            NotDetectedExit();
-            animInstance().notifyStateExited("ROOT.NotDetected");
+        public void DetectingExit() {
         }
         
         //## statechart_method 
@@ -353,17 +344,52 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void NotDetected_enter() {
-            animInstance().notifyStateEntered("ROOT.NotDetected");
-            rootState_subState = NotDetected;
-            rootState_active = NotDetected;
-            NotDetectedEnter();
+        public int Idle_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(toMeasure.toMeasure_Ascenseur_id))
+                {
+                    res = IdleTaketoMeasure();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Idle_enter() {
+            animInstance().notifyStateEntered("ROOT.Idle");
+            rootState_subState = Idle;
+            rootState_active = Idle;
+            IdleEnter();
         }
         
         //## statechart_method 
         public int rootState_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
+        }
+        
+        //## statechart_method 
+        public void IdleExit() {
+        }
+        
+        //## statechart_method 
+        public void Idle_entDef() {
+            Idle_enter();
+        }
+        
+        //## statechart_method 
+        public int Detecting_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(cabinArrived.cabinArrived_Ascenseur_id))
+                {
+                    res = DetectingTakecabinArrived();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void DetectingEnter() {
         }
         
         //## statechart_method 
@@ -377,11 +403,15 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void IdleEnter() {
+        }
+        
+        //## statechart_method 
         public int DetectedTakecabinGone() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("2");
             Detected_exit();
-            NotDetected_entDef();
+            Idle_entDef();
             animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
@@ -392,34 +422,64 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int NotDetected_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(cabinArrived.cabinArrived_Ascenseur_id))
-                {
-                    res = NotDetectedTakecabinArrived();
-                }
-            
-            return res;
+        public void Detecting_exit() {
+            DetectingExit();
+            animInstance().notifyStateExited("ROOT.Detecting");
         }
         
         //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("3");
+            Idle_entDef();
+            animInstance().notifyTransitionEnded("3");
+        }
+        
+        //## statechart_method 
+        public void Detecting_entDef() {
+            Detecting_enter();
+        }
+        
+        //## statechart_method 
+        public int IdleTaketoMeasure() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("0");
-            NotDetected_entDef();
+            Idle_exit();
+            Detecting_entDef();
             animInstance().notifyTransitionEnded("0");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
-        public void NotDetectedExit() {
-        }
-        
-        //## statechart_method 
-        public void NotDetected_entDef() {
-            NotDetected_enter();
+        public void Idle_exit() {
+            IdleExit();
+            animInstance().notifyStateExited("ROOT.Idle");
         }
         
         //## statechart_method 
         public void rootStateExit() {
+        }
+        
+        //## statechart_method 
+        public int DetectingTakecabinArrived() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            Detecting_exit();
+            //#[ transition 1 
+            sendCabinArrived();
+            //#]
+            Detected_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Detecting_enter() {
+            animInstance().notifyStateEntered("ROOT.Detecting");
+            rootState_subState = Detecting;
+            rootState_active = Detecting;
+            DetectingEnter();
         }
         
         /**  methods added just for design level debugging instrumentation */
@@ -452,6 +512,60 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
         }
         
     }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_sen_con_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_sen_con_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectSensor(Sensor) 
+        public void connectSensor(Sensor part) {
+            //#[ operation connectSensor(Sensor) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_sen_con_1_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_sen_con_1_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectSensor(Sensor) 
+        public void connectSensor(Sensor part) {
+            //#[ operation connectSensor(Sensor) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
@@ -481,7 +595,6 @@ public class Sensor implements RiJActive, RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
-        msg.add("itsControllerSys", false, true, itsControllerSys);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 

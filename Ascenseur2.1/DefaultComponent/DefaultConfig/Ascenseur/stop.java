@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: stop
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/stop.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event stop() 
 public class stop extends RiJEvent implements AnimatedEvent {
     
-    public static final int stop_Ascenseur_id = 2626;		//## ignore 
+    public static final int stop_Ascenseur_id = 2625;		//## ignore 
     
     
     // Constructors

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Door
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Door.java
 *********************************************************************/
 
@@ -39,6 +39,8 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     protected RiJThread m_thread;		//## ignore 
     
     public Reactive reactive;		//## ignore 
+    
+    protected Door.p_door_con_C p_door_con;		//## ignore 
     
     protected int close;		//## attribute close 
     
@@ -75,6 +77,11 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     //## statechart_method 
     public boolean isIn(int state) {
         return reactive.isIn(state);
+    }
+    
+    //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
     }
     
     //## statechart_method 
@@ -128,11 +135,33 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         
         m_thread = new RiJThread("Door");
         reactive = new Reactive(m_thread);
+        initRelations(m_thread);
         }
         finally {
             animInstance().notifyMethodExit();
         }
         
+    }
+    
+    //## auto_generated 
+    public Door.p_door_con_C getP_door_con() {
+        return p_door_con;
+    }
+    
+    //## auto_generated 
+    public Door.p_door_con_C get_p_door_con() {
+        return p_door_con;
+    }
+    
+    //## auto_generated 
+    public Door.p_door_con_C newP_door_con() {
+        p_door_con = new Door.p_door_con_C();
+        return p_door_con;
+    }
+    
+    //## auto_generated 
+    public void deleteP_door_con() {
+        p_door_con=null;
     }
     
     //## operation goSleep() 
@@ -144,7 +173,7 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         
         //#[ operation goSleep() 
         System.out.println("Tell Controller system to go");
-        itsControllerSys.gen (new readyToGo());
+        getP_door_con().gen (new readyToGo());
         //#]
         }
         finally {
@@ -213,6 +242,13 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     public void _clearItsControllerSys() {
         animInstance().notifyRelationCleared("itsControllerSys");
         itsControllerSys = null;
+    }
+    
+    //## auto_generated 
+    protected void initRelations(RiJThread p_thread) {
+        p_door_con = newP_door_con();
+        if(getP_door_con() != null)
+           getP_door_con().connectDoor(this);
     }
     
     //## auto_generated 
@@ -540,6 +576,33 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
         public AnimInstance animInstance() { 
             return Door.this.animInstance(); 
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_door_con_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_door_con_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectDoor(Door) 
+        public void connectDoor(Door part) {
+            //#[ operation connectDoor(Door) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
         }
         
     }

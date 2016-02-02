@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: sendFloorAndUpOrDown
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/sendFloorAndUpOrDown.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event sendFloorAndUpOrDown() 
 public class sendFloorAndUpOrDown extends RiJEvent implements AnimatedEvent {
     
-    public static final int sendFloorAndUpOrDown_Ascenseur_id = 2633;		//## ignore 
+    public static final int sendFloorAndUpOrDown_Ascenseur_id = 2632;		//## ignore 
     
     
     // Constructors

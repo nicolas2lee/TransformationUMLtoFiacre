@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Ascenseur
-//!	Generated Date	: Tue, 5, Jan 2016 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Ascenseur_pkgClass.java
 *********************************************************************/
 
@@ -33,9 +33,9 @@ public class Ascenseur_pkgClass {
     
     public static Door itsDoor;		//## classInstance itsDoor 
     
-    public static Door itsDoor_1;		//## classInstance itsDoor_1 
-    
     public static Sensor itsSensor;		//## classInstance itsSensor 
+    
+    public static Sensor itsSensor_1;		//## classInstance itsSensor_1 
     
     public static Winch itsWinch;		//## classInstance itsWinch 
     
@@ -79,9 +79,9 @@ public class Ascenseur_pkgClass {
             {
                 AnimServices.setInstanceName(itsSensor, "itsSensor");
             }
-        if(itsDoor_1 != null)
+        if(itsSensor_1 != null)
             {
-                AnimServices.setInstanceName(itsDoor_1, "itsDoor_1");
+                AnimServices.setInstanceName(itsSensor_1, "itsSensor_1");
             }
     }
     
@@ -91,15 +91,72 @@ public class Ascenseur_pkgClass {
         itsCabin = new Cabin(p_thread);
         itsControllerSys = new ControllerSys(p_thread);
         itsDoor = new Door(p_thread);
-        itsDoor_1 = new Door(p_thread);
         itsSensor = new Sensor(p_thread);
+        itsSensor_1 = new Sensor(p_thread);
         itsWinch = new Winch(p_thread);
-        itsWinch.setItsCabin(itsCabin);
-        itsControllerSys.setItsCabin(itsCabin);
-        itsControllerSys.setItsDoor(itsDoor);
-        itsControllerSys.setItsSensor(itsSensor);
-        itsControllerSys.setItsButton_ex(itsButton_ex);
-        itsControllerSys.setItsWinch(itsWinch);
+        {
+            
+            itsButton_ex.getP_btn_con().setItsDefaultRequiredInterface(itsControllerSys.getP_con_btn().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsControllerSys.getP_con_btn().setItsDefaultRequiredInterface(itsButton_ex.getP_btn_con().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsControllerSys.getP_con_door().setItsDefaultRequiredInterface(itsDoor.getP_door_con().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsDoor.getP_door_con().setItsDefaultRequiredInterface(itsControllerSys.getP_con_door().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsWinch.getP_win_con().setItsDefaultRequiredInterface(itsControllerSys.getP_con_win().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsControllerSys.getP_con_win().setItsDefaultRequiredInterface(itsWinch.getP_win_con().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsCabin.getP_cab_con().setItsDefaultRequiredInterface(itsControllerSys.getP_con_cab().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsControllerSys.getP_con_cab().setItsDefaultRequiredInterface(itsCabin.getP_cab_con().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsWinch.getP_win_cab().setItsDefaultRequiredInterface(itsCabin.getP_cab_win().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsCabin.getP_cab_win().setItsDefaultRequiredInterface(itsWinch.getP_win_cab().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsSensor.getP_sen_con().setItsDefaultRequiredInterface(itsControllerSys.getP_con_sen().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsControllerSys.getP_con_sen().setItsDefaultRequiredInterface(itsSensor.getP_sen_con().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsSensor_1.getP_sen_con_1().setItsDefaultRequiredInterface(itsControllerSys.getP_con_sen().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsControllerSys.getP_con_sen().setItsDefaultRequiredInterface(itsSensor_1.getP_sen_con_1().getItsDefaultProvidedInterface());
+            
+        }
         renameGlobalInstances();
     }
     
@@ -110,8 +167,8 @@ public class Ascenseur_pkgClass {
         done &= itsCabin.startBehavior();
         done &= itsControllerSys.startBehavior();
         done &= itsDoor.startBehavior();
-        done &= itsDoor_1.startBehavior();
         done &= itsSensor.startBehavior();
+        done &= itsSensor_1.startBehavior();
         done &= itsWinch.startBehavior();
         return done;
     }

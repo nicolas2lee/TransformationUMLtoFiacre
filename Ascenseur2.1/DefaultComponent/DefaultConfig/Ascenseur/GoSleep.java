@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: GoSleep
-//!	Generated Date	: Mon, 23, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/GoSleep.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event GoSleep() 
 public class GoSleep extends RiJEvent implements AnimatedEvent {
     
-    public static final int GoSleep_Ascenseur_id = 2621;		//## ignore 
+    public static final int GoSleep_Ascenseur_id = 2620;		//## ignore 
     
     
     // Constructors

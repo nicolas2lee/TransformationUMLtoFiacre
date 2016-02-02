@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
 *********************************************************************/
 
@@ -39,12 +39,12 @@ public class MainDefaultComponent {
             Class.forName("Ascenseur.detected");
             Class.forName("Ascenseur.goDown");
             Class.forName("Ascenseur.GoSleep");
+            Class.forName("Ascenseur.gotoOpenDoorDirectly");
             Class.forName("Ascenseur.goUp");
             Class.forName("Ascenseur.moveCabin");
             Class.forName("Ascenseur.moveCabinDown");
             Class.forName("Ascenseur.moveCabinUp");
             Class.forName("Ascenseur.OpenDoor");
-            Class.forName("Ascenseur.Press");
             Class.forName("Ascenseur.Pressed");
             Class.forName("Ascenseur.readyToGo");
             Class.forName("Ascenseur.readyToOpenDoor");
@@ -59,6 +59,7 @@ public class MainDefaultComponent {
             Class.forName("Ascenseur.stop");
             Class.forName("Ascenseur.stopFromController");
             Class.forName("Ascenseur.TimeoutOrArrive");
+            Class.forName("Ascenseur.toMeasure");
     
         // Registering Static Classes 
         

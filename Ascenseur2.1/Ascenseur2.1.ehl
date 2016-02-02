@@ -1,10 +1,16 @@
 [Op Calls]
 itsButton_ex->CALL(sendFloorAndUpOrDown(),sendFloorAndUpOrDown())
 [Events]
+itsButton_ex->GEN(Pressed(2,Up))`Button_ex
+itsButton_ex->GEN(Pressed(1,Up))`Button_ex
+itsButton_ex->GEN(Pressed(0,up))`Button_ex
+itsButton_ex->GEN(Pressed(0,))`Button_ex
+itsButton_ex->GEN(Pressed(0,Up))`Button_ex
+itsButton_ex->GEN(Pressed(1,up))`Button_ex
+itsButton_ex->GEN(Pressed())`Button_ex
 itsSensor->GEN(cabinArrived())`Sensor
 itsSensor->GEN(cabinGone())`Sensor
 itsCabin->GEN(sendFloorAndCloseDoor())`Cabin
-itsButton_ex->GEN(Pressed())`Button_ex
 Button_ex[0]->GEN(Pressed())`Button_ex
 itsControllerSys->GEN(receive())`ControllerSys
 theControllerSys->GEN(receiveFromButton_Ex())`ControllerSys

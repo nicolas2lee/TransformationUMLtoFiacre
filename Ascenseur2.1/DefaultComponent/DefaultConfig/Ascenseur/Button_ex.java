@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Button_ex
-//!	Generated Date	: Mon, 18, Jan 2016 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Button_ex.java
 *********************************************************************/
 
@@ -40,6 +40,8 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     
     public Reactive reactive;		//## ignore 
     
+    protected Button_ex.p_btn_con_C p_btn_con;		//## ignore 
+    
     protected int down;		//## attribute down 
     
     protected int up;		//## attribute up 
@@ -74,6 +76,11 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     //## statechart_method 
     public boolean isIn(int state) {
         return reactive.isIn(state);
+    }
+    
+    //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
     }
     
     //## statechart_method 
@@ -127,6 +134,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         
         m_thread = new RiJThread("Button_ex");
         reactive = new Reactive(m_thread);
+        initRelations(m_thread);
         }
         finally {
             animInstance().notifyMethodExit();
@@ -134,24 +142,25 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         
     }
     
-    //## operation sendFloorAndUpOrDown() 
-    public void sendFloorAndUpOrDown() {
-        try {
-            animInstance().notifyMethodEntered("sendFloorAndUpOrDown",
-               new ArgData[] {
-               });
-        
-        //#[ operation sendFloorAndUpOrDown() 
-        System.out.println("Client pressed button and send the floor info and up or down to controller system");      
-        itsControllerSys.gen(new receiveFromButton_Ex()); 
-        int a;          
-        
-        //#]
-        }
-        finally {
-            animInstance().notifyMethodExit();
-        }
-        
+    //## auto_generated 
+    public Button_ex.p_btn_con_C getP_btn_con() {
+        return p_btn_con;
+    }
+    
+    //## auto_generated 
+    public Button_ex.p_btn_con_C get_p_btn_con() {
+        return p_btn_con;
+    }
+    
+    //## auto_generated 
+    public Button_ex.p_btn_con_C newP_btn_con() {
+        p_btn_con = new Button_ex.p_btn_con_C();
+        return p_btn_con;
+    }
+    
+    //## auto_generated 
+    public void deleteP_btn_con() {
+        p_btn_con=null;
     }
     
     //## auto_generated 
@@ -214,6 +223,13 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     public void _clearItsControllerSys() {
         animInstance().notifyRelationCleared("itsControllerSys");
         itsControllerSys = null;
+    }
+    
+    //## auto_generated 
+    protected void initRelations(RiJThread p_thread) {
+        p_btn_con = newP_btn_con();
+        if(getP_btn_con() != null)
+           getP_btn_con().connectButton_ex(this);
     }
     
     //## auto_generated 
@@ -386,11 +402,12 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         
         //## statechart_method 
         public int OffTakePressed() {
+            Pressed params = (Pressed) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("2");
             Off_exit();
             //#[ transition 2 
-             sendFloorAndUpOrDown();
+            getP_btn_con().gen(new receiveFromButton_Ex(params.currentFloor, params.direction));
             //#]
             On_entDef();
             animInstance().notifyTransitionEnded("2");
@@ -475,6 +492,33 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
         public AnimInstance animInstance() { 
             return Button_ex.this.animInstance(); 
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_btn_con_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_btn_con_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectButton_ex(Button_ex) 
+        public void connectButton_ex(Button_ex part) {
+            //#[ operation connectButton_ex(Button_ex) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
         }
         
     }

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: stopFromController
-//!	Generated Date	: Mon, 30, Nov 2015 
+//!	Generated Date	: Tue, 2, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/stopFromController.java
 *********************************************************************/
 
@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event stopFromController() 
 public class stopFromController extends RiJEvent implements AnimatedEvent {
     
-    public static final int stopFromController_Ascenseur_id = 2641;		//## ignore 
+    public static final int stopFromController_Ascenseur_id = 2640;		//## ignore 
     
     
     // Constructors
