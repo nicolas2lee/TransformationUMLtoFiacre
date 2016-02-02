@@ -1,0 +1,10 @@
+I-Logix-RPY-Archive version 8.10.0 * 6930133
+
+- filesTable = { IRPYRawContainer 
+	- size = 3;
+	- value = "Ascenseur2.1.rpy" ""
+	"Ascenseur2.1_rpy\\Ascenseur.sbs" "Ascenseur"
+	"Ascenseur2.1_rpy\\DefaultComponent.cmp" "DefaultComponent"
+	
+}
+

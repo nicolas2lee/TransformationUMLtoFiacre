@@ -1,0 +1,815 @@
+/*********************************************************************
+	Rhapsody	: 8.1.1
+	Login		: zhengta
+	Component	: DefaultComponent
+	Configuration 	: DefaultConfig
+	Model Element	: Cabin
+//!	Generated Date	: Mon, 30, Nov 2015 
+	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Cabin.java
+*********************************************************************/
+
+package Ascenseur;
+
+//## auto_generated
+import com.ibm.rational.rhapsody.oxf.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
+
+//----------------------------------------------------------------------------
+// Ascenseur/Cabin.java                                                                  
+//----------------------------------------------------------------------------
+
+//## package Ascenseur 
+
+
+//## class Cabin 
+public class Cabin implements RiJActive, RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClassCabin = new AnimClass("Ascenseur.Cabin",false);
+    //#]
+    
+    protected RiJThread m_thread;		//## ignore 
+    
+    public Reactive reactive;		//## ignore 
+    
+    protected int Set_Button;		//## attribute Set_Button 
+    
+    protected ControllerSys itsControllerSys;		//## link itsControllerSys 
+    
+    protected Winch itsWinch;		//## link itsWinch 
+    
+    //#[ ignore 
+    public static final int RiJNonState=0;
+    public static final int Up=1;
+    public static final int Stop=2;
+    public static final int sentInfo=3;
+    public static final int Down=4;
+    //#]
+    protected int rootState_subState;		//## ignore 
+    
+    protected int rootState_active;		//## ignore 
+    
+    
+    //## statechart_method 
+    public RiJThread getThread() {
+        return reactive.getThread();
+    }
+    
+    //## statechart_method 
+    public void schedTimeout(long delay, long tmID, RiJStateReactive reactive) {
+        getThread().schedTimeout(delay, tmID, reactive);
+    }
+    
+    //## statechart_method 
+    public void unschedTimeout(long tmID, RiJStateReactive reactive) {
+        getThread().unschedTimeout(tmID, reactive);
+    }
+    
+    //## statechart_method 
+    public boolean isIn(int state) {
+        return reactive.isIn(state);
+    }
+    
+    //## statechart_method 
+    public boolean isCompleted(int state) {
+        return reactive.isCompleted(state);
+    }
+    
+    //## statechart_method 
+    public RiJEventConsumer getEventConsumer() {
+        return (RiJEventConsumer)reactive;
+    }
+    
+    //## statechart_method 
+    public void gen(RiJEvent event) {
+        reactive._gen(event);
+    }
+    
+    //## statechart_method 
+    public void queueEvent(RiJEvent event) {
+        reactive.queueEvent(event);
+    }
+    
+    //## statechart_method 
+    public void cancelEvent(RiJEvent event) {
+        m_thread.cancelEvent(event);
+    }
+    
+    //## statechart_method 
+    public int takeEvent(RiJEvent event) {
+        return reactive.takeEvent(event);
+    }
+    
+    //## statechart_method 
+    public void run() {
+        m_thread.run();
+    }
+    
+    //## statechart_method 
+    public void start() {
+        m_thread.start(this);
+    }
+    
+    // Constructors
+    
+    //## auto_generated 
+    public  Cabin(RiJThread p_thread) {
+        try {
+            animInstance().notifyConstructorEntered(animClassCabin.getUserClass(),
+               new ArgData[] {
+               });
+        
+        m_thread = new RiJThread("Cabin");
+        reactive = new Reactive(m_thread);
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    //## operation sendCabinBrakedToController() 
+    public void sendCabinBrakedToController() {
+        try {
+            animInstance().notifyMethodEntered("sendCabinBrakedToController",
+               new ArgData[] {
+               });
+        
+        //#[ operation sendCabinBrakedToController() 
+        System.out.println("send cabin braked to controller system");  
+        itsControllerSys.gen (new braked());
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    //## operation sendInfoToControllerSys() 
+    public void sendInfoToControllerSys() {
+        try {
+            animInstance().notifyMethodEntered("sendInfoToControllerSys",
+               new ArgData[] {
+               });
+        
+        //#[ operation sendInfoToControllerSys() 
+        System.out.println("Send floor to controller system");  
+        itsControllerSys.gen (new receiveFloorAndCloseDoor());
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    //## operation sendMovedDownToController() 
+    public void sendMovedDownToController() {
+        try {
+            animInstance().notifyMethodEntered("sendMovedDownToController",
+               new ArgData[] {
+               });
+        
+        //#[ operation sendMovedDownToController() 
+        System.out.println("Send cabin moved down to controller system");  
+        itsControllerSys.gen (new receiveCabinMoved());
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    //## operation sendMovedUpToController() 
+    public void sendMovedUpToController() {
+        try {
+            animInstance().notifyMethodEntered("sendMovedUpToController",
+               new ArgData[] {
+               });
+        
+        //#[ operation sendMovedUpToController() 
+        System.out.println("Send cabin moved up to controller system");  
+        itsControllerSys.gen (new receiveCabinMoved());
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    //## auto_generated 
+    public int getSet_Button() {
+        return Set_Button;
+    }
+    
+    //## auto_generated 
+    public void setSet_Button(int p_Set_Button) {
+        Set_Button = p_Set_Button;
+    }
+    
+    //## auto_generated 
+    public ControllerSys getItsControllerSys() {
+        return itsControllerSys;
+    }
+    
+    //## auto_generated 
+    public void __setItsControllerSys(ControllerSys p_ControllerSys) {
+        itsControllerSys = p_ControllerSys;
+        if(p_ControllerSys != null)
+            {
+                animInstance().notifyRelationAdded("itsControllerSys", p_ControllerSys);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("itsControllerSys");
+            }
+    }
+    
+    //## auto_generated 
+    public void _setItsControllerSys(ControllerSys p_ControllerSys) {
+        if(itsControllerSys != null)
+            {
+                itsControllerSys.__setItsCabin(null);
+            }
+        __setItsControllerSys(p_ControllerSys);
+    }
+    
+    //## auto_generated 
+    public void setItsControllerSys(ControllerSys p_ControllerSys) {
+        if(p_ControllerSys != null)
+            {
+                p_ControllerSys._setItsCabin(this);
+            }
+        _setItsControllerSys(p_ControllerSys);
+    }
+    
+    //## auto_generated 
+    public void _clearItsControllerSys() {
+        animInstance().notifyRelationCleared("itsControllerSys");
+        itsControllerSys = null;
+    }
+    
+    //## auto_generated 
+    public Winch getItsWinch() {
+        return itsWinch;
+    }
+    
+    //## auto_generated 
+    public void __setItsWinch(Winch p_Winch) {
+        itsWinch = p_Winch;
+        if(p_Winch != null)
+            {
+                animInstance().notifyRelationAdded("itsWinch", p_Winch);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("itsWinch");
+            }
+    }
+    
+    //## auto_generated 
+    public void _setItsWinch(Winch p_Winch) {
+        if(itsWinch != null)
+            {
+                itsWinch.__setItsCabin(null);
+            }
+        __setItsWinch(p_Winch);
+    }
+    
+    //## auto_generated 
+    public void setItsWinch(Winch p_Winch) {
+        if(p_Winch != null)
+            {
+                p_Winch._setItsCabin(this);
+            }
+        _setItsWinch(p_Winch);
+    }
+    
+    //## auto_generated 
+    public void _clearItsWinch() {
+        animInstance().notifyRelationCleared("itsWinch");
+        itsWinch = null;
+    }
+    
+    //## auto_generated 
+    public boolean startBehavior() {
+        boolean done = false;
+        done = reactive.startBehavior();
+        if(done)
+            {
+                start();
+            }
+        return done;
+    }
+    
+    //## ignore 
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
+        
+        // Default constructor 
+        public Reactive() {
+            this(RiJMainThread.instance());
+        }
+        
+        
+        // Constructors
+        
+        public  Reactive(RiJThread p_thread) {
+            super(p_thread);
+            initStatechart();
+        }
+        
+        //## statechart_method 
+        public boolean isIn(int state) {
+            if(rootState_subState == state)
+                {
+                    return true;
+                }
+            return false;
+        }
+        
+        //## statechart_method 
+        public boolean isCompleted(int state) {
+            return true;
+        }
+        
+        //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case Stop:
+                {
+                    Stop_add(animStates);
+                }
+                break;
+                case Down:
+                {
+                    Down_add(animStates);
+                }
+                break;
+                case sentInfo:
+                {
+                    sentInfo_add(animStates);
+                }
+                break;
+                case Up:
+                {
+                    Up_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
+        }
+        
+        //## statechart_method 
+        public void rootState_entDef() {
+            {
+                rootState_enter();
+                rootStateEntDef();
+            }
+        }
+        
+        //## statechart_method 
+        public int rootState_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            switch (rootState_active) {
+                case Stop:
+                {
+                    res = Stop_takeEvent(id);
+                }
+                break;
+                case Down:
+                {
+                    res = Down_takeEvent(id);
+                }
+                break;
+                case sentInfo:
+                {
+                    res = sentInfo_takeEvent(id);
+                }
+                break;
+                case Up:
+                {
+                    res = Up_takeEvent(id);
+                }
+                break;
+                default:
+                    break;
+            }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Up_add(AnimStates animStates) {
+            animStates.add("ROOT.Up");
+        }
+        
+        //## statechart_method 
+        public void Stop_add(AnimStates animStates) {
+            animStates.add("ROOT.Stop");
+        }
+        
+        //## statechart_method 
+        public void sentInfo_add(AnimStates animStates) {
+            animStates.add("ROOT.sentInfo");
+        }
+        
+        //## statechart_method 
+        public void Down_add(AnimStates animStates) {
+            animStates.add("ROOT.Down");
+        }
+        
+        //## auto_generated 
+        protected void initStatechart() {
+            rootState_subState = RiJNonState;
+            rootState_active = RiJNonState;
+        }
+        
+        //## statechart_method 
+        public int sentInfo_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(moveCabinDown.moveCabinDown_Ascenseur_id))
+                {
+                    res = sentInfoTakemoveCabinDown();
+                }
+            else if(event.isTypeOf(moveCabinUp.moveCabinUp_Ascenseur_id))
+                {
+                    res = sentInfoTakemoveCabinUp();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int sentInfoTakemoveCabinUp() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("7");
+            sentInfo_exit();
+            //#[ transition 7 
+            sendMovedUpToController();
+            //#]
+            Up_entDef();
+            animInstance().notifyTransitionEnded("7");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void UpEnter() {
+        }
+        
+        //## statechart_method 
+        public void StopExit() {
+        }
+        
+        //## statechart_method 
+        public void sentInfoExit() {
+        }
+        
+        //## statechart_method 
+        public void Stop_entDef() {
+            Stop_enter();
+        }
+        
+        //## statechart_method 
+        public void Down_entDef() {
+            Down_enter();
+        }
+        
+        //## statechart_method 
+        public int StopTakemoveCabinUp() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("5");
+            Stop_exit();
+            //#[ transition 5 
+            sendMovedUpToController();
+            //#]
+            Up_entDef();
+            animInstance().notifyTransitionEnded("5");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Up_exit() {
+            UpExit();
+            animInstance().notifyStateExited("ROOT.Up");
+        }
+        
+        //## statechart_method 
+        public void UpExit() {
+        }
+        
+        //## statechart_method 
+        public int rootState_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void DownEnter() {
+        }
+        
+        //## statechart_method 
+        public int Stop_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(sendFloorAndCloseDoor.sendFloorAndCloseDoor_Ascenseur_id))
+                {
+                    res = StopTakesendFloorAndCloseDoor();
+                }
+            else if(event.isTypeOf(moveCabinDown.moveCabinDown_Ascenseur_id))
+                {
+                    res = StopTakemoveCabinDown();
+                }
+            else if(event.isTypeOf(moveCabinUp.moveCabinUp_Ascenseur_id))
+                {
+                    res = StopTakemoveCabinUp();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int UpTakebraked() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("6");
+            Up_exit();
+            //#[ transition 6 
+            sendCabinBrakedToController();
+            //#]
+            Stop_entDef();
+            animInstance().notifyTransitionEnded("6");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Up_enter() {
+            animInstance().notifyStateEntered("ROOT.Up");
+            rootState_subState = Up;
+            rootState_active = Up;
+            UpEnter();
+        }
+        
+        //## statechart_method 
+        public void Up_entDef() {
+            Up_enter();
+        }
+        
+        //## statechart_method 
+        public int StopTakesendFloorAndCloseDoor() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
+            Stop_exit();
+            //#[ transition 2 
+            sendInfoToControllerSys();
+            //#]
+            sentInfo_entDef();
+            animInstance().notifyTransitionEnded("2");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Stop_enter() {
+            animInstance().notifyStateEntered("ROOT.Stop");
+            rootState_subState = Stop;
+            rootState_active = Stop;
+            StopEnter();
+        }
+        
+        //## statechart_method 
+        public int Up_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(braked.braked_Ascenseur_id))
+                {
+                    res = UpTakebraked();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
+            rootStateEnter();
+        }
+        
+        //## statechart_method 
+        public void rootStateEnter() {
+        }
+        
+        //## statechart_method 
+        public int sentInfoTakemoveCabinDown() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
+            sentInfo_exit();
+            //#[ transition 3 
+            sendMovedDownToController();
+            //#]
+            Down_entDef();
+            animInstance().notifyTransitionEnded("3");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Down_exit() {
+            DownExit();
+            animInstance().notifyStateExited("ROOT.Down");
+        }
+        
+        //## statechart_method 
+        public void sentInfoEnter() {
+        }
+        
+        //## statechart_method 
+        public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
+            Stop_entDef();
+            animInstance().notifyTransitionEnded("0");
+        }
+        
+        //## statechart_method 
+        public void StopEnter() {
+        }
+        
+        //## statechart_method 
+        public void sentInfo_exit() {
+            sentInfoExit();
+            animInstance().notifyStateExited("ROOT.sentInfo");
+        }
+        
+        //## statechart_method 
+        public int StopTakemoveCabinDown() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("4");
+            Stop_exit();
+            //#[ transition 4 
+            sendMovedDownToController();
+            //#]
+            Down_entDef();
+            animInstance().notifyTransitionEnded("4");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void rootStateExit() {
+        }
+        
+        //## statechart_method 
+        public void Down_enter() {
+            animInstance().notifyStateEntered("ROOT.Down");
+            rootState_subState = Down;
+            rootState_active = Down;
+            DownEnter();
+        }
+        
+        //## statechart_method 
+        public void sentInfo_entDef() {
+            sentInfo_enter();
+        }
+        
+        //## statechart_method 
+        public void Stop_exit() {
+            StopExit();
+            animInstance().notifyStateExited("ROOT.Stop");
+        }
+        
+        //## statechart_method 
+        public int Down_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(braked.braked_Ascenseur_id))
+                {
+                    res = DownTakebraked();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int DownTakebraked() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            Down_exit();
+            //#[ transition 1 
+            sendCabinBrakedToController();
+            //#]
+            Stop_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void DownExit() {
+        }
+        
+        //## statechart_method 
+        public void sentInfo_enter() {
+            animInstance().notifyStateEntered("ROOT.sentInfo");
+            rootState_subState = sentInfo;
+            rootState_active = sentInfo;
+            sentInfoEnter();
+        }
+        
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
+        }
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
+        }
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return Cabin.this.animInstance(); 
+        }
+        
+    }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClassCabin; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+        msg.add("Set_Button", Set_Button);
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+        msg.add("itsWinch", false, true, itsWinch);
+        msg.add("itsControllerSys", false, true, itsControllerSys);
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(Cabin.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            Cabin.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            Cabin.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
+}
+/*********************************************************************
+	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Cabin.java
+*********************************************************************/
+
