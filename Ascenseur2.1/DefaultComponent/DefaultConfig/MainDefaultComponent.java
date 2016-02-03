@@ -32,12 +32,13 @@ public class MainDefaultComponent {
       // Registering Events 
       try {
         
+            Class.forName("Ascenseur.arrive");
             Class.forName("Ascenseur.braked");
             Class.forName("Ascenseur.cabinArrived");
-            Class.forName("Ascenseur.cabinGone");
             Class.forName("Ascenseur.CloseDoor");
             Class.forName("Ascenseur.continueToMove");
             Class.forName("Ascenseur.detected");
+            Class.forName("Ascenseur.doneTask");
             Class.forName("Ascenseur.goDown");
             Class.forName("Ascenseur.GoSleep");
             Class.forName("Ascenseur.gotoOpenDoorDirectly");
@@ -59,7 +60,6 @@ public class MainDefaultComponent {
             Class.forName("Ascenseur.sendMessage");
             Class.forName("Ascenseur.stop");
             Class.forName("Ascenseur.stopFromController");
-            Class.forName("Ascenseur.TimeoutOrArrive");
             Class.forName("Ascenseur.toM");
             Class.forName("Ascenseur.toMeasure");
     

@@ -62,6 +62,8 @@ public class Sensor implements RiJStateConcept, Animated {
     
     protected int rootState_active;		//## ignore 
     
+    public static final int Sensor_Timeout_Detected_id = 1;		//## ignore 
+    
     
     //## statechart_method 
     public RiJThread getThread() {
@@ -501,9 +503,9 @@ public class Sensor implements RiJStateConcept, Animated {
         //## statechart_method 
         public int Detected_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(cabinGone.cabinGone_Ascenseur_id))
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
                 {
-                    res = DetectedTakecabinGone();
+                    res = DetectedTakeRiJTimeout();
                 }
             
             return res;
@@ -519,6 +521,7 @@ public class Sensor implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void DetectedEnter() {
+            itsRiJThread.schedTimeout(1, Sensor_Timeout_Detected_id, this, "ROOT.Detected");
         }
         
         //## statechart_method 
@@ -571,6 +574,20 @@ public class Sensor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int DetectedTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Sensor_Timeout_Detected_id)
+                {
+                    animInstance().notifyTransitionStarted("2");
+                    Detected_exit();
+                    Idle_entDef();
+                    animInstance().notifyTransitionEnded("2");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
         public int Detecting_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(toMeasure.toMeasure_Ascenseur_id))
@@ -604,18 +621,8 @@ public class Sensor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int DetectedTakecabinGone() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
-            Detected_exit();
-            Idle_entDef();
-            animInstance().notifyTransitionEnded("2");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
         public void DetectedExit() {
+            itsRiJThread.unschedTimeout(Sensor_Timeout_Detected_id, this);
         }
         
         //## statechart_method 

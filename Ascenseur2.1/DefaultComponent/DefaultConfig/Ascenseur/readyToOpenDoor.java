@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event readyToOpenDoor() 
 public class readyToOpenDoor extends RiJEvent implements AnimatedEvent {
     
-    public static final int readyToOpenDoor_Ascenseur_id = 2641;		//## ignore 
+    public static final int readyToOpenDoor_Ascenseur_id = 2639;		//## ignore 
     
     
     // Constructors

@@ -53,6 +53,8 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     
     protected int rootState_active;		//## ignore 
     
+    public static final int Button_ex_Timeout_On_id = 1;		//## ignore 
+    
     
     //## statechart_method 
     public RiJThread getThread() {
@@ -313,17 +315,6 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int OnTakeTimeoutOrArrive() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            On_exit();
-            Off_entDef();
-            animInstance().notifyTransitionEnded("1");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
         public void Off_enter() {
             animInstance().notifyStateEntered("ROOT.Off");
             rootState_subState = Off;
@@ -354,16 +345,32 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public int On_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(TimeoutOrArrive.TimeoutOrArrive_Ascenseur_id))
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
                 {
-                    res = OnTakeTimeoutOrArrive();
+                    res = OnTakeRiJTimeout();
+                }
+            else if(event.isTypeOf(arrive.arrive_Ascenseur_id))
+                {
+                    res = OnTakearrive();
                 }
             
             return res;
         }
         
         //## statechart_method 
+        public int OnTakearrive() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            On_exit();
+            Off_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void OnExit() {
+            itsRiJThread.unschedTimeout(Button_ex_Timeout_On_id, this);
         }
         
         //## statechart_method 
@@ -383,7 +390,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("2");
             Off_exit();
             //#[ transition 2 
-            getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor, params.direction));
+            getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
             //#]
             On_entDef();
             animInstance().notifyTransitionEnded("2");
@@ -394,6 +401,20 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public void Off_entDef() {
             Off_enter();
+        }
+        
+        //## statechart_method 
+        public int OnTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Button_ex_Timeout_On_id)
+                {
+                    animInstance().notifyTransitionStarted("3");
+                    On_exit();
+                    Off_entDef();
+                    animInstance().notifyTransitionEnded("3");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
         }
         
         //## statechart_method 
@@ -434,6 +455,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         
         //## statechart_method 
         public void OnEnter() {
+            itsRiJThread.schedTimeout(5, Button_ex_Timeout_On_id, this, "ROOT.On");
         }
         
         //## statechart_method 

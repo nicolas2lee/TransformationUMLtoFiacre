@@ -24,23 +24,21 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## package Ascenseur 
 
 
-//## event receiveFromButton_Ex(int,String) 
+//## event receiveFromButton_Ex(int) 
 public class receiveFromButton_Ex extends RiJEvent implements AnimatedEvent {
     
-    public static final int receiveFromButton_Ex_Ascenseur_id = 2635;		//## ignore 
+    public static final int receiveFromButton_Ex_Ascenseur_id = 2633;		//## ignore 
     
     public int requestedFloor;
-    public String requestedDirection;
     
     // Constructors
     
     public  receiveFromButton_Ex() {
         lId = receiveFromButton_Ex_Ascenseur_id;
     }
-    public  receiveFromButton_Ex(int p_requestedFloor, String p_requestedDirection) {
+    public  receiveFromButton_Ex(int p_requestedFloor) {
         lId = receiveFromButton_Ex_Ascenseur_id;
         requestedFloor = p_requestedFloor;
-        requestedDirection = p_requestedDirection;
     }
     
     public boolean isTypeOf(long id) {
@@ -64,12 +62,10 @@ public class receiveFromButton_Ex extends RiJEvent implements AnimatedEvent {
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
           msg.add("requestedFloor", requestedFloor);
-          msg.add("requestedDirection", requestedDirection);
     }
     public String toString() {
           String s="receiveFromButton_Ex(";      
           s += "requestedFloor=" + AnimInstance.animToString(requestedFloor) + " ";
-          s += "requestedDirection=" + AnimInstance.animToString(requestedDirection) + " ";
           s += ")";
           return s;
     }

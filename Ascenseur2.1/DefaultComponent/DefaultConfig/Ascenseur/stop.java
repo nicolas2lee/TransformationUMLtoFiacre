@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event stop() 
 public class stop extends RiJEvent implements AnimatedEvent {
     
-    public static final int stop_Ascenseur_id = 2625;		//## ignore 
+    public static final int stop_Ascenseur_id = 2623;		//## ignore 
     
     
     // Constructors

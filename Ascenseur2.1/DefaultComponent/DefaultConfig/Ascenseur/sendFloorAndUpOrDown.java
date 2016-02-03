@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event sendFloorAndUpOrDown() 
 public class sendFloorAndUpOrDown extends RiJEvent implements AnimatedEvent {
     
-    public static final int sendFloorAndUpOrDown_Ascenseur_id = 2632;		//## ignore 
+    public static final int sendFloorAndUpOrDown_Ascenseur_id = 2630;		//## ignore 
     
     
     // Constructors

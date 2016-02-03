@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event readyToGo() 
 public class readyToGo extends RiJEvent implements AnimatedEvent {
     
-    public static final int readyToGo_Ascenseur_id = 2634;		//## ignore 
+    public static final int readyToGo_Ascenseur_id = 2632;		//## ignore 
     
     
     // Constructors

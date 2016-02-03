@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event continueToMove() 
 public class continueToMove extends RiJEvent implements AnimatedEvent {
     
-    public static final int continueToMove_Ascenseur_id = 2645;		//## ignore 
+    public static final int continueToMove_Ascenseur_id = 2643;		//## ignore 
     
     
     // Constructors

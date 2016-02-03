@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event goDown() 
 public class goDown extends RiJEvent implements AnimatedEvent {
     
-    public static final int goDown_Ascenseur_id = 2624;		//## ignore 
+    public static final int goDown_Ascenseur_id = 2622;		//## ignore 
     
     
     // Constructors

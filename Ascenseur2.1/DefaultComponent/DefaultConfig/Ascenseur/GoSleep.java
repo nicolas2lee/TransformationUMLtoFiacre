@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event GoSleep() 
 public class GoSleep extends RiJEvent implements AnimatedEvent {
     
-    public static final int GoSleep_Ascenseur_id = 2620;		//## ignore 
+    public static final int GoSleep_Ascenseur_id = 2619;		//## ignore 
     
     
     // Constructors

@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event moveCabinUp() 
 public class moveCabinUp extends RiJEvent implements AnimatedEvent {
     
-    public static final int moveCabinUp_Ascenseur_id = 2638;		//## ignore 
+    public static final int moveCabinUp_Ascenseur_id = 2636;		//## ignore 
     
     
     // Constructors

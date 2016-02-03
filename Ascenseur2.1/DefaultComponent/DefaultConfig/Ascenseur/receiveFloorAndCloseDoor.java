@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event receiveFloorAndCloseDoor(int) 
 public class receiveFloorAndCloseDoor extends RiJEvent implements AnimatedEvent {
     
-    public static final int receiveFloorAndCloseDoor_Ascenseur_id = 2636;		//## ignore 
+    public static final int receiveFloorAndCloseDoor_Ascenseur_id = 2634;		//## ignore 
     
     public int requestedTargetFloor;
     

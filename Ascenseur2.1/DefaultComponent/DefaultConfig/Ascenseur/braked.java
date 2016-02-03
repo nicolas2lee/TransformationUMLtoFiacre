@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event braked() 
 public class braked extends RiJEvent implements AnimatedEvent {
     
-    public static final int braked_Ascenseur_id = 2630;		//## ignore 
+    public static final int braked_Ascenseur_id = 2628;		//## ignore 
     
     
     // Constructors

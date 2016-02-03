@@ -3,9 +3,9 @@
 	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
-	Model Element	: receive
+	Model Element	: arrive
 //!	Generated Date	: Wed, 3, Feb 2016 
-	File Path	: DefaultComponent/DefaultConfig/Ascenseur/receive.java
+	File Path	: DefaultComponent/DefaultConfig/Ascenseur/arrive.java
 *********************************************************************/
 
 package Ascenseur;
@@ -18,31 +18,31 @@ import com.ibm.rational.rhapsody.oxf.RiJEvent;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Ascenseur/receive.java                                                                  
+// Ascenseur/arrive.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Ascenseur 
 
 
-//## event receive() 
-public class receive extends RiJEvent implements AnimatedEvent {
+//## event arrive() 
+public class arrive extends RiJEvent implements AnimatedEvent {
     
-    public static final int receive_Ascenseur_id = 2626;		//## ignore 
+    public static final int arrive_Ascenseur_id = 2645;		//## ignore 
     
     
     // Constructors
     
-    public  receive() {
-        lId = receive_Ascenseur_id;
+    public  arrive() {
+        lId = arrive_Ascenseur_id;
     }
     
     public boolean isTypeOf(long id) {
-        return (receive_Ascenseur_id==id);
+        return (arrive_Ascenseur_id==id);
     }
     
     //#[ ignore
     /** the animated event proxy */
-    public static AnimEventClass animClass = new AnimEventClass("Ascenseur.receive");
+    public static AnimEventClass animClass = new AnimEventClass("Ascenseur.arrive");
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
          Object obj = null;
@@ -58,7 +58,7 @@ public class receive extends RiJEvent implements AnimatedEvent {
     public void addAttributes(AnimAttributes msg) {      
     }
     public String toString() {
-          String s="receive(";      
+          String s="arrive(";      
           s += ")";
           return s;
     }
@@ -66,6 +66,6 @@ public class receive extends RiJEvent implements AnimatedEvent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Ascenseur/receive.java
+	File Path	: DefaultComponent/DefaultConfig/Ascenseur/arrive.java
 *********************************************************************/
 

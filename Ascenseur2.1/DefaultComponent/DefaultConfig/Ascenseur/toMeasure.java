@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event toMeasure(int,int) 
 public class toMeasure extends RiJEvent implements AnimatedEvent {
     
-    public static final int toMeasure_Ascenseur_id = 2643;		//## ignore 
+    public static final int toMeasure_Ascenseur_id = 2641;		//## ignore 
     
     public int currentFloor;
     public int sensorFloor;

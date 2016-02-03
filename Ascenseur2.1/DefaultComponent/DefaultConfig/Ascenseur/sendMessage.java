@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event sendMessage() 
 public class sendMessage extends RiJEvent implements AnimatedEvent {
     
-    public static final int sendMessage_Ascenseur_id = 2626;		//## ignore 
+    public static final int sendMessage_Ascenseur_id = 2624;		//## ignore 
     
     
     // Constructors

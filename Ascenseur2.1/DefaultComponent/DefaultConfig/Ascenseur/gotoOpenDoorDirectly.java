@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event gotoOpenDoorDirectly() 
 public class gotoOpenDoorDirectly extends RiJEvent implements AnimatedEvent {
     
-    public static final int gotoOpenDoorDirectly_Ascenseur_id = 2642;		//## ignore 
+    public static final int gotoOpenDoorDirectly_Ascenseur_id = 2640;		//## ignore 
     
     
     // Constructors

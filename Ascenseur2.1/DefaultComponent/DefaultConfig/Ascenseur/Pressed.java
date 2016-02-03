@@ -24,23 +24,21 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## package Ascenseur 
 
 
-//## event Pressed(int,String) 
+//## event Pressed(int) 
 public class Pressed extends RiJEvent implements AnimatedEvent {
     
     public static final int Pressed_Ascenseur_id = 2616;		//## ignore 
     
     public int requestFloor;
-    public String direction;
     
     // Constructors
     
     public  Pressed() {
         lId = Pressed_Ascenseur_id;
     }
-    public  Pressed(int p_requestFloor, String p_direction) {
+    public  Pressed(int p_requestFloor) {
         lId = Pressed_Ascenseur_id;
         requestFloor = p_requestFloor;
-        direction = p_direction;
     }
     
     public boolean isTypeOf(long id) {
@@ -64,12 +62,10 @@ public class Pressed extends RiJEvent implements AnimatedEvent {
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
           msg.add("requestFloor", requestFloor);
-          msg.add("direction", direction);
     }
     public String toString() {
           String s="Pressed(";      
           s += "requestFloor=" + AnimInstance.animToString(requestFloor) + " ";
-          s += "direction=" + AnimInstance.animToString(direction) + " ";
           s += ")";
           return s;
     }
