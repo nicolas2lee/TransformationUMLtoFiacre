@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Pressed
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Pressed.java
 *********************************************************************/
 
@@ -29,7 +29,7 @@ public class Pressed extends RiJEvent implements AnimatedEvent {
     
     public static final int Pressed_Ascenseur_id = 2616;		//## ignore 
     
-    public int currentFloor;
+    public int requestFloor;
     public String direction;
     
     // Constructors
@@ -37,9 +37,9 @@ public class Pressed extends RiJEvent implements AnimatedEvent {
     public  Pressed() {
         lId = Pressed_Ascenseur_id;
     }
-    public  Pressed(int p_currentFloor, String p_direction) {
+    public  Pressed(int p_requestFloor, String p_direction) {
         lId = Pressed_Ascenseur_id;
-        currentFloor = p_currentFloor;
+        requestFloor = p_requestFloor;
         direction = p_direction;
     }
     
@@ -63,12 +63,12 @@ public class Pressed extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
-          msg.add("currentFloor", currentFloor);
+          msg.add("requestFloor", requestFloor);
           msg.add("direction", direction);
     }
     public String toString() {
           String s="Pressed(";      
-          s += "currentFloor=" + AnimInstance.animToString(currentFloor) + " ";
+          s += "requestFloor=" + AnimInstance.animToString(requestFloor) + " ";
           s += "direction=" + AnimInstance.animToString(direction) + " ";
           s += ")";
           return s;

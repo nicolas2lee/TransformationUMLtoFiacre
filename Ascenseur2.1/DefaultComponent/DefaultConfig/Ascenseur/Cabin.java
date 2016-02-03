@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Cabin
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Cabin.java
 *********************************************************************/
 
@@ -200,24 +200,6 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         //#[ operation sendCabinBrakedToController() 
         System.out.println("send cabin braked to controller system");  
         getP_cab_con().gen (new braked());
-        //#]
-        }
-        finally {
-            animInstance().notifyMethodExit();
-        }
-        
-    }
-    
-    //## operation sendInfoToControllerSys() 
-    public void sendInfoToControllerSys() {
-        try {
-            animInstance().notifyMethodEntered("sendInfoToControllerSys",
-               new ArgData[] {
-               });
-        
-        //#[ operation sendInfoToControllerSys() 
-        System.out.println("Send floor to controller system");  
-        getP_cab_con().gen (new receiveFloorAndCloseDoor());
         //#]
         }
         finally {
@@ -643,11 +625,12 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         
         //## statechart_method 
         public int StopTakesendFloorAndCloseDoor() {
+            sendFloorAndCloseDoor params = (sendFloorAndCloseDoor) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("2");
             Stop_exit();
             //#[ transition 2 
-            sendInfoToControllerSys();
+            getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));
             //#]
             sentInfo_entDef();
             animInstance().notifyTransitionEnded("2");

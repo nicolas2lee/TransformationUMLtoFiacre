@@ -5,13 +5,69 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 4;
+		- size = 7;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 0;
 				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 78;
+				- m_nTop = 78;
+				- m_nRight = 1041;
+				- m_nBottom = 493;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Ascenseur.sbs";
+				- _subsystem = "Ascenseur";
+				- _class = "Button_ex";
+				- _name = "StatechartDiagram";
+				- _id = GUID 3d0536d5-378c-4f21-93b2-dabd1bb4dab3;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 926 355 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 2;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 26;
+				- m_nTop = 26;
+				- m_nRight = 1067;
+				- m_nBottom = 441;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Ascenseur.sbs";
+				- _subsystem = "Ascenseur";
+				- _class = "Cabin";
+				- _name = "StatechartDiagram";
+				- _id = GUID 27c9c5ef-72b3-41cd-8ddf-6b46dda9b3bd;
+			}
+			- _UpLeft = 0 70 ;
+			- _DownRight = 1004 425 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 4;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -30,10 +86,10 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID ec63a17e-639c-44f5-be9e-e4a19662be6e;
 			}
-			- _UpLeft = -3 0 ;
-			- _DownRight = 725 259 ;
+			- _UpLeft = -46 0 ;
+			- _DownRight = 1315 685 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 2;
+			- m_nDiagramIndex = 6;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -44,38 +100,38 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -31;
-				- m_nLeft = 0;
-				- m_nTop = 0;
-				- m_nRight = 665;
-				- m_nBottom = 338;
+				- m_nLeft = 130;
+				- m_nTop = 130;
+				- m_nRight = 1211;
+				- m_nBottom = 465;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
-				- _m2Class = "IDiagram";
+				- _m2Class = "IStateChartDiagram";
 				- _filename = "Ascenseur.sbs";
 				- _subsystem = "Ascenseur";
-				- _class = "";
-				- _name = "InstanceClsDiag";
-				- _id = GUID f8c66818-f1d6-4356-ac41-683dcbf56098;
+				- _class = "Door";
+				- _name = "StatechartDiagram";
+				- _id = GUID 8d9231e3-20af-4ea8-8f95-81b4f40ef3be;
 			}
-			- _UpLeft = 0 109 ;
-			- _DownRight = 628 387 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1044 275 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 3;
+			- m_nDiagramIndex = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -31;
-				- m_nLeft = 26;
-				- m_nTop = 26;
-				- m_nRight = 791;
-				- m_nBottom = 345;
+				- m_nLeft = 182;
+				- m_nTop = 182;
+				- m_nRight = 1145;
+				- m_nBottom = 597;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -87,7 +143,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _id = GUID 98b0efb9-610d-47e4-b862-55d7dccde199;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 774 551 ;
+			- _DownRight = 926 335 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
@@ -117,10 +173,38 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 			- _UpLeft = 0 0 ;
 			- _DownRight = 576 350 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 0;
+			- m_nDiagramIndex = 5;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 52;
+				- m_nTop = 52;
+				- m_nRight = 1015;
+				- m_nBottom = 467;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Ascenseur.sbs";
+				- _subsystem = "Ascenseur";
+				- _class = "Winch";
+				- _name = "StatechartDiagram";
+				- _id = GUID a1416477-c6ac-4977-b1e4-39c206dfc643;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 926 355 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 3;
 		}
 	}
-	- _fullName = "U:\\semestre5\\uv5.1\\uml\\Ascenseur2.1\\Ascenseur2.1";
+	- _fullName = "U:\\semestre5\\uv5.1\\AcenseurUML2Fiacre\\TransformationUMLtoFiacre\\Ascenseur2.1\\Ascenseur2.1";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}

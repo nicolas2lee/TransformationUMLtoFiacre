@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Button_ex
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Button_ex.java
 *********************************************************************/
 
@@ -41,10 +41,6 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     public Reactive reactive;		//## ignore 
     
     protected Button_ex.p_btn_con_C p_btn_con;		//## ignore 
-    
-    protected int down;		//## attribute down 
-    
-    protected int up;		//## attribute up 
     
     protected ControllerSys itsControllerSys;		//## link itsControllerSys 
     
@@ -161,26 +157,6 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     //## auto_generated 
     public void deleteP_btn_con() {
         p_btn_con=null;
-    }
-    
-    //## auto_generated 
-    public int getDown() {
-        return down;
-    }
-    
-    //## auto_generated 
-    public void setDown(int p_down) {
-        down = p_down;
-    }
-    
-    //## auto_generated 
-    public int getUp() {
-        return up;
-    }
-    
-    //## auto_generated 
-    public void setUp(int p_up) {
-        up = p_up;
     }
     
     //## auto_generated 
@@ -407,7 +383,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("2");
             Off_exit();
             //#[ transition 2 
-            getP_btn_con().gen(new receiveFromButton_Ex(params.currentFloor, params.direction));
+            getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor, params.direction));
             //#]
             On_entDef();
             animInstance().notifyTransitionEnded("2");
@@ -547,8 +523,6 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
-        msg.add("up", up);
-        msg.add("down", down);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {

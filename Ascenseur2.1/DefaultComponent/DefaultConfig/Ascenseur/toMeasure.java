@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: toMeasure
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/toMeasure.java
 *********************************************************************/
 
@@ -24,16 +24,23 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## package Ascenseur 
 
 
-//## event toMeasure() 
+//## event toMeasure(int,int) 
 public class toMeasure extends RiJEvent implements AnimatedEvent {
     
     public static final int toMeasure_Ascenseur_id = 2643;		//## ignore 
     
+    public int currentFloor;
+    public int sensorFloor;
     
     // Constructors
     
     public  toMeasure() {
         lId = toMeasure_Ascenseur_id;
+    }
+    public  toMeasure(int p_currentFloor, int p_sensorFloor) {
+        lId = toMeasure_Ascenseur_id;
+        currentFloor = p_currentFloor;
+        sensorFloor = p_sensorFloor;
     }
     
     public boolean isTypeOf(long id) {
@@ -56,9 +63,13 @@ public class toMeasure extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
+          msg.add("currentFloor", currentFloor);
+          msg.add("sensorFloor", sensorFloor);
     }
     public String toString() {
           String s="toMeasure(";      
+          s += "currentFloor=" + AnimInstance.animToString(currentFloor) + " ";
+          s += "sensorFloor=" + AnimInstance.animToString(sensorFloor) + " ";
           s += ")";
           return s;
     }

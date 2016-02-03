@@ -3,9 +3,9 @@
 	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
-	Model Element	: CloseDoor
+	Model Element	: toM
 //!	Generated Date	: Wed, 3, Feb 2016 
-	File Path	: DefaultComponent/DefaultConfig/Ascenseur/CloseDoor.java
+	File Path	: DefaultComponent/DefaultConfig/Ascenseur/toM.java
 *********************************************************************/
 
 package Ascenseur;
@@ -18,31 +18,31 @@ import com.ibm.rational.rhapsody.oxf.RiJEvent;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Ascenseur/CloseDoor.java                                                                  
+// Ascenseur/toM.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Ascenseur 
 
 
-//## event CloseDoor() 
-public class CloseDoor extends RiJEvent implements AnimatedEvent {
+//## event toM() 
+public class toM extends RiJEvent implements AnimatedEvent {
     
-    public static final int CloseDoor_Ascenseur_id = 2619;		//## ignore 
+    public static final int toM_Ascenseur_id = 2644;		//## ignore 
     
     
     // Constructors
     
-    public  CloseDoor() {
-        lId = CloseDoor_Ascenseur_id;
+    public  toM() {
+        lId = toM_Ascenseur_id;
     }
     
     public boolean isTypeOf(long id) {
-        return (CloseDoor_Ascenseur_id==id);
+        return (toM_Ascenseur_id==id);
     }
     
     //#[ ignore
     /** the animated event proxy */
-    public static AnimEventClass animClass = new AnimEventClass("Ascenseur.CloseDoor");
+    public static AnimEventClass animClass = new AnimEventClass("Ascenseur.toM");
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
          Object obj = null;
@@ -58,7 +58,7 @@ public class CloseDoor extends RiJEvent implements AnimatedEvent {
     public void addAttributes(AnimAttributes msg) {      
     }
     public String toString() {
-          String s="CloseDoor(";      
+          String s="toM(";      
           s += ")";
           return s;
     }
@@ -66,6 +66,6 @@ public class CloseDoor extends RiJEvent implements AnimatedEvent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Ascenseur/CloseDoor.java
+	File Path	: DefaultComponent/DefaultConfig/Ascenseur/toM.java
 *********************************************************************/
 

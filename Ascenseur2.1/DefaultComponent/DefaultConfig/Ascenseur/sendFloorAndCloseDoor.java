@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: sendFloorAndCloseDoor
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/sendFloorAndCloseDoor.java
 *********************************************************************/
 
@@ -24,16 +24,21 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## package Ascenseur 
 
 
-//## event sendFloorAndCloseDoor() 
+//## event sendFloorAndCloseDoor(int) 
 public class sendFloorAndCloseDoor extends RiJEvent implements AnimatedEvent {
     
     public static final int sendFloorAndCloseDoor_Ascenseur_id = 2631;		//## ignore 
     
+    public int targetFloor;
     
     // Constructors
     
     public  sendFloorAndCloseDoor() {
         lId = sendFloorAndCloseDoor_Ascenseur_id;
+    }
+    public  sendFloorAndCloseDoor(int p_targetFloor) {
+        lId = sendFloorAndCloseDoor_Ascenseur_id;
+        targetFloor = p_targetFloor;
     }
     
     public boolean isTypeOf(long id) {
@@ -56,9 +61,11 @@ public class sendFloorAndCloseDoor extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
+          msg.add("targetFloor", targetFloor);
     }
     public String toString() {
           String s="sendFloorAndCloseDoor(";      
+          s += "targetFloor=" + AnimInstance.animToString(targetFloor) + " ";
           s += ")";
           return s;
     }

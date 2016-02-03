@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Ascenseur
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Ascenseur_pkgClass.java
 *********************************************************************/
 
@@ -36,6 +36,12 @@ public class Ascenseur_pkgClass {
     public static Sensor itsSensor;		//## classInstance itsSensor 
     
     public static Sensor itsSensor_1;		//## classInstance itsSensor_1 
+    
+    public static Sensor itsSensor_2;		//## classInstance itsSensor_2 
+    
+    public static Sensor itsSensor_3;		//## classInstance itsSensor_3 
+    
+    public static Sensor itsSensor_4;		//## classInstance itsSensor_4 
     
     public static Winch itsWinch;		//## classInstance itsWinch 
     
@@ -83,6 +89,18 @@ public class Ascenseur_pkgClass {
             {
                 AnimServices.setInstanceName(itsSensor_1, "itsSensor_1");
             }
+        if(itsSensor_2 != null)
+            {
+                AnimServices.setInstanceName(itsSensor_2, "itsSensor_2");
+            }
+        if(itsSensor_3 != null)
+            {
+                AnimServices.setInstanceName(itsSensor_3, "itsSensor_3");
+            }
+        if(itsSensor_4 != null)
+            {
+                AnimServices.setInstanceName(itsSensor_4, "itsSensor_4");
+            }
     }
     
     //## auto_generated 
@@ -93,6 +111,9 @@ public class Ascenseur_pkgClass {
         itsDoor = new Door(p_thread);
         itsSensor = new Sensor(p_thread);
         itsSensor_1 = new Sensor(p_thread);
+        itsSensor_2 = new Sensor(p_thread);
+        itsSensor_3 = new Sensor(p_thread);
+        itsSensor_4 = new Sensor(p_thread);
         itsWinch = new Winch(p_thread);
         {
             
@@ -150,11 +171,38 @@ public class Ascenseur_pkgClass {
         }
         {
             
-            itsSensor_1.getP_sen_con_1().setItsDefaultRequiredInterface(itsControllerSys.getP_con_sen().getItsDefaultProvidedInterface());
+            itsSensor_1.getP_sen_con_1().setItsDefaultRequiredInterface(itsControllerSys.getP_con_sen_1().getItsDefaultProvidedInterface());
             
         }{
             
-            itsControllerSys.getP_con_sen().setItsDefaultRequiredInterface(itsSensor_1.getP_sen_con_1().getItsDefaultProvidedInterface());
+            itsControllerSys.getP_con_sen_1().setItsDefaultRequiredInterface(itsSensor_1.getP_sen_con_1().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsControllerSys.getP_con_sen_2().setItsDefaultRequiredInterface(itsSensor_2.getP_sen_con_2().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsSensor_2.getP_sen_con_2().setItsDefaultRequiredInterface(itsControllerSys.getP_con_sen_2().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsControllerSys.getP_con_sen_3().setItsDefaultRequiredInterface(itsSensor_3.getP_sen_con_3().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsSensor_3.getP_sen_con_3().setItsDefaultRequiredInterface(itsControllerSys.getP_con_sen_3().getItsDefaultProvidedInterface());
+            
+        }
+        {
+            
+            itsSensor_4.getP_sen_con_4().setItsDefaultRequiredInterface(itsControllerSys.getP_con_sen_4().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsControllerSys.getP_con_sen_4().setItsDefaultRequiredInterface(itsSensor_4.getP_sen_con_4().getItsDefaultProvidedInterface());
             
         }
         renameGlobalInstances();
@@ -169,6 +217,9 @@ public class Ascenseur_pkgClass {
         done &= itsDoor.startBehavior();
         done &= itsSensor.startBehavior();
         done &= itsSensor_1.startBehavior();
+        done &= itsSensor_2.startBehavior();
+        done &= itsSensor_3.startBehavior();
+        done &= itsSensor_4.startBehavior();
         done &= itsWinch.startBehavior();
         return done;
     }

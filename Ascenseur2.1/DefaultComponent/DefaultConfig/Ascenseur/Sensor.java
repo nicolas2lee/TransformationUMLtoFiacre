@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Sensor
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Sensor.java
 *********************************************************************/
 
@@ -41,6 +41,16 @@ public class Sensor implements RiJStateConcept, Animated {
     protected Sensor.p_sen_con_C p_sen_con;		//## ignore 
     
     protected Sensor.p_sen_con_1_C p_sen_con_1;		//## ignore 
+    
+    protected Sensor.p_sen_con_2_C p_sen_con_2;		//## ignore 
+    
+    protected Sensor.p_sen_con_3_C p_sen_con_3;		//## ignore 
+    
+    protected Sensor.p_sen_con_4_C p_sen_con_4;		//## ignore 
+    
+    protected int cabinFloor;		//## attribute cabinFloor 
+    
+    protected int floor;		//## attribute floor 
     
     //#[ ignore 
     public static final int RiJNonState=0;
@@ -163,6 +173,147 @@ public class Sensor implements RiJStateConcept, Animated {
         p_sen_con_1=null;
     }
     
+    //## auto_generated 
+    public Sensor.p_sen_con_2_C getP_sen_con_2() {
+        return p_sen_con_2;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_2_C get_p_sen_con_2() {
+        return p_sen_con_2;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_2_C newP_sen_con_2() {
+        p_sen_con_2 = new Sensor.p_sen_con_2_C();
+        return p_sen_con_2;
+    }
+    
+    //## auto_generated 
+    public void deleteP_sen_con_2() {
+        p_sen_con_2=null;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_3_C getP_sen_con_3() {
+        return p_sen_con_3;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_3_C get_p_sen_con_3() {
+        return p_sen_con_3;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_3_C newP_sen_con_3() {
+        p_sen_con_3 = new Sensor.p_sen_con_3_C();
+        return p_sen_con_3;
+    }
+    
+    //## auto_generated 
+    public void deleteP_sen_con_3() {
+        p_sen_con_3=null;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_4_C getP_sen_con_4() {
+        return p_sen_con_4;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_4_C get_p_sen_con_4() {
+        return p_sen_con_4;
+    }
+    
+    //## auto_generated 
+    public Sensor.p_sen_con_4_C newP_sen_con_4() {
+        p_sen_con_4 = new Sensor.p_sen_con_4_C();
+        return p_sen_con_4;
+    }
+    
+    //## auto_generated 
+    public void deleteP_sen_con_4() {
+        p_sen_con_4=null;
+    }
+    
+    //## operation checkArrived() 
+    public void checkArrived() {
+        try {
+            animInstance().notifyMethodEntered("checkArrived",
+               new ArgData[] {
+               });
+        
+        //#[ operation checkArrived() 
+        System.out.println("floor is "+floor+" cabinFloor is "+cabinFloor);
+        if (floor == cabinFloor)  {
+        	gen(new cabinArrived());
+        }else{ 
+        	try {
+            	Thread.sleep(1000);                 //1000 milliseconds is one second.
+        	} catch(InterruptedException ex) {
+        	    Thread.currentThread().interrupt();
+        	}
+        	checkSensorFloor(floor);
+        }
+        
+        
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * @param sensorFloor
+    */
+    //## operation checkSensorFloor(int) 
+    public void checkSensorFloor(int sensorFloor) {
+        try {
+            animInstance().notifyMethodEntered("checkSensorFloor",
+               new ArgData[] {
+                   new ArgData(int.class, "sensorFloor", AnimInstance.animToString(sensorFloor))
+               });
+        
+        //#[ operation checkSensorFloor(int) 
+        
+        
+        switch(sensorFloor){
+        case 0: getP_sen_con().gen(new continueToMove());   
+        		break; 
+        case 1: getP_sen_con_1().gen(new  continueToMove());   
+        		break;   
+        case 2: getP_sen_con_2().gen(new  continueToMove());   
+        		break; 
+        case 3: getP_sen_con_3().gen(new  continueToMove());   
+        		break;  
+        case 4: getP_sen_con_4().gen(new  continueToMove());   
+        		break;
+        
+        }           
+        /*
+        switch(sensorFloor){
+        case 0: return getP_sen_con();   
+        		//break; 
+        case 1: return getP_sen_con_1();   
+        		//break;   
+        case 2: return getP_sen_con_2();   
+        		//break; 
+        case 3: return getP_sen_con_3();   
+        		//break;  
+        case 4:return getP_sen_con_4();   
+        		//break;             
+        } */
+        
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
     //## operation sendCabinArrived() 
     public void sendCabinArrived() {
         try {
@@ -171,7 +322,20 @@ public class Sensor implements RiJStateConcept, Animated {
                });
         
         //#[ operation sendCabinArrived() 
-        getP_sen_con().gen(new detected());
+        //checkSensorFloor(floor).gen(new detected());    
+        switch(floor){
+        case 0: getP_sen_con().gen(new detected());   
+        		break; 
+        case 1: getP_sen_con_1().gen(new detected());   
+        		break;   
+        case 2: getP_sen_con_2().gen(new detected());   
+        		break; 
+        case 3: getP_sen_con_3().gen(new detected());   
+        		break;  
+        case 4: getP_sen_con_4().gen(new detected());   
+        		break;
+        
+        }
         //#]
         }
         finally {
@@ -181,13 +345,42 @@ public class Sensor implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
+    public int getCabinFloor() {
+        return cabinFloor;
+    }
+    
+    //## auto_generated 
+    public void setCabinFloor(int p_cabinFloor) {
+        cabinFloor = p_cabinFloor;
+    }
+    
+    //## auto_generated 
+    public int getFloor() {
+        return floor;
+    }
+    
+    //## auto_generated 
+    public void setFloor(int p_floor) {
+        floor = p_floor;
+    }
+    
+    //## auto_generated 
     protected void initRelations(RiJThread p_thread) {
         p_sen_con = newP_sen_con();
         p_sen_con_1 = newP_sen_con_1();
+        p_sen_con_2 = newP_sen_con_2();
+        p_sen_con_3 = newP_sen_con_3();
+        p_sen_con_4 = newP_sen_con_4();
         if(getP_sen_con() != null)
            getP_sen_con().connectSensor(this);
         if(getP_sen_con_1() != null)
            getP_sen_con_1().connectSensor(this);
+        if(getP_sen_con_2() != null)
+           getP_sen_con_2().connectSensor(this);
+        if(getP_sen_con_3() != null)
+           getP_sen_con_3().connectSensor(this);
+        if(getP_sen_con_4() != null)
+           getP_sen_con_4().connectSensor(this);
     }
     
     //## auto_generated 
@@ -380,7 +573,11 @@ public class Sensor implements RiJStateConcept, Animated {
         //## statechart_method 
         public int Detecting_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(cabinArrived.cabinArrived_Ascenseur_id))
+            if(event.isTypeOf(toMeasure.toMeasure_Ascenseur_id))
+                {
+                    res = DetectingTaketoMeasure();
+                }
+            else if(event.isTypeOf(cabinArrived.cabinArrived_Ascenseur_id))
                 {
                     res = DetectingTakecabinArrived();
                 }
@@ -435,15 +632,36 @@ public class Sensor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int DetectingTaketoMeasure() {
+            toMeasure params = (toMeasure) event;
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("4");
+            Detecting_exit();
+            //#[ transition 4 
+            cabinFloor=params.currentFloor; 
+            checkArrived();
+            //#]
+            Detecting_entDef();
+            animInstance().notifyTransitionEnded("4");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void Detecting_entDef() {
             Detecting_enter();
         }
         
         //## statechart_method 
         public int IdleTaketoMeasure() {
+            toMeasure params = (toMeasure) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("0");
             Idle_exit();
+            //#[ transition 0 
+            floor=params.sensorFloor;
+            cabinFloor=params.currentFloor;
+            //#]
             Detecting_entDef();
             animInstance().notifyTransitionEnded("0");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -566,6 +784,87 @@ public class Sensor implements RiJStateConcept, Animated {
         }
         
     }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_sen_con_2_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_sen_con_2_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectSensor(Sensor) 
+        public void connectSensor(Sensor part) {
+            //#[ operation connectSensor(Sensor) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_sen_con_3_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_sen_con_3_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectSensor(Sensor) 
+        public void connectSensor(Sensor part) {
+            //#[ operation connectSensor(Sensor) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class p_sen_con_4_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  p_sen_con_4_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectSensor(Sensor) 
+        public void connectSensor(Sensor part) {
+            //#[ operation connectSensor(Sensor) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
+        }
+        
+    }
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
@@ -591,6 +890,8 @@ public class Sensor implements RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
+        msg.add("floor", floor);
+        msg.add("cabinFloor", cabinFloor);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {

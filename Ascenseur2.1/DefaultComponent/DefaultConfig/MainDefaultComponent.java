@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: zhengta
+	Login		: guoxi
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Tue, 2, Feb 2016 
+//!	Generated Date	: Wed, 3, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
 *********************************************************************/
 
@@ -36,6 +36,7 @@ public class MainDefaultComponent {
             Class.forName("Ascenseur.cabinArrived");
             Class.forName("Ascenseur.cabinGone");
             Class.forName("Ascenseur.CloseDoor");
+            Class.forName("Ascenseur.continueToMove");
             Class.forName("Ascenseur.detected");
             Class.forName("Ascenseur.goDown");
             Class.forName("Ascenseur.GoSleep");
@@ -59,6 +60,7 @@ public class MainDefaultComponent {
             Class.forName("Ascenseur.stop");
             Class.forName("Ascenseur.stopFromController");
             Class.forName("Ascenseur.TimeoutOrArrive");
+            Class.forName("Ascenseur.toM");
             Class.forName("Ascenseur.toMeasure");
     
         // Registering Static Classes 
