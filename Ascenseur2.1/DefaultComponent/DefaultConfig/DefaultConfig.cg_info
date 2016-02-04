@@ -20,7 +20,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "DefaultComponent\\DefaultConfig";
 	- _id = GUID d7093f2b-9b60-4d04-9b49-e314d28638e0;
 }
-- genTime = 2.3.2016::20:56:51;
+- genTime = 2.4.2016::8:54:44;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Ascenseur.sbs";
@@ -47,7 +47,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	- _name = "Ascenseur";
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 }
-- genTime = 2.3.2016::20:56:44;
+- genTime = 2.4.2016::8:54:44;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Ascenseur.sbs";
