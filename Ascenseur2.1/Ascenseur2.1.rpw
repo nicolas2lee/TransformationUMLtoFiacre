@@ -10,8 +10,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -30,8 +30,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "AnimatedInit0BtnEx3Cabin1";
 				- _id = GUID b8fe3bda-204c-423e-b0e7-f581391f4ad4;
 			}
-			- _UpLeft = 0 6091 ;
-			- _DownRight = 3099 7392 ;
+			- _UpLeft = 0 5626 ;
+			- _DownRight = 4498 6759 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}
@@ -87,15 +87,15 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _id = GUID 8d9231e3-20af-4ea8-8f95-81b4f40ef3be;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1036 273 ;
+			- _DownRight = 1044 275 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -115,7 +115,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _id = GUID 69ee69ef-af59-4712-b598-8e69f22fcf2e;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 576 350 ;
+			- _DownRight = 801 597 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 3;
 		}
