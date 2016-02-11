@@ -58,15 +58,18 @@
     <genClasses ecoreClass="td1.ecore#//Guard">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Guard/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Guard/Body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Guard/codeFiacre"/>
     </genClasses>
     <genClasses ecoreClass="td1.ecore#//Trigger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Trigger/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Trigger/Body"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td1.ecore#//Trigger/arguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Trigger/codeFiacre"/>
     </genClasses>
     <genClasses ecoreClass="td1.ecore#//Action">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Action/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Action/Body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Action/codeFiacre"/>
     </genClasses>
     <genClasses ecoreClass="td1.ecore#//Port">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//Port/Name"/>
