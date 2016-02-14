@@ -1,0 +1,7 @@
+[#package genFiacre]
+
+[#template public generateFiacre(class: fiacreMM.Process, pack: fiacreMM.Program)]
+[#file]genrated/${pack}.fcr[/#file]
+
+
+[/#template]

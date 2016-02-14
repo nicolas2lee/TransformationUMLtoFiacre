@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fiacre" nsURI="http://www.mdworkbench.com/fiacre" nsPrefix="fiacre">
+  <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EModelElement">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+    <eOperations name="StateInvariant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ECharacterObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
+        eType="#//Transition" eOpposite="#//Transition/state"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EModelElement">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" upperBound="-1"
+        eType="#//State" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
+        eType="#//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
+        eType="#//Variable" eOpposite="#//Variable/process"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ECharacterObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EModelElement">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+    <eOperations name="Guard"/>
+    <eOperations name="Trigger"/>
+    <eOperations name="Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" upperBound="-1"
+        eType="#//State" eOpposite="#//State/transition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EModelElement">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EModelElement">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" upperBound="-1"
+        eType="#//Process" eOpposite="#//Process/variable"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ECharacterObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+        eType="#//Component" eOpposite="#//Component/variable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Init" eSuperTypes="#//State">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+    <eOperations name="Assignment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EModelElement">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" upperBound="-1"
+        eType="#//Process" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
+        eType="#//Variable" eOpposite="#//Variable/component"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ECharacterObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EModelElement">
+    <eAnnotations source="http://www.sodius.com/metamodels/MDWProperties">
+      <details key="logicalPackage" value="td1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
+        eType="#//Variable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" upperBound="-1"
+        eType="#//Process" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration name="NavTest.main">
+  <classpath file="NavTest.main_1450097695554.classpath"/>
+  <entryPoint ruleSet="genFiacre.toFiacre" rule="main">
+    <arguments>
+      <argument connectorName="Rhapsody On-Demand" uri=""/>
+      <argument connectorName="" uri=""/>
+    </arguments>
+  </entryPoint>
+  <report file="U:\rhapsody\.metadata\.plugins\com.sodius.mdw.platform.rdt.ui\NavTest.main_1450097695589.report"/>
+  <options directory="U:\rhapsody\genFiacreModel" forceOverwrite="false"/>
+</configuration>

@@ -1,0 +1,111 @@
+/**
+ */
+package com.sodius.mdw.metamodel.fiacremm;
+
+import com.sodius.mdw.core.model.emf.MDWEObject;
+
+import org.eclipse.emf.ecore.EModelElement;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Guard</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.Guard#getName <em>Name</em>}</li>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.Guard#getBody <em>Body</em>}</li>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.Guard#getCodeFiacre <em>Code Fiacre</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage#getGuard()
+ * @model annotation="http://www.sodius.com/metamodels/MDWProperties logicalPackage='td1'"
+ * @extends MDWEObject
+ * @generated
+ */
+public interface Guard extends MDWEObject, EModelElement
+{
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * The default value is <code>""</code>.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage#getGuard_Name()
+   * @model default=""
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link com.sodius.mdw.metamodel.fiacremm.Guard#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Body</b></em>' attribute.
+   * The default value is <code>""</code>.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Body</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Body</em>' attribute.
+   * @see #setBody(String)
+   * @see com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage#getGuard_Body()
+   * @model default=""
+   * @generated
+   */
+  String getBody();
+
+  /**
+   * Sets the value of the '{@link com.sodius.mdw.metamodel.fiacremm.Guard#getBody <em>Body</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Body</em>' attribute.
+   * @see #getBody()
+   * @generated
+   */
+  void setBody(String value);
+
+  /**
+   * Returns the value of the '<em><b>Code Fiacre</b></em>' attribute.
+   * The default value is <code>""</code>.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Code Fiacre</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Code Fiacre</em>' attribute.
+   * @see #setCodeFiacre(String)
+   * @see com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage#getGuard_CodeFiacre()
+   * @model default=""
+   * @generated
+   */
+  String getCodeFiacre();
+
+  /**
+   * Sets the value of the '{@link com.sodius.mdw.metamodel.fiacremm.Guard#getCodeFiacre <em>Code Fiacre</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Code Fiacre</em>' attribute.
+   * @see #getCodeFiacre()
+   * @generated
+   */
+  void setCodeFiacre(String value);
+
+} // Guard

@@ -1,0 +1,25 @@
+[#package generateProcess]
+
+
+[#template public genProcess(process : fiacreMM.Process)]
+	Process ${process.Name} [#include genPortArgs(process)] [#include genArgs(process)]
+		
+		is
+		[#include genStateDecl(process)]
+		[#include genVarDecl(process)]
+		init
+		[#foreach v in process.variables]
+			${v.Name} := ${v.initVal};
+		[/#foreach]
+			to ${process.initState}
+		
+		[#foreach state : fiacreMM.State in process.states]
+			from ${state.Name}
+			[#foreach t : fiacreMM.Transition in state.outTransitions]
+				${t.action.body}
+				${t.action.codeFiacre}
+				to ${t.target}
+			[/#foreach]
+		[/#foreach]
+
+[/#template]

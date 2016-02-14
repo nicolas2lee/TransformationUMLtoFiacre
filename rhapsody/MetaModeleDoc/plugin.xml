@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://metaDoc/1.2/metaDoc.ecore" 
+       class = "com.sodius.mdw.metamodel.metadoc.MetaDocPackage"
+       genModel = "metamodel/metaDoc.genmodel" /> 
+  </extension>
+
+	 <extension point="com.sodius.mdw.core.metamodel">
+	</extension>
+</plugin>

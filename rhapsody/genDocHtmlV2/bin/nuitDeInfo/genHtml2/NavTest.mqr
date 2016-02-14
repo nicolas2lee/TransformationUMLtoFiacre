@@ -1,0 +1,41 @@
+package nuitDeInfo.genHtml2;
+
+import com.sodius.mdw.metamodel.rhapsody.*;
+
+public ruleset NavTest( in model : rhapsody ) {
+
+	entry rule main() {
+		var proj = model.getInstances("Project");
+		//System.out.println("test");
+		foreach (aproj : rhapsody.Project in proj ) {
+			System.out.println("Nom du projet : " +  proj.name );
+		}
+				
+		var appliPackages = proj.packages;
+		foreach ( aPack in  appliPackages ) {
+			
+			if ( aPack.name == "Default" ) {
+				var umlClasses = aPack.classes;
+				System.out.println("Nom de Paquetage : " + aPack.name   );
+				$genIndexClasses_nuitDeInfo( aPack );
+				foreach ( aClass in  umlClasses ) {
+					System.out.println("	Nom de classe : " + aClass.name   );
+					System.out.println(aClass.statechart.allTriggers);
+					System.out.println(aClass.operations);
+//					@appelSousregle( aClass );
+					$genHtml_nuitDeInfo( aClass , aPack );
+				}
+			}
+		}
+		
+	}
+
+
+//	private rule main::appelSousRegle( aClass : rhapsody.Class ) {
+//
+//	
+//	}
+
+
+
+}

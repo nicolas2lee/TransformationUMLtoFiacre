@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;metaModel2Doc&apos;" deleteContents="false" description="Delete resource &apos;metaModel2Doc&apos;" element1="/metaModel2Doc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1449197203099"/>&#x0A;<refactoring comment="Delete resource &apos;MetaModeleDoc&apos;" deleteContents="false" description="Delete resource &apos;MetaModeleDoc&apos;" element1="/MetaModeleDoc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1449197206926"/>
+</session>

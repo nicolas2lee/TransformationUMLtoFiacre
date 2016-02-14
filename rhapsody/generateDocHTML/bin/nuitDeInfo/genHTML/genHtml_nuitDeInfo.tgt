@@ -1,0 +1,69 @@
+[#package nuitDeInfo.genHTML]
+
+[#template public genHtml_nuitDeInfo( class : rhapsody.Class , pack : rhapsody.Package )]
+[#file]generated/${class.name}.html[/#file]
+<html>
+<title> Doc pour la classe ${class.name}
+</title> 
+<body TEXT="#000000" BGCOLOR="#FFFFCC" LINK="#0000FF" VLINK="#FF0000" ALINK="#FF0000" >
+<hr>
+
+<H1> Classe : ${class.name} </H1>
+[#if class.isActive]
+	<b> Classe Active </b>
+	<br><br>
+[/#if]
+Description de la classe :
+${class.description}
+<br>
+<hr>
+<br>
+[#-- Attributes declaration --]
+<hr>
+ <H2> Attributs de la classe ${class.name}  </H2>
+[#foreach attr : rhapsody.Attribute in class.attributes]
+    <H3> ${attr.type.name} ${attr.name}  </H3>
+    ${attr.description}
+[/#foreach]
+<hr>
+ [#-- Statecharts declaration --]
+<hr>
+ <H2> Statechart de la classe ${class.name}  </H2>
+ 	
+    <H3> Nom de statechart : ${class.statechart.name} </H3>
+    <hr>
+    <ul>
+    
+    [#foreach element : rhapsody.ModelElement in class.statechart.references.elementsInDiagram]
+    	
+    	[#if ( element.metaClass == "State" )]
+    		[#if ( element.name != "ROOT" )]
+    			<li><H4> Nom d'état : ${element}</H4></li>
+    		[/#if]
+    	[#elseif ( element.metaClass == "Transition" )]
+    	
+    		<li><H4> Nom de transition : ${element}</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> ${element.source} </font> au état <font color="red">${element.target}</font></H5></li>
+    		[#if (element.trigger.operation!=null)]
+				<li> <H5>  Nom de tigger : <font color="blue">${element.trigger.operation.name} </font></H5></li>
+			[/#if]
+			[#if (element.guard.body!=null)]
+				<li> <H5> Nom de guard : <font color="blue">${element.guard.body} </font></H5></li>
+			[/#if]			
+			[#if (element.action.body!=null)]
+				<li> <H5> Nom d'action : <font color="blue">${element.action.body} </font></H5></li>
+			[/#if]
+    		</ul>
+    		</li>
+    	[/#if]    	
+	[/#foreach]
+	</ul>
+	<hr>
+<br>
+<br>
+<a href="${pack.name}.html"> Retour vers l'index du paquetage </a>
+
+</body>
+</html>
+[/#template]

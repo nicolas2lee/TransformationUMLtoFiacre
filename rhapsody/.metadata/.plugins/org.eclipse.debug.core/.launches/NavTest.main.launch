@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="com.sodius.mdw.ide.ui.MDWApplication">
+<booleanAttribute key="com.sodius.mdw.ide.IS_GENERATION_ATTR" value="false"/>
+<booleanAttribute key="com.sodius.mdw.ide.IS_RULE_ATTR" value="true"/>
+<stringAttribute key="com.sodius.mdw.ide.MAIN_ELEMENT_ATTR" value="generateFiacreMain.toFiacre.main"/>
+<listAttribute key="com.sodius.mdw.ide.PARAMETERS_ATTR">
+<listEntry value="mdw:model:Rhapsody Application (no graphics)||in"/>
+<listEntry value="mdw:model:XMI 2.1|${project_loc:umlToFiacre1.0}\generated\outputFiacre.xmi|out"/>
+</listAttribute>
+<intAttribute key="com.sodius.mdw.ide.TEMPLATE_PARAMETER_COUNT_ATTR" value="2"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/umlToFiacre1.0"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="umlToFiacre1.1"/>
+</launchConfiguration>

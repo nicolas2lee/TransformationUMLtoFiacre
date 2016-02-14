@@ -1,0 +1,21 @@
+[#package NavTestPackage]
+
+[#template public genIndexClasses( pack : rhapsody.Package )]
+[#file]generated/${pack.name}.html[/#file]
+<html>
+<title> Index des classes pour le paquetage ${pack.name}
+<title> 
+<body TEXT="#000000" BGCOLOR="#FFFFCC" LINK="#0000FF" VLINK="#FF0000" ALINK="#FF0000" >
+<hr>
+
+<H1> Index des classes du paquetage : ${pack.name} </H1>
+<hr>
+<br>
+[#foreach classe : rhapsody.Class in pack.classes]
+    <H2> <a href="${classe.name}.html"> La classe ${classe.name} </a></H2>
+    ${classe.description}
+[/#foreach]
+
+</body>
+</html>
+[/#template]

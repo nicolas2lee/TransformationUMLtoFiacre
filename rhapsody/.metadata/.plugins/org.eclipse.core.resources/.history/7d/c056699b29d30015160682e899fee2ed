@@ -1,0 +1,18 @@
+[#package generateUtile]
+
+[#template public handleEndComma(set,SIZE)]
+
+[#set nbElement = 0]
+[#foreach element in set]
+	[#if SIZE==0]
+		${element.Name}
+	[#else]
+		[#if nbElement == SIZE-1]
+			${element.Name}
+		[#else]
+			${element.Name},
+			[#set nbElement = nbElement+1]
+		[/#if]
+	[/#if]
+[/#foreach]
+[/#template]

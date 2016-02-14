@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: MetaModeleDoc;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: MetaModeleDoc_1.0.0.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: com.sodius.mdw.metamodel.metadoc,
+ com.sodius.mdw.metamodel.metadoc.impl,
+ com.sodius.mdw.metamodel.metadoc.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.sodius.mdw.core;visibility:=reexport
+Ant-Version: Apache Ant 1.7.0
+Created-By: 1.6.0_02-b06 (Sun Microsystems Inc.)
+Eclipse-LazyStart: true

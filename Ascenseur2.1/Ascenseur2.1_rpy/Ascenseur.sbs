@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 	- _myState = 8192;
 	- _name = "Ascenseur";
-	- _modifiedTimeWeak = 2.6.2016::14:53:35;
+	- _modifiedTimeWeak = 2.14.2016::15:3:11;
 	- _lastID = 10;
 	- Declaratives = { IRPYRawContainer 
 		- size = 5;
@@ -27777,7 +27777,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 		}
 	}
-	- weakCGTime = 2.6.2016::14:53:35;
+	- weakCGTime = 2.14.2016::15:3:11;
 	- strongCGTime = 2.3.2016::14:22:12;
 	- _defaultComposite = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 	- _eventsBaseID = 2616;
@@ -27788,8 +27788,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 2.3.2016::20:58:46;
-			- weakCGTime = 2.3.2016::20:58:46;
+			- _modifiedTimeWeak = 2.6.2016::14:53:35;
+			- weakCGTime = 2.6.2016::14:53:35;
 			- strongCGTime = 2.3.2016::14:22:12;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -28245,13 +28245,13 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- _name = "Button_ex";
-			- _modifiedTimeWeak = 2.3.2016::20:55:4;
+			- _modifiedTimeWeak = 2.14.2016::15:3:11;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 6;
-			- weakCGTime = 2.3.2016::20:55:4;
+			- weakCGTime = 2.14.2016::15:3:11;
 			- strongCGTime = 11.23.2015::16:13:41;
 			- Ports = { IRPYRawContainer 
 				- size = 1;
@@ -28334,9 +28334,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _id = GUID 1f5b14c3-b876-4d37-9092-66f1f9118789;
 					- _myState = 10240;
 					- _name = "statechart_2";
-					- _modifiedTimeWeak = 2.3.2016::20:55:4;
+					- _modifiedTimeWeak = 2.14.2016::15:3:11;
 					- _lastID = 6;
-					- weakCGTime = 2.3.2016::20:55:4;
+					- weakCGTime = 2.14.2016::15:3:11;
 					- strongCGTime = 11.16.2015::15:26:58;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -28393,7 +28393,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 599ea035-0701-4b32-916e-9de3c632ebdd;
 							- _myState = 2048;
 							- _name = "transition_4";
-							- _modifiedTimeWeak = 2.3.2016::20:55:4;
+							- _modifiedTimeWeak = 2.14.2016::15:3:11;
 							- _itsLabel = { ILabel 
 								- _id = GUID d129fba7-584b-499f-a72e-abf7db186038;
 								- _modifiedTimeWeak = 2.3.2016::20:55:4;
@@ -28542,8 +28542,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.3.2016::20:55:4;
-							- _lastModifiedTime = "2.3.2016::20:55:4";
+							- _modifiedTimeWeak = 2.14.2016::15:3:11;
+							- _lastModifiedTime = "2.14.2016::15:3:11";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 887751fe-fec3-4c0f-9c2d-f55152c41387;
 								- m_type = 0;

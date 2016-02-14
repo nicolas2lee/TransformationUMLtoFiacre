@@ -1,0 +1,89 @@
+<html>
+<title> Doc pour la classe VictimeEtTemoins
+</title> 
+<body TEXT="#000000" BGCOLOR="#FFFFCC" LINK="#0000FF" VLINK="#FF0000" ALINK="#FF0000" >
+<hr>
+
+<H1> Classe : VictimeEtTemoins </H1>
+Description de la classe :
+
+<br>
+<hr>
+<br>
+<hr>
+ <H2> Attributs de la classe VictimeEtTemoins  </H2>
+<hr>
+<hr>
+ <H2> Statechart de la classe VictimeEtTemoins  </H2>
+ 	
+    <H3> Nom de statechart : statechart_1 </H3>
+    <hr>
+    <ul>
+    
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    			<li><H4> Nom d'état : EnSecurite</H4></li>
+    	
+    			<li><H4> Nom d'état : Prevenir</H4></li>
+    	
+    			<li><H4> Nom d'état : EnDangereux</H4></li>
+    	
+    			<li><H4> Nom d'état : Mort</H4></li>
+    	
+    			<li><H4> Nom d'état : Intervenu</H4></li>
+    	
+    	
+    	
+    		<li><H4> Nom de transition : 1</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> EnSecurite </font> au état <font color="red">EnDangereux</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">apparaitreAccident </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 2</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> EnDangereux </font> au état <font color="red">Prevenir</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">appelUrgence </font></H5></li>
+				<li> <H5> Nom d'action : <font color="blue">appelAuCentreOperation(); </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 3</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> Intervenu </font> au état <font color="red">EnSecurite</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">sauverReussi </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 4</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> Intervenu </font> au état <font color="red">Mort</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">echouerOrdre </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 5</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> Prevenir </font> au état <font color="red">Intervenu</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">intervenirDeSauver </font></H5></li>
+				<li> <H5> Nom d'action : <font color="blue">envoyerInfoDetaille(); </font></H5></li>
+    		</ul>
+    		</li>
+	</ul>
+	<hr>
+<br>
+<br>
+<a href="Default.html"> Retour vers l'index du paquetage </a>
+
+</body>
+</html>

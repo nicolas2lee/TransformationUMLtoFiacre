@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:metaDoc="http://metaDoc/1.2/metaDoc.ecore">
+  <metaDoc:ModelDoc name="Td1" tableIndex="/1">
+    <sections name="Index" type="Package">
+      <subSections name="hello_0" type="Class">
+        <paragraph text="int attribute_hello"/>
+      </subSections>
+      <subSections name="class_1" type="Class">
+        <paragraph text="int attribute_1"/>
+        <paragraph text="Operation_1, void Operation_1(), system.out.println(&quot; beer! &quot;);"/>
+      </subSections>
+      <subSections name="class_2" type="Class">
+        <paragraph text="int attribute_2"/>
+      </subSections>
+      <subSections name="class_3" type="Class">
+        <paragraph text="ROOT"/>
+        <paragraph text="state_0"/>
+        <paragraph text="state_1"/>
+        <paragraph text="state_2"/>
+        <paragraph text="terminationstate_4"/>
+        <paragraph text="0"/>
+        <paragraph text="dht"/>
+        <paragraph text="mk"/>
+        <paragraph text="asd"/>
+        <paragraph text="1"/>
+        <paragraph text="2"/>
+      </subSections>
+    </sections>
+  </metaDoc:ModelDoc>
+  <metaDoc:TableOfContents firstLevel="/0/@sections.0" secondLevel="/0/@sections.0/@subSections.0 /0/@sections.0/@subSections.1 /0/@sections.0/@subSections.2 /0/@sections.0/@subSections.3"/>
+</xmi:XMI>

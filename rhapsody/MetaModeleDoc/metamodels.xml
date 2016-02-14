@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metamodel id="metaDoc" name="MetaDoc" version="1.2" presentationName="MetaDoc 1.2">
+  <provider class="com.sodius.mdw.corext.model.emf.EMFMetamodelProvider">
+    <property name="epackage" value="com.sodius.mdw.metamodel.metadoc.MetaDocPackage"/>
+  </provider>
+  <modelReader name="XMI" uriType="file" class="com.sodius.mdw.core.model.emf.EMFXMIModelReader">
+    <fileExtension description="XMI files" extension="xmi"/>
+    <fileExtension description="XML files" extension="xml"/>
+  </modelReader>
+  <modelWriter name="XMI 2.1" uriType="file" class="com.sodius.mdw.core.model.emf.EMFXMIModelWriter">
+    <property name="xmiVersion" value="2.1"/>
+    <fileExtension description="XMI files" extension="xmi"/>
+    <fileExtension description="XML files" extension="xml"/>
+  </modelWriter>
+</metamodel>

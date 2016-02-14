@@ -1,0 +1,6 @@
+[#package generateProcess]
+
+[#template public genPortArgs()]
+[#file]file.txt[/#file]
+generated text
+[/#template]

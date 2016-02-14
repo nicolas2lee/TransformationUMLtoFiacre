@@ -1,0 +1,37 @@
+[#package NavTestPackage]
+
+[#template public genHtml( class : rhapsody.Class , pack : rhapsody.Package )]
+[#file]generated/${class.name}.html[/#file]
+<html>
+<title> Doc pour la classe ${class.name}
+<title> 
+<body TEXT="#000000" BGCOLOR="#FFFFCC" LINK="#0000FF" VLINK="#FF0000" ALINK="#FF0000" >
+<hr>
+
+<H1> Classe : ${class.name} </H1>
+[#if class.isActive]
+	<b> Classe Active </b>
+	<br><br>
+[/#if]
+Description de la classe :
+${class.description}
+<br>
+<hr>
+<br>
+[#-- Attributes declaration --]
+<hr>
+ <H2> Attributs de la classe fuck ${class.name}  </H2>
+[#foreach attr : rhapsody.Attribute in class.attributes]
+    <H3> ${attr.type.name} ${attr.name}  </H3>
+    ${attr.description}
+[/#foreach]
+<hr>
+
+
+<br>
+<br>
+<a href="${pack.name}.html"> Retour vers l'index du paquetage </a>
+
+</body>
+</html>
+[/#template]

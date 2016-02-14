@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/myFiacre/src" modelPluginID="myFiacre" modelName="Fiacre"
+    rootExtendsInterface="com.sodius.mdw.core.model.emf.MDWEObject" rootExtendsClass="com.sodius.mdw.corext.model.emf.DefaultMDWEObject"
+    importerID="com.sodius.mdw.platform.model.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false" runtimeVersion="2.4">
+  <foreignModel>file:/U:/semestre5/uv5.1/eclipse_folder/Td1/model/td1.ecore</foreignModel>
+  <modelPluginVariables>MDW_CORE=com.sodius.mdw.core</modelPluginVariables>
+  <genPackages prefix="Fiacre" basePackage="com.sodius.mdw.metamodel" disposableProviderFactory="true"
+      ecorePackage="fiacre.ecore#/">
+    <genClasses ecoreClass="fiacre.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fiacre.ecore#//State/ID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacre.ecore#//State/transition"/>
+      <genOperations ecoreOperation="fiacre.ecore#//State/StateInvariant"/>
+    </genClasses>
+    <genClasses ecoreClass="fiacre.ecore#//Process">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacre.ecore#//Process/state"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacre.ecore#//Process/transition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacre.ecore#//Process/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fiacre.ecore#//Process/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="fiacre.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacre.ecore#//Transition/state"/>
+      <genOperations ecoreOperation="fiacre.ecore#//Transition/Guard"/>
+      <genOperations ecoreOperation="fiacre.ecore#//Transition/Trigger"/>
+      <genOperations ecoreOperation="fiacre.ecore#//Transition/Action"/>
+    </genClasses>
+    <genClasses ecoreClass="fiacre.ecore#//DataType"/>
+    <genClasses ecoreClass="fiacre.ecore#//Variable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacre.ecore#//Variable/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacre.ecore#//Variable/process"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fiacre.ecore#//Variable/ID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacre.ecore#//Variable/component"/>
+    </genClasses>
+    <genClasses ecoreClass="fiacre.ecore#//Init">
+      <genOperations ecoreOperation="fiacre.ecore#//Init/Assignment"/>
+    </genClasses>
+    <genClasses ecoreClass="fiacre.ecore#//Component">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacre.ecore#//Component/process"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacre.ecore#//Component/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fiacre.ecore#//Component/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="fiacre.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacre.ecore#//Program/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacre.ecore#//Program/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacre.ecore#//Program/process"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

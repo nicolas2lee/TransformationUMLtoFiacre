@@ -38,8 +38,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -59,7 +59,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _id = GUID 3d0536d5-378c-4f21-93b2-dabd1bb4dab3;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1026 313 ;
+			- _DownRight = 781 561 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
@@ -150,8 +150,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -170,8 +170,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "diagSeqNotion";
 				- _id = GUID fc0b30dd-b567-47b9-8fd7-ee4fdb02ca1e;
 			}
-			- _UpLeft = 0 20 ;
-			- _DownRight = 1224 534 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1608 459 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}

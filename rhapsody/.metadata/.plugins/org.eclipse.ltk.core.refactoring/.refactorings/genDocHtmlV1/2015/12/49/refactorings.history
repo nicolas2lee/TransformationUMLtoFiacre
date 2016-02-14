@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;genDocHtmlV2/src/nuitDeInfo.genHtml2&apos;&#x0D;&#x0A;- Original project: &apos;genDocHtmlV1&apos;&#x0D;&#x0A;- Destination element: &apos;genDocHtmlV2/src/nuitDeInfo.genHtml2&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     genIndexClasses_nuitDeInfo.tgt&#x0D;&#x0A;     NavTest.mqr&#x0D;&#x0A;     genHtml_nuitDeInfo.tgt" description="Copy files" destination="=genDocHtmlV2/src&lt;nuitDeInfo.genHtml2" element1="src/nuitDeInfo/genHtml1/genIndexClasses_nuitDeInfo.tgt" element2="src/nuitDeInfo/genHtml1/NavTest.mqr" element3="src/nuitDeInfo/genHtml1/genHtml_nuitDeInfo.tgt" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1449201283299" units="0" version="1.0"/>
+</session>

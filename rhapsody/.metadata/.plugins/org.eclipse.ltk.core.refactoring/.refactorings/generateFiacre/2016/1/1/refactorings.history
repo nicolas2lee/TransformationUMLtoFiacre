@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;genToFiacre&apos; to &apos;genF/src&apos;&#x0D;&#x0A;- Original project: &apos;generateFiacre&apos;&#x0D;&#x0A;- Destination element: &apos;genF/src&apos;&#x0D;&#x0A;- Original element: &apos;generateFiacre/src/genToFiacre&apos;" description="Copy package" destination="=genF/src" element1="/src&lt;genToFiacre" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1451919972273" version="1.0"/>
+</session>

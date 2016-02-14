@@ -1,0 +1,46 @@
+package genFiacre;
+
+import com.sodius.mdw.metamodel.rhapsody.*;
+
+public ruleset toFiacre(in model : rhapsody, out fiacreModel : fiacreMM) {
+
+	entry rule main() {
+		var proj = model.getInstances("Project");
+		var program : fiacreMM.Program = fiacreModel.create( "Program" );
+		var appliPackages = proj.packages;
+		
+		//System.out.println("Nom du paquetage : " +  proj.packages.name );
+		foreach ( aPack in  appliPackages ) {
+			
+			if ( aPack.name == "Ascenseur" ) {
+				program = aPack;
+				System.out.println("Nom de Paquetage : " + program  );
+				
+				//var state : fiacreMM.Program = fiacreModel.create( "Program" );
+				var classes = aPack.classes;
+				var process : fiacreMM.Process = fiacreModel.create( "Process" );
+
+				foreach ( aClass in  classes ) {
+					process = aClass.statechart;
+					System.out.println("Nom de Processus : " + process  );
+					
+					var stateUml = aClass.statechart.references[0].elementsInDiagram;
+					var stateF : fiacreMM.Process = fiacreModel.create( "State" );
+					foreach (element in stateUml ){
+						if (element.metaClass == "State" && element.name != "ROOT" ){
+							//System.out.println(element);
+							stateF = element;
+							System.out.println(stateF);
+						}
+					}
+					
+					/*
+					System.out.println("trigger :" + aClass.statechart.allTriggers);
+					System.out.println("operation :" + aClass.operations+ "\n");
+//					@appelSousregle( aClass );
+					$generateFiacre( aClass , aPack );*/
+				}
+			}
+		}
+	}
+}

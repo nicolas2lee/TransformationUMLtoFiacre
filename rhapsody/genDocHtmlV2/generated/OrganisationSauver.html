@@ -1,0 +1,88 @@
+<html>
+<title> Doc pour la classe OrganisationSauver
+</title> 
+<body TEXT="#000000" BGCOLOR="#FFFFCC" LINK="#0000FF" VLINK="#FF0000" ALINK="#FF0000" >
+<hr>
+
+<H1> Classe : OrganisationSauver </H1>
+Description de la classe :
+
+<br>
+<hr>
+<br>
+<hr>
+ <H2> Attributs de la classe OrganisationSauver  </H2>
+<hr>
+<hr>
+ <H2> Statechart de la classe OrganisationSauver  </H2>
+ 	
+    <H3> Nom de statechart : statechart_4 </H3>
+    <hr>
+    <ul>
+    
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    			<li><H4> Nom d'état : Attent</H4></li>
+    	
+    			<li><H4> Nom d'état : EnMission</H4></li>
+    	
+    			<li><H4> Nom d'état : demandePlusRessource</H4></li>
+    	
+    	
+    	
+    		<li><H4> Nom de transition : 1</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> EnMission </font> au état <font color="red">Attent</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">validerMission </font></H5></li>
+				<li> <H5> Nom d'action : <font color="blue">envoyerValiderVersCentreEtVictime(); </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 2</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> EnMission </font> au état <font color="red">demandePlusRessource</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">demanderAide </font></H5></li>
+				<li> <H5> Nom d'action : <font color="blue">demanderAideACentre(); </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 3</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> EnMission </font> au état <font color="red">Attent</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">echouerMission </font></H5></li>
+				<li> <H5> Nom d'action : <font color="blue">envoyerEchecVersCentreEtVictime(); </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 4</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> Attent </font> au état <font color="red">EnMission</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">intervenirAVictime </font></H5></li>
+				<li> <H5> Nom d'action : <font color="blue">intervenirAccident(); </font></H5></li>
+    		</ul>
+    		</li>
+    	
+    	
+    		<li><H4> Nom de transition : 5</H4>
+    		<ul>
+    		<li><H5>Vennat d'état <font color="red"> demandePlusRessource </font> au état <font color="red">EnMission</font></H5></li>
+				<li> <H5>  Nom de tigger : <font color="blue">plusRessources </font></H5></li>
+				<li> <H5> Nom d'action : <font color="blue">envoyerRecuVersCentre(); </font></H5></li>
+    		</ul>
+    		</li>
+	</ul>
+	<hr>
+<br>
+<br>
+<a href="Default.html"> Retour vers l'index du paquetage </a>
+
+</body>
+</html>

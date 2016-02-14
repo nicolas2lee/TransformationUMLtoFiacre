@@ -1,0 +1,376 @@
+/**
+ */
+package com.sodius.mdw.metamodel.fiacremm.impl;
+
+import com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage;
+import com.sodius.mdw.metamodel.fiacremm.State;
+import com.sodius.mdw.metamodel.fiacremm.Transition;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import com.sodius.mdw.core.model.emf.MDWEList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import com.sodius.mdw.corext.model.emf.DefaultMDWEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import com.sodius.mdw.corext.model.emf.MDWEObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>State</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.StateImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.StateImpl#getOutTransitions <em>Out Transitions</em>}</li>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.StateImpl#getInTransitions <em>In Transitions</em>}</li>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.StateImpl#getProcess <em>Process</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class StateImpl extends DefaultMDWEObject implements State
+{
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = "";
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getOutTransitions() <em>Out Transitions</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOutTransitions()
+   * @generated
+   * @ordered
+   */
+  protected MDWEList<Transition> outTransitions;
+
+  /**
+   * The cached value of the '{@link #getInTransitions() <em>In Transitions</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInTransitions()
+   * @generated
+   * @ordered
+   */
+  protected MDWEList<Transition> inTransitions;
+
+  /**
+   * The cached value of the '{@link #getProcess() <em>Process</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProcess()
+   * @generated
+   * @ordered
+   */
+  protected com.sodius.mdw.metamodel.fiacremm.Process process;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected StateImpl()
+  {
+    super();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass()
+  {
+    return FiacreMMPackage.Literals.STATE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FiacreMMPackage.STATE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MDWEList<Transition> getOutTransitions()
+  {
+    if (outTransitions == null)
+    {
+      outTransitions = new MDWEObjectWithInverseResolvingEList<Transition>(Transition.class, this, FiacreMMPackage.STATE__OUT_TRANSITIONS, FiacreMMPackage.TRANSITION__SOURCE);
+    }
+    return outTransitions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MDWEList<Transition> getInTransitions()
+  {
+    if (inTransitions == null)
+    {
+      inTransitions = new MDWEObjectWithInverseResolvingEList<Transition>(Transition.class, this, FiacreMMPackage.STATE__IN_TRANSITIONS, FiacreMMPackage.TRANSITION__TARGET);
+    }
+    return inTransitions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public com.sodius.mdw.metamodel.fiacremm.Process getProcess()
+  {
+    if (process != null && process.eIsProxy())
+    {
+      InternalEObject oldProcess = (InternalEObject)process;
+      process = (com.sodius.mdw.metamodel.fiacremm.Process)eResolveProxy(oldProcess);
+      if (process != oldProcess)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FiacreMMPackage.STATE__PROCESS, oldProcess, process));
+      }
+    }
+    return process;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public com.sodius.mdw.metamodel.fiacremm.Process basicGetProcess()
+  {
+    return process;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProcess(com.sodius.mdw.metamodel.fiacremm.Process newProcess, NotificationChain msgs)
+  {
+    com.sodius.mdw.metamodel.fiacremm.Process oldProcess = process;
+    process = newProcess;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FiacreMMPackage.STATE__PROCESS, oldProcess, newProcess);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProcess(com.sodius.mdw.metamodel.fiacremm.Process newProcess)
+  {
+    if (newProcess != process)
+    {
+      NotificationChain msgs = null;
+      if (process != null)
+        msgs = ((InternalEObject)process).eInverseRemove(this, FiacreMMPackage.PROCESS__INIT_STATE, com.sodius.mdw.metamodel.fiacremm.Process.class, msgs);
+      if (newProcess != null)
+        msgs = ((InternalEObject)newProcess).eInverseAdd(this, FiacreMMPackage.PROCESS__INIT_STATE, com.sodius.mdw.metamodel.fiacremm.Process.class, msgs);
+      msgs = basicSetProcess(newProcess, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FiacreMMPackage.STATE__PROCESS, newProcess, newProcess));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case FiacreMMPackage.STATE__OUT_TRANSITIONS:
+        return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutTransitions()).basicAdd(otherEnd, msgs);
+      case FiacreMMPackage.STATE__IN_TRANSITIONS:
+        return ((InternalEList<InternalEObject>)(InternalEList<?>)getInTransitions()).basicAdd(otherEnd, msgs);
+      case FiacreMMPackage.STATE__PROCESS:
+        if (process != null)
+          msgs = ((InternalEObject)process).eInverseRemove(this, FiacreMMPackage.PROCESS__INIT_STATE, com.sodius.mdw.metamodel.fiacremm.Process.class, msgs);
+        return basicSetProcess((com.sodius.mdw.metamodel.fiacremm.Process)otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case FiacreMMPackage.STATE__OUT_TRANSITIONS:
+        return ((InternalEList<?>)getOutTransitions()).basicRemove(otherEnd, msgs);
+      case FiacreMMPackage.STATE__IN_TRANSITIONS:
+        return ((InternalEList<?>)getInTransitions()).basicRemove(otherEnd, msgs);
+      case FiacreMMPackage.STATE__PROCESS:
+        return basicSetProcess(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case FiacreMMPackage.STATE__NAME:
+        return getName();
+      case FiacreMMPackage.STATE__OUT_TRANSITIONS:
+        return getOutTransitions();
+      case FiacreMMPackage.STATE__IN_TRANSITIONS:
+        return getInTransitions();
+      case FiacreMMPackage.STATE__PROCESS:
+        if (resolve) return getProcess();
+        return basicGetProcess();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case FiacreMMPackage.STATE__NAME:
+        setName((String)newValue);
+        return;
+      case FiacreMMPackage.STATE__OUT_TRANSITIONS:
+        getOutTransitions().clear();
+        getOutTransitions().addAll((Collection<? extends Transition>)newValue);
+        return;
+      case FiacreMMPackage.STATE__IN_TRANSITIONS:
+        getInTransitions().clear();
+        getInTransitions().addAll((Collection<? extends Transition>)newValue);
+        return;
+      case FiacreMMPackage.STATE__PROCESS:
+        setProcess((com.sodius.mdw.metamodel.fiacremm.Process)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case FiacreMMPackage.STATE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case FiacreMMPackage.STATE__OUT_TRANSITIONS:
+        getOutTransitions().clear();
+        return;
+      case FiacreMMPackage.STATE__IN_TRANSITIONS:
+        getInTransitions().clear();
+        return;
+      case FiacreMMPackage.STATE__PROCESS:
+        setProcess((com.sodius.mdw.metamodel.fiacremm.Process)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case FiacreMMPackage.STATE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case FiacreMMPackage.STATE__OUT_TRANSITIONS:
+        return outTransitions != null && !outTransitions.isEmpty();
+      case FiacreMMPackage.STATE__IN_TRANSITIONS:
+        return inTransitions != null && !inTransitions.isEmpty();
+      case FiacreMMPackage.STATE__PROCESS:
+        return process != null;
+    }
+    return super.eIsSet(featureID);
+  }
+
+} //StateImpl
