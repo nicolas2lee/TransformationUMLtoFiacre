@@ -1,5 +1,0 @@
-[#package generateProcess]
-[#import generateUtile.*]
-[#template public genStateDecl(process : fiacreMM.Process)]
-		states [#include handleEndComma(process.states, process.StateSize)]
-[/#template]

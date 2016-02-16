@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 	- _myState = 8192;
 	- _name = "Ascenseur";
-	- _modifiedTimeWeak = 2.14.2016::15:3:11;
+	- _modifiedTimeWeak = 2.16.2016::21:38:22;
 	- _lastID = 10;
 	- Declaratives = { IRPYRawContainer 
 		- size = 5;
@@ -27777,7 +27777,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 		}
 	}
-	- weakCGTime = 2.14.2016::15:3:11;
+	- weakCGTime = 2.16.2016::21:38:22;
 	- strongCGTime = 2.3.2016::14:22:12;
 	- _defaultComposite = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 	- _eventsBaseID = 2616;
@@ -27788,8 +27788,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 2.6.2016::14:53:35;
-			- weakCGTime = 2.6.2016::14:53:35;
+			- _modifiedTimeWeak = 2.14.2016::15:3:11;
+			- weakCGTime = 2.14.2016::15:3:11;
 			- strongCGTime = 2.3.2016::14:22:12;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -28245,13 +28245,13 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- _name = "Button_ex";
-			- _modifiedTimeWeak = 2.14.2016::15:3:11;
+			- _modifiedTimeWeak = 2.16.2016::21:33:16;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 6;
-			- weakCGTime = 2.14.2016::15:3:11;
+			- weakCGTime = 2.16.2016::21:33:16;
 			- strongCGTime = 11.23.2015::16:13:41;
 			- Ports = { IRPYRawContainer 
 				- size = 1;
@@ -28334,9 +28334,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _id = GUID 1f5b14c3-b876-4d37-9092-66f1f9118789;
 					- _myState = 10240;
 					- _name = "statechart_2";
-					- _modifiedTimeWeak = 2.14.2016::15:3:11;
+					- _modifiedTimeWeak = 2.16.2016::21:33:16;
 					- _lastID = 6;
-					- weakCGTime = 2.14.2016::15:3:11;
+					- weakCGTime = 2.16.2016::21:33:16;
 					- strongCGTime = 11.16.2015::15:26:58;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -28393,7 +28393,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 599ea035-0701-4b32-916e-9de3c632ebdd;
 							- _myState = 2048;
 							- _name = "transition_4";
-							- _modifiedTimeWeak = 2.14.2016::15:3:11;
+							- _modifiedTimeWeak = 2.16.2016::21:33:16;
+							- _description = { IDescription 
+								- _text = "output ! requestFloor;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID d129fba7-584b-499f-a72e-abf7db186038;
 								- _modifiedTimeWeak = 2.3.2016::20:55:4;
@@ -28542,8 +28545,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.14.2016::15:3:11;
-							- _lastModifiedTime = "2.14.2016::15:3:11";
+							- _modifiedTimeWeak = 2.16.2016::21:33:16;
+							- _lastModifiedTime = "2.16.2016::21:33:16";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 887751fe-fec3-4c0f-9c2d-f55152c41387;
 								- m_type = 0;
@@ -29109,13 +29112,13 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- _name = "ControllerSys";
-			- _modifiedTimeWeak = 2.6.2016::14:54:16;
+			- _modifiedTimeWeak = 2.16.2016::21:37:36;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 29;
-			- weakCGTime = 2.6.2016::14:54:16;
+			- weakCGTime = 2.16.2016::21:37:36;
 			- strongCGTime = 11.23.2015::16:13:47;
 			- Ports = { IRPYRawContainer 
 				- size = 9;
@@ -29998,9 +30001,9 @@ getP_con_win().gen(new stop());";
 					- _id = GUID 685901b6-7276-4fd0-a848-77c1829e0e40;
 					- _myState = 10240;
 					- _name = "statechart_1";
-					- _modifiedTimeWeak = 2.3.2016::20:56:15;
+					- _modifiedTimeWeak = 2.16.2016::21:37:36;
 					- _lastID = 29;
-					- weakCGTime = 2.3.2016::20:56:15;
+					- weakCGTime = 2.16.2016::21:37:36;
 					- strongCGTime = 11.16.2015::15:47:32;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -30165,7 +30168,24 @@ destFloor=targetFloor;";
 							- _id = GUID dd4816b8-ef82-4965-aa86-18847e203beb;
 							- _myState = 2048;
 							- _name = "transition_13";
-							- _modifiedTimeWeak = 2.3.2016::20:56:15;
+							- _modifiedTimeWeak = 2.16.2016::21:37:36;
+							- _description = { IDescription 
+								- _text = "input ? exBtnFloor;     
+destFloor := exBtnFloor;
+if (currentFloor < exBtnFloor) then
+	getP_con_win().gen(new goUp());   
+	upordown := 1;  
+	sendToMeasureSensor(exBtnFloor);
+else
+	if (currentFloor == exBtnFloor)  then      
+		gen (new gotoOpenDoorDirectly());
+	else
+		getP_con_win().gen(new goDown()); 
+		upordown := -1;  
+		sendToMeasureSensor(exBtnFloor);
+	end;
+end;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 452436d4-16eb-41cc-94c5-6e67fb3b6fcf;
 								- _modifiedTimeWeak = 2.3.2016::20:56:15;
@@ -30209,10 +30229,10 @@ if (currentFloor < exBtnFloor){
 							- _id = GUID eb95331a-74ee-48fe-9517-309834f56d53;
 							- _myState = 2048;
 							- _name = "transition_14";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.16.2016::21:37:8;
 							- _itsLabel = { ILabel 
 								- _id = GUID c1bee9d5-2d3d-4923-acd3-9d1d521578a1;
-								- _modifiedTimeWeak = 2.3.2016::16:32:9;
+								- _modifiedTimeWeak = 2.16.2016::21:37:8;
 								- _itsTrigger = { IInterfaceItemTrigger 
 									- _id = GUID c0a3095f-1d89-49de-849d-5a0c12b83fe0;
 									- _modifiedTimeWeak = 1.2.1990::0:0:0;
@@ -30226,14 +30246,9 @@ if (currentFloor < exBtnFloor){
 								- _itsGuard = NULL;
 								- _itsAction = { IAction 
 									- _id = GUID 07eba8c7-2352-4350-80ef-a326e920ead7;
-									- _modifiedTimeWeak = 2.3.2016::16:32:9;
+									- _modifiedTimeWeak = 2.16.2016::21:37:8;
 									- _body = "currentFloor+=upordown;   
-sendToMeasureSensor(destFloor);  
-/*try {
-    Thread.sleep(1000);                 //1000 milliseconds is one second.
-} catch(InterruptedException ex) {
-    Thread.currentThread().interrupt();
-}*/";
+sendToMeasureSensor(destFloor);";
 								}
 							}
 							- _itsTarget = GUID 02daf6b4-871f-4c64-ab8f-4e82633f4304;
@@ -30545,7 +30560,7 @@ sendToMeasureSensor(destFloor);";
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 2.3.2016::21:56:15;
+					- _version = 2.16.2016::22:37:8;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = GUID ec63a17e-639c-44f5-be9e-e4a19662be6e;
 					- Views = { IRPYRawContainer 
@@ -30622,8 +30637,8 @@ sendToMeasureSensor(destFloor);";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.3.2016::20:56:15;
-							- _lastModifiedTime = "2.3.2016::20:56:15";
+							- _modifiedTimeWeak = 2.16.2016::21:37:36;
+							- _lastModifiedTime = "2.16.2016::21:37:36";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 48ce0548-1240-4b22-9f2e-505dd9c5ad53;
 								- m_type = 0;
@@ -31587,12 +31602,7 @@ if (currentFloor < exBtnFloor){
 									- m_direction = ' ';
 									- m_rpn = { CGIText 
 										- m_str = "receiveCabinMoved/currentFloor+=upordown;   
-sendToMeasureSensor(destFloor);  
-/*try {
-    Thread.sleep(1000);                 //1000 milliseconds is one second.
-} catch(InterruptedException ex) {
-    Thread.currentThread().interrupt();
-}*/";
+sendToMeasureSensor(destFloor);";
 										- m_style = "Arial" 10 0 0 0 1 ;
 										- m_color = { IColor 
 											- m_fgColor = 0;
@@ -34235,13 +34245,13 @@ getP_cab_con().gen (new braked());";
 				}
 			}
 			- _name = "Winch";
-			- _modifiedTimeWeak = 2.2.2016::21:14:9;
+			- _modifiedTimeWeak = 2.16.2016::21:41:40;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 12;
-			- weakCGTime = 2.2.2016::21:14:9;
+			- weakCGTime = 2.16.2016::21:41:40;
 			- strongCGTime = 11.23.2015::16:13:53;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -34399,7 +34409,7 @@ getP_win_con().gen(new braked());";
 					- _id = GUID 8650942b-603e-48e7-894a-998c16455c9f;
 					- _myState = 8192;
 					- _name = "sendGoUpToCabin";
-					- _modifiedTimeWeak = 2.2.2016::20:50:47;
+					- _modifiedTimeWeak = 2.16.2016::21:38:22;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
 						- size = 0;
@@ -34419,8 +34429,7 @@ getP_win_con().gen(new braked());";
 					- _static = 0;
 					- _constant = 0;
 					- _itsBody = { IBody 
-						- _bodyData = "System.out.println(\"Tell winch control the cabin which is moved up\");
-getP_win_cab().gen(new moveCabinUp());";
+						- _bodyData = "getP_win_cab().gen(new moveCabinUp());";
 					}
 				}
 				{ IPrimitiveOperation 
@@ -34590,9 +34599,9 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 64e81955-7753-492a-a419-0ffe51ca49eb;
 					- _myState = 10240;
 					- _name = "statechart_4";
-					- _modifiedTimeWeak = 11.30.2015::14:36:42;
+					- _modifiedTimeWeak = 2.16.2016::21:41:40;
 					- _lastID = 10;
-					- weakCGTime = 11.30.2015::14:36:42;
+					- weakCGTime = 2.16.2016::21:41:40;
 					- strongCGTime = 11.16.2015::15:40:34;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -34624,7 +34633,10 @@ getP_win_con().gen (new readyToOpenDoor());";
 							- _id = GUID 96206548-2b8a-4142-8cfd-1b20aad45027;
 							- _myState = 2048;
 							- _name = "transition_2";
-							- _modifiedTimeWeak = 11.30.2015::13:9:47;
+							- _modifiedTimeWeak = 2.16.2016::21:41:40;
+							- _description = { IDescription 
+								- _text = "getP_win_cab().gen(new moveCabinUp());";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID c4de8e20-1fb1-47bc-8e70-61d9f079acb9;
 								- _modifiedTimeWeak = 11.30.2015::13:9:47;
@@ -34881,8 +34893,8 @@ getP_win_con().gen (new readyToOpenDoor());";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 11.30.2015::14:36:42;
-							- _lastModifiedTime = "11.30.2015::14:36:42";
+							- _modifiedTimeWeak = 2.16.2016::21:41:40;
+							- _lastModifiedTime = "2.16.2016::21:41:40";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 0201afd8-0e55-4c75-9989-709f66843259;
 								- m_type = 0;

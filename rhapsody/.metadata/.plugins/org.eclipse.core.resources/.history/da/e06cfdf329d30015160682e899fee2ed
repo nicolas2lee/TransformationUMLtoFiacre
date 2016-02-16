@@ -1,6 +1,0 @@
-[#package generateProcess]
-
-[#template public genArgs()]
-[#file]file.txt[/#file]
-generated text
-[/#template]

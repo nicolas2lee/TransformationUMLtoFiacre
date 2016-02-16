@@ -1,7 +1,0 @@
-[#package generateProcess]
-[#import generateUtile.*]
-
-[#template public genPortArgs()]
-[]
-
-[/#template]

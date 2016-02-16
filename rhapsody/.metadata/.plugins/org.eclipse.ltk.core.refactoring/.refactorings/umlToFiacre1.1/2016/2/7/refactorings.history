@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;umlToFiacre2.0/src&apos;&#x0D;&#x0A;- Original project: &apos;umlToFiacre1.1&apos;&#x0D;&#x0A;- Destination element: &apos;umlToFiacre2.0/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     umlToFiacre1.1/src/generateFiacreMain&#x0D;&#x0A;     umlToFiacre1.1/src/generateProcess&#x0D;&#x0A;     umlToFiacre1.1/src/generateUtile&#x0D;&#x0A;     umlToFiacre1.1/src/generateComponent" description="Copy packages" destination="=umlToFiacre2.0/src" element1="/src&lt;generateFiacreMain" element2="/src&lt;generateProcess" element3="/src&lt;generateUtile" element4="/src&lt;generateComponent" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1455658234726" version="1.0"/>
+</session>

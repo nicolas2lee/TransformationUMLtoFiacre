@@ -16,34 +16,6 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -31;
-				- m_nLeft = 104;
-				- m_nTop = 104;
-				- m_nRight = 1304;
-				- m_nBottom = 477;
-			}
-			- _wasOpenedOnCloseProject = 0;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IMSC";
-				- _filename = "Ascenseur.sbs";
-				- _subsystem = "Ascenseur";
-				- _class = "";
-				- _name = "AnimatedInit0BtnEx3Cabin1";
-				- _id = GUID b8fe3bda-204c-423e-b0e7-f581391f4ad4;
-			}
-			- _UpLeft = 0 5626 ;
-			- _DownRight = 3351 6470 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 0;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -31;
 				- m_nLeft = 156;
 				- m_nTop = 156;
 				- m_nRight = 1219;
@@ -59,9 +31,9 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _id = GUID 3d0536d5-378c-4f21-93b2-dabd1bb4dab3;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 781 561 ;
+			- _DownRight = 1283 391 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 2;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -89,7 +61,35 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 			- _UpLeft = 0 80 ;
 			- _DownRight = 1004 435 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 3;
+			- m_nDiagramIndex = 4;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 26;
+				- m_nTop = 26;
+				- m_nRight = 381;
+				- m_nBottom = 292;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Ascenseur.sbs";
+				- _subsystem = "Ascenseur";
+				- _class = "ControllerSys";
+				- _name = "StatechartDiagram";
+				- _id = GUID ec63a17e-639c-44f5-be9e-e4a19662be6e;
+			}
+			- _UpLeft = 152 0 ;
+			- _DownRight = 470 206 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -117,7 +117,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 			- _UpLeft = 0 0 ;
 			- _DownRight = 1044 275 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 2;
+			- m_nDiagramIndex = 3;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -145,38 +145,38 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 			- _UpLeft = 0 0 ;
 			- _DownRight = 852 518 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 4;
+			- m_nDiagramIndex = 5;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -31;
-				- m_nLeft = 0;
-				- m_nTop = 0;
-				- m_nRight = 1063;
-				- m_nBottom = 373;
+				- m_nLeft = 182;
+				- m_nTop = 182;
+				- m_nRight = 769;
+				- m_nBottom = 629;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
-				- _m2Class = "IMSC";
+				- _m2Class = "IStateChartDiagram";
 				- _filename = "Ascenseur.sbs";
 				- _subsystem = "Ascenseur";
-				- _class = "";
-				- _name = "diagSeqNotion";
-				- _id = GUID fc0b30dd-b567-47b9-8fd7-ee4fdb02ca1e;
+				- _class = "Winch";
+				- _name = "StatechartDiagram";
+				- _id = GUID a1416477-c6ac-4977-b1e4-39c206dfc643;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1608 459 ;
+			- _DownRight = 774 634 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}
 	}
-	- _fullName = "U:\\semestre5\\uv5.1\\AcenseurUML2Fiacre\\TransformationUMLtoFiacre\\Ascenseur2.1\\Ascenseur2.1";
+	- _fullName = "U:\\semestre5\\uv5.1\\TransformationUMLtoFiacre\\Ascenseur2.1\\Ascenseur2.1";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}
