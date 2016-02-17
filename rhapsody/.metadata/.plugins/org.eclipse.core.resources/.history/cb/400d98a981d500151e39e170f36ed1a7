@@ -1,0 +1,6 @@
+[#package generateUtile]
+
+[#template public handleEnd()]
+[#file]file.txt[/#file]
+generated text
+[/#template]

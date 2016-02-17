@@ -26,13 +26,13 @@
 <coolItem id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.sodius.mdw.platform.rdt.ml.MQLScriptEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.sodius.mdw.platform.model.modelEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.sodius.mdw.platform.model.modelEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.emf.ecore.presentation.EcoreEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.sodius.mdw.platform.model.metamodelEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.sodius.mdw.platform.model.metamodelEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.pde.ui.manifestEditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -46,21 +46,30 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" partName="toFiacre.mqr" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre2.0/src/generateFiacreMain/toFiacre.mqr" title="toFiacre.mqr" tooltip="umlToFiacre2.0/src/generateFiacreMain/toFiacre.mqr" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre2.0/src/generateFiacreMain/toFiacre.mqr"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1801" selectionTopPixel="960"/>
+<editor id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" partName="toFiacre.mqr" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre1.0/src/generateFiacreMain/toFiacre.mqr" title="toFiacre.mqr" tooltip="umlToFiacre1.0/src/generateFiacreMain/toFiacre.mqr" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre1.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3487" selectionTopPixel="1501"/>
 </editor>
-<editor id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genProcess.tgt" partName="genProcess.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre2.0/src/generateProcess/genProcess.tgt" title="genProcess.tgt" tooltip="umlToFiacre2.0/src/generateProcess/genProcess.tgt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre2.0/src/generateProcess/genProcess.tgt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="502" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="Ascenseur.fcr" partName="Ascenseur.fcr" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre1.0/generatedFiacre/Ascenseur.fcr" title="Ascenseur.fcr" tooltip="umlToFiacre1.0/generatedFiacre/Ascenseur.fcr" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre1.0/generatedFiacre/Ascenseur.fcr"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="175" selectionTopPixel="4590"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="Ascenseur.fcr" partName="Ascenseur.fcr" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre2.0/generatedFiacre/Ascenseur.fcr" title="Ascenseur.fcr" tooltip="umlToFiacre2.0/generatedFiacre/Ascenseur.fcr" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre2.0/generatedFiacre/Ascenseur.fcr"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="165" selectionTopPixel="0"/>
+<editor id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genFIFOelemtype.tgt" partName="genFIFOelemtype.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre1.0/src/generateProcess/genFIFOelemtype.tgt" title="genFIFOelemtype.tgt" tooltip="umlToFiacre1.0/src/generateProcess/genFIFOelemtype.tgt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre1.0/src/generateProcess/genFIFOelemtype.tgt"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="350" selectionTopPixel="0"/>
+</editor>
+<editor id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="generateFiacre.tgt" partName="generateFiacre.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt" title="generateFiacre.tgt" tooltip="umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1120" selectionTopPixel="0"/>
+</editor>
+<editor id="com.sodius.mdw.platform.model.modelEditor" name="Rhapsody Application (no graphics)" partName="Rhapsody Application (no graphics)" title="Rhapsody Application (no graphics)" tooltip="Rhapsody Application (no graphics)" workbook="DefaultEditorWorkbook">
+<input connector="Rhapsody Application (no graphics)" factoryID="com.sodius.mdw.ide.ui.modelFactory" isRead="true" metamodel="rhapsody" readerConnector="Rhapsody Application (no graphics)" uri=""/>
 </editor>
 </editors>
 <views>
@@ -78,6 +87,7 @@
 <view id="com.sodius.mdw.ide.ui.modelView" partName="Models">
 <viewState>
 <node id="rhapsody.Rhapsody Application (no graphics).true." selected="true"/>
+<node expanded="true" id="fiacreMM"/>
 <node expanded="true" id="rhapsody"/>
 <linking enable="false"/>
 </viewState>
@@ -90,6 +100,9 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (7 items)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -225,7 +238,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.20584653" ratioLeft="338" ratioRight="1304" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.54915255" ratioLeft="486" ratioRight="399" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.620339" ratioLeft="549" ratioRight="336" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="com.sodius.mdw.ide.ui.reportView" label="Report"/>
@@ -442,66 +455,186 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" path="/umlToFiacre2.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" path="/umlToFiacre1.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateProcess/genFIFOelemtype.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre1.0/generatedFiacre/Ascenseur.fcr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateProcess/genProcessFIFO.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateProcess/genProcess.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateComponent/genComponent.tgt"/>
 <editor connector="Rhapsody Application (no graphics)" factoryID="com.sodius.mdw.ide.ui.modelFactory" id="com.sodius.mdw.platform.model.modelEditor" isRead="true" metamodel="rhapsody" readerConnector="Rhapsody Application (no graphics)" uri=""/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre2.0/src/generateProcess/genProcess.tgt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre2.0/generatedFiacre/Ascenseur.fcr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre1.0/generatedFiacre/Ascenseur.fcr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre1.0/generatedFiacre/Ascenseur.fcr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateProcess/genFIFOelemtype.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt"/>
 <editor connector="Rhapsody Application (no graphics)" factoryID="com.sodius.mdw.ide.ui.modelFactory" id="com.sodius.mdw.platform.model.modelEditor" isRead="true" metamodel="rhapsody" readerConnector="Rhapsody Application (no graphics)" uri=""/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" path="/umlToFiacre1.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre1.0/generatedFiacre/Ascenseur.fcr"/>
 </editors>
-<item historyLabel="toFiacre.mqr" index="0">
+<item historyLabel="genFIFOelemtype.tgt" index="2">
+<position info="not_deleted" x="372" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Rhapsody Application (no graphics)" index="1">
+<item historyLabel="genProcessFIFO.tgt" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="2">
+<position info="not_deleted" x="372" y="0"/>
+</item>
+<item historyLabel="genProcess.tgt" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="genComponent.tgt" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="genProcess.tgt" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="generateFiacre.tgt" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="0">
+<position info="not_deleted" x="3191" y="0"/>
+</item>
+<item historyLabel="Rhapsody Application (no graphics)" index="7">
 <position pageID="com.sodius.mdw.platform.model.modelTypePage">
-<pageLocation/>
+<pageLocation instancePaths="0|5|1|0|12" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
+</position>
+</item>
+<item historyLabel="Ascenseur.fcr" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="0">
+<position info="not_deleted" x="29" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="0">
+<position info="not_deleted" x="3892" y="0"/>
+</item>
+<item historyLabel="Rhapsody Application (no graphics)" index="7">
+<position pageID="com.sodius.mdw.platform.model.modelTypePage">
+<pageLocation instancePaths="0|5|1|0|12" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
 </position>
 </item>
 <item historyLabel="toFiacre.mqr" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="3258" y="0"/>
 </item>
-<item historyLabel="genProcess.tgt" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="toFiacre.mqr" index="0">
-<position info="not_deleted" x="1801" y="0"/>
-</item>
-<item historyLabel="genProcess.tgt" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Ascenseur.fcr" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="toFiacre.mqr" index="0">
-<position info="not_deleted" x="1801" y="0"/>
-</item>
-<item historyLabel="genProcess.tgt" index="2">
-<position info="not_deleted" x="502" y="0"/>
-</item>
-<item historyLabel="toFiacre.mqr" index="0">
-<position info="not_deleted" x="1801" y="0"/>
-</item>
-<item historyLabel="Rhapsody Application (no graphics)" index="4">
+<item historyLabel="Rhapsody Application (no graphics)" index="7">
 <position pageID="com.sodius.mdw.platform.model.modelTypePage">
-<pageLocation instancePaths="0|0|3|11|0|7|0|0|10" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
+<pageLocation instancePaths="0|5|1|0|2" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
 </position>
 </item>
 <item historyLabel="toFiacre.mqr" index="0">
-<position info="not_deleted" x="1801" y="0"/>
+<position info="not_deleted" x="3258" y="0"/>
 </item>
-<item historyLabel="Ascenseur.fcr" index="3">
-<position info="not_deleted" x="1232" y="0"/>
+<item historyLabel="toFiacre.mqr" index="0">
+<position info="not_deleted" x="3301" y="0"/>
 </item>
-<item historyLabel="genProcess.tgt" index="2">
-<position info="not_deleted" x="502" y="0"/>
+<item historyLabel="toFiacre.mqr" index="0">
+<position info="not_deleted" x="3487" y="0"/>
 </item>
-<item historyLabel="Ascenseur.fcr" index="3">
-<position info="not_deleted" x="243" y="2"/>
-</item>
-<item historyLabel="genProcess.tgt" index="2">
-<position info="not_deleted" x="502" y="0"/>
-</item>
-<item active="true" historyLabel="Ascenseur.fcr" index="3">
+<item historyLabel="Ascenseur.fcr" index="9">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="generateFiacre.tgt" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Rhapsody Application (no graphics)" index="12">
+<position pageID="reload"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position info="not_deleted" x="396" y="0"/>
+</item>
+<item historyLabel="Rhapsody Application (no graphics)" index="12">
+<position pageID="com.sodius.mdw.platform.model.modelTypePage">
+<pageLocation instancePaths="0|0|5|10|0|7|0|0|11|8|0" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
+</position>
+</item>
+<item historyLabel="generateFiacre.tgt" index="13">
+<position info="not_deleted" x="656" y="0"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="14">
+<position info="not_deleted" x="3487" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position/>
+</item>
+<item historyLabel="Rhapsody Application (no graphics)" index="12">
+<position pageID="com.sodius.mdw.platform.model.modelTypePage">
+<pageLocation instancePaths="0|0|5|10|0|7|0|0|11|8|0" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
+</position>
+</item>
+<item historyLabel="toFiacre.mqr" index="14">
+<position info="not_deleted" x="3487" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="generateFiacre.tgt" index="13">
+<position info="not_deleted" x="1120" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position/>
+</item>
+<item historyLabel="Rhapsody Application (no graphics)" index="12">
+<position pageID="com.sodius.mdw.platform.model.modelTypePage">
+<pageLocation instancePaths="0|0|5|10|0|7|0|0|9|9" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
+</position>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position/>
+</item>
+<item historyLabel="Rhapsody Application (no graphics)" index="12">
+<position pageID="com.sodius.mdw.platform.model.modelTypePage">
+<pageLocation instancePaths="0|0|5|10|0|7|0|0|9|9" typeName="com.sodius.mdw.metamodel.rhapsody.Package"/>
+</position>
+</item>
+<item historyLabel="generateFiacre.tgt" index="13">
+<position info="not_deleted" x="1120" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position info="not_deleted" x="307" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="15">
+<position info="not_deleted" x="169" y="0"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="14">
+<position info="not_deleted" x="3487" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="15">
+<position info="not_deleted" x="169" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position info="not_deleted" x="396" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="15">
+<position info="not_deleted" x="175" y="0"/>
+</item>
+<item historyLabel="genFIFOelemtype.tgt" index="10">
+<position/>
+</item>
+<item active="true" historyLabel="Ascenseur.fcr" index="15">
+<position info="not_deleted" x="175" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -523,50 +656,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Ascenseur.fcr" tooltip="umlToFiacre2.0/generatedFiacre/Ascenseur.fcr">
-<persistable path="/umlToFiacre2.0/generatedFiacre/Ascenseur.fcr"/>
-</file>
 <file factoryID="com.sodius.mdw.ide.ui.modelFactory" id="com.sodius.mdw.platform.model.modelEditor" name="Rhapsody Application (no graphics)" tooltip="Rhapsody Application (no graphics)">
 <persistable connector="Rhapsody Application (no graphics)" isRead="true" metamodel="rhapsody" readerConnector="Rhapsody Application (no graphics)" uri=""/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genProcess.tgt" tooltip="umlToFiacre2.0/src/generateProcess/genProcess.tgt">
-<persistable path="/umlToFiacre2.0/src/generateProcess/genProcess.tgt"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="generateFiacre.tgt" tooltip="umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt">
+<persistable path="/umlToFiacre1.0/src/generateFiacreMain/generateFiacre.tgt"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" tooltip="umlToFiacre2.0/src/generateFiacreMain/toFiacre.mqr">
-<persistable path="/umlToFiacre2.0/src/generateFiacreMain/toFiacre.mqr"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genArgs.tgt" tooltip="umlToFiacre1.1/src/generateProcess/genArgs.tgt">
-<persistable path="/umlToFiacre1.1/src/generateProcess/genArgs.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genPortArgs.tgt" tooltip="umlToFiacre1.1/src/generateProcess/genPortArgs.tgt">
-<persistable path="/umlToFiacre1.1/src/generateProcess/genPortArgs.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genProcess.tgt" tooltip="umlToFiacre1.1/src/generateProcess/genProcess.tgt">
-<persistable path="/umlToFiacre1.1/src/generateProcess/genProcess.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="handleEndComma.tgt" tooltip="umlToFiacre1.1/src/generateUtile/handleEndComma.tgt">
-<persistable path="/umlToFiacre1.1/src/generateUtile/handleEndComma.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genStateDecl.tgt" tooltip="umlToFiacre1.1/src/generateProcess/genStateDecl.tgt">
-<persistable path="/umlToFiacre1.1/src/generateProcess/genStateDecl.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Ascenseur.fcr" tooltip="umlToFiacre1.1/generatedFiacre/Ascenseur.fcr">
-<persistable path="/umlToFiacre1.1/generatedFiacre/Ascenseur.fcr"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" tooltip="umlToFiacre1.1/src/generateFiacreMain/toFiacre.mqr">
-<persistable path="/umlToFiacre1.1/src/generateFiacreMain/toFiacre.mqr"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genFIFOelemtype.tgt" tooltip="umlToFiacre1.0/src/generateProcess/genFIFOelemtype.tgt">
+<persistable path="/umlToFiacre1.0/src/generateProcess/genFIFOelemtype.tgt"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Ascenseur.fcr" tooltip="umlToFiacre1.0/generatedFiacre/Ascenseur.fcr">
 <persistable path="/umlToFiacre1.0/generatedFiacre/Ascenseur.fcr"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genVarDecl.tgt" tooltip="umlToFiacre1.0/src/generateProcess/genVarDecl.tgt">
-<persistable path="/umlToFiacre1.0/src/generateProcess/genVarDecl.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genStateDecl.tgt" tooltip="umlToFiacre1.0/src/generateProcess/genStateDecl.tgt">
-<persistable path="/umlToFiacre1.0/src/generateProcess/genStateDecl.tgt"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genComponent.tgt" tooltip="umlToFiacre1.0/src/generateComponent/genComponent.tgt">
 <persistable path="/umlToFiacre1.0/src/generateComponent/genComponent.tgt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genProcess.tgt" tooltip="umlToFiacre1.0/src/generateProcess/genProcess.tgt">
+<persistable path="/umlToFiacre1.0/src/generateProcess/genProcess.tgt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genProcessFIFO.tgt" tooltip="umlToFiacre1.0/src/generateProcess/genProcessFIFO.tgt">
+<persistable path="/umlToFiacre1.0/src/generateProcess/genProcessFIFO.tgt"/>
+</file>
+<file factoryID="com.sodius.mdw.ide.ui.modelFactory" id="com.sodius.mdw.platform.model.metamodelEditor" name="Rhapsody" tooltip="Rhapsody">
+<persistable metamodel="rhapsody"/>
+</file>
+<file factoryID="com.sodius.mdw.ide.ui.modelFactory" id="com.sodius.mdw.platform.model.modelEditor" name="XMI 2.1 - outputFiacre.xmi" tooltip="U:\semestre5\uv5.1\TransformationUMLtoFiacre\rhapsody\umlToFiacre1.0\generated\outputFiacre.xmi">
+<persistable connector="XMI 2.1" isRead="false" metamodel="fiacreMM" readerConnector="XMI" uri="${project_loc:umlToFiacre1.0}\generated\outputFiacre.xmi"/>
+</file>
+<file factoryID="com.sodius.mdw.ide.ui.modelFactory" id="com.sodius.mdw.platform.model.metamodelEditor" name="fiacreMM 1.0" tooltip="fiacreMM 1.0">
+<persistable metamodel="fiacreMM"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="handleEnd.tgt" tooltip="umlToFiacre1.0/src/generateUtile/handleEnd.tgt">
+<persistable path="/umlToFiacre1.0/src/generateUtile/handleEnd.tgt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="handleEndPointVirgule.tgt" tooltip="umlToFiacre1.0/src/generateUtile/handleEndPointVirgule.tgt">
+<persistable path="/umlToFiacre1.0/src/generateUtile/handleEndPointVirgule.tgt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="handleEndComma.tgt" tooltip="umlToFiacre1.0/src/generateUtile/handleEndComma.tgt">
+<persistable path="/umlToFiacre1.0/src/generateUtile/handleEndComma.tgt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" tooltip="umlToFiacre1.0/src/generateFiacreMain/toFiacre.mqr">
+<persistable path="/umlToFiacre1.0/src/generateFiacreMain/toFiacre.mqr"/>
+</file>
+<file factoryID="com.sodius.mdw.ide.ui.modelFactory" id="com.sodius.mdw.platform.model.metamodelEditor" name="ficareMM 2.2" tooltip="ficareMM 2.2">
+<persistable metamodel="fiacreMM"/>
 </file>
 </mruList>
 </workbench>

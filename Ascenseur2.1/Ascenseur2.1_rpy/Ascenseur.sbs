@@ -3,10 +3,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 	- _myState = 8192;
 	- _name = "Ascenseur";
-	- _modifiedTimeWeak = 2.16.2016::21:38:22;
-	- _lastID = 10;
+	- _modifiedTimeWeak = 2.17.2016::16:51:51;
+	- _lastID = 12;
 	- Declaratives = { IRPYRawContainer 
-		- size = 5;
+		- size = 7;
 		- value = 
 		{ IDiagram 
 			- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
@@ -27776,8 +27776,27 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 		}
+		{ IStereotype 
+			- _id = GUID 5df3a74c-c327-49a9-9cd7-d82d0d88f518;
+			- _myState = 8192;
+			- _name = "timeEvent";
+			- _modifiedTimeWeak = 2.17.2016::16:46:52;
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "TriggeredOperation"; 
+			}
+		}
+		{ IStereotype 
+			- _id = GUID e435f43f-339d-49e2-8237-5fc26a5dc27d;
+			- _myState = 8192;
+			- _name = "timeEvent";
+			- _modifiedTimeWeak = 2.17.2016::16:48:18;
+			- _m2Classes = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
 	}
-	- weakCGTime = 2.16.2016::21:38:22;
+	- weakCGTime = 2.17.2016::16:51:51;
 	- strongCGTime = 2.3.2016::14:22:12;
 	- _defaultComposite = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 	- _eventsBaseID = 2616;
@@ -27788,8 +27807,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 2.14.2016::15:3:11;
-			- weakCGTime = 2.14.2016::15:3:11;
+			- _modifiedTimeWeak = 2.16.2016::21:38:22;
+			- weakCGTime = 2.16.2016::21:38:22;
 			- strongCGTime = 2.3.2016::14:22:12;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -28245,13 +28264,13 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- _name = "Button_ex";
-			- _modifiedTimeWeak = 2.16.2016::21:33:16;
+			- _modifiedTimeWeak = 2.17.2016::16:51:51;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 6;
-			- weakCGTime = 2.16.2016::21:33:16;
+			- weakCGTime = 2.17.2016::16:51:51;
 			- strongCGTime = 11.23.2015::16:13:41;
 			- Ports = { IRPYRawContainer 
 				- size = 1;
@@ -28334,9 +28353,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _id = GUID 1f5b14c3-b876-4d37-9092-66f1f9118789;
 					- _myState = 10240;
 					- _name = "statechart_2";
-					- _modifiedTimeWeak = 2.16.2016::21:33:16;
+					- _modifiedTimeWeak = 2.17.2016::16:51:51;
 					- _lastID = 6;
-					- weakCGTime = 2.16.2016::21:33:16;
+					- weakCGTime = 2.17.2016::16:51:51;
 					- strongCGTime = 11.16.2015::15:26:58;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -28368,7 +28387,15 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 96d59667-0b0e-43d3-bb75-25db5a61a018;
 							- _myState = 2048;
 							- _name = "transition_3";
-							- _modifiedTimeWeak = 2.3.2016::20:37:47;
+							- _modifiedTimeWeak = 2.17.2016::15:50:40;
+							- _description = { IDescription 
+								- _text = "if (empty toButton_ex) then loop end;
+received := first toButton_ex;
+toButton_ex := dequeue(toButton_ex);
+if (received = arrive) then
+    to Off
+end";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID ee4e33c0-1200-4a92-9136-af406d40f0dd;
 								- _modifiedTimeWeak = 2.3.2016::20:37:47;
@@ -28393,9 +28420,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 599ea035-0701-4b32-916e-9de3c632ebdd;
 							- _myState = 2048;
 							- _name = "transition_4";
-							- _modifiedTimeWeak = 2.16.2016::21:33:16;
+							- _modifiedTimeWeak = 2.17.2016::15:39:40;
 							- _description = { IDescription 
-								- _text = "output ! requestFloor;";
+								- _text = "output ! requestFloor;
+";
 							}
 							- _itsLabel = { ILabel 
 								- _id = GUID d129fba7-584b-499f-a72e-abf7db186038;
@@ -28425,7 +28453,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 0556a1ca-78fe-4cc4-9d91-3a282b8b3a42;
 							- _myState = 2048;
 							- _name = "transition_5";
-							- _modifiedTimeWeak = 2.3.2016::20:37:13;
+							- _modifiedTimeWeak = 2.17.2016::16:51:51;
+							- _description = { IDescription 
+								- _text = "wait[4,5];";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 03caa820-4830-4a1a-9187-d3309f6ca5f9;
 								- _modifiedTimeWeak = 2.3.2016::20:37:13;
@@ -28468,7 +28499,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 2.3.2016::21:55:4;
+					- _version = 2.17.2016::17:51:51;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = GUID 3d0536d5-378c-4f21-93b2-dabd1bb4dab3;
 					- Views = { IRPYRawContainer 
@@ -28545,8 +28576,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.16.2016::21:33:16;
-							- _lastModifiedTime = "2.16.2016::21:33:16";
+							- _modifiedTimeWeak = 2.17.2016::16:51:51;
+							- _lastModifiedTime = "2.17.2016::16:51:51";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 887751fe-fec3-4c0f-9c2d-f55152c41387;
 								- m_type = 0;
@@ -28991,7 +29022,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 									}
 									- m_pParent = ;
 									- m_name = { CGIText 
-										- m_str = "";
+										- m_str = "timeEvent";
 										- m_style = "Arial" 10 0 0 0 1 ;
 										- m_color = { IColor 
 											- m_fgColor = 0;
@@ -29112,13 +29143,13 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- _name = "ControllerSys";
-			- _modifiedTimeWeak = 2.16.2016::21:37:36;
+			- _modifiedTimeWeak = 2.17.2016::15:36:26;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 29;
-			- weakCGTime = 2.16.2016::21:37:36;
+			- weakCGTime = 2.17.2016::15:36:26;
 			- strongCGTime = 11.23.2015::16:13:47;
 			- Ports = { IRPYRawContainer 
 				- size = 9;
@@ -30001,9 +30032,9 @@ getP_con_win().gen(new stop());";
 					- _id = GUID 685901b6-7276-4fd0-a848-77c1829e0e40;
 					- _myState = 10240;
 					- _name = "statechart_1";
-					- _modifiedTimeWeak = 2.16.2016::21:37:36;
+					- _modifiedTimeWeak = 2.17.2016::15:36:26;
 					- _lastID = 29;
-					- weakCGTime = 2.16.2016::21:37:36;
+					- weakCGTime = 2.17.2016::15:36:26;
 					- strongCGTime = 11.16.2015::15:47:32;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -30035,7 +30066,11 @@ getP_con_win().gen(new stop());";
 							- _id = GUID fc168488-148b-4c43-abe6-daf7fbfb0c66;
 							- _myState = 2048;
 							- _name = "transition_8";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.17.2016::15:19:1;
+							- _description = { IDescription 
+								- _text = "toWinch = enqueue(toWinch, stopFromController);
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 31746125-c393-420b-8e9b-fe181a2723a1;
 								- _modifiedTimeWeak = 11.23.2015::15:12:29;
@@ -30064,7 +30099,12 @@ getP_con_win().gen(new stop());";
 							- _id = GUID 620f76b7-4ecd-43bf-8319-280f57fcb893;
 							- _myState = 2048;
 							- _name = "transition_9";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.17.2016::15:20:48;
+							- _description = { IDescription 
+								- _text = "toDoor := enqueue(toDoor, OpenDoor);
+toButton_ex := enqueue(toDoor, OpenDoor);
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 96e5e605-4055-4212-b7b8-78838ad56946;
 								- _modifiedTimeWeak = 11.30.2015::14:38:59;
@@ -30093,7 +30133,12 @@ getP_con_win().gen(new stop());";
 							- _id = GUID d5889848-043a-46e9-b71c-0afd9b14bd1a;
 							- _myState = 2048;
 							- _name = "transition_10";
-							- _modifiedTimeWeak = 2.3.2016::20:30:27;
+							- _modifiedTimeWeak = 2.17.2016::15:23:7;
+							- _description = { IDescription 
+								- _text = "toDoor := enqueue(toDoor, CloseDoor);
+targetFloor := params.requestedTargetFloor;    
+destFloor := targetFloor;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 30759b79-3fd7-4a29-83ac-fe7dfef8b9da;
 								- _modifiedTimeWeak = 2.3.2016::20:30:27;
@@ -30124,32 +30169,52 @@ destFloor=targetFloor;";
 							- _id = GUID e990ad6b-cff6-4543-bb18-2b704a330a02;
 							- _myState = 2048;
 							- _name = "transition_12";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.17.2016::15:32:28;
+							- _description = { IDescription 
+								- _text = "if (currentFloor < targetFloor) then
+            toWinch := enqueue(toWinch, goUp); 
+	upordown := 1; 
+	sendToMeasureSensor(targetFloor);
+else
+	if (currentFloor = targetFloor) then       
+                        toControllerSys := enqueue(toControllerSys, gotoOpenDoorDirectly); 
+	else
+		toWinch := enqueue(toWinch, goDown); 
+		upordown := upordown-1;  
+		case targetFloor of 
+	                0 -> toSensor = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	             |  1 ->  toSensor1 = enqueue(toSensor, toMeasure(currentFloor, floor));     	  
+	             |  2 ->  toSensor2 = enqueue(toSensor, toMeasure(currentFloor, floor));  	 
+	             |  3 ->  toSensor3 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	             |  4 ->  toSensor4 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+                         end;
+	end;
+end;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 2aaae736-3391-4d0a-9e82-2baaacdaa7b6;
-								- _modifiedTimeWeak = 2.3.2016::16:20:28;
+								- _modifiedTimeWeak = 2.17.2016::13:12:55;
 								- _itsTrigger = { IInterfaceItemTrigger 
 									- _id = GUID aee9f8e3-fb7a-4c6d-ab90-b8534a163369;
-									- _modifiedTimeWeak = 1.2.1990::0:0:0;
+									- _modifiedTimeWeak = 2.17.2016::13:12:55;
 									- _body = "readyToGo";
 									- _info = "";
 									- _itsInterfaceItem = { IHandle 
 										- _m2Class = "IEvent";
-										- _id = GUID d59ed82f-a4e6-4cb9-9c93-2086d37619d8;
+										- _id = GUID b9e92270-2897-4105-99d7-deb73fbc32ce;
 									}
 								}
 								- _itsGuard = NULL;
 								- _itsAction = { IAction 
 									- _id = GUID c5f12a4d-cf5a-4746-a1a5-4233258b6106;
-									- _modifiedTimeWeak = 2.3.2016::16:20:28;
+									- _modifiedTimeWeak = 2.17.2016::13:12:55;
 									- _body = "if (currentFloor < targetFloor){
 	getP_con_win().gen(new goUp());   
 	upordown=1; 
 	
 	sendToMeasureSensor(targetFloor);
 }else{
-	if (currentFloor == targetFloor) {
-		//open the door         
+	if (currentFloor == targetFloor) {        
 		gen (new gotoOpenDoorDirectly());
 	}else{
 		getP_con_win().gen(new goDown()); 
@@ -30168,27 +30233,39 @@ destFloor=targetFloor;";
 							- _id = GUID dd4816b8-ef82-4965-aa86-18847e203beb;
 							- _myState = 2048;
 							- _name = "transition_13";
-							- _modifiedTimeWeak = 2.16.2016::21:37:36;
+							- _modifiedTimeWeak = 2.17.2016::15:15:58;
 							- _description = { IDescription 
 								- _text = "input ? exBtnFloor;     
 destFloor := exBtnFloor;
 if (currentFloor < exBtnFloor) then
-	getP_con_win().gen(new goUp());   
+            toWinch = enqueue(toWinch, goUp);
 	upordown := 1;  
-	sendToMeasureSensor(exBtnFloor);
+            case floor of 
+	      0 -> toSensor = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  1 ->  toSensor1 = enqueue(toSensor, toMeasure(currentFloor, floor));     	  
+	   |  2 ->  toSensor2 = enqueue(toSensor, toMeasure(currentFloor, floor));  	 
+	   |  3 ->  toSensor3 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  4 ->  toSensor4 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+            end;
 else
 	if (currentFloor == exBtnFloor)  then      
-		gen (new gotoOpenDoorDirectly());
+                        toControllerSys = enqueue(toControllerSys, gotoOpenDoorDirectly)
 	else
-		getP_con_win().gen(new goDown()); 
-		upordown := -1;  
-		sendToMeasureSensor(exBtnFloor);
+                        toWinch = enqueue(toWinch, goDown)
+	            upordown := -1;  
+		case floor of 
+	                0 -> toSensor = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	             |  1 ->  toSensor1 = enqueue(toSensor, toMeasure(currentFloor, floor));     	  
+	             |  2 ->  toSensor2 = enqueue(toSensor, toMeasure(currentFloor, floor));  	 
+	             |  3 ->  toSensor3 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	             |  4 ->  toSensor4 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+                        end;
 	end;
 end;";
 							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 452436d4-16eb-41cc-94c5-6e67fb3b6fcf;
-								- _modifiedTimeWeak = 2.3.2016::20:56:15;
+								- _modifiedTimeWeak = 2.17.2016::13:12:37;
 								- _itsTrigger = { IInterfaceItemTrigger 
 									- _id = GUID 518022e1-f6df-478c-97c3-e9333bd86108;
 									- _modifiedTimeWeak = 1.2.1990::0:0:0;
@@ -30202,8 +30279,8 @@ end;";
 								- _itsGuard = NULL;
 								- _itsAction = { IAction 
 									- _id = GUID d6240175-1c5c-4d35-bbbe-f4b29334ccda;
-									- _modifiedTimeWeak = 2.3.2016::20:56:15;
-									- _body = "exBtnFloor=params.requestedFloor;       
+									- _modifiedTimeWeak = 2.17.2016::13:12:37;
+									- _body = "exBtnFloor=params.requestedFloor;  
 destFloor=exBtnFloor;
 if (currentFloor < exBtnFloor){
 	getP_con_win().gen(new goUp());   
@@ -30229,7 +30306,18 @@ if (currentFloor < exBtnFloor){
 							- _id = GUID eb95331a-74ee-48fe-9517-309834f56d53;
 							- _myState = 2048;
 							- _name = "transition_14";
-							- _modifiedTimeWeak = 2.16.2016::21:37:8;
+							- _modifiedTimeWeak = 2.17.2016::15:17:34;
+							- _description = { IDescription 
+								- _text = "currentFloor := currentFloor+ upordown;   
+case floor of 
+	      0 ->  toSensor = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  1 ->  toSensor1 = enqueue(toSensor, toMeasure(currentFloor, floor));     	  
+	   |  2 ->  toSensor2 = enqueue(toSensor, toMeasure(currentFloor, floor));  	 
+	   |  3 ->  toSensor3 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  4 ->  toSensor4 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+end;
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID c1bee9d5-2d3d-4923-acd3-9d1d521578a1;
 								- _modifiedTimeWeak = 2.16.2016::21:37:8;
@@ -30259,7 +30347,11 @@ sendToMeasureSensor(destFloor);";
 							- _id = GUID 39882527-3824-49f7-a4cf-80eb2897ed04;
 							- _myState = 2048;
 							- _name = "transition_15";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.17.2016::15:19:40;
+							- _description = { IDescription 
+								- _text = "toWinch = enqueue(toWinch, stop);
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 2dc5371e-8e66-4b8f-80a5-383269fe5d5b;
 								- _modifiedTimeWeak = 11.30.2015::14:31:56;
@@ -30288,10 +30380,14 @@ sendToMeasureSensor(destFloor);";
 							- _id = GUID 88433b1e-8617-4a63-8a7b-4b38516d2b98;
 							- _myState = 2048;
 							- _name = "transition_16";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.17.2016::15:25:40;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys, readyToOpenDoor);
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 250ddb55-4b65-488e-9418-076811650499;
-								- _modifiedTimeWeak = 2.2.2016::22:4:16;
+								- _modifiedTimeWeak = 2.17.2016::15:25:40;
 								- _itsTrigger = { IInterfaceItemTrigger 
 									- _id = GUID b0183756-cb69-4ce8-9784-f8c448dc2983;
 									- _modifiedTimeWeak = 1.2.1990::0:0:0;
@@ -30305,9 +30401,8 @@ sendToMeasureSensor(destFloor);";
 								- _itsGuard = NULL;
 								- _itsAction = { IAction 
 									- _id = GUID b2cfacf3-6013-466a-b423-4f1228b810a5;
-									- _modifiedTimeWeak = 2.2.2016::22:4:16;
-									- _body = "System.out.println(\"ready to open\"); 
-gen (new readyToOpenDoor());";
+									- _modifiedTimeWeak = 2.17.2016::15:25:40;
+									- _body = "gen (new readyToOpenDoor());";
 								}
 							}
 							- _itsTarget = GUID 26c2beaf-1ac2-4b7f-b5d0-245417f23c33;
@@ -30318,7 +30413,19 @@ gen (new readyToOpenDoor());";
 							- _id = GUID d27ea709-acee-47a8-9181-61a878308b2e;
 							- _myState = 2048;
 							- _name = "transition_17";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.17.2016::15:26:44;
+							- _description = { IDescription 
+								- _text = "currentFloor := currentFloor + upordown;   
+sendToMeasureSensor(destFloor);
+case destFloor of 
+	      0 -> toSensor = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  1 ->  toSensor1 = enqueue(toSensor, toMeasure(currentFloor, floor));     	  
+	   |  2 ->  toSensor2 = enqueue(toSensor, toMeasure(currentFloor, floor));  	 
+	   |  3 ->  toSensor3 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  4 ->  toSensor4 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+ end;
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 9f722a41-10ff-4733-b4cf-876a030476c5;
 								- _modifiedTimeWeak = 2.3.2016::16:33:17;
@@ -30348,7 +30455,19 @@ sendToMeasureSensor(destFloor);";
 							- _id = GUID d028372a-3a67-4e32-9c5d-8bbd325133f1;
 							- _myState = 2048;
 							- _name = "transition_18";
-							- _modifiedTimeWeak = 2.3.2016::20:13:3;
+							- _modifiedTimeWeak = 2.17.2016::15:34:15;
+							- _description = { IDescription 
+								- _text = "currentFloor := currentFloor+upordown;   
+loadedPassager := true;        
+ case destFloor of 
+	      0 -> toSensor = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  1 ->  toSensor1 = enqueue(toSensor, toMeasure(currentFloor, floor));     	  
+	   |  2 ->  toSensor2 = enqueue(toSensor, toMeasure(currentFloor, floor));  	 
+	   |  3 ->  toSensor3 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  4 ->  toSensor4 = enqueue(toSensor, toMeasure(currentFloor, floor));   
+end;
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 262f3eb2-e496-4bd4-ba29-3e745c4c6e16;
 								- _modifiedTimeWeak = 2.3.2016::20:13:3;
@@ -30379,7 +30498,10 @@ sendToMeasureSensor(destFloor);";
 							- _id = GUID 120b10f0-f720-4fde-b4ba-c43660314538;
 							- _myState = 2048;
 							- _name = "transition_19";
-							- _modifiedTimeWeak = 2.3.2016::19:48:53;
+							- _modifiedTimeWeak = 2.17.2016::15:33:12;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toCOntrollerSys, readyToOpenDoor);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID ceb3e740-d86d-4d00-9895-ace700a568fb;
 								- _modifiedTimeWeak = 2.3.2016::16:22:26;
@@ -30408,7 +30530,10 @@ sendToMeasureSensor(destFloor);";
 							- _id = GUID 15440e0e-5401-4946-b806-57986c6f0415;
 							- _myState = 2048;
 							- _name = "transition_26";
-							- _modifiedTimeWeak = 2.3.2016::20:14:49;
+							- _modifiedTimeWeak = 2.17.2016::15:27:17;
+							- _description = { IDescription 
+								- _text = "loadedPassager := false;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 4e7a0a86-e962-434a-be23-ac75d716c362;
 								- _modifiedTimeWeak = 2.3.2016::20:14:49;
@@ -30437,7 +30562,10 @@ sendToMeasureSensor(destFloor);";
 							- _id = GUID e96c78b1-fa50-446a-b949-9cf43cf90a89;
 							- _myState = 2048;
 							- _name = "transition_27";
-							- _modifiedTimeWeak = 2.3.2016::20:44:45;
+							- _modifiedTimeWeak = 2.17.2016::15:36:26;
+							- _description = { IDescription 
+								- _text = "toDoor := enqueue(toDoor, CloseDoor);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 79b11f70-cc1d-49fb-a3ee-ef17d1f6cb52;
 								- _modifiedTimeWeak = 2.3.2016::20:44:45;
@@ -30461,7 +30589,10 @@ sendToMeasureSensor(destFloor);";
 							- _id = GUID 83bbac6c-9480-4cdb-87dc-1b2e74d96f0a;
 							- _myState = 2048;
 							- _name = "transition_28";
-							- _modifiedTimeWeak = 2.3.2016::20:51:10;
+							- _modifiedTimeWeak = 2.17.2016::15:28:12;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys, doneTask)";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 0ab52e7c-ed3d-49e4-ad7c-f9b307eb45f1;
 								- _modifiedTimeWeak = 2.3.2016::20:51:10;
@@ -30560,7 +30691,7 @@ sendToMeasureSensor(destFloor);";
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 2.16.2016::22:37:8;
+					- _version = 2.17.2016::16:25:40;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = GUID ec63a17e-639c-44f5-be9e-e4a19662be6e;
 					- Views = { IRPYRawContainer 
@@ -30637,8 +30768,8 @@ sendToMeasureSensor(destFloor);";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.16.2016::21:37:36;
-							- _lastModifiedTime = "2.16.2016::21:37:36";
+							- _modifiedTimeWeak = 2.17.2016::15:36:26;
+							- _lastModifiedTime = "2.17.2016::15:36:26";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 48ce0548-1240-4b22-9f2e-505dd9c5ad53;
 								- m_type = 0;
@@ -31336,14 +31467,13 @@ destFloor=targetFloor;";
 									- m_targetType = 'T';
 									- m_direction = ' ';
 									- m_rpn = { CGIText 
-										- m_str = "readyToGo/if (currentFloor < targetFloor){
+										- m_str = "readyToOpenDoor/if (currentFloor < targetFloor){
 	getP_con_win().gen(new goUp());   
 	upordown=1; 
 	
 	sendToMeasureSensor(targetFloor);
 }else{
-	if (currentFloor == targetFloor) {
-		//open the door         
+	if (currentFloor == targetFloor) {        
 		gen (new gotoOpenDoorDirectly());
 	}else{
 		getP_con_win().gen(new goDown()); 
@@ -31431,7 +31561,7 @@ destFloor=targetFloor;";
 									- m_targetType = 'T';
 									- m_direction = ' ';
 									- m_rpn = { CGIText 
-										- m_str = "receiveFromButton_Ex/exBtnFloor=params.requestedFloor;       
+										- m_str = "receiveFromButton_Ex/exBtnFloor=params.requestedFloor;  
 destFloor=exBtnFloor;
 if (currentFloor < exBtnFloor){
 	getP_con_win().gen(new goUp());   
@@ -31812,8 +31942,7 @@ sendToMeasureSensor(destFloor);";
 									- m_targetType = 'T';
 									- m_direction = ' ';
 									- m_rpn = { CGIText 
-										- m_str = "gotoOpenDoorDirectly/System.out.println(\"ready to open\"); 
-gen (new readyToOpenDoor());";
+										- m_str = "gotoOpenDoorDirectly/gen (new readyToOpenDoor());";
 										- m_style = "Arial" 10 0 0 0 1 ;
 										- m_color = { IColor 
 											- m_fgColor = 0;
@@ -32554,13 +32683,13 @@ sendToMeasureSensor(destFloor);";
 				}
 			}
 			- _name = "Cabin";
-			- _modifiedTimeWeak = 2.6.2016::14:53:35;
+			- _modifiedTimeWeak = 2.17.2016::15:59:17;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 15;
-			- weakCGTime = 2.6.2016::14:53:35;
+			- weakCGTime = 2.17.2016::15:59:17;
 			- strongCGTime = 11.23.2015::16:14:0;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -32837,9 +32966,9 @@ getP_cab_con().gen (new braked());";
 					- _id = GUID 98ae0087-33ff-4a50-a6e2-40b5a21005ae;
 					- _myState = 10240;
 					- _name = "statechart_5";
-					- _modifiedTimeWeak = 2.3.2016::15:58:7;
+					- _modifiedTimeWeak = 2.17.2016::15:59:17;
 					- _lastID = 11;
-					- weakCGTime = 2.3.2016::15:58:7;
+					- weakCGTime = 2.17.2016::15:59:17;
 					- strongCGTime = 11.16.2015::16:41:9;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -32871,7 +33000,11 @@ getP_cab_con().gen (new braked());";
 							- _id = GUID 511cbcdc-742a-4fa3-b93a-d7fca7f1cc99;
 							- _myState = 2048;
 							- _name = "transition_3";
-							- _modifiedTimeWeak = 11.30.2015::14:9:0;
+							- _modifiedTimeWeak = 2.17.2016::15:54:46;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue (toControllerSys, braked);
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 017ba4d8-34f5-4f8f-afaf-50708424e7dd;
 								- _modifiedTimeWeak = 11.30.2015::14:9:0;
@@ -32900,7 +33033,10 @@ getP_cab_con().gen (new braked());";
 							- _id = GUID e020c4ee-e3e9-4ecc-b8d4-2fc6fcc496c3;
 							- _myState = 2048;
 							- _name = "transition_4";
-							- _modifiedTimeWeak = 2.3.2016::15:58:7;
+							- _modifiedTimeWeak = 2.17.2016::15:59:17;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys, receiveFloorAndCloseDoor(params.targetFloor));";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID aaec489a-ea4e-49ac-b2c3-5c38f42f5cc4;
 								- _modifiedTimeWeak = 2.3.2016::15:58:7;
@@ -32929,7 +33065,10 @@ getP_cab_con().gen (new braked());";
 							- _id = GUID f5bfa8c6-e12c-452e-b913-e26afc45fa0d;
 							- _myState = 2048;
 							- _name = "transition_5";
-							- _modifiedTimeWeak = 11.30.2015::13:28:17;
+							- _modifiedTimeWeak = 2.17.2016::15:58:18;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue (toControllerSys, receiveCabinMoved);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 24c5dc18-293e-4164-89e5-998e74794e39;
 								- _modifiedTimeWeak = 11.30.2015::13:28:17;
@@ -32958,7 +33097,11 @@ getP_cab_con().gen (new braked());";
 							- _id = GUID 6b31d8c5-211f-4efc-b4c4-66366fcdba0a;
 							- _myState = 2048;
 							- _name = "transition_7";
-							- _modifiedTimeWeak = 11.30.2015::13:27:18;
+							- _modifiedTimeWeak = 2.17.2016::15:53:21;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys, receiveCabinMoved);
+";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 84a48b9d-0325-42c6-a643-c9be771cc818;
 								- _modifiedTimeWeak = 11.30.2015::13:27:18;
@@ -32987,7 +33130,10 @@ getP_cab_con().gen (new braked());";
 							- _id = GUID 6bdf8ad0-1509-4896-a6c2-dc503f222ee1;
 							- _myState = 2048;
 							- _name = "transition_8";
-							- _modifiedTimeWeak = 11.30.2015::13:27:35;
+							- _modifiedTimeWeak = 2.17.2016::15:55:41;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys, receiveCabinMoved );";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 5559e3d3-451a-4696-b24e-1a881f21d28e;
 								- _modifiedTimeWeak = 11.30.2015::13:27:35;
@@ -33016,7 +33162,10 @@ getP_cab_con().gen (new braked());";
 							- _id = GUID 7fc28382-7a49-4806-bd01-0d140b9d79d0;
 							- _myState = 2048;
 							- _name = "transition_9";
-							- _modifiedTimeWeak = 11.30.2015::14:9:37;
+							- _modifiedTimeWeak = 2.17.2016::15:56:30;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys, braked);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 051c4d50-7479-49af-91f9-38a9241cabdd;
 								- _modifiedTimeWeak = 11.30.2015::14:9:37;
@@ -33045,7 +33194,10 @@ getP_cab_con().gen (new braked());";
 							- _id = GUID 142a6693-e0c0-49c3-a208-0b6f5755851c;
 							- _myState = 2048;
 							- _name = "transition_10";
-							- _modifiedTimeWeak = 11.30.2015::13:28:1;
+							- _modifiedTimeWeak = 2.17.2016::15:57:25;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys,  receiveCabinMoved );";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 1008dbaa-4563-4b0e-b614-5058915a6311;
 								- _modifiedTimeWeak = 11.30.2015::13:28:1;
@@ -33109,7 +33261,7 @@ getP_cab_con().gen (new braked());";
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 2.3.2016::16:58:7;
+					- _version = 2.17.2016::16:50:59;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = GUID 27c9c5ef-72b3-41cd-8ddf-6b46dda9b3bd;
 					- Views = { IRPYRawContainer 
@@ -33186,8 +33338,8 @@ getP_cab_con().gen (new braked());";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.3.2016::15:57:8;
-							- _lastModifiedTime = "2.3.2016::15:58:7";
+							- _modifiedTimeWeak = 2.17.2016::15:59:17;
+							- _lastModifiedTime = "2.17.2016::15:59:17";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 7bc200a1-b60b-4552-9a41-a29054dcfd5e;
 								- m_type = 0;
@@ -33537,7 +33689,7 @@ getP_cab_con().gen (new braked());";
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
 									- m_SourcePort = 274 71 ;
-									- m_TargetPort = 415 1060 ;
+									- m_TargetPort = 79 1024 ;
 									- m_pInheritsFrom = { IHandle 
 										- _m2Class = "";
 									}
@@ -34245,13 +34397,13 @@ getP_cab_con().gen (new braked());";
 				}
 			}
 			- _name = "Winch";
-			- _modifiedTimeWeak = 2.16.2016::21:41:40;
+			- _modifiedTimeWeak = 2.17.2016::16:18:4;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 12;
-			- weakCGTime = 2.16.2016::21:41:40;
+			- weakCGTime = 2.17.2016::16:18:4;
 			- strongCGTime = 11.23.2015::16:13:53;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -34599,9 +34751,9 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 64e81955-7753-492a-a419-0ffe51ca49eb;
 					- _myState = 10240;
 					- _name = "statechart_4";
-					- _modifiedTimeWeak = 2.16.2016::21:41:40;
+					- _modifiedTimeWeak = 2.17.2016::16:18:4;
 					- _lastID = 10;
-					- weakCGTime = 2.16.2016::21:41:40;
+					- weakCGTime = 2.17.2016::16:18:4;
 					- strongCGTime = 11.16.2015::15:40:34;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -34633,9 +34785,9 @@ getP_win_con().gen (new readyToOpenDoor());";
 							- _id = GUID 96206548-2b8a-4142-8cfd-1b20aad45027;
 							- _myState = 2048;
 							- _name = "transition_2";
-							- _modifiedTimeWeak = 2.16.2016::21:41:40;
+							- _modifiedTimeWeak = 2.17.2016::16:14:0;
 							- _description = { IDescription 
-								- _text = "getP_win_cab().gen(new moveCabinUp());";
+								- _text = "toCabin := enqueue(toCabin moveCabinUp);";
 							}
 							- _itsLabel = { ILabel 
 								- _id = GUID c4de8e20-1fb1-47bc-8e70-61d9f079acb9;
@@ -34665,7 +34817,10 @@ getP_win_con().gen (new readyToOpenDoor());";
 							- _id = GUID a624aefb-76b4-4b16-8b3e-cff9ba5c9f27;
 							- _myState = 2048;
 							- _name = "transition_4";
-							- _modifiedTimeWeak = 11.30.2015::14:36:42;
+							- _modifiedTimeWeak = 2.17.2016::16:18:4;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue(toControllerSys,readyToOpenDoor);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID a9bcd2fd-42d9-4d43-afd4-fb36f651aa4b;
 								- _modifiedTimeWeak = 11.30.2015::14:36:42;
@@ -34694,7 +34849,10 @@ getP_win_con().gen (new readyToOpenDoor());";
 							- _id = GUID edfd911e-8e05-45aa-a158-5438bb6ee650;
 							- _myState = 2048;
 							- _name = "transition_6";
-							- _modifiedTimeWeak = 11.30.2015::13:10:31;
+							- _modifiedTimeWeak = 2.17.2016::16:17:10;
+							- _description = { IDescription 
+								- _text = "toCabin := enqueue (toCabin, moveCabinDown);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID c00c53dc-e864-4911-a3db-4fda1055ffce;
 								- _modifiedTimeWeak = 11.30.2015::13:10:31;
@@ -34723,7 +34881,10 @@ getP_win_con().gen (new readyToOpenDoor());";
 							- _id = GUID ccdc61e7-6a08-4b50-a6d9-ac866098ca06;
 							- _myState = 2048;
 							- _name = "transition_8";
-							- _modifiedTimeWeak = 11.30.2015::13:45:9;
+							- _modifiedTimeWeak = 2.17.2016::16:14:42;
+							- _description = { IDescription 
+								- _text = "toCabin := enqueue(toCabin, braked);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 021f94ba-12a6-4b42-9fe3-dd48b190b5ff;
 								- _modifiedTimeWeak = 11.30.2015::13:45:9;
@@ -34752,7 +34913,10 @@ getP_win_con().gen (new readyToOpenDoor());";
 							- _id = GUID 9edc7c27-123f-4f80-9769-07767bebc551;
 							- _myState = 2048;
 							- _name = "transition_9";
-							- _modifiedTimeWeak = 11.30.2015::13:45:31;
+							- _modifiedTimeWeak = 2.17.2016::16:16:34;
+							- _description = { IDescription 
+								- _text = "toCabin := enqueue(toCabin,braked);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID c383a94b-1fdd-4bdd-a6a0-fc0ef76c922c;
 								- _modifiedTimeWeak = 11.30.2015::13:45:31;
@@ -34893,8 +35057,8 @@ getP_win_con().gen (new readyToOpenDoor());";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.16.2016::21:41:40;
-							- _lastModifiedTime = "2.16.2016::21:41:40";
+							- _modifiedTimeWeak = 2.17.2016::16:18:4;
+							- _lastModifiedTime = "2.17.2016::16:18:4";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 0201afd8-0e55-4c75-9989-709f66843259;
 								- m_type = 0;
@@ -35761,13 +35925,13 @@ getP_win_con().gen (new readyToOpenDoor());";
 				}
 			}
 			- _name = "Door";
-			- _modifiedTimeWeak = 2.6.2016::14:54:55;
+			- _modifiedTimeWeak = 2.17.2016::16:4:51;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 6;
-			- weakCGTime = 2.6.2016::14:54:55;
+			- weakCGTime = 2.17.2016::16:4:51;
 			- strongCGTime = 11.23.2015::16:14:8;
 			- Ports = { IRPYRawContainer 
 				- size = 1;
@@ -35878,9 +36042,9 @@ getP_door_con().gen (new readyToGo());";
 					- _id = GUID 95168807-e010-46c9-8052-a9a445d7ced2;
 					- _myState = 10240;
 					- _name = "statechart_3";
-					- _modifiedTimeWeak = 1.5.2016::8:21:50;
+					- _modifiedTimeWeak = 2.17.2016::16:4:51;
 					- _lastID = 5;
-					- weakCGTime = 1.5.2016::8:21:50;
+					- weakCGTime = 2.17.2016::16:4:51;
 					- strongCGTime = 11.16.2015::15:31:24;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -35912,7 +36076,13 @@ getP_door_con().gen (new readyToGo());";
 							- _id = GUID a7aa4da5-8ad1-4562-8de7-8b6f8ce4103e;
 							- _myState = 2048;
 							- _name = "transition_2";
-							- _modifiedTimeWeak = 11.16.2015::15:35:20;
+							- _modifiedTimeWeak = 2.17.2016::16:2:40;
+							- _description = { IDescription 
+								- _text = "if (empty toDoor) then loop end;
+received := first toDoor;
+toDoor := dequeue(toDoor);
+if (received = OpenDoor) then to Open end;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 0cb43aa3-19ab-4b9f-adcb-43f7fd8b4db2;
 								- _modifiedTimeWeak = 11.16.2015::15:35:20;
@@ -35937,7 +36107,13 @@ getP_door_con().gen (new readyToGo());";
 							- _id = GUID 1b58bffb-4f87-4555-961e-acbff35b8c12;
 							- _myState = 2048;
 							- _name = "transition_3";
-							- _modifiedTimeWeak = 11.16.2015::15:35:29;
+							- _modifiedTimeWeak = 2.17.2016::16:3:15;
+							- _description = { IDescription 
+								- _text = "if (empty toDoor) then loop end;
+received := first toDoor;
+toDoor := dequeue(toDoor);
+if (received = CloseDoor) then to Closed end;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID e327fce3-667b-4dbf-abc9-176fe4a271ce;
 								- _modifiedTimeWeak = 11.16.2015::15:35:29;
@@ -35962,7 +36138,10 @@ getP_door_con().gen (new readyToGo());";
 							- _id = GUID d45a5261-af7d-4185-a033-4930fb914520;
 							- _myState = 2048;
 							- _name = "transition_4";
-							- _modifiedTimeWeak = 11.23.2015::15:27:45;
+							- _modifiedTimeWeak = 2.17.2016::16:4:51;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue (toController, readyToGo);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID c1f80666-4b82-4105-8464-dce0eddf1113;
 								- _modifiedTimeWeak = 11.23.2015::15:27:45;
@@ -36087,8 +36266,8 @@ getP_door_con().gen (new readyToGo());";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 1.5.2016::8:21:50;
-							- _lastModifiedTime = "1.5.2016::8:21:50";
+							- _modifiedTimeWeak = 2.17.2016::16:4:51;
+							- _lastModifiedTime = "2.17.2016::16:4:51";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID cdfa6b25-00b6-4ff5-9917-fc7c6196e292;
 								- m_type = 0;
@@ -36673,13 +36852,13 @@ getP_door_con().gen (new readyToGo());";
 			- _id = GUID 969d671d-410e-4e58-8cd7-0d783043b3d9;
 			- _myState = 8192;
 			- _name = "Sensor";
-			- _modifiedTimeWeak = 2.6.2016::14:55:31;
+			- _modifiedTimeWeak = 2.17.2016::16:51:35;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID f8c66818-f1d6-4356-ac41-683dcbf56098;
 			}
 			- _lastID = 11;
-			- weakCGTime = 2.6.2016::14:55:31;
+			- weakCGTime = 2.17.2016::16:51:35;
 			- strongCGTime = 2.2.2016::22:43:41;
 			- Ports = { IRPYRawContainer 
 				- size = 5;
@@ -37130,9 +37309,9 @@ case 4:return getP_sen_con_4();
 					- _id = GUID 8da187ae-b87c-4b4c-a3b8-22771c0cae13;
 					- _myState = 10240;
 					- _name = "statechart_0";
-					- _modifiedTimeWeak = 2.3.2016::20:51:43;
+					- _modifiedTimeWeak = 2.17.2016::16:51:35;
 					- _lastID = 6;
-					- weakCGTime = 2.3.2016::20:51:43;
+					- weakCGTime = 2.17.2016::16:51:35;
 					- strongCGTime = 2.2.2016::22:43:41;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -37147,7 +37326,11 @@ case 4:return getP_sen_con_4();
 							- _id = GUID f588a5b4-388d-441f-8303-54aed76c5588;
 							- _myState = 2048;
 							- _name = "transition_1";
-							- _modifiedTimeWeak = 2.3.2016::15:53:39;
+							- _modifiedTimeWeak = 2.17.2016::16:5:48;
+							- _description = { IDescription 
+								- _text = "floor := params.sensorFloor;
+cabinFloor := params.currentFloor;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 20601cf4-577e-424c-926a-d675ab38b5c5;
 								- _modifiedTimeWeak = 2.3.2016::15:53:39;
@@ -37177,7 +37360,10 @@ cabinFloor=params.currentFloor;";
 							- _id = GUID 101eae6b-bc2a-435a-9aa5-d5389747bad5;
 							- _myState = 2048;
 							- _name = "transition_2";
-							- _modifiedTimeWeak = 2.2.2016::22:44:42;
+							- _modifiedTimeWeak = 2.17.2016::16:12:35;
+							- _description = { IDescription 
+								- _text = "toControllerSys := enqueue (toControllerSys, detected);";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID e1593640-fa3e-4ff6-9545-82a4a888ff6d;
 								- _modifiedTimeWeak = 2.2.2016::22:44:42;
@@ -37206,7 +37392,10 @@ cabinFloor=params.currentFloor;";
 							- _id = GUID bc6ba6e3-4a86-4d98-86da-fb5495fe2772;
 							- _myState = 2048;
 							- _name = "transition_3";
-							- _modifiedTimeWeak = 2.3.2016::20:51:43;
+							- _modifiedTimeWeak = 2.17.2016::16:51:35;
+							- _description = { IDescription 
+								- _text = "wait[1,2]";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 8a51488f-0a53-4e47-9135-5ea87323dd16;
 								- _modifiedTimeWeak = 2.3.2016::20:51:43;
@@ -37245,7 +37434,28 @@ cabinFloor=params.currentFloor;";
 							- _id = GUID 6d88a6ff-9a91-4c38-9d33-db8c6bef55e6;
 							- _myState = 2048;
 							- _name = "transition_5";
-							- _modifiedTimeWeak = 2.3.2016::15:53:52;
+							- _modifiedTimeWeak = 2.17.2016::16:9:38;
+							- _description = { IDescription 
+								- _text = "cabinFloor=params.currentFloor; 
+if (floor = cabinFloor)  then
+            case sensorFloor of 
+	      0 -> toSensor = enqueue(toSensor,cabinArrived);   
+	   |  1 ->  toSensor1 = enqueue(toSensor1, cabinArrived);     	  
+	   |  2 ->  toSensor2 = enqueue(toSensor2, cabinArrived);  	 
+	   |  3 ->  toSensor3 = enqueue(toSensor3, cabinArrived);   
+	   |  4 ->  toSensor4 = enqueue(toSensor4, cabinArrived);   
+            end;
+else
+	wait[1,2];
+	case sensorFloor of 
+	      0 -> toSensor = enqueue(toSensor, toMeasure(currentFloor, floor));   
+	   |  1 ->  toSensor1 = enqueue(toSensor1, toMeasure(currentFloor, floor));     	  
+	   |  2 ->  toSensor2 = enqueue(toSensor2, toMeasure(currentFloor, floor));  	 
+	   |  3 ->  toSensor3 = enqueue(toSensor3, toMeasure(currentFloor, floor));   
+	   |  4 ->  toSensor4 = enqueue(toSensor4, toMeasure(currentFloor, floor));   
+            end;
+end;";
+							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 6b700b0d-6ab4-4bd5-ac5a-f0437476a7de;
 								- _modifiedTimeWeak = 2.3.2016::15:53:52;
@@ -37303,7 +37513,7 @@ checkArrived();";
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 2.3.2016::21:51:43;
+					- _version = 2.17.2016::17:51:35;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = GUID 69ee69ef-af59-4712-b598-8e69f22fcf2e;
 					- Views = { IRPYRawContainer 
@@ -37380,8 +37590,8 @@ checkArrived();";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.3.2016::20:51:34;
-							- _lastModifiedTime = "2.3.2016::20:51:43";
+							- _modifiedTimeWeak = 2.17.2016::16:51:35;
+							- _lastModifiedTime = "2.17.2016::16:51:35";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 5e5ab6f3-5b04-4271-af4f-563ade6da44f;
 								- m_type = 0;
@@ -37794,7 +38004,7 @@ cabinFloor=params.currentFloor;";
 									}
 									- m_pParent = ;
 									- m_name = { CGIText 
-										- m_str = "";
+										- m_str = "timeEvent";
 										- m_style = "Arial" 10 0 0 0 1 ;
 										- m_color = { IColor 
 											- m_fgColor = 0;
@@ -37984,8 +38194,8 @@ checkArrived();";
 									- m_anglePoint1 = 0 0 ;
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
-									- m_SourcePort = 1028 212 ;
-									- m_TargetPort = 1039 866 ;
+									- m_SourcePort = 1005 212 ;
+									- m_TargetPort = 1016 866 ;
 									- m_pInheritsFrom = { IHandle 
 										- _m2Class = "";
 									}

@@ -1,0 +1,19 @@
+[#package generateProcess]
+
+[#template public genFIFOelemtype(datatype : fiacreMM.DataType, process : fiacreMM.Process)]
+type ${datatype.elementType} is union
+	[#foreach state : fiacreMM.State in process.states]
+	[#foreach t : fiacreMM.Transition in state.outTransitions]
+	[#if t.trigger.Body != null]
+		[#if t.trigger.itsLabel ]
+			
+		[#else]
+			
+		[/#if]
+		| ${t.trigger.Body}
+	[/#if]
+	[/#foreach]
+	[/#foreach]
+end
+
+[/#template]

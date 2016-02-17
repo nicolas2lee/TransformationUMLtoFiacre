@@ -1,0 +1,5 @@
+[#package generateProcess]
+
+[#template public genFIFOelemtype(datatype : fiacreMM.DataType, process : fiacreMM.Process)]
+
+[/#template]

@@ -1,0 +1,9 @@
+[#package generateProcess]
+
+[#template public genProcessFIFO(process : fiacreMM.Process)]
+	[#foreach var in process.variables]
+		[#if var.datatype.Name == "queue"]
+		type ${var.Name} is queue ${var.datatype.Size} of ${var.datatype.elementType}
+		[/#if]
+	[/#foreach]
+[/#template]

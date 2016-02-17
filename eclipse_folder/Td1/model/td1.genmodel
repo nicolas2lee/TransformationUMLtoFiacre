@@ -31,6 +31,8 @@
     </genClasses>
     <genClasses ecoreClass="td1.ecore#//DataType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//DataType/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//DataType/Size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td1.ecore#//DataType/elementType"/>
     </genClasses>
     <genClasses ecoreClass="td1.ecore#//Variable">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td1.ecore#//Variable/datatype"/>

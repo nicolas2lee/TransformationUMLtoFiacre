@@ -1,0 +1,10 @@
+[#package generateProcess]
+
+[#template public genFIFOelemtype(datatype : fiacreMM.DataType, process : fiacreMM.Process)]
+type ${datatype.elementType} is union
+	[#foreach element : type in collection]
+		
+	[/#foreach]
+end
+
+[/#template]

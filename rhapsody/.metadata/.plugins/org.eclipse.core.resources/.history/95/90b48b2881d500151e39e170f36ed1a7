@@ -1,0 +1,6 @@
+[#package generateProcess]
+
+[#template public genFIFOelemtype()]
+[#file]file.txt[/#file]
+generated text
+[/#template]

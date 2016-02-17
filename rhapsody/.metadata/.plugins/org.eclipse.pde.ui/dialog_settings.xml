@@ -4,8 +4,8 @@
 	<item value="false" key="uiPlugin"/>
 	<item value="false" key="rcpPlugin"/>
 	<item value="false" key="apiAnalysis"/>
-	<item value="false" key="osgiProject"/>
 	<item value="3.5 or greater" key="targetName"/>
+	<item value="false" key="osgiProject"/>
 	<section name="dependenciesView">
 	</section>
 	<section name="quick_assist_proposal_size">
@@ -23,20 +23,20 @@
 		<item value="false" key="useWorkspaceCompiledClasses"/>
 		<item value="1" key="exportType"/>
 		<item value="C:\" key="destination4"/>
-		<item value="false" key="signJAR"/>
 		<item value="C:\TEMP\eclipse" key="destination3"/>
+		<item value="false" key="signJAR"/>
 		<item value="C:\TEMP\eclipse\plugins" key="destination2"/>
 		<item value="C:\ProgramData\IBM\Rational\Rhapsody\8.1.1\Sodius\RulesComposer\eclipse" key="destination1"/>
 		<item value="C:\ProgramData\IBM\Rational\Rhapsody\8.1.1\Sodius\RulesComposer\eclipse" key="destination0"/>
-		<item value="201510121700" key="qualifierName"/>
 		<item value="true" key="allowBinaryCycles"/>
+		<item value="201510121700" key="qualifierName"/>
 	</section>
 	<section name="PluginImportWizard">
 		<item value="1" key="importType"/>
 		<item value="true" key="addFragments"/>
 		<item value="C:\Users\zhengta\Desktop" key="droplocation1"/>
-		<item value="C:\Users\zhengta\Desktop" key="droplocation0"/>
 		<item value="3" key="importFrom"/>
+		<item value="C:\Users\zhengta\Desktop" key="droplocation0"/>
 		<item value="true" key="scanAll"/>
 		<item value="true" key="showLatestPluginsOnly"/>
 	</section>

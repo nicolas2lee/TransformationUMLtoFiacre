@@ -10,8 +10,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -30,8 +30,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID 3d0536d5-378c-4f21-93b2-dabd1bb4dab3;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 1283 391 ;
+			- _UpLeft = 73 42 ;
+			- _DownRight = 681 733 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 		}
@@ -58,18 +58,18 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID 27c9c5ef-72b3-41cd-8ddf-6b46dda9b3bd;
 			}
-			- _UpLeft = 0 80 ;
-			- _DownRight = 1004 435 ;
+			- _UpLeft = 0 -14 ;
+			- _DownRight = 1004 341 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 4;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
+				- m_nFlags = 2;
+				- m_showCmd = 2;
+				- m_ptMinPositionX = 0;
+				- m_ptMinPositionY = 788;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -31;
 				- m_nLeft = 26;
@@ -86,8 +86,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID ec63a17e-639c-44f5-be9e-e4a19662be6e;
 			}
-			- _UpLeft = 152 0 ;
-			- _DownRight = 470 206 ;
+			- _UpLeft = 8 150 ;
+			- _DownRight = 744 986 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
@@ -142,16 +142,16 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID 69ee69ef-af59-4712-b598-8e69f22fcf2e;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 852 518 ;
+			- _UpLeft = 143 0 ;
+			- _DownRight = 681 327 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 5;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -170,8 +170,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID a1416477-c6ac-4977-b1e4-39c206dfc643;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 774 634 ;
+			- _UpLeft = 41 6 ;
+			- _DownRight = 550 364 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}

@@ -1,0 +1,18 @@
+[#package generateFiacreMain]
+[#import generateProcess.*]
+[#import generateComponent.*]
+
+[#template public generateFiacre( p: fiacreMM.Program)]
+[#file]generatedFiacre/${p.Name}.fcr[/#file]
+
+[#foreach c : fiacreMM.Component in p.components]
+	[#include genProcessFIFO(process) ]
+	/*process*/
+	[#foreach process : fiacreMM.Process in c.instances]
+		[#include genProcess(process)]
+	[/#foreach]
+	/*Component*/
+	[#include genComponent(c)]
+[/#foreach]
+
+[/#template]
