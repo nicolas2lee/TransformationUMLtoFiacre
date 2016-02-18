@@ -14,7 +14,7 @@
    </extension>
 
   <extension point="com.sodius.mdw.core.metamodel">
-    <metamodel id="fiacreMM" name="fiacreMM" version="1.0" presentationName="fiacreMM 1.0">
+    <metamodel id="fiacreMM" name="fiacreMM" version="1.2" presentationName="fiacreMM 1.2">
       <provider class="com.sodius.mdw.corext.model.emf.EMFMetamodelProvider">
         <epackage class="com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage"/>
       </provider>

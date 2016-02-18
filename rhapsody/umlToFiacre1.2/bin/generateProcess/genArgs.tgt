@@ -1,0 +1,14 @@
+[#package generateProcess]
+[#import generateUtile.*]
+
+[#template public genArgs(process : fiacreMM.Process)]
+		(
+		[#foreach t : fiacreMM.Transition in process.transitions]
+			[#if t.trigger.arguments != null]
+				[#foreach arg : fiacreMM.Variable in t.trigger.arguments]
+					&${arg.Name} : ${arg.datatype},
+				[/#foreach]
+			[/#if]
+		[/#foreach]
+		)
+[/#template]

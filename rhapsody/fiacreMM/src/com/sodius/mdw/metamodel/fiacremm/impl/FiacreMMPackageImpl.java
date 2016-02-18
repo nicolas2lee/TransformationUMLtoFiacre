@@ -315,6 +315,16 @@ public class FiacreMMPackageImpl extends EPackageImpl implements FiacreMMPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getProcess_AlluniqueTrigger()
+  {
+    return (EReference)processEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTransition()
   {
     return transitionEClass;
@@ -835,6 +845,7 @@ public class FiacreMMPackageImpl extends EPackageImpl implements FiacreMMPackage
     createEAttribute(processEClass, PROCESS__STATE_SIZE);
     createEAttribute(processEClass, PROCESS__VAR_SIZE);
     createEReference(processEClass, PROCESS__PORTS);
+    createEReference(processEClass, PROCESS__ALLUNIQUE_TRIGGER);
 
     transitionEClass = createEClass(TRANSITION);
     createEReference(transitionEClass, TRANSITION__SOURCE);
@@ -951,6 +962,7 @@ public class FiacreMMPackageImpl extends EPackageImpl implements FiacreMMPackage
     initEAttribute(getProcess_StateSize(), ecorePackage.getEInt(), "StateSize", "0", 0, 1, com.sodius.mdw.metamodel.fiacremm.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProcess_VarSize(), ecorePackage.getEInt(), "VarSize", "0", 0, 1, com.sodius.mdw.metamodel.fiacremm.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProcess_Ports(), this.getPort(), null, "ports", null, 0, -1, com.sodius.mdw.metamodel.fiacremm.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProcess_AlluniqueTrigger(), this.getTrigger(), null, "alluniqueTrigger", null, 0, -1, com.sodius.mdw.metamodel.fiacremm.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTransition_Source(), this.getState(), this.getState_OutTransitions(), "source", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

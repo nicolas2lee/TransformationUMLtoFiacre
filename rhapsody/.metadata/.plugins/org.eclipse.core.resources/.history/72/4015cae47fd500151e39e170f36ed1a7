@@ -1,6 +1,0 @@
-[#package generateProcess]
-
-[#template public genProcessFIFO()]
-[#file]file.txt[/#file]
-generated text
-[/#template]

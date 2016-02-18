@@ -6,6 +6,7 @@ import com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage;
 import com.sodius.mdw.metamodel.fiacremm.Port;
 import com.sodius.mdw.metamodel.fiacremm.State;
 import com.sodius.mdw.metamodel.fiacremm.Transition;
+import com.sodius.mdw.metamodel.fiacremm.Trigger;
 import com.sodius.mdw.metamodel.fiacremm.Variable;
 
 import java.util.Collection;
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.ProcessImpl#getStateSize <em>State Size</em>}</li>
  *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.ProcessImpl#getVarSize <em>Var Size</em>}</li>
  *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.ProcessImpl#getPorts <em>Ports</em>}</li>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.impl.ProcessImpl#getAlluniqueTrigger <em>Allunique Trigger</em>}</li>
  * </ul>
  * </p>
  *
@@ -156,6 +158,16 @@ public class ProcessImpl extends DefaultMDWEObject implements com.sodius.mdw.met
    * @ordered
    */
   protected MDWEList<Port> ports;
+
+  /**
+   * The cached value of the '{@link #getAlluniqueTrigger() <em>Allunique Trigger</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAlluniqueTrigger()
+   * @generated
+   * @ordered
+   */
+  protected MDWEList<Trigger> alluniqueTrigger;
 
   /**
    * <!-- begin-user-doc -->
@@ -376,6 +388,20 @@ public class ProcessImpl extends DefaultMDWEObject implements com.sodius.mdw.met
    * <!-- end-user-doc -->
    * @generated
    */
+  public MDWEList<Trigger> getAlluniqueTrigger()
+  {
+    if (alluniqueTrigger == null)
+    {
+      alluniqueTrigger = new MDWEObjectContainmentEList<Trigger>(Trigger.class, this, FiacreMMPackage.PROCESS__ALLUNIQUE_TRIGGER);
+    }
+    return alluniqueTrigger;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
@@ -412,6 +438,8 @@ public class ProcessImpl extends DefaultMDWEObject implements com.sodius.mdw.met
         return basicSetInitState(null, msgs);
       case FiacreMMPackage.PROCESS__PORTS:
         return ((InternalEList<?>)getPorts()).basicRemove(otherEnd, msgs);
+      case FiacreMMPackage.PROCESS__ALLUNIQUE_TRIGGER:
+        return ((InternalEList<?>)getAlluniqueTrigger()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -443,6 +471,8 @@ public class ProcessImpl extends DefaultMDWEObject implements com.sodius.mdw.met
         return getVarSize();
       case FiacreMMPackage.PROCESS__PORTS:
         return getPorts();
+      case FiacreMMPackage.PROCESS__ALLUNIQUE_TRIGGER:
+        return getAlluniqueTrigger();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -486,6 +516,10 @@ public class ProcessImpl extends DefaultMDWEObject implements com.sodius.mdw.met
         getPorts().clear();
         getPorts().addAll((Collection<? extends Port>)newValue);
         return;
+      case FiacreMMPackage.PROCESS__ALLUNIQUE_TRIGGER:
+        getAlluniqueTrigger().clear();
+        getAlluniqueTrigger().addAll((Collection<? extends Trigger>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -524,6 +558,9 @@ public class ProcessImpl extends DefaultMDWEObject implements com.sodius.mdw.met
       case FiacreMMPackage.PROCESS__PORTS:
         getPorts().clear();
         return;
+      case FiacreMMPackage.PROCESS__ALLUNIQUE_TRIGGER:
+        getAlluniqueTrigger().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -554,6 +591,8 @@ public class ProcessImpl extends DefaultMDWEObject implements com.sodius.mdw.met
         return varSize != VAR_SIZE_EDEFAULT;
       case FiacreMMPackage.PROCESS__PORTS:
         return ports != null && !ports.isEmpty();
+      case FiacreMMPackage.PROCESS__ALLUNIQUE_TRIGGER:
+        return alluniqueTrigger != null && !alluniqueTrigger.isEmpty();
     }
     return super.eIsSet(featureID);
   }

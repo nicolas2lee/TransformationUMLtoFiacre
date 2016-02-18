@@ -23,6 +23,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fiacremm.ecore#//Process/StateSize"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fiacremm.ecore#//Process/VarSize"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacremm.ecore#//Process/ports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fiacremm.ecore#//Process/alluniqueTrigger"/>
     </genClasses>
     <genClasses ecoreClass="fiacremm.ecore#//Transition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fiacremm.ecore#//Transition/source"/>

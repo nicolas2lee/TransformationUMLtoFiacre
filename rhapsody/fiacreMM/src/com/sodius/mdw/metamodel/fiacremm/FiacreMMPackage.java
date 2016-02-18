@@ -213,13 +213,22 @@ public interface FiacreMMPackage extends EPackage
   int PROCESS__PORTS = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 7;
 
   /**
+   * The feature id for the '<em><b>Allunique Trigger</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROCESS__ALLUNIQUE_TRIGGER = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 8;
+
+  /**
    * The number of structural features of the '<em>Process</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROCESS_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 8;
+  int PROCESS_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 9;
 
   /**
    * The meta object id for the '{@link com.sodius.mdw.metamodel.fiacremm.impl.TransitionImpl <em>Transition</em>}' class.
@@ -978,6 +987,17 @@ public interface FiacreMMPackage extends EPackage
   EReference getProcess_Ports();
 
   /**
+   * Returns the meta object for the containment reference list '{@link com.sodius.mdw.metamodel.fiacremm.Process#getAlluniqueTrigger <em>Allunique Trigger</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Allunique Trigger</em>'.
+   * @see com.sodius.mdw.metamodel.fiacremm.Process#getAlluniqueTrigger()
+   * @see #getProcess()
+   * @generated
+   */
+  EReference getProcess_AlluniqueTrigger();
+
+  /**
    * Returns the meta object for class '{@link com.sodius.mdw.metamodel.fiacremm.Transition <em>Transition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1634,6 +1654,14 @@ public interface FiacreMMPackage extends EPackage
      * @generated
      */
     EReference PROCESS__PORTS = eINSTANCE.getProcess_Ports();
+
+    /**
+     * The meta object literal for the '<em><b>Allunique Trigger</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROCESS__ALLUNIQUE_TRIGGER = eINSTANCE.getProcess_AlluniqueTrigger();
 
     /**
      * The meta object literal for the '{@link com.sodius.mdw.metamodel.fiacremm.impl.TransitionImpl <em>Transition</em>}' class.

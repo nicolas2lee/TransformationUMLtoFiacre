@@ -1,5 +1,0 @@
-[#package generateProcess]
-
-[#template public genProcessFIFO(process : fiacreMM.Process)]
-
-[/#template]

@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EModelElement;
  *   <li>{@link com.sodius.mdw.metamodel.fiacremm.Process#getStateSize <em>State Size</em>}</li>
  *   <li>{@link com.sodius.mdw.metamodel.fiacremm.Process#getVarSize <em>Var Size</em>}</li>
  *   <li>{@link com.sodius.mdw.metamodel.fiacremm.Process#getPorts <em>Ports</em>}</li>
+ *   <li>{@link com.sodius.mdw.metamodel.fiacremm.Process#getAlluniqueTrigger <em>Allunique Trigger</em>}</li>
  * </ul>
  * </p>
  *
@@ -176,5 +177,17 @@ public interface Process extends MDWEObject, EModelElement
    * @generated
    */
   MDWEList<Port> getPorts();
+
+  /**
+   * Returns the value of the '<em><b>Allunique Trigger</b></em>' containment reference list.
+   * The list contents are of type {@link com.sodius.mdw.metamodel.fiacremm.Trigger}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Allunique Trigger</em>' containment reference list.
+   * @see com.sodius.mdw.metamodel.fiacremm.FiacreMMPackage#getProcess_AlluniqueTrigger()
+   * @model containment="true"
+   * @generated
+   */
+  MDWEList<Trigger> getAlluniqueTrigger();
 
 } // Process

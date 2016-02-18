@@ -1,0 +1,28 @@
+[#package generateProcess]
+
+[#template public genFIFOelemtype(datatype : fiacreMM.DataType, process : fiacreMM.Process)]
+type ${datatype.elementType} is union
+	[#set nbElement = 0]
+	[#foreach state : fiacreMM.State in process.states]
+	[#foreach t : fiacreMM.Transition in state.outTransitions]
+	[#if t.trigger.Body != null]
+		[#if nbElement == 0]
+		[#if t.trigger.Body[2]=='(']
+			  timeEvent
+		[#else]
+			 ${t.trigger.Body}
+		[/#if]
+		[#else]
+		[#if t.trigger.Body[2]=='(']
+			| timeEvent
+		[#else]
+			| ${t.trigger.Body}
+		[/#if]
+		[/#if]
+		[#set nbElement = nbElement +1 ]
+	[/#if]
+	[/#foreach]
+	[/#foreach]
+end
+
+[/#template]

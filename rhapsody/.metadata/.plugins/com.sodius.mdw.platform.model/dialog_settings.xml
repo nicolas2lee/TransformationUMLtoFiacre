@@ -11,8 +11,8 @@
 	<item value="2" key="com.sodius.mdw.platform.model.featuresPage.orientation"/>
 	<item value="XMI 2.1" key="com.sodius.mdw.platform.model.last.model.connector.FiacreMM.false"/>
 	<item value="2" key="com.sodius.mdw.platform.model.modelTypesPage.orientation"/>
-	<item value="false" key="LINK_NAVIGATOR_TO_EDITOR"/>
 	<item value="fiacreMM" key="com.sodius.mdw.platform.model.last.model.metamodel.false"/>
+	<item value="false" key="LINK_NAVIGATOR_TO_EDITOR"/>
 	<item value="XMI 2.1" key="com.sodius.mdw.platform.model.last.model.connector.metaDoc.false"/>
 	<item value="U:\semestre5" key="com.sodius.mdw.platform.model.last.model.location"/>
 	<list key="metamodelExtensions.ecore">
