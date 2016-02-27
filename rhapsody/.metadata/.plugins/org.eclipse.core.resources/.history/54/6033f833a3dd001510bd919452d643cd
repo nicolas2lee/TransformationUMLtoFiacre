@@ -1,0 +1,24 @@
+[#package generateComponent]
+[#import generateUtile.*]
+[#template public genComponent(c:fiacreMM.Component)]
+	Component ${c.Name} is 
+	port 
+		
+	par
+	
+	[#set nbProcess = 0]
+[#foreach element in c.instances]
+	[#if SIZE==0]
+		${element.Name}
+	[#else]
+		[#if nbElement == SIZE-1]
+			${element.Name}
+		[#else]
+			${element.Name},
+			[#set nbElement = nbElement+1]
+		[/#if]
+	[/#if]
+[/#foreach]
+		[#include handleEndComma(c.instances,c.ProcessSize)]
+	
+[/#template]

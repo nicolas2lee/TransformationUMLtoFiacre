@@ -1,0 +1,13 @@
+[#package generateComponent]
+[#import generateUtile.*]
+[#template public genComponent(c:fiacreMM.Component)]
+	Component ${c.Name} is 
+	port 
+		
+	par
+	
+	[#set nbProcess = 0]
+	
+		[#include handleEndComma(c.instances,c.ProcessSize)]
+	
+[/#template]
