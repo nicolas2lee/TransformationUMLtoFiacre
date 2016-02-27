@@ -1,0 +1,528 @@
+
+	/*process*/
+	Process Button_ex []
+
+ (
+					&requestFloor : int,
+		)
+
+	is
+		states 
+			Off,
+			On
+	init
+		to Off
+
+	from Off
+		getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
+genFiacre2();
+		
+		to On
+	from On
+		genFiacre1();
+		
+		to Off
+		genFiacre3();
+		
+		to Off
+
+	Process ControllerSys []
+
+ (
+					&requestedTargetFloor : int,
+					&requestedFloor : int,
+		)
+
+	is
+		states 
+			Wait,
+			cabinMoved,
+			cabinArrived,
+			doorOpened,
+			doorClosed,
+			receiveRequestFromButtonEx,
+			cabinBraked,
+			recievedRequestFromCabin,
+			waitDoorClosed
+		var 
+			exBtnFloor,
+			currentFloor,
+			isBusy,
+			upordown,
+			targetFloor,
+			destFloor,
+			loadedPassager
+	init
+		exBtnFloor := -1;
+		currentFloor := 0;
+		isBusy := false;
+		upordown := 0;
+		targetFloor := -1;
+		destFloor := -1;
+		loadedPassager := false;
+		to Wait
+
+	from Wait
+		exBtnFloor=params.requestedFloor;       
+destFloor=exBtnFloor;
+if (currentFloor < exBtnFloor){
+	getP_con_win().gen(new goUp());   
+	upordown=1;  
+	sendToMeasureSensor(exBtnFloor);
+}else{
+	if (currentFloor == exBtnFloor) {
+		//open the door         
+		gen (new gotoOpenDoorDirectly());
+	}else{
+		getP_con_win().gen(new goDown()); 
+		upordown=-1;  
+		sendToMeasureSensor(exBtnFloor);
+	}
+}    
+genFiacre5();
+		
+		to receiveRequestFromButtonEx
+	from cabinMoved
+		sendStopToWinch();   
+genFiacre1();
+		
+		to cabinArrived
+		currentFloor+=upordown;   
+sendToMeasureSensor(destFloor);     
+genFiacre9();
+		
+		to cabinMoved
+	from cabinArrived
+		sendToWinchToStop();     
+genFiacre7();
+		
+		to cabinBraked
+	from doorOpened
+		closeDoor();
+targetFloor=params.requestedTargetFloor;    
+destFloor=targetFloor;     
+genFiacre3();
+		
+		to doorClosed
+		closeDoor();     
+genFiacre13();
+		
+		to waitDoorClosed
+	from doorClosed
+		if (currentFloor < targetFloor){
+	getP_con_win().gen(new goUp());   
+	upordown=1; 
+	
+	sendToMeasureSensor(targetFloor);
+}else{
+	if (currentFloor == targetFloor) {
+		//open the door         
+		gen (new gotoOpenDoorDirectly());
+	}else{
+		getP_con_win().gen(new goDown()); 
+		upordown=-1;  
+		
+		sendToMeasureSensor(targetFloor);
+	}
+} 
+genFiacre4();
+		
+		to recievedRequestFromCabin
+		loadedPassager=false;         
+genFiacre12();
+		
+		to Wait
+	from receiveRequestFromButtonEx
+		currentFloor+=upordown;   
+sendToMeasureSensor(destFloor);  
+/*try {
+    Thread.sleep(1000);                 //1000 milliseconds is one second.
+} catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+}*/       
+genFiacre6();
+		
+		to cabinMoved
+		System.out.println("ready to open"); 
+gen (new readyToOpenDoor());    
+genFiacre8();
+		
+		to cabinBraked
+	from cabinBraked
+		 openDoor();
+ genFiacre2();
+		
+		to doorOpened
+	from recievedRequestFromCabin
+		currentFloor+=upordown;   
+loadedPassager=true;        
+sendToMeasureSensor(destFloor);      
+genFiacre10();
+		
+		to cabinMoved
+		gen(new readyToOpenDoor());                 
+genFiacre11();
+		
+		to cabinBraked
+	from waitDoorClosed
+		gen(new doneTask());       
+genFiacre14();
+		
+		to doorClosed
+
+	Process Winch []
+
+ (
+		)
+
+	is
+		states 
+			Not_Going,
+			Going_Up,
+			Going_Down,
+			receiveCabinBrakedFromControllerSys
+		var 
+			motor,
+			frein,
+			selector
+	init
+		motor := ;
+		frein := ;
+		selector := ;
+		to Not_Going
+
+	from Not_Going
+		sendGoUpToCabin();   
+genFiacre1();
+		
+		to Going_Up
+		sendGoDownToCabin();  
+genFiacre3();
+		
+		to Going_Down
+	from Going_Up
+		sendBrakeToCabin();   
+genFiacre4();
+		
+		to receiveCabinBrakedFromControllerSys
+	from Going_Down
+		sendBrakeToCabin();        
+genFiacre5();
+		
+		to receiveCabinBrakedFromControllerSys
+	from receiveCabinBrakedFromControllerSys
+		receiveStopFromController();      
+genFiacre2();
+		
+		to Not_Going
+
+	Process Cabin []
+
+ (
+					&targetFloor : int,
+		)
+
+	is
+		states 
+			Stop,
+			Down,
+			sentInfo,
+			Up
+		var 
+			currentFloor
+	init
+		currentFloor := 0;
+		to Stop
+
+	from Stop
+		getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    
+genFiacre2();
+		
+		to sentInfo
+		sendMovedDownToController();       
+genFiacre4();
+		
+		to Down
+		sendMovedUpToController();   
+genFiacre5();
+		
+		to Up
+	from Down
+		sendCabinBrakedToController();                 
+genFiacre1();
+		
+		to Stop
+	from sentInfo
+		sendMovedDownToController();      
+genFiacre3();
+		
+		to Down
+		sendMovedUpToController();         
+genFiacre7();
+		
+		to Up
+	from Up
+		sendCabinBrakedToController();  
+genFiacre6();
+		
+		to Stop
+
+	Process Door []
+
+ (
+		)
+
+	is
+		states 
+			Open,
+			Closed,
+			Sleep
+	init
+		to Sleep
+
+	from Open
+		genFiacre2();
+		
+		to Closed
+	from Closed
+		goSleep();
+genFiacre3();
+		
+		to Sleep
+	from Sleep
+		genFiacre1();
+		
+		to Open
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		
+		to Detecting
+	from Detecting
+		sendCabinArrived();     
+genFiacre1();
+		
+		to Detected
+		cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		
+		to Detecting
+	from Detected
+		genFiacre2();
+		
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		
+		to Detecting
+	from Detecting
+		sendCabinArrived();     
+genFiacre1();
+		
+		to Detected
+		cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		
+		to Detecting
+	from Detected
+		genFiacre2();
+		
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		
+		to Detecting
+	from Detecting
+		sendCabinArrived();     
+genFiacre1();
+		
+		to Detected
+		cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		
+		to Detecting
+	from Detected
+		genFiacre2();
+		
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		
+		to Detecting
+	from Detecting
+		sendCabinArrived();     
+genFiacre1();
+		
+		to Detected
+		cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		
+		to Detecting
+	from Detected
+		genFiacre2();
+		
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		
+		to Detecting
+	from Detecting
+		sendCabinArrived();     
+genFiacre1();
+		
+		to Detected
+		cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		
+		to Detecting
+	from Detected
+		genFiacre2();
+		
+		to Idle
+
+	/*Component*/
+	Component InstanceClsDiag is 
+	par
+	
+	
+			Button_ex,
+			ControllerSys,
+			Winch,
+			Cabin,
+			Door,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor
+	
+

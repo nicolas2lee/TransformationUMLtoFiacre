@@ -1,0 +1,581 @@
+
+	/*process*/
+	Process Button_ex []
+
+ (
+					&requestFloor : int,
+		)
+
+	is
+		states 
+			Off,
+			On
+	init
+		to Off
+
+	from Off
+		name is  
+		body is getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
+genFiacre2();
+		codeFiacre is Pressed
+		to On
+	from On
+		name is  
+		body is genFiacre1();
+		codeFiacre is arrive
+		to Off
+		name is  
+		body is genFiacre3();
+		codeFiacre is tm 5
+		to Off
+
+	Process ControllerSys []
+
+ (
+					&requestedTargetFloor : int,
+					&requestedFloor : int,
+		)
+
+	is
+		states 
+			Wait,
+			cabinMoved,
+			cabinArrived,
+			doorOpened,
+			doorClosed,
+			receiveRequestFromButtonEx,
+			cabinBraked,
+			recievedRequestFromCabin,
+			waitDoorClosed
+		var 
+			exBtnFloor,
+			currentFloor,
+			isBusy,
+			upordown,
+			targetFloor,
+			destFloor,
+			loadedPassager
+	init
+		exBtnFloor := -1;
+		currentFloor := 0;
+		isBusy := false;
+		upordown := 0;
+		targetFloor := -1;
+		destFloor := -1;
+		loadedPassager := false;
+		to Wait
+
+	from Wait
+		name is  
+		body is exBtnFloor=params.requestedFloor;       
+destFloor=exBtnFloor;
+if (currentFloor < exBtnFloor){
+	getP_con_win().gen(new goUp());   
+	upordown=1;  
+	sendToMeasureSensor(exBtnFloor);
+}else{
+	if (currentFloor == exBtnFloor) {
+		//open the door         
+		gen (new gotoOpenDoorDirectly());
+	}else{
+		getP_con_win().gen(new goDown()); 
+		upordown=-1;  
+		sendToMeasureSensor(exBtnFloor);
+	}
+}    
+genFiacre5();
+		codeFiacre is receiveFromButton_Ex
+		to receiveRequestFromButtonEx
+	from cabinMoved
+		name is  
+		body is sendStopToWinch();   
+genFiacre1();
+		codeFiacre is detected 
+		to cabinArrived
+		name is  
+		body is currentFloor+=upordown;   
+sendToMeasureSensor(destFloor);     
+genFiacre9();
+		codeFiacre is continueToMove
+		to cabinMoved
+	from cabinArrived
+		name is  
+		body is sendToWinchToStop();     
+genFiacre7();
+		codeFiacre is braked
+		to cabinBraked
+	from doorOpened
+		name is  
+		body is closeDoor();
+targetFloor=params.requestedTargetFloor;    
+destFloor=targetFloor;     
+genFiacre3();
+		codeFiacre is  receiveFloorAndCloseDoor
+		to doorClosed
+		name is  
+		body is closeDoor();     
+genFiacre13();
+		codeFiacre is [loadedPassager]
+		to waitDoorClosed
+	from doorClosed
+		name is  
+		body is if (currentFloor < targetFloor){
+	getP_con_win().gen(new goUp());   
+	upordown=1; 
+	
+	sendToMeasureSensor(targetFloor);
+}else{
+	if (currentFloor == targetFloor) {
+		//open the door         
+		gen (new gotoOpenDoorDirectly());
+	}else{
+		getP_con_win().gen(new goDown()); 
+		upordown=-1;  
+		
+		sendToMeasureSensor(targetFloor);
+	}
+} 
+genFiacre4();
+		codeFiacre is readyToGo    (s : doorClosed, t : recievedRequestFromCabin) 
+		to recievedRequestFromCabin
+		name is  
+		body is loadedPassager=false;         
+genFiacre12();
+		codeFiacre is doneTask
+		to Wait
+	from receiveRequestFromButtonEx
+		name is  
+		body is currentFloor+=upordown;   
+sendToMeasureSensor(destFloor);  
+/*try {
+    Thread.sleep(1000);                 //1000 milliseconds is one second.
+} catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+}*/       
+genFiacre6();
+		codeFiacre is receiveCabinMoved     (s: receiveRequestFromButtonEx, t: cabinMoved )
+		to cabinMoved
+		name is  
+		body is System.out.println("ready to open"); 
+gen (new readyToOpenDoor());    
+genFiacre8();
+		codeFiacre is gotoOpenDoorDirectly  (s: receiveRequestFromButtonEx, t: cabinBraked)
+		to cabinBraked
+	from cabinBraked
+		name is  
+		body is  openDoor();
+ genFiacre2();
+		codeFiacre is readyToOpenDoor
+		to doorOpened
+	from recievedRequestFromCabin
+		name is  
+		body is currentFloor+=upordown;   
+loadedPassager=true;        
+sendToMeasureSensor(destFloor);      
+genFiacre10();
+		codeFiacre is receiveCabinMoved    (s: recievedRequestFromCabin, t: cabinMoved)
+		to cabinMoved
+		name is  
+		body is gen(new readyToOpenDoor());                 
+genFiacre11();
+		codeFiacre is gotoOpenDoorDirectly    (s: recievedRequestFromCabin, t: cabinBraked )
+		to cabinBraked
+	from waitDoorClosed
+		name is  
+		body is gen(new doneTask());       
+genFiacre14();
+		codeFiacre is readyToGo      (s: waitDoorClosed, t:  doorClosed)
+		to doorClosed
+
+	Process Winch []
+
+ (
+		)
+
+	is
+		states 
+			Not_Going,
+			Going_Up,
+			Going_Down,
+			receiveCabinBrakedFromControllerSys
+		var 
+			motor,
+			frein,
+			selector
+	init
+		motor := ;
+		frein := ;
+		selector := ;
+		to Not_Going
+
+	from Not_Going
+		name is  
+		body is sendGoUpToCabin();   
+genFiacre1();
+		codeFiacre is 
+		to Going_Up
+		name is  
+		body is sendGoDownToCabin();  
+genFiacre3();
+		codeFiacre is goDown
+		to Going_Down
+	from Going_Up
+		name is  
+		body is sendBrakeToCabin();   
+genFiacre4();
+		codeFiacre is stopFromController (s: Going_Up, t:  receiveCabinBrakedFromControllerSys)
+
+		to receiveCabinBrakedFromControllerSys
+	from Going_Down
+		name is  
+		body is sendBrakeToCabin();        
+genFiacre5();
+		codeFiacre is stopFromController (s: Going_Down, t:  receiveCabinBrakedFromControllerSys)
+		to receiveCabinBrakedFromControllerSys
+	from receiveCabinBrakedFromControllerSys
+		name is  
+		body is receiveStopFromController();      
+genFiacre2();
+		codeFiacre is  stop
+		to Not_Going
+
+	Process Cabin []
+
+ (
+					&targetFloor : int,
+		)
+
+	is
+		states 
+			Stop,
+			Down,
+			sentInfo,
+			Up
+		var 
+			currentFloor
+	init
+		currentFloor := 0;
+		to Stop
+
+	from Stop
+		name is  
+		body is getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    
+genFiacre2();
+		codeFiacre is sendFloorAndCloseDoor 
+		to sentInfo
+		name is  
+		body is sendMovedDownToController();       
+genFiacre4();
+		codeFiacre is moveCabinDown    (s : Stop, t : Down)
+		to Down
+		name is  
+		body is sendMovedUpToController();   
+genFiacre5();
+		codeFiacre is moveCabinUp         (s : Stop, t : Up)
+		to Up
+	from Down
+		name is  
+		body is sendCabinBrakedToController();                 
+genFiacre1();
+		codeFiacre is braked
+		to Stop
+	from sentInfo
+		name is  
+		body is sendMovedDownToController();      
+genFiacre3();
+		codeFiacre is moveCabinDown     (s : sentInfo, t : Down)
+		to Down
+		name is  
+		body is sendMovedUpToController();         
+genFiacre7();
+		codeFiacre is moveCabinUp    (s : sentInfo, t : Up)
+		to Up
+	from Up
+		name is  
+		body is sendCabinBrakedToController();  
+genFiacre6();
+		codeFiacre is braked         (s : Up, t : Stop)
+		to Stop
+
+	Process Door []
+
+ (
+		)
+
+	is
+		states 
+			Open,
+			Closed,
+			Sleep
+	init
+		to Sleep
+
+	from Open
+		name is  
+		body is genFiacre2();
+		codeFiacre is CloseDoor
+		to Closed
+	from Closed
+		name is  
+		body is goSleep();
+genFiacre3();
+		codeFiacre is none
+		to Sleep
+	from Sleep
+		name is  
+		body is genFiacre1();
+		codeFiacre is OpenDoor
+		to Open
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		name is  
+		body is floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		codeFiacre is toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		name is  
+		body is sendCabinArrived();     
+genFiacre1();
+		codeFiacre is cabinArrived
+		to Detected
+		name is  
+		body is cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		codeFiacre is toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		name is  
+		body is genFiacre2();
+		codeFiacre is tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		name is  
+		body is floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		codeFiacre is toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		name is  
+		body is sendCabinArrived();     
+genFiacre1();
+		codeFiacre is cabinArrived
+		to Detected
+		name is  
+		body is cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		codeFiacre is toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		name is  
+		body is genFiacre2();
+		codeFiacre is tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		name is  
+		body is floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		codeFiacre is toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		name is  
+		body is sendCabinArrived();     
+genFiacre1();
+		codeFiacre is cabinArrived
+		to Detected
+		name is  
+		body is cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		codeFiacre is toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		name is  
+		body is genFiacre2();
+		codeFiacre is tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		name is  
+		body is floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		codeFiacre is toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		name is  
+		body is sendCabinArrived();     
+genFiacre1();
+		codeFiacre is cabinArrived
+		to Detected
+		name is  
+		body is cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		codeFiacre is toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		name is  
+		body is genFiacre2();
+		codeFiacre is tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		name is  
+		body is floor=params.sensorFloor;
+cabinFloor=params.currentFloor;      
+genFiacre0();
+		codeFiacre is toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		name is  
+		body is sendCabinArrived();     
+genFiacre1();
+		codeFiacre is cabinArrived
+		to Detected
+		name is  
+		body is cabinFloor=params.currentFloor; 
+checkArrived();   
+genFiacre4();
+		codeFiacre is toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		name is  
+		body is genFiacre2();
+		codeFiacre is tm(1)
+		to Idle
+
+	/*Component*/
+	Component InstanceClsDiag is 
+	par
+	
+	
+			Button_ex,
+			ControllerSys,
+			Winch,
+			Cabin,
+			Door,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor
+	
+

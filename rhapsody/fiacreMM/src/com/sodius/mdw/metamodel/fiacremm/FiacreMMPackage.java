@@ -213,22 +213,13 @@ public interface FiacreMMPackage extends EPackage
   int PROCESS__PORTS = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 7;
 
   /**
-   * The feature id for the '<em><b>Allunique Trigger</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROCESS__ALLUNIQUE_TRIGGER = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 8;
-
-  /**
    * The number of structural features of the '<em>Process</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROCESS_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 9;
+  int PROCESS_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The meta object id for the '{@link com.sodius.mdw.metamodel.fiacremm.impl.TransitionImpl <em>Transition</em>}' class.
@@ -341,31 +332,13 @@ public interface FiacreMMPackage extends EPackage
   int DATA_TYPE__NAME = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Size</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DATA_TYPE__SIZE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Element Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DATA_TYPE__ELEMENT_TYPE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 2;
-
-  /**
    * The number of structural features of the '<em>Data Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DATA_TYPE_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 3;
+  int DATA_TYPE_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link com.sodius.mdw.metamodel.fiacremm.impl.VariableImpl <em>Variable</em>}' class.
@@ -987,17 +960,6 @@ public interface FiacreMMPackage extends EPackage
   EReference getProcess_Ports();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.sodius.mdw.metamodel.fiacremm.Process#getAlluniqueTrigger <em>Allunique Trigger</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Allunique Trigger</em>'.
-   * @see com.sodius.mdw.metamodel.fiacremm.Process#getAlluniqueTrigger()
-   * @see #getProcess()
-   * @generated
-   */
-  EReference getProcess_AlluniqueTrigger();
-
-  /**
    * Returns the meta object for class '{@link com.sodius.mdw.metamodel.fiacremm.Transition <em>Transition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1093,28 +1055,6 @@ public interface FiacreMMPackage extends EPackage
    * @generated
    */
   EAttribute getDataType_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.sodius.mdw.metamodel.fiacremm.DataType#getSize <em>Size</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Size</em>'.
-   * @see com.sodius.mdw.metamodel.fiacremm.DataType#getSize()
-   * @see #getDataType()
-   * @generated
-   */
-  EAttribute getDataType_Size();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.sodius.mdw.metamodel.fiacremm.DataType#getElementType <em>Element Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Element Type</em>'.
-   * @see com.sodius.mdw.metamodel.fiacremm.DataType#getElementType()
-   * @see #getDataType()
-   * @generated
-   */
-  EAttribute getDataType_ElementType();
 
   /**
    * Returns the meta object for class '{@link com.sodius.mdw.metamodel.fiacremm.Variable <em>Variable</em>}'.
@@ -1656,14 +1596,6 @@ public interface FiacreMMPackage extends EPackage
     EReference PROCESS__PORTS = eINSTANCE.getProcess_Ports();
 
     /**
-     * The meta object literal for the '<em><b>Allunique Trigger</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROCESS__ALLUNIQUE_TRIGGER = eINSTANCE.getProcess_AlluniqueTrigger();
-
-    /**
      * The meta object literal for the '{@link com.sodius.mdw.metamodel.fiacremm.impl.TransitionImpl <em>Transition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1738,22 +1670,6 @@ public interface FiacreMMPackage extends EPackage
      * @generated
      */
     EAttribute DATA_TYPE__NAME = eINSTANCE.getDataType_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DATA_TYPE__SIZE = eINSTANCE.getDataType_Size();
-
-    /**
-     * The meta object literal for the '<em><b>Element Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DATA_TYPE__ELEMENT_TYPE = eINSTANCE.getDataType_ElementType();
 
     /**
      * The meta object literal for the '{@link com.sodius.mdw.metamodel.fiacremm.impl.VariableImpl <em>Variable</em>}' class.

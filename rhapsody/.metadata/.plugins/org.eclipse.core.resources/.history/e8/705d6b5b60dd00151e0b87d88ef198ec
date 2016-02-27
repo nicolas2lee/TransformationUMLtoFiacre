@@ -1,0 +1,523 @@
+
+	/*process*/
+	Process Button_ex 
+	[]
+
+ 
+	is
+	states 
+			Off_Button_ex,
+			On_Button_ex
+	init
+		to 
+
+	from Off_Button_ex
+		Pressed;
+          receiveFromButton_Ex ! requestFloor;
+          to On
+
+		
+	from On_Button_ex
+		select
+          arrive;
+          to Off         
+		
+		[]
+          wait[4,5];
+          to Off
+          end;
+		
+
+	Process ControllerSys 
+	[]
+
+ 
+	is
+	states 
+			Wait_ControllerSys,
+			cabinMoved_ControllerSys,
+			cabinArrived_ControllerSys,
+			doorOpened_ControllerSys,
+			doorClosed_ControllerSys,
+			receiveRequestFromButtonEx_ControllerSys,
+			cabinBraked_ControllerSys,
+			recievedRequestFromCabin_ControllerSys,
+			waitDoorClosed_ControllerSys
+		var 
+			exBtnFloor,
+			currentFloor,
+			isBusy,
+			upordown,
+			targetFloor,
+			destFloor,
+			loadedPassager
+	init
+		exBtnFloor := -1;
+		currentFloor := 0;
+		isBusy := false;
+		upordown := 0;
+		targetFloor := -1;
+		destFloor := -1;
+		loadedPassager := false;
+		to 
+
+	from Wait_ControllerSys
+		receiveFromButton_Ex ! requestFloor;
+exBtnFloor := requestFloor;
+destFloor := exBtnFloor;
+if (currentFloor < exBtnFloor) then
+	getP_con_win().gen(new goUp());   
+	upordown :=1 ;  
+	sendToMeasureSensor ! exBtnFloor;
+else
+	if (currentFloor == exBtnFloor) then
+		//open the door         
+		gen (new gotoOpenDoorDirectly());
+	else
+		getP_con_win().gen(new goDown()); 
+		upordown :=-1;  
+		sendToMeasureSensor ! exBtnFloor;
+	end
+end;
+to ReceiveRequestFromButtonEx
+
+		
+	from cabinMoved_ControllerSys
+		detected 
+		
+		continueToMove
+		
+	from cabinArrived_ControllerSys
+		braked
+		
+	from doorOpened_ControllerSys
+		 receiveFloorAndCloseDoor
+		
+		[loadedPassager]
+		
+	from doorClosed_ControllerSys
+		readyToGo    (s : doorClosed, t : recievedRequestFromCabin) 
+		
+		doneTask
+		
+	from receiveRequestFromButtonEx_ControllerSys
+		receiveCabinMoved     (s: receiveRequestFromButtonEx, t: cabinMoved )
+		
+		gotoOpenDoorDirectly  (s: receiveRequestFromButtonEx, t: cabinBraked)
+		
+	from cabinBraked_ControllerSys
+		readyToOpenDoor
+		
+	from recievedRequestFromCabin_ControllerSys
+		receiveCabinMoved    (s: recievedRequestFromCabin, t: cabinMoved)
+		
+		gotoOpenDoorDirectly    (s: recievedRequestFromCabin, t: cabinBraked )
+		
+	from waitDoorClosed_ControllerSys
+		readyToGo      (s: waitDoorClosed, t:  doorClosed)
+		
+
+	Process Winch 
+	[]
+
+ 
+	is
+	states 
+			Not_Going_Winch,
+			Going_Up_Winch,
+			Going_Down_Winch,
+			receiveCabinBrakedFromControllerSys_Winch
+		var 
+			motor,
+			frein,
+			selector
+	init
+		motor := 0;
+		frein := 0;
+		selector := 0;
+		to 
+
+	from Not_Going_Winch
+		goUp;
+//getP_win_cab().gen(new moveCabinUp());
+          p_win_cab_moveCabinUp;
+          to Going_Up
+		
+		goDown;
+          moveCabinDown;
+//getP_win_cab().gen(new moveCabinDown());
+          to Goinf_Down
+		
+	from Going_Up_Winch
+		stopFromController;
+//getP_win_cab().gen(new braked());
+          p_win_cab_braked;
+          to receiveCabinBrakedFromControllerSys
+		
+	from Going_Down_Winch
+		stopFromController;
+//getP_win_cab().gen(new braked());
+          p_win_cab_braked;
+           to receiveCabinBrakedFromControllerSys
+		
+	from receiveCabinBrakedFromControllerSys_Winch
+		stop;
+          readyToOpenDoor;
+          to Not_Going
+		
+
+	Process Cabin 
+	[]
+
+ 
+	is
+	states 
+			Stop_Cabin,
+			Down_Cabin,
+			sentInfo_Cabin,
+			Up_Cabin
+		var 
+			currentFloor
+	init
+		currentFloor := 0;
+		to 
+
+	from Stop_Cabin
+		sendFloorAndCloseDoor  ?  targetFloor;
+receiveFloorAndCloseDoor !  targetFloor;
+to sentInfo
+		
+		moveCabinDown;
+P_cab_con_braked;
+to Down
+		
+		moveCabinUp;
+receiveCabinMoved;
+to Up
+
+
+		
+	from Down_Cabin
+		braked;
+p_cab_con_braked;
+to Stop
+		
+	from sentInfo_Cabin
+		moveCabinDown ;
+p_cab_con_receiveCabinMoved;
+		
+		moveCabinUp;
+p_cab_con_receiveCabinMoved;
+to Up
+		
+	from Up_Cabin
+		braked;
+p_cab_con_braked;
+to Stop
+
+		
+
+	Process Door 
+	[]
+
+ 
+	is
+	states 
+			Open_Door,
+			Closed_Door,
+			Sleep_Door
+	init
+		to 
+
+	from Open_Door
+		CloseDoor;
+to Closed
+		
+	from Closed_Door
+		//getP_door_con().gen (new readyToGo());
+p_door_con_readyToGo;
+to Sleep
+		
+	from Sleep_Door
+		OpenDoor;
+to Open
+
+		
+
+	Process Sensor 
+	[]
+
+ 
+	is
+	states 
+			Idle_Sensor,
+			Detecting_Sensor,
+			Detected_Sensor
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to 
+
+	from Idle_Sensor
+		toMeasure ?  floor, cabinFloor;
+to Detecting
+
+		
+	from Detecting_Sensor
+		cabinArrived;
+//checkSensorFloor(floor).gen(new detected());    
+case (floor) of 
+          0 -> p_sen_con_detected 
+       | 1 -> P_sen_con_1_detected
+       | 2 -> p_sen_con_2_detected   
+       | 3 -> p_sen_con_3_detected 
+       | 4 -> p_sen_con_4_detected
+end;
+to Detected
+		
+		toMeasure ? cabinFloor;
+if (floor = cabinFloor) then 
+            to Detected
+else
+            case (floor) of 
+          0 -> p_sen_con_continueToMove 
+       | 1 -> P_sen_con_1_continueToMove
+       | 2 -> p_sen_con_2_continueToMove
+       | 3 -> p_sen_con_3_continueToMove 
+       | 4 -> p_sen_con_4_continueToMove
+end;
+to Detected
+
+		
+	from Detected_Sensor
+		to Idle
+		
+
+	Process Sensor 
+	[]
+
+ 
+	is
+	states 
+			Idle_Sensor,
+			Detecting_Sensor,
+			Detected_Sensor
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to 
+
+	from Idle_Sensor
+		toMeasure ?  floor, cabinFloor;
+to Detecting
+
+		
+	from Detecting_Sensor
+		cabinArrived;
+//checkSensorFloor(floor).gen(new detected());    
+case (floor) of 
+          0 -> p_sen_con_detected 
+       | 1 -> P_sen_con_1_detected
+       | 2 -> p_sen_con_2_detected   
+       | 3 -> p_sen_con_3_detected 
+       | 4 -> p_sen_con_4_detected
+end;
+to Detected
+		
+		toMeasure ? cabinFloor;
+if (floor = cabinFloor) then 
+            to Detected
+else
+            case (floor) of 
+          0 -> p_sen_con_continueToMove 
+       | 1 -> P_sen_con_1_continueToMove
+       | 2 -> p_sen_con_2_continueToMove
+       | 3 -> p_sen_con_3_continueToMove 
+       | 4 -> p_sen_con_4_continueToMove
+end;
+to Detected
+
+		
+	from Detected_Sensor
+		to Idle
+		
+
+	Process Sensor 
+	[]
+
+ 
+	is
+	states 
+			Idle_Sensor,
+			Detecting_Sensor,
+			Detected_Sensor
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to 
+
+	from Idle_Sensor
+		toMeasure ?  floor, cabinFloor;
+to Detecting
+
+		
+	from Detecting_Sensor
+		cabinArrived;
+//checkSensorFloor(floor).gen(new detected());    
+case (floor) of 
+          0 -> p_sen_con_detected 
+       | 1 -> P_sen_con_1_detected
+       | 2 -> p_sen_con_2_detected   
+       | 3 -> p_sen_con_3_detected 
+       | 4 -> p_sen_con_4_detected
+end;
+to Detected
+		
+		toMeasure ? cabinFloor;
+if (floor = cabinFloor) then 
+            to Detected
+else
+            case (floor) of 
+          0 -> p_sen_con_continueToMove 
+       | 1 -> P_sen_con_1_continueToMove
+       | 2 -> p_sen_con_2_continueToMove
+       | 3 -> p_sen_con_3_continueToMove 
+       | 4 -> p_sen_con_4_continueToMove
+end;
+to Detected
+
+		
+	from Detected_Sensor
+		to Idle
+		
+
+	Process Sensor 
+	[]
+
+ 
+	is
+	states 
+			Idle_Sensor,
+			Detecting_Sensor,
+			Detected_Sensor
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to 
+
+	from Idle_Sensor
+		toMeasure ?  floor, cabinFloor;
+to Detecting
+
+		
+	from Detecting_Sensor
+		cabinArrived;
+//checkSensorFloor(floor).gen(new detected());    
+case (floor) of 
+          0 -> p_sen_con_detected 
+       | 1 -> P_sen_con_1_detected
+       | 2 -> p_sen_con_2_detected   
+       | 3 -> p_sen_con_3_detected 
+       | 4 -> p_sen_con_4_detected
+end;
+to Detected
+		
+		toMeasure ? cabinFloor;
+if (floor = cabinFloor) then 
+            to Detected
+else
+            case (floor) of 
+          0 -> p_sen_con_continueToMove 
+       | 1 -> P_sen_con_1_continueToMove
+       | 2 -> p_sen_con_2_continueToMove
+       | 3 -> p_sen_con_3_continueToMove 
+       | 4 -> p_sen_con_4_continueToMove
+end;
+to Detected
+
+		
+	from Detected_Sensor
+		to Idle
+		
+
+	Process Sensor 
+	[]
+
+ 
+	is
+	states 
+			Idle_Sensor,
+			Detecting_Sensor,
+			Detected_Sensor
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to 
+
+	from Idle_Sensor
+		toMeasure ?  floor, cabinFloor;
+to Detecting
+
+		
+	from Detecting_Sensor
+		cabinArrived;
+//checkSensorFloor(floor).gen(new detected());    
+case (floor) of 
+          0 -> p_sen_con_detected 
+       | 1 -> P_sen_con_1_detected
+       | 2 -> p_sen_con_2_detected   
+       | 3 -> p_sen_con_3_detected 
+       | 4 -> p_sen_con_4_detected
+end;
+to Detected
+		
+		toMeasure ? cabinFloor;
+if (floor = cabinFloor) then 
+            to Detected
+else
+            case (floor) of 
+          0 -> p_sen_con_continueToMove 
+       | 1 -> P_sen_con_1_continueToMove
+       | 2 -> p_sen_con_2_continueToMove
+       | 3 -> p_sen_con_3_continueToMove 
+       | 4 -> p_sen_con_4_continueToMove
+end;
+to Detected
+
+		
+	from Detected_Sensor
+		to Idle
+		
+
+	/*Component*/
+	Component InstanceClsDiag is 
+	par
+	
+	
+			Button_ex,
+			ControllerSys,
+			Winch,
+			Cabin,
+			Door,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor
+	
+

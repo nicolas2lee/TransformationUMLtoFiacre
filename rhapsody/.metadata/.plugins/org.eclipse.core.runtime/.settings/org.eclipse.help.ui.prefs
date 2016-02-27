@@ -1,6 +1,6 @@
 browser.h=768
-browser.maximized=false
+browser.maximized=true
 browser.w=1024
-browser.x=256
-browser.y=118
+browser.x=-112
+browser.y=219
 eclipse.preferences.version=1

@@ -5,7 +5,6 @@
 	<bundle bundleID="330" name="genDocHtmlV2"/>
 	<bundle bundleID="33" class="com.sodius.mdw.metamodel.uml21.ide.UMLEditPlugin$Implementation" localization="plugin" name="MDAccess for UML 2.x - UI" provider="SODIUS"/>
 	<bundle bundleID="159" class="org.eclipse.equinox.http.jetty.internal.Activator" localization="plugin" name="%bundleName" provider="%providerName"/>
-	<bundle bundleID="331" name="umlToFiacre1.2"/>
 	<bundle bundleID="34" class="com.sodius.mdw.ext.platform.InternalPlatformPlugin" localization="plugin" name="MDWorkbench Platform" provider="SODIUS"/>
 	<bundle bundleID="158" localization="plugin" name="%pluginName" provider="%providerName"/>
 	<bundle bundleID="39" localization="plugin" name="MDWorkbench Platform - Model HTML Export" provider="SODIUS"/>
@@ -186,15 +185,15 @@
 	<bundle bundleID="221" localization="plugin" name="%pluginName" provider="%providerName"/>
 	<bundle bundleID="222" localization="plugin" name="%pluginName" provider="%providerName"/>
 	<bundle bundleID="223" class="org.eclipse.jdt.internal.launching.LaunchingPlugin" localization="plugin" name="%pluginName" provider="%providerName"/>
-	<bundle bundleID="327" name="generateDocHTML"/>
+	<bundle bundleID="327" name="genDocHtmlV1"/>
 	<bundle bundleID="224" class="org.eclipse.jdt.internal.ui.JavaPlugin" localization="plugin" name="%pluginName" provider="%providerName"/>
-	<bundle bundleID="328" localization="plugin" name="%pluginName" provider="%providerName">
-		<library name="."/>
-	</bundle>
+	<bundle bundleID="328" name="generateDocHTML"/>
 	<bundle bundleID="225" localization="plugin" name="Jetty :: Continuation" provider="Eclipse Jetty Project">
 		<library name="."/>
 	</bundle>
-	<bundle bundleID="329" name="umlToFiacre1.1"/>
+	<bundle bundleID="329" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="."/>
+	</bundle>
 	<bundle bundleID="226" localization="plugin" name="Jetty :: Http Utility" provider="Eclipse Jetty Project">
 		<library name="."/>
 	</bundle>
@@ -212,7 +211,7 @@
 	</bundle>
 	<bundle bundleID="187" class="org.eclipse.equinox.internal.p2.transport.ecf.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
 	<bundle bundleID="325" localization="plugin" name="%bundleName" provider="%providerName"/>
-	<bundle bundleID="326" name="genDocHtmlV1"/>
+	<bundle bundleID="326" name="umlToFiacre3.0"/>
 	<bundle bundleID="189" class="org.eclipse.equinox.internal.p2.importexport.internal.ImportExportActivator" localization="plugin" name="%pluginName" provider="%providerName"/>
 	<bundle bundleID="320" localization="plugin" name="%pluginName" provider="%providerName">
 		<library name="junit.jar"/>

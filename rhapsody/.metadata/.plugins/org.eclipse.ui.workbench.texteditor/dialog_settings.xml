@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="WinchEvents" key="selection"/>
+		<item value="setProcess" key="selection"/>
 		<list key="findhistory">
-			<item value="WinchEvents"/>
-			<item value="toWinch"/>
-			<item value="setTGA"/>
+			<item value="setProcess"/>
+			<item value="setState"/>
+			<item value="setTransition"/>
 			<item value="MetaModelFiacre"/>
 			<item value="fiacreMM"/>
 			<item value="component"/>
 			<item value="FiacreMM"/>
-			<item value="fiacremm"/>
+			<item value="setTGA"/>
 		</list>
 		<list key="replacehistory">
 			<item value="fiacreMM"/>

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Sensor
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Sat, 27, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Sensor.java
 *********************************************************************/
 
@@ -48,9 +48,9 @@ public class Sensor implements RiJStateConcept, Animated {
     
     protected Sensor.p_sen_con_4_C p_sen_con_4;		//## ignore 
     
-    protected int cabinFloor;		//## attribute cabinFloor 
+    protected int cabinFloor = -1;		//## attribute cabinFloor 
     
-    protected int floor;		//## attribute floor 
+    protected int floor = -1;		//## attribute floor 
     
     //#[ ignore 
     public static final int RiJNonState=0;
@@ -308,6 +308,105 @@ public class Sensor implements RiJStateConcept, Animated {
         		//break;             
         } */
         
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * toMeasure ?  floor, cabinFloor;
+     * to Detecting
+     * 
+    */
+    //## operation genFiacre0() 
+    public void genFiacre0() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre0",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre0() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * cabinArrived;
+     * //checkSensorFloor(floor).gen(new detected());    
+     * case (floor) of 
+     *           0 -> p_sen_con_detected 
+     *        | 1 -> P_sen_con_1_detected
+     *        | 2 -> p_sen_con_2_detected   
+     *        | 3 -> p_sen_con_3_detected 
+     *        | 4 -> p_sen_con_4_detected
+     * end;
+     * to Detected
+    */
+    //## operation genFiacre1() 
+    public void genFiacre1() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre1",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre1() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * to Idle
+    */
+    //## operation genFiacre2() 
+    public void genFiacre2() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre2",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre2() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * toMeasure ? cabinFloor;
+     * if (floor = cabinFloor) then 
+     *             to Detected
+     * else
+     *             case (floor) of 
+     *           0 -> p_sen_con_continueToMove 
+     *        | 1 -> P_sen_con_1_continueToMove
+     *        | 2 -> p_sen_con_2_continueToMove
+     *        | 3 -> p_sen_con_3_continueToMove 
+     *        | 4 -> p_sen_con_4_continueToMove
+     * end;
+     * to Detected
+     * 
+    */
+    //## operation genFiacre4() 
+    public void genFiacre4() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre4",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre4() 
         //#]
         }
         finally {
@@ -580,6 +679,9 @@ public class Sensor implements RiJStateConcept, Animated {
                 {
                     animInstance().notifyTransitionStarted("2");
                     Detected_exit();
+                    //#[ transition 2 
+                    genFiacre2();
+                    //#]
                     Idle_entDef();
                     animInstance().notifyTransitionEnded("2");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -646,7 +748,8 @@ public class Sensor implements RiJStateConcept, Animated {
             Detecting_exit();
             //#[ transition 4 
             cabinFloor=params.currentFloor; 
-            checkArrived();
+            checkArrived();   
+            genFiacre4();
             //#]
             Detecting_entDef();
             animInstance().notifyTransitionEnded("4");
@@ -667,7 +770,8 @@ public class Sensor implements RiJStateConcept, Animated {
             Idle_exit();
             //#[ transition 0 
             floor=params.sensorFloor;
-            cabinFloor=params.currentFloor;
+            cabinFloor=params.currentFloor;      
+            genFiacre0();
             //#]
             Detecting_entDef();
             animInstance().notifyTransitionEnded("0");
@@ -691,7 +795,8 @@ public class Sensor implements RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("1");
             Detecting_exit();
             //#[ transition 1 
-            sendCabinArrived();
+            sendCabinArrived();     
+            genFiacre1();
             //#]
             Detected_entDef();
             animInstance().notifyTransitionEnded("1");

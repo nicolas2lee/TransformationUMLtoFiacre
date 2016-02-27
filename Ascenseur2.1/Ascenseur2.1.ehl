@@ -1,6 +1,7 @@
 [Op Calls]
 itsButton_ex->CALL(sendFloorAndUpOrDown(),sendFloorAndUpOrDown())
 [Events]
+itsButton_ex->GEN(Pressed(0))`Button_ex
 itsCabin->GEN(sendFloorAndCloseDoor(1))`Cabin
 itsButton_ex->GEN(Pressed(3))`Button_ex
 itsButton_ex->GEN(Pressed(3,up))`Button_ex

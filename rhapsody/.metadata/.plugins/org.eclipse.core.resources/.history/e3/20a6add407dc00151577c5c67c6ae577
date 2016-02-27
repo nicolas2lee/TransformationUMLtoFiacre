@@ -1,0 +1,387 @@
+
+	/*process*/
+	Process Button_ex []
+
+ (
+					&requestFloor : int,
+		)
+
+	is
+		states 
+			Off,
+			On
+	init
+		to Off
+
+	from Off
+		Pressed;
+          receiveFromButton_Ex ! requestFloor;
+
+		to On
+	from On
+		select
+          arrive;
+		to Off
+		[]
+          wait[4,5];
+		to Off
+
+	Process ControllerSys []
+
+ (
+					&requestedTargetFloor : int,
+					&requestedFloor : int,
+		)
+
+	is
+		states 
+			Wait,
+			cabinMoved,
+			cabinArrived,
+			doorOpened,
+			doorClosed,
+			receiveRequestFromButtonEx,
+			cabinBraked,
+			recievedRequestFromCabin,
+			waitDoorClosed
+		var 
+			exBtnFloor,
+			currentFloor,
+			isBusy,
+			upordown,
+			targetFloor,
+			destFloor,
+			loadedPassager
+	init
+		exBtnFloor := -1;
+		currentFloor := 0;
+		isBusy := false;
+		upordown := 0;
+		targetFloor := -1;
+		destFloor := -1;
+		loadedPassager := false;
+		to Wait
+
+	from Wait
+		receiveFromButton_Ex
+		to receiveRequestFromButtonEx
+	from cabinMoved
+		detected 
+		to cabinArrived
+		continueToMove
+		to cabinMoved
+	from cabinArrived
+		braked
+		to cabinBraked
+	from doorOpened
+		 receiveFloorAndCloseDoor
+		to doorClosed
+		[loadedPassager]
+		to waitDoorClosed
+	from doorClosed
+		readyToGo    (s : doorClosed, t : recievedRequestFromCabin) 
+		to recievedRequestFromCabin
+		doneTask
+		to Wait
+	from receiveRequestFromButtonEx
+		receiveCabinMoved     (s: receiveRequestFromButtonEx, t: cabinMoved )
+		to cabinMoved
+		gotoOpenDoorDirectly  (s: receiveRequestFromButtonEx, t: cabinBraked)
+		to cabinBraked
+	from cabinBraked
+		readyToOpenDoor
+		to doorOpened
+	from recievedRequestFromCabin
+		receiveCabinMoved    (s: recievedRequestFromCabin, t: cabinMoved)
+		to cabinMoved
+		gotoOpenDoorDirectly    (s: recievedRequestFromCabin, t: cabinBraked )
+		to cabinBraked
+	from waitDoorClosed
+		readyToGo      (s: waitDoorClosed, t:  doorClosed)
+		to doorClosed
+
+	Process Winch []
+
+ (
+		)
+
+	is
+		states 
+			Not_Going,
+			Going_Up,
+			Going_Down,
+			receiveCabinBrakedFromControllerSys
+		var 
+			motor,
+			frein,
+			selector
+	init
+		motor := ;
+		frein := ;
+		selector := ;
+		to Not_Going
+
+	from Not_Going
+		
+		to Going_Up
+		goDown
+		to Going_Down
+	from Going_Up
+		stopFromController (s: Going_Up, t:  receiveCabinBrakedFromControllerSys)
+
+		to receiveCabinBrakedFromControllerSys
+	from Going_Down
+		stopFromController (s: Going_Down, t:  receiveCabinBrakedFromControllerSys)
+		to receiveCabinBrakedFromControllerSys
+	from receiveCabinBrakedFromControllerSys
+		 stop
+		to Not_Going
+
+	Process Cabin []
+
+ (
+					&targetFloor : int,
+		)
+
+	is
+		states 
+			Stop,
+			Down,
+			sentInfo,
+			Up
+		var 
+			currentFloor
+	init
+		currentFloor := 0;
+		to Stop
+
+	from Stop
+		sendFloorAndCloseDoor 
+		to sentInfo
+		moveCabinDown    (s : Stop, t : Down)
+		to Down
+		moveCabinUp         (s : Stop, t : Up)
+		to Up
+	from Down
+		braked
+		to Stop
+	from sentInfo
+		moveCabinDown     (s : sentInfo, t : Down)
+		to Down
+		moveCabinUp    (s : sentInfo, t : Up)
+		to Up
+	from Up
+		braked         (s : Up, t : Stop)
+		to Stop
+
+	Process Door []
+
+ (
+		)
+
+	is
+		states 
+			Open,
+			Closed,
+			Sleep
+	init
+		to Sleep
+
+	from Open
+		CloseDoor;
+		to Closed
+	from Closed
+		readyToGo;
+		to Sleep
+	from Sleep
+		OpenDoor;
+
+		to Open
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		cabinArrived
+		to Detected
+		toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		cabinArrived
+		to Detected
+		toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		cabinArrived
+		to Detected
+		toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		cabinArrived
+		to Detected
+		toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		tm(1)
+		to Idle
+
+	Process Sensor []
+
+ (
+					&currentFloor : int,
+					&sensorFloor : int,
+					&currentFloor : int,
+					&sensorFloor : int,
+		)
+
+	is
+		states 
+			Idle,
+			Detecting,
+			Detected
+		var 
+			floor,
+			cabinFloor
+	init
+		floor := -1;
+		cabinFloor := -1;
+		to Idle
+
+	from Idle
+		toMeasure (s: Idle, t:  Detecting)
+		to Detecting
+	from Detecting
+		cabinArrived
+		to Detected
+		toMeasure  (s: Detecting, t:  Detecting)
+		to Detecting
+	from Detected
+		tm(1)
+		to Idle
+
+	/*Component*/
+	Component InstanceClsDiag is 
+	par
+	
+	
+			Button_ex,
+			ControllerSys,
+			Winch,
+			Cabin,
+			Door,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor,
+			Sensor
+	
+

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Winch
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Sat, 27, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Winch.java
 *********************************************************************/
 
@@ -44,11 +44,11 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     protected Winch.p_win_cab_C p_win_cab;		//## ignore 
     
-    protected int frein;		//## attribute frein 
+    protected int frein = 0;		//## attribute frein 
     
-    protected int motor;		//## attribute motor 
+    protected int motor = 0;		//## attribute motor 
     
-    protected int selector;		//## attribute selector 
+    protected int selector = 0;		//## attribute selector 
     
     protected Cabin itsCabin;		//## link itsCabin 
     
@@ -190,6 +190,115 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     //## auto_generated 
     public void deleteP_win_cab() {
         p_win_cab=null;
+    }
+    
+    /**
+     * goUp;
+     * //getP_win_cab().gen(new moveCabinUp());
+     *           p_win_cab_moveCabinUp;
+     *           to Going_Up
+    */
+    //## operation genFiacre1() 
+    public void genFiacre1() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre1",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre1() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * stop;
+     *           readyToOpenDoor;
+     *           to Not_Going
+    */
+    //## operation genFiacre2() 
+    public void genFiacre2() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre2",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre2() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * goDown;
+     *           moveCabinDown;
+     * //getP_win_cab().gen(new moveCabinDown());
+     *           to Goinf_Down
+    */
+    //## operation genFiacre3() 
+    public void genFiacre3() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre3",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre3() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * stopFromController;
+     * //getP_win_cab().gen(new braked());
+     *           p_win_cab_braked;
+     *           to receiveCabinBrakedFromControllerSys
+    */
+    //## operation genFiacre4() 
+    public void genFiacre4() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre4",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre4() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * stopFromController;
+     * //getP_win_cab().gen(new braked());
+     *           p_win_cab_braked;
+     *            to receiveCabinBrakedFromControllerSys
+    */
+    //## operation genFiacre5() 
+    public void genFiacre5() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre5",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre5() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation receiveStopFromController() 
@@ -563,7 +672,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("5");
             Going_Down_exit();
             //#[ transition 5 
-            sendBrakeToCabin();
+            sendBrakeToCabin();        
+            genFiacre5();
             //#]
             receiveCabinBrakedFromControllerSys_entDef();
             animInstance().notifyTransitionEnded("5");
@@ -639,7 +749,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("3");
             Not_Going_exit();
             //#[ transition 3 
-            sendGoDownToCabin();
+            sendGoDownToCabin();  
+            genFiacre3();
             //#]
             Going_Down_entDef();
             animInstance().notifyTransitionEnded("3");
@@ -657,7 +768,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("2");
             receiveCabinBrakedFromControllerSys_exit();
             //#[ transition 2 
-            receiveStopFromController();
+            receiveStopFromController();      
+            genFiacre2();
             //#]
             Not_Going_entDef();
             animInstance().notifyTransitionEnded("2");
@@ -693,7 +805,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("4");
             Going_Up_exit();
             //#[ transition 4 
-            sendBrakeToCabin();
+            sendBrakeToCabin();   
+            genFiacre4();
             //#]
             receiveCabinBrakedFromControllerSys_entDef();
             animInstance().notifyTransitionEnded("4");
@@ -715,7 +828,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("1");
             Not_Going_exit();
             //#[ transition 1 
-            sendGoUpToCabin();
+            sendGoUpToCabin();   
+            genFiacre1();
             //#]
             Going_Up_entDef();
             animInstance().notifyTransitionEnded("1");

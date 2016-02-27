@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Door
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Sat, 27, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Door.java
 *********************************************************************/
 
@@ -41,10 +41,6 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     public Reactive reactive;		//## ignore 
     
     protected Door.p_door_con_C p_door_con;		//## ignore 
-    
-    protected int close;		//## attribute close 
-    
-    protected int open;		//## attribute open 
     
     protected ControllerSys itsControllerSys;		//## link itsControllerSys 
     
@@ -164,16 +160,19 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         p_door_con=null;
     }
     
-    //## operation goSleep() 
-    public void goSleep() {
+    /**
+     * OpenDoor;
+     * to Open
+     * 
+    */
+    //## operation genFiacre1() 
+    public void genFiacre1() {
         try {
-            animInstance().notifyMethodEntered("goSleep",
+            animInstance().notifyMethodEntered("genFiacre1",
                new ArgData[] {
                });
         
-        //#[ operation goSleep() 
-        System.out.println("Tell Controller system to go");
-        getP_door_con().gen (new readyToGo());
+        //#[ operation genFiacre1() 
         //#]
         }
         finally {
@@ -182,24 +181,62 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         
     }
     
-    //## auto_generated 
-    public int getClose() {
-        return close;
+    /**
+     * CloseDoor;
+     * to Closed
+    */
+    //## operation genFiacre2() 
+    public void genFiacre2() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre2",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre2() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
-    //## auto_generated 
-    public void setClose(int p_close) {
-        close = p_close;
+    /**
+     * //getP_door_con().gen (new readyToGo());
+     * p_door_con_readyToGo;
+     * to Sleep
+    */
+    //## operation genFiacre3() 
+    public void genFiacre3() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre3",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre3() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
-    //## auto_generated 
-    public int getOpen() {
-        return open;
-    }
-    
-    //## auto_generated 
-    public void setOpen(int p_open) {
-        open = p_open;
+    //## operation goSleep() 
+    public void goSleep() {
+        try {
+            animInstance().notifyMethodEntered("goSleep",
+               new ArgData[] {
+               });
+        
+        //#[ operation goSleep() 
+        getP_door_con().gen (new readyToGo());
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -438,6 +475,7 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
             Closed_exit();
             //#[ transition 3 
             goSleep();
+            genFiacre3();
             //#]
             Sleep_entDef();
             animInstance().notifyTransitionEnded("3");
@@ -484,6 +522,9 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("2");
             Open_exit();
+            //#[ transition 2 
+            genFiacre2();
+            //#]
             Closed_entDef();
             animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -531,6 +572,9 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("1");
             Sleep_exit();
+            //#[ transition 1 
+            genFiacre1();
+            //#]
             Open_entDef();
             animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -631,8 +675,6 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
-        msg.add("open", open);
-        msg.add("close", close);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {

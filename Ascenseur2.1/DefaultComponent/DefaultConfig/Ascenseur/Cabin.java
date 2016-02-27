@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Cabin
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Sat, 27, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Cabin.java
 *********************************************************************/
 
@@ -43,8 +43,6 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     protected Cabin.p_cab_con_C p_cab_con;		//## ignore 
     
     protected Cabin.p_cab_win_C p_cab_win;		//## ignore 
-    
-    protected int Set_Button;		//## attribute Set_Button 
     
     protected int currentFloor = 0;		//## attribute currentFloor 
     
@@ -190,6 +188,155 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         p_cab_win=null;
     }
     
+    /**
+     * braked;
+     * p_cab_con_braked;
+     * to Stop
+    */
+    //## operation genFiacre1() 
+    public void genFiacre1() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre1",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre1() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * sendFloorAndCloseDoor  ?  targetFloor;
+     * receiveFloorAndCloseDoor !  targetFloor;
+     * to sentInfo
+    */
+    //## operation genFiacre2() 
+    public void genFiacre2() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre2",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre2() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * moveCabinDown ;
+     * p_cab_con_receiveCabinMoved;
+    */
+    //## operation genFiacre3() 
+    public void genFiacre3() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre3",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre3() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * moveCabinDown;
+     * P_cab_con_braked;
+     * to Down
+    */
+    //## operation genFiacre4() 
+    public void genFiacre4() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre4",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre4() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * moveCabinUp;
+     * receiveCabinMoved;
+     * to Up
+     * 
+     * 
+    */
+    //## operation genFiacre5() 
+    public void genFiacre5() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre5",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre5() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * braked;
+     * p_cab_con_braked;
+     * to Stop
+     * 
+    */
+    //## operation genFiacre6() 
+    public void genFiacre6() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre6",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre6() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * moveCabinUp;
+     * p_cab_con_receiveCabinMoved;
+     * to Up
+    */
+    //## operation genFiacre7() 
+    public void genFiacre7() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre7",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre7() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
     //## operation sendCabinBrakedToController() 
     public void sendCabinBrakedToController() {
         try {
@@ -242,16 +389,6 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyMethodExit();
         }
         
-    }
-    
-    //## auto_generated 
-    public int getSet_Button() {
-        return Set_Button;
-    }
-    
-    //## auto_generated 
-    public void setSet_Button(int p_Set_Button) {
-        Set_Button = p_Set_Button;
     }
     
     //## auto_generated 
@@ -513,7 +650,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("7");
             sentInfo_exit();
             //#[ transition 7 
-            sendMovedUpToController();
+            sendMovedUpToController();         
+            genFiacre7();
             //#]
             Up_entDef();
             animInstance().notifyTransitionEnded("7");
@@ -549,7 +687,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("5");
             Stop_exit();
             //#[ transition 5 
-            sendMovedUpToController();
+            sendMovedUpToController();   
+            genFiacre5();
             //#]
             Up_entDef();
             animInstance().notifyTransitionEnded("5");
@@ -602,7 +741,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("6");
             Up_exit();
             //#[ transition 6 
-            sendCabinBrakedToController();
+            sendCabinBrakedToController();  
+            genFiacre6();
             //#]
             Stop_entDef();
             animInstance().notifyTransitionEnded("6");
@@ -630,7 +770,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("2");
             Stop_exit();
             //#[ transition 2 
-            getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));
+            getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    
+            genFiacre2();
             //#]
             sentInfo_entDef();
             animInstance().notifyTransitionEnded("2");
@@ -673,7 +814,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("3");
             sentInfo_exit();
             //#[ transition 3 
-            sendMovedDownToController();
+            sendMovedDownToController();      
+            genFiacre3();
             //#]
             Down_entDef();
             animInstance().notifyTransitionEnded("3");
@@ -714,7 +856,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("4");
             Stop_exit();
             //#[ transition 4 
-            sendMovedDownToController();
+            sendMovedDownToController();       
+            genFiacre4();
             //#]
             Down_entDef();
             animInstance().notifyTransitionEnded("4");
@@ -762,7 +905,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("1");
             Down_exit();
             //#[ transition 1 
-            sendCabinBrakedToController();
+            sendCabinBrakedToController();                 
+            genFiacre1();
             //#]
             Stop_entDef();
             animInstance().notifyTransitionEnded("1");
@@ -891,7 +1035,6 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
-        msg.add("Set_Button", Set_Button);
         msg.add("currentFloor", currentFloor);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */

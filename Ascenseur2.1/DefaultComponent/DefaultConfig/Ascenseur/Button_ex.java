@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Button_ex
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Sat, 27, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Button_ex.java
 *********************************************************************/
 
@@ -159,6 +159,72 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     //## auto_generated 
     public void deleteP_btn_con() {
         p_btn_con=null;
+    }
+    
+    /**
+     * select
+     *           arrive;
+     *           to Off_Button_ex         
+    */
+    //## operation genFiacre1() 
+    public void genFiacre1() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre1",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre1() 
+        //test
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * Pressed;
+     *           receiveFromButton_Ex ! requestFloor;
+     *           to On_Button_ex
+     * 
+    */
+    //## operation genFiacre2() 
+    public void genFiacre2() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre2",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre2() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * []
+     *           wait[4,5];
+     *           to Off_Button_Ex
+     *           end;
+    */
+    //## operation genFiacre3() 
+    public void genFiacre3() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre3",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre3() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -362,6 +428,9 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("1");
             On_exit();
+            //#[ transition 1 
+            genFiacre1();
+            //#]
             Off_entDef();
             animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -391,6 +460,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
             Off_exit();
             //#[ transition 2 
             getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
+            genFiacre2();
             //#]
             On_entDef();
             animInstance().notifyTransitionEnded("2");
@@ -410,6 +480,9 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
                 {
                     animInstance().notifyTransitionStarted("3");
                     On_exit();
+                    //#[ transition 3 
+                    genFiacre3();
+                    //#]
                     Off_entDef();
                     animInstance().notifyTransitionEnded("3");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;

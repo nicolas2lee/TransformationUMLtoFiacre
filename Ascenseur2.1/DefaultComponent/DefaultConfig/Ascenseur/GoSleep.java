@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: GoSleep
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Thu, 25, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/GoSleep.java
 *********************************************************************/
 

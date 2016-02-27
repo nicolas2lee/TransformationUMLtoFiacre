@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: ControllerSys
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Sat, 27, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/ControllerSys.java
 *********************************************************************/
 
@@ -60,15 +60,15 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     protected int currentFloor = 0;		//## attribute currentFloor 
     
-    protected int destFloor;		//## attribute destFloor 
+    protected int destFloor = -1;		//## attribute destFloor 
     
-    protected int exBtnFloor;		//## attribute exBtnFloor 
+    protected int exBtnFloor = -1;		//## attribute exBtnFloor 
     
     protected boolean isBusy = false;		//## attribute isBusy 
     
     protected boolean loadedPassager = false;		//## attribute loadedPassager 
     
-    protected int targetFloor;		//## attribute targetFloor 
+    protected int targetFloor = -1;		//## attribute targetFloor 
     
     protected int upordown = 0;		//## attribute upordown 
     
@@ -388,6 +388,291 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
     }
     
+    /**
+     * detected 
+    */
+    //## operation genFiacre1() 
+    public void genFiacre1() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre1",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre1() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * receiveCabinMoved    (s: recievedRequestFromCabin, t: cabinMoved)
+    */
+    //## operation genFiacre10() 
+    public void genFiacre10() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre10",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre10() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * gotoOpenDoorDirectly    (s: recievedRequestFromCabin, t: cabinBraked )
+    */
+    //## operation genFiacre11() 
+    public void genFiacre11() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre11",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre11() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * doneTask
+    */
+    //## operation genFiacre12() 
+    public void genFiacre12() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre12",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre12() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * [loadedPassager]
+    */
+    //## operation genFiacre13() 
+    public void genFiacre13() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre13",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre13() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * readyToGo      (s: waitDoorClosed, t:  doorClosed)
+    */
+    //## operation genFiacre14() 
+    public void genFiacre14() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre14",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre14() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * readyToOpenDoor
+    */
+    //## operation genFiacre2() 
+    public void genFiacre2() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre2",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre2() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     *  receiveFloorAndCloseDoor
+    */
+    //## operation genFiacre3() 
+    public void genFiacre3() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre3",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre3() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * readyToGo    (s : doorClosed, t : recievedRequestFromCabin) 
+    */
+    //## operation genFiacre4() 
+    public void genFiacre4() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre4",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre4() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * receiveFromButton_Ex !  requestFloor;
+     * exBtnFloor := requestFloor;
+     * destFloor := exBtnFloor;
+     * if (currentFloor < exBtnFloor) then
+     * 	p_con_win_ goUp;   
+     * 	upordown :=1 ;  
+     * 	sendToMeasureSensor ! exBtnFloor;
+     * else
+     * 	
+     * 	getP_con_win().gen(new goDown()); 
+     * 	upordown :=-1;  
+     *                sendToMeasureSensor ! exBtnFloor;
+     * end;
+     * to ReceiveRequestFromButtonEx
+     * 
+    */
+    //## operation genFiacre5() 
+    public void genFiacre5() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre5",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre5() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * receiveCabinMoved     (s: receiveRequestFromButtonEx, t: cabinMoved )
+    */
+    //## operation genFiacre6() 
+    public void genFiacre6() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre6",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre6() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * braked
+    */
+    //## operation genFiacre7() 
+    public void genFiacre7() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre7",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre7() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * if (currentFloor = exBtnFloor) then   
+     * //getP_con_door().gen (new OpenDoor());
+     *                 p_con_door_OpenDoor;
+     * 	to doorOpened
+     * end;
+     * 
+    */
+    //## operation genFiacre8() 
+    public void genFiacre8() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre8",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre8() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * continueToMove
+    */
+    //## operation genFiacre9() 
+    public void genFiacre9() {
+        try {
+            animInstance().notifyMethodEntered("genFiacre9",
+               new ArgData[] {
+               });
+        
+        //#[ operation genFiacre9() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
     //## operation openDoor() 
     public void openDoor() {
         try {
@@ -398,7 +683,7 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         //#[ operation openDoor() 
         System.out.println("Tell door to open");
         getP_con_door().gen (new OpenDoor());  
-        getP_con_btn().gen(new arrive());
+        
         //#]
         }
         finally {
@@ -976,7 +1261,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             		
             		sendToMeasureSensor(targetFloor);
             	}
-            }
+            } 
+            genFiacre4();
             //#]
             recievedRequestFromCabin_entDef();
             animInstance().notifyTransitionEnded("4");
@@ -1016,7 +1302,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             receiveRequestFromButtonEx_exit();
             //#[ transition 8 
             System.out.println("ready to open"); 
-            gen (new readyToOpenDoor());
+            gen (new readyToOpenDoor());    
+            genFiacre8();
             //#]
             cabinBraked_entDef();
             animInstance().notifyTransitionEnded("8");
@@ -1149,6 +1436,7 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             cabinBraked_exit();
             //#[ transition 2 
              openDoor();
+             genFiacre2();
             //#]
             doorOpened_entDef();
             animInstance().notifyTransitionEnded("2");
@@ -1168,12 +1456,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             receiveRequestFromButtonEx_exit();
             //#[ transition 6 
             currentFloor+=upordown;   
-            sendToMeasureSensor(destFloor);  
-            /*try {
-                Thread.sleep(1000);                 //1000 milliseconds is one second.
-            } catch(InterruptedException ex) {
-                Thread.currentThread().interrupt();
-            }*/
+            sendToMeasureSensor(destFloor);       
+            genFiacre6();
             //#]
             cabinMoved_entDef();
             animInstance().notifyTransitionEnded("6");
@@ -1187,7 +1471,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("7");
             cabinArrived_exit();
             //#[ transition 7 
-            sendToWinchToStop();
+            sendToWinchToStop();     
+            genFiacre7();
             //#]
             cabinBraked_entDef();
             animInstance().notifyTransitionEnded("7");
@@ -1215,7 +1500,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             //#[ transition 10 
             currentFloor+=upordown;   
             loadedPassager=true;        
-            sendToMeasureSensor(destFloor);
+            sendToMeasureSensor(destFloor);      
+            genFiacre10();
             //#]
             cabinMoved_entDef();
             animInstance().notifyTransitionEnded("10");
@@ -1281,7 +1567,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             		upordown=-1;  
             		sendToMeasureSensor(exBtnFloor);
             	}
-            }
+            }    
+            genFiacre5();
             //#]
             receiveRequestFromButtonEx_entDef();
             animInstance().notifyTransitionEnded("5");
@@ -1307,7 +1594,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("11");
             recievedRequestFromCabin_exit();
             //#[ transition 11 
-            gen(new readyToOpenDoor());
+            gen(new readyToOpenDoor());                 
+            genFiacre11();
             //#]
             cabinBraked_entDef();
             animInstance().notifyTransitionEnded("11");
@@ -1354,7 +1642,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("14");
             waitDoorClosed_exit();
             //#[ transition 14 
-            gen(new doneTask());
+            gen(new doneTask());       
+            genFiacre14();
             //#]
             doorClosed_entDef();
             animInstance().notifyTransitionEnded("14");
@@ -1373,7 +1662,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("1");
             cabinMoved_exit();
             //#[ transition 1 
-            sendStopToWinch();
+            sendStopToWinch();   
+            genFiacre1();
             //#]
             cabinArrived_entDef();
             animInstance().notifyTransitionEnded("1");
@@ -1401,7 +1691,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("12");
             doorClosed_exit();
             //#[ transition 12 
-            loadedPassager=false;
+            loadedPassager=false;         
+            genFiacre12();
             //#]
             Wait_entDef();
             animInstance().notifyTransitionEnded("12");
@@ -1424,7 +1715,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
                     animInstance().notifyTransitionStarted("13");
                     doorOpened_exit();
                     //#[ transition 13 
-                    closeDoor();
+                    closeDoor();     
+                    genFiacre13();
                     //#]
                     waitDoorClosed_entDef();
                     animInstance().notifyTransitionEnded("13");
@@ -1465,7 +1757,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             //#[ transition 3 
             closeDoor();
             targetFloor=params.requestedTargetFloor;    
-            destFloor=targetFloor;
+            destFloor=targetFloor;     
+            genFiacre3();
             //#]
             doorClosed_entDef();
             animInstance().notifyTransitionEnded("3");
@@ -1488,7 +1781,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             cabinMoved_exit();
             //#[ transition 9 
             currentFloor+=upordown;   
-            sendToMeasureSensor(destFloor);
+            sendToMeasureSensor(destFloor);     
+            genFiacre9();
             //#]
             cabinMoved_entDef();
             animInstance().notifyTransitionEnded("9");
