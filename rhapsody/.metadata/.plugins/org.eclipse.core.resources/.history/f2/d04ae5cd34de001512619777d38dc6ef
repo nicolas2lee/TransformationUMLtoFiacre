@@ -1,0 +1,8 @@
+[#package generateProcess]
+[#import generateUtile.*]
+[#template public genVarDecl(process : fiacreMM.Process, isControllerSys : boolean)]
+		[#if (process.VarSize > 0)]
+		var 
+			[#include handleEndComma(process.variables,process.VarSize)]
+		[/#if]
+[/#template]

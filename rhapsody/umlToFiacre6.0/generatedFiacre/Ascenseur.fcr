@@ -1,11 +1,14 @@
 
+type Double_Floor is record
+	first : int,
+	second : int
+end
+
 	/*process*/
-	Process Button_ex 
+	Process Button_ex
 	[
-	  Pressed : in,
-	  arrive : in none,	
 	
-	receiveFromButton_Ex : out int,
+	  receiveFromButton_Ex : out int
     ]
 
  
@@ -17,42 +20,34 @@
 		to Off_Button_ex
 
 	from Off_Button_ex
-		select
-          arrive;
-          to Off_Button_ex        
-		
+		receiveFromButton_Ex ! 3;
+        to On_Button_ex
+	
 	from On_Button_ex
-		receiveFromButton_Ex ! requestFloor;
-          to On_Button_ex
+		to Off_Button_ex
+	
 
-		
-		[]
-          wait[4,5];
-          to Off_Button_ex
-          end;
-		
-
-	Process ControllerSys 
+	Process ControllerSys
 	[
 	  detected : in none,	
-	
 	  readyToOpenDoor : in none,	
-	
-	  receiveFloorAndCloseDoor : in,
+	  receiveFloorAndCloseDoor : in int,
+	  
 	  readyToGo : in none,	
-	
-	  receiveFromButton_Ex : in,
+	  receiveFromButton_Ex : in int,
+	  
 	  receiveCabinMoved : in none,	
-	
 	  braked : in none,	
-	
 	  gotoOpenDoorDirectly : in none,	
-	
 	  continueToMove : in none,	
-	
 	  doneTask : in none,	
-	
-	
+	  goUp : out  none,
+      goDown : out none,
+      toMeasure : out Double_Floor, 
+      stopFromController : out none,   
+      stop : out none,
+      OpenDoor : out none,
+      CloseDoor : out none
     ]
 
  
@@ -68,6 +63,7 @@
 			recievedRequestFromCabin_ControllerSys,
 			waitDoorClosed_ControllerSys
 		var 
+				doublefloor : Double_Floor,
 			exBtnFloor,
 			currentFloor,
 			isBusy,
@@ -76,6 +72,7 @@
 			destFloor,
 			loadedPassager
 	init
+		doublefloor := {first = -1, second = -1};
 		exBtnFloor := -1;
 		currentFloor := 0;
 		isBusy := false;
@@ -87,199 +84,129 @@
 
 	from Wait_ControllerSys
 		receiveFromButton_Ex ?  exBtnFloor;
-          destFloor := exBtnFloor;
-          if (currentFloor < exBtnFloor) then
+        destFloor := exBtnFloor;
+        if (currentFloor < exBtnFloor) then
               goUp;   
               upordown :=1 ;  
-          case (exBtnFloor) of 
-               0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor
-            | 1 ->  sendToMeasureSensor_1 ! currentFloor, exBtnFloor
-            | 2 ->  sendToMeasureSensor_2 ! currentFloor, exBtnFloor
-            | 3 ->  sendToMeasureSensor_3 ! currentFloor, exBtnFloor
-            | 4 ->  sendToMeasureSensor_4 ! currentFloor, exBtnFloor
-           end;
-                 to ReceiveRequestFromButtonEx_ControllerSys
-            elseif (currentFloor > exBtnFloor) then 	
-                 goDown; 
-                 upordown := -1;  
-                 case (exBtnFloor) of 
-                   0 ->  sendToMeasureSensor !  currentFloor,  exBtnFloor
-                | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor
-                | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor
-                | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor
-                | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor
-                end;
+              doublefloor := {first = currentFloor, second = exBtnFloor};
+              toMeasure ! doublefloor;
+              to ReceiveRequestFromButtonEx_ControllerSys
+        elsif (currentFloor > exBtnFloor) then 	
+               goDown; 
+               upordown := -1;  
+               doublefloor := {first = currentFloor, second = exBtnFloor};
+               toMeasure !  doublefloor;
+               to ReceiveRequestFromButtonEx
+        else
                 to ReceiveRequestFromButtonEx
-            else
-                to ReceiveRequestFromButtonEx
-            end
+        end
 
 
-		
+	
 	from cabinMoved_ControllerSys
 		select
-              p_sen_con_detected;
+              detected;
               stopFromController;
               to cabinArrived_ControllerSys
-          []
-              p_sen_con_1_detected;
-              stopFromController;
-              to cabinArrived_ControllerSys
-          []
-              p_sen_con_2_detected;
-              stopFromController;
-              to cabinArrived_ControllerSys
-          []
-              p_sen_con_3_detected ;
-              stopFromController;
-              to cabinArrived_ControllerSys
-          []
-              p_sen_con_4_detected; 
-              stopFromController;
-              to cabinArrived_ControllerSys
-         
-         
-
-		
+	
 		[]
-              p_sen_con_continueToMove;
+              continueToMove;
               currentFloor = currentFloor +upordown; 
-              toMeasureSensor ! currentFloor, destfloor;
-              to cabinMoved_ControllerSys
-          []
-              p_sen_con_1_continueToMove; 
-              currentFloor = currentFloor +upordown; 
-              sendToMeasureSensor_1 ! currentFloor, destfloor;
-             to cabinMoved_ControllerSys
-          []
-              p_sen_con_2_continueToMove;
-              currentFloor = currentFloor +upordown; 
-              sendToMeasureSensor_2 ! currentFloor, destfloor;
-              to cabinMoved_ControllerSys
-          []
-              p_sen_con_3_continueToMove;
-              currentFloor = currentFloor +upordown; 
-              sendToMeasureSensor_3 ! currentFloor, destfloor;
-              to cabinMoved_ControllerSys
-          []
-              p_sen_con_4_continueToMove;
-              currentFloor = currentFloor +upordown; 
-              sendToMeasureSensor_4 ! currentFloor, destfloor;
+              doublefloor := {first = currentFloor, second = destfloor};
+              toMeasure ! doublefloor := {first = currentFloor, second = destfloor};
               to cabinMoved_ControllerSys
          end;
 
 
 
-		
+	
 	from cabinArrived_ControllerSys
 		braked;
-          stop;
-          to cabinBraked
-		
+         stop;
+         to cabinBraked
+	
 	from doorOpened_ControllerSys
-		targetFloor := 1;
-          destFloor := targetFloor;
-          closeDoor;
-          to doorClosed_ControllerSys
-		
+	
 		if (loadedPassager) then
           CloseDoor;
           to waitDoorClosed
+        else
+          targetFloor := 1;
+          destFloor := targetFloor;
+          closeDoor;
+          to doorClosed_ControllerSys
         end
-		
+	
 	from doorClosed_ControllerSys
 		readyToGo;
-          if (currentFloor < targetFloor) then
+         if (currentFloor < targetFloor) then
               goUp;   
               upordown := 1; 
-              case (targetFloor) of 
-                 0 ->  sendToMeasureSensor ! currentFloor, targetFloor
-              | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor
-              | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor
-              | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor
-              | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor
-                end;
-                to recievedRequestFromCabin_ControllerSys
-          else
-                if (currentFloor == targetFloor) then
+              doublefloor := {first = currentFloor, second = targetFloor};
+              toMeasure ! doublefloor;
+              to recievedRequestFromCabin_ControllerSys
+         else
+                if (currentFloor = targetFloor) then
                     openDoor;
                     to doorOpened_ControllerSys
                 else
                      goDown; 
                      upordown := -1;  
-                     case (targetFloor) of 
-                       0 ->  sendToMeasureSensor ! currentFloor, targetFloor
-                    | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor
-                    | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor
-                    | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor
-                    | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor
-                     end;
+                     doublefloor := {first = currentFloor, second = targetFloor};
+                     toMeasure ! doublefloor
                      to recievedRequestFromCabin_ControllerSys
                 end
-          end 
+         end 
 
-		
-		
-		
+	
+	
 	from receiveRequestFromButtonEx_ControllerSys
 		receiveCabinMoved;
-          currentFloor := currentFloor + upordown;
-          case (exBtnFloor) of 
-               0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor
-            | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor
-            | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor
-            | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor
-            | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor
-           end;
-           to cabinMoved_ControllerSys
+         currentFloor := currentFloor + upordown;
+         doublefloor := {first = currentFloor, second = destFloor}
+         toMeasure ! doublefloor
+         to cabinMoved_ControllerSys
 
-		
+	
 		if (currentFloor = exBtnFloor) then   
                 p_con_door_OpenDoor;
                 to doorOpened
           end;
 
-		
+	
 	from cabinBraked_ControllerSys
 		readyToOpenDoor;
-          OpenDoor;
-          to doorOpened_ControllerSys
+         OpenDoor;
+         to doorOpened_ControllerSys
 
-		
+	
 	from recievedRequestFromCabin_ControllerSys
 		receiveCabinMoved;
-          currentFloor := currentFloor + upordown;
-          loadedPassager := true;
-          case (destFloor) of 
-               0 ->  sendToMeasureSensor ! currentFloor, destFloor
-            | 1 ->  sendToMeasureSensor_1 ! currentFloor,destFloor
-            | 2 ->  sendToMeasureSensor_2 ! currentFloor, destFloor
-            | 3 ->  sendToMeasureSensor_3 ! currentFloor,destFloor
-            | 4 ->  sendToMeasureSensor_4 ! currentFloor, destFloor
-         end;
-         to cabinMoved_ControllerSys
+        currentFloor := currentFloor + upordown;
+        loadedPassager := true;
+        doublefloor := {first = currentFloor, second = destFloor};
+        toMeasure ! doublefloor;
+        to cabinMoved_ControllerSys
 
-		
-		
-		
+	
+	
 	from waitDoorClosed_ControllerSys
 		readyToGo;
-          loadedPassager := false;
-          to Wait_ControllerSys
+        loadedPassager := false;
+        to Wait_ControllerSys
 
-		
+	
 
-	Process Winch 
+	Process Winch
 	[
 	  goUp : in none,	
-	
 	  stop : in none,	
-	
 	  goDown : in none,	
-	
 	  stopFromController : in none,	
-	
-	
+	  moveCabinUp : out none,
+      moveCabinDown : out none,
+      braked : out none,
+      readyToOpenDoor : out none
     ]
 
  
@@ -303,40 +230,40 @@
 		select
           goUp;
           moveCabinUp;
-          to Going_Up
-		
+          to Going_Up_Winch
+	
 		[]
           goDown;
           moveCabinDown;
-          to Goinf_Down
+          to Goinf_Down_Winch
         end
-		
+	
 	from Going_Up_Winch
 		stopFromController;
-          braked;
-          to receiveCabinBrakedFromControllerSys
-		
+        braked;
+        to receiveCabinBrakedFromControllerSys
+	
 	from Going_Down_Winch
 		stopFromController;
-          braked;
-          to receiveCabinBrakedFromControllerSys
-		
+        braked;
+        to receiveCabinBrakedFromControllerSys
+	
 	from receiveCabinBrakedFromControllerSys_Winch
 		stop;
-          readyToOpenDoor;
-          to Not_Going_Winch
-		
+        readyToOpenDoor;
+        to Not_Going_Winch
+	
 
-	Process Cabin 
+	Process Cabin
 	[
 	  braked : in none,	
-	
-	  sendFloorAndCloseDoor : in,
+	  sendFloorAndCloseDoor : in int,
+	  
 	  moveCabinDown : in none,	
-	
 	  moveCabinUp : in none,	
-	
-	
+	  receiveFloorAndCloseDoor : out int,
+      braked : out none,
+      receiveCabinMoved : out none
     ]
 
  
@@ -357,12 +284,12 @@
           sendFloorAndCloseDoor  ?  targetFloor;
           receiveFloorAndCloseDoor !  targetFloor;
           to sentInfo_Cabin
-		
+	
 		[] 
-         moveCabinDown;
-          P_cab_con_braked;
+          moveCabinDown;
+          receiveCabinMoved;
           to Down_Cabin
-		
+	
 		[]
           moveCabinUp;
           receiveCabinMoved;
@@ -370,38 +297,36 @@
         end
 
 
-		
+	
 	from Down_Cabin
 		braked;
-          p_cab_con_braked;
-          to Stop_Cabin
-		
+        braked;
+         to Stop_Cabin
+	
 	from sentInfo_Cabin
 		select
           moveCabinDown ;
           receiveCabinMoved;
           to Down_Cabin
-		
+	
 		[]
           moveCabinUp;
           receiveCabinMoved;
           to Up_Cabin
         end
-		
+	
 	from Up_Cabin
 		braked;
-          braked;
-          to Stop_Cabin
+         braked;
+         to Stop_Cabin
 
-		
+	
 
-	Process Door 
+	Process Door
 	[
 	  OpenDoor : in none,	
-	
 	  CloseDoor : in none,	
-	
-	
+	  readyToGo : out none
     ]
 
  
@@ -415,24 +340,26 @@
 
 	from Open_Door
 		CloseDoor;
-          to Closed_Door
-		
+        to Closed_Door
+	
 	from Closed_Door
 		readyToGo;
-          to Sleep_Door
-		
+        to Sleep_Door
+	
 	from Sleep_Door
 		OpenDoor;
-           to Open_Door
+        to Open_Door
 
-		
+	
 
-	Process Sensor 
+	Process Sensor
 	[
-	  toMeasure : in,
+	  toMeasure : in Double_Floor,
+	  
 	  cabinArrived : in none,	
-	
-	
+	continueToMove : out none
+        
+
     ]
 
  
@@ -451,37 +378,24 @@
 
 	from Idle_Sensor
 		toMeasure ?  floor, cabinFloor;
-          to Detecting_Sensor
+        to Detecting_Sensor
 
-		
+	
 	from Detecting_Sensor
-		
-
-		
+	
 		toMeasure ? cabinFloor;
-          if (floor = cabinFloor) then 
-            case (floor) of 
-          0 -> p_sen_con_detected; to Detected_Sensor 
-       | 1 -> P_sen_con_1_detected; to Detected_Sensor
-       | 2 -> p_sen_con_2_detected; to Detected_Sensor   
-       | 3 -> p_sen_con_3_detected; to Detected_Sensor 
-       | 4 -> p_sen_con_4_detected; to Detected_Sensor
-          end
-          else
-            case (floor) of 
-               0 -> p_sen_con_continueToMove 
-            | 1 -> P_sen_con_1_continueToMove
-            | 2 -> p_sen_con_2_continueToMove
-            | 3 -> p_sen_con_3_continueToMove 
-            | 4 -> p_sen_con_4_continueToMove
-           end;
-           to Detected_Sensor
-         end
+        if (floor = cabinFloor) then 
+              detected;          
+              to Detected_Sensor
+        else
+              continueToMove; 
+              to Detecting_Sensor
+       end
 
-		
+	
 	from Detected_Sensor
 		to Idle_Sensor
-		
+	
 
 	/*Component*/
 	Component InstanceClsDiag is 
@@ -493,50 +407,130 @@
 		sensor4 : int := 4
 		
 	port 
-				Pressed : ,
-				arrive : none,	
-				detected : none,	
-				readyToOpenDoor : none,	
-				receiveFloorAndCloseDoor : ,
-				readyToGo : none,	
-				receiveFromButton_Ex : ,
-				receiveCabinMoved : none,	
-				braked : none,	
-				gotoOpenDoorDirectly : none,	
-				continueToMove : none,	
-				doneTask : none,	
-				goUp : none,	
-				stop : none,	
-				goDown : none,	
-				stopFromController : none,	
-				braked : none,	
-				sendFloorAndCloseDoor : ,
-				moveCabinDown : none,	
-				moveCabinUp : none,	
-				OpenDoor : none,	
-				CloseDoor : none,	
-				toMeasure : ,
-				cabinArrived : none,	
-				toMeasure : ,
-				cabinArrived : none,	
-				toMeasure : ,
-				cabinArrived : none,	
-				toMeasure : ,
-				cabinArrived : none,	
-				toMeasure : ,
-				cabinArrived : none,	
+	  			detected : none,	
+	  			readyToOpenDoor : none,	
+	  			receiveFloorAndCloseDoor : int,
+	  			readyToGo : none,	
+	  			receiveFromButton_Ex : int,
+	  			receiveCabinMoved : none,	
+	  			braked : none,	
+	  			gotoOpenDoorDirectly : none,	
+	  			continueToMove : none,	
+	  			doneTask : none,	
+	  			goUp : none,	
+	  			stop : none,	
+	  			goDown : none,	
+	  			stopFromController : none,	
+	  			braked : none,	
+	  			sendFloorAndCloseDoor : int,
+	  			moveCabinDown : none,	
+	  			moveCabinUp : none,	
+	  			OpenDoor : none,	
+	  			CloseDoor : none,	
+	  			toMeasure : Double_Floor,
+	  			cabinArrived : none,	
+	  			toMeasure : Double_Floor,
+	  			cabinArrived : none,	
+	  			toMeasure : Double_Floor,
+	  			cabinArrived : none,	
+	  			toMeasure : Double_Floor,
+	  			cabinArrived : none,	
+	  			toMeasure : Double_Floor,
+	  			cabinArrived : none,	
 	par
 	
-			Button_ex
-			|| ControllerSys
-			|| Winch
-			|| Cabin
-			|| Door
-			|| Sensor
-			|| Sensor
-			|| Sensor
-			|| Sensor
-			|| Sensor
+			Button_ex [
+	
+	  receiveFromButton_Ex : out int
+    ]
+
+			|| ControllerSys [
+	  detected
+	  readyToOpenDoor
+	  receiveFloorAndCloseDoor,
+	  readyToGo
+	  receiveFromButton_Ex,
+	  receiveCabinMoved
+	  braked
+	  gotoOpenDoorDirectly
+	  continueToMove
+	  doneTask
+	  goUp : out  none,
+      goDown : out none,
+      toMeasure : out Double_Floor, 
+      stopFromController : out none,   
+      stop : out none,
+      OpenDoor : out none,
+      CloseDoor : out none
+    ]
+
+			|| Winch [
+	  goUp
+	  stop
+	  goDown
+	  stopFromController
+	  moveCabinUp : out none,
+      moveCabinDown : out none,
+      braked : out none,
+      readyToOpenDoor : out none
+    ]
+
+			|| Cabin [
+	  braked
+	  sendFloorAndCloseDoor,
+	  moveCabinDown
+	  moveCabinUp
+	  receiveFloorAndCloseDoor : out int,
+      braked : out none,
+      receiveCabinMoved : out none
+    ]
+
+			|| Door [
+	  OpenDoor
+	  CloseDoor
+	  readyToGo : out none
+    ]
+
+			|| Sensor [
+	  toMeasure,
+	  cabinArrived
+	continueToMove : out none
+        
+
+    ]
+
+			|| Sensor [
+	  toMeasure,
+	  cabinArrived
+	continueToMove : out none
+        
+
+    ]
+
+			|| Sensor [
+	  toMeasure,
+	  cabinArrived
+	continueToMove : out none
+        
+
+    ]
+
+			|| Sensor [
+	  toMeasure,
+	  cabinArrived
+	continueToMove : out none
+        
+
+    ]
+
+			|| Sensor [
+	  toMeasure,
+	  cabinArrived
+	continueToMove : out none
+        
+
+    ]
+
 		
 	
 

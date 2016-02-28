@@ -280,7 +280,6 @@ public class Sensor implements RiJStateConcept, Animated {
         
         //#[ operation checkSensorFloor(int) 
         
-        
         switch(sensorFloor){
         case 0: getP_sen_con().gen(new continueToMove());   
         		break; 
@@ -318,7 +317,7 @@ public class Sensor implements RiJStateConcept, Animated {
     
     /**
      * toMeasure ?  floor, cabinFloor;
-     *           to Detecting_Sensor
+     *          to Detecting_Sensor
      * 
     */
     //## operation genFiacre0() 
@@ -406,6 +405,30 @@ public class Sensor implements RiJStateConcept, Animated {
                });
         
         //#[ operation genFiacre4() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     *   p_sen_con_continueToMove : out none,  
+     *        p_sen_con_1_continueToMove : out none,   
+     *        p_sen_con_2_continueToMove : out none,
+     *        p_sen_con_3_continueToMove : out none,
+     *        p_sen_con_4_continueToMove : out none       
+     * 
+    */
+    //## operation genOutPort() 
+    public void genOutPort() {
+        try {
+            animInstance().notifyMethodEntered("genOutPort",
+               new ArgData[] {
+               });
+        
+        //#[ operation genOutPort() 
         //#]
         }
         finally {

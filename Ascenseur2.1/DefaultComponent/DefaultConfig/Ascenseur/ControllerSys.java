@@ -629,32 +629,32 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * receiveFromButton_Ex ?  exBtnFloor;
-     *           destFloor := exBtnFloor;
-     *           if (currentFloor < exBtnFloor) then
+     *          destFloor := exBtnFloor;
+     *          if (currentFloor < exBtnFloor) then
      *               goUp;   
      *               upordown :=1 ;  
-     *           case (exBtnFloor) of 
-     *                0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor
-     *             | 1 ->  sendToMeasureSensor_1 ! currentFloor, exBtnFloor
-     *             | 2 ->  sendToMeasureSensor_2 ! currentFloor, exBtnFloor
-     *             | 3 ->  sendToMeasureSensor_3 ! currentFloor, exBtnFloor
-     *             | 4 ->  sendToMeasureSensor_4 ! currentFloor, exBtnFloor
-     *            end;
-     *                  to ReceiveRequestFromButtonEx_ControllerSys
-     *             elseif (currentFloor > exBtnFloor) then 	
+     *               case (exBtnFloor) of 
+     *                  0 ->  toMeasure ! currentFloor, exBtnFloor
+     *               | 1 ->  toMeasure_1 ! currentFloor, exBtnFloor
+     *               | 2 ->  toMeasure_2 ! currentFloor, exBtnFloor
+     *               | 3 ->  toMeasure_3 ! currentFloor, exBtnFloor
+     *               | 4 ->  toMeasure_4 ! currentFloor, exBtnFloor
+     *               end;
+     *               to ReceiveRequestFromButtonEx_ControllerSys
+     *          elsif (currentFloor > exBtnFloor) then 	
      *                  goDown; 
      *                  upordown := -1;  
      *                  case (exBtnFloor) of 
-     *                    0 ->  sendToMeasureSensor !  currentFloor,  exBtnFloor
-     *                 | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor
-     *                 | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor
-     *                 | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor
-     *                 | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor
-     *                 end;
+     *                     0 ->  toMeasure !  currentFloor,  exBtnFloor
+     *                  | 1 -> toMeasure_1 !  currentFloor, exBtnFloor
+     *                  | 2 ->  toMeasure_2 !  currentFloor, exBtnFloor
+     *                  | 3 ->  toMeasure_3 !  currentFloor, exBtnFloor
+     *                  | 4 ->  toMeasure_4 !  currentFloor, exBtnFloor
+     *                  end;
+     *                  to ReceiveRequestFromButtonEx
+     *          else
      *                 to ReceiveRequestFromButtonEx
-     *             else
-     *                 to ReceiveRequestFromButtonEx
-     *             end
+     *          end
      * 
      * 
     */
@@ -786,6 +786,38 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
                });
         
         //#[ operation genFiacre9() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     *   goUp : out  none,
+     *       goDown : out none,
+     *       p_con_sen_toMeasure : out Double_Floor 
+     *       p_con_sen_1_toMeasure : out Double_Floor,   
+     *       p_con_sen_2_toMeasure : out  Double_Floor,   
+     *       p_con_sen_3_toMeasure : out  Double_Floor,   
+     *       p_con_sen_4_toMeasure : out  Double_Floor,
+     *       stopFromController : out none,   
+     *       stop : out none,
+     *       OpenDoor : out none,
+     *       CloseDoor : out none
+     * 
+     * 
+     * 
+    */
+    //## operation genOutPort() 
+    public void genOutPort() {
+        try {
+            animInstance().notifyMethodEntered("genOutPort",
+               new ArgData[] {
+               });
+        
+        //#[ operation genOutPort() 
         //#]
         }
         finally {

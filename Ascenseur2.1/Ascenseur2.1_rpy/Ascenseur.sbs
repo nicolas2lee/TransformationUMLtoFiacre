@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 	- _myState = 8192;
 	- _name = "Ascenseur";
-	- _modifiedTimeWeak = 2.28.2016::11:25:8;
+	- _modifiedTimeWeak = 2.28.2016::16:24:1;
 	- _lastID = 10;
 	- Declaratives = { IRPYRawContainer 
 		- size = 5;
@@ -11488,7 +11488,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 			- _name = "AnimatedInit0BtnEx3Cabin1";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "2.3.2016::20:58:46";
+			- _lastModifiedTime = "2.28.2016::15:14:26";
 			- _graphicChart = { CGIMscChart 
 				- vLadderMargin = 20;
 				- m_usingActivationBar = 0;
@@ -24836,8 +24836,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 304c8374-8d3d-4c1a-a463-32327d099896;
 						}
 						- m_pFormalMessage = { IHandle 
-							- _m2Class = "IEvent";
-							- _id = GUID 6f11ee66-e8a7-4e74-8664-a55c86ffacd0;
+							- _m2Class = "";
 						}
 						- m_eType = EVENT;
 						- m_targetExec = { IHandle 
@@ -27227,8 +27226,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 304c8374-8d3d-4c1a-a463-32327d099896;
 						}
 						- m_pFormalMessage = { IHandle 
-							- _m2Class = "IEvent";
-							- _id = GUID 6f11ee66-e8a7-4e74-8664-a55c86ffacd0;
+							- _m2Class = "";
 						}
 						- m_eType = EVENT;
 						- m_targetExec = { IHandle 
@@ -27777,7 +27775,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 		}
 	}
-	- weakCGTime = 2.28.2016::11:25:8;
+	- weakCGTime = 2.28.2016::16:24:1;
 	- strongCGTime = 2.3.2016::14:22:12;
 	- _defaultComposite = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 	- _eventsBaseID = 2616;
@@ -27788,8 +27786,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 2.28.2016::10:54:5;
-			- weakCGTime = 2.28.2016::10:54:5;
+			- _modifiedTimeWeak = 2.28.2016::11:25:8;
+			- weakCGTime = 2.28.2016::11:25:8;
 			- strongCGTime = 2.3.2016::14:22:12;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -28245,13 +28243,13 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- _name = "Button_ex";
-			- _modifiedTimeWeak = 2.28.2016::11:25:8;
+			- _modifiedTimeWeak = 2.28.2016::15:14:47;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 10;
-			- weakCGTime = 2.28.2016::11:25:8;
+			- weakCGTime = 2.28.2016::15:14:47;
 			- strongCGTime = 11.23.2015::16:13:41;
 			- Ports = { IRPYRawContainer 
 				- size = 1;
@@ -28297,7 +28295,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- Operations = { IRPYRawContainer 
-				- size = 6;
+				- size = 4;
 				- value = 
 				{ IReception 
 					- _id = GUID db31aa65-defc-42ba-804b-09571565c1fe;
@@ -28312,29 +28310,15 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _id = GUID 3291aa9a-5e3e-48a8-a882-9a32e30a999c;
 					}
 				}
-				{ IReception 
-					- _id = GUID 7746b563-faad-4eb2-a0ca-c9b44b34a3c9;
-					- _myState = 8192;
-					- _modifiedTimeWeak = 1.2.1990::0:0:0;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _event = { IHandle 
-						- _m2Class = "IEvent";
-						- _id = GUID 6f11ee66-e8a7-4e74-8664-a55c86ffacd0;
-					}
-				}
 				{ IPrimitiveOperation 
 					- _id = GUID 684071d2-0faf-44e1-850a-5a21ae3ff035;
 					- _myState = 8192;
 					- _name = "genFiacre1";
-					- _modifiedTimeWeak = 2.27.2016::20:25:53;
+					- _modifiedTimeWeak = 2.28.2016::14:31:13;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
-\\viewkind4\\uc1\\pard\\f0\\fs22 select\\par
-          arrive;\\par
-\\f1\\fs20           to Off_Button_ex        \\par
+\\viewkind4\\uc1\\pard\\f0\\fs22 receiveFromButton_Ex ! 3;\\par
+        to On\\f1\\fs20 _Button_ex\\par
 }
 ";
 					}
@@ -28364,47 +28348,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _id = GUID 1c0bbe2d-122b-4060-9ea5-ff7cf133be35;
 					- _myState = 8192;
 					- _name = "genFiacre2";
-					- _modifiedTimeWeak = 2.28.2016::10:54:5;
+					- _modifiedTimeWeak = 2.28.2016::15:14:47;
 					- _description = { IDescription 
-						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
-\\viewkind4\\uc1\\pard\\f0\\fs22 receiveFromButton_Ex ! requestFloor;\\par
-          to On\\f1\\fs20 _Button_ex\\f0\\fs22\\par
-\\f1\\fs20\\par
-}
-";
-					}
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 741a572b-95cb-4fcf-ae28-d7be5eb7f2f0;
-					- _myState = 8192;
-					- _name = "genFiacre3";
-					- _modifiedTimeWeak = 2.27.2016::20:25:59;
-					- _description = { IDescription 
-						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
-\\viewkind4\\uc1\\pard\\f0\\fs22 []\\par
-          wait[4,5];\\par
-          to Off\\f1\\fs20 _Button_ex\\f0\\fs22\\par
-          end;\\f1\\fs20\\par
-}
-";
+						- _text = "to Off_Button_ex";
 					}
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -28429,9 +28375,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _id = GUID e0485146-6043-4b2b-865c-1b4cc1e493ba;
 					- _myState = 8192;
 					- _name = "genOutPort";
-					- _modifiedTimeWeak = 2.28.2016::11:25:8;
+					- _modifiedTimeWeak = 2.28.2016::14:15:11;
 					- _description = { IDescription 
-						- _text = "receiveFromButton_Ex : out int";
+						- _text = "  receiveFromButton_Ex : out int";
 					}
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -28461,9 +28407,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _id = GUID 1f5b14c3-b876-4d37-9092-66f1f9118789;
 					- _myState = 10240;
 					- _name = "statechart_2";
-					- _modifiedTimeWeak = 2.28.2016::11:4:34;
+					- _modifiedTimeWeak = 2.28.2016::15:14:19;
 					- _lastID = 7;
-					- weakCGTime = 2.28.2016::11:4:34;
+					- weakCGTime = 2.28.2016::15:14:19;
 					- strongCGTime = 11.16.2015::15:26:58;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -28472,7 +28418,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _classModifier = Unspecified;
 					- _defNumber = 2;
 					- Transitions = { IRPYRawContainer 
-						- size = 4;
+						- size = 3;
 						- value = 
 						{ IDefaultDrvdTrans 
 							- _id = GUID db752ccb-785e-4205-b0e9-0901fffabdb4;
@@ -28495,10 +28441,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 							- _id = GUID 599ea035-0701-4b32-916e-9de3c632ebdd;
 							- _myState = 2048;
 							- _name = "transition_4";
-							- _modifiedTimeWeak = 2.22.2016::21:8:55;
+							- _modifiedTimeWeak = 2.28.2016::13:58:12;
 							- _itsLabel = { ILabel 
 								- _id = GUID d129fba7-584b-499f-a72e-abf7db186038;
-								- _modifiedTimeWeak = 2.22.2016::21:8:55;
+								- _modifiedTimeWeak = 2.28.2016::13:58:12;
 								- _itsTrigger = { IInterfaceItemTrigger 
 									- _id = GUID cc582e5f-ebac-4fa4-9032-2b79bc2a6410;
 									- _modifiedTimeWeak = 1.2.1990::0:0:0;
@@ -28512,9 +28458,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 								- _itsGuard = NULL;
 								- _itsAction = { IAction 
 									- _id = GUID 4dfd4c12-d9aa-4ead-99a2-2f180e7c32fc;
-									- _modifiedTimeWeak = 2.22.2016::21:8:55;
+									- _modifiedTimeWeak = 2.28.2016::13:58:12;
 									- _body = "getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
-genFiacre2();";
+genFiacre1();";
 								}
 							}
 							- _itsTarget = GUID 8ea57824-f302-40ab-ab5e-e1448be6fd18;
@@ -28525,14 +28471,14 @@ genFiacre2();";
 							- _id = GUID 0556a1ca-78fe-4cc4-9d91-3a282b8b3a42;
 							- _myState = 2048;
 							- _name = "transition_5";
-							- _modifiedTimeWeak = 2.25.2016::21:11:31;
+							- _modifiedTimeWeak = 2.28.2016::13:58:30;
 							- _description = { IDescription 
 								- _text = "wait [4,5];
 to Off;";
 							}
 							- _itsLabel = { ILabel 
 								- _id = GUID 03caa820-4830-4a1a-9187-d3309f6ca5f9;
-								- _modifiedTimeWeak = 2.22.2016::21:9:27;
+								- _modifiedTimeWeak = 2.28.2016::13:58:30;
 								- _itsTrigger = { ITimeout 
 									- _id = GUID 26ab54db-d861-4455-bdb8-147b9cec83f9;
 									- _modifiedTimeWeak = 1.2.1990::0:0:0;
@@ -28543,37 +28489,8 @@ to Off;";
 								- _itsGuard = NULL;
 								- _itsAction = { IAction 
 									- _id = GUID f2b5de9b-a13b-4fe9-a105-ddb7860a04f0;
-									- _modifiedTimeWeak = 1.2.1990::0:0:0;
-									- _body = "genFiacre3();";
-								}
-							}
-							- _itsTarget = GUID 5a45d097-8bb9-4fe8-bd1e-e2bac9f71dd5;
-							- _staticReaction = 0;
-							- _itsSource = GUID 8ea57824-f302-40ab-ab5e-e1448be6fd18;
-						}
-						{ ITransition 
-							- _id = GUID 5e2f7e08-de4e-45bd-ada5-c69d6f227433;
-							- _myState = 2048;
-							- _name = "transition_6";
-							- _modifiedTimeWeak = 2.28.2016::11:4:34;
-							- _itsLabel = { ILabel 
-								- _id = GUID d864c6ab-ea61-4140-ab12-95d03dc98c83;
-								- _modifiedTimeWeak = 2.28.2016::11:4:34;
-								- _itsTrigger = { IInterfaceItemTrigger 
-									- _id = GUID 5ac1d3b6-cb14-4973-9107-6ecfac491c1c;
-									- _modifiedTimeWeak = 1.2.1990::0:0:0;
-									- _body = "arrive";
-									- _info = "";
-									- _itsInterfaceItem = { IHandle 
-										- _m2Class = "IEvent";
-										- _id = GUID 6f11ee66-e8a7-4e74-8664-a55c86ffacd0;
-									}
-								}
-								- _itsGuard = NULL;
-								- _itsAction = { IAction 
-									- _id = GUID 4206a4f2-f980-42ae-a1f5-72a09140b9dd;
-									- _modifiedTimeWeak = 1.2.1990::0:0:0;
-									- _body = "genFiacre1();";
+									- _modifiedTimeWeak = 2.28.2016::13:58:30;
+									- _body = "genFiacre2();";
 								}
 							}
 							- _itsTarget = GUID 5a45d097-8bb9-4fe8-bd1e-e2bac9f71dd5;
@@ -28593,19 +28510,19 @@ to Off;";
 						{ IState 
 							- _id = GUID 5a45d097-8bb9-4fe8-bd1e-e2bac9f71dd5;
 							- _name = "Off_Button_ex";
-							- _modifiedTimeWeak = 2.28.2016::11:4:20;
+							- _modifiedTimeWeak = 2.28.2016::15:14:19;
 							- _parent = GUID 8c5bba44-4e19-4c51-b97f-1db81185dc74;
 							- _defaultTrans = ;
 						}
 						{ IState 
 							- _id = GUID 8ea57824-f302-40ab-ab5e-e1448be6fd18;
 							- _name = "On_Button_ex";
-							- _modifiedTimeWeak = 2.28.2016::11:4:20;
+							- _modifiedTimeWeak = 2.28.2016::15:14:19;
 							- _parent = GUID 8c5bba44-4e19-4c51-b97f-1db81185dc74;
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 2.28.2016::12:4:36;
+					- _version = 2.28.2016::16:14:19;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = GUID 3d0536d5-378c-4f21-93b2-dabd1bb4dab3;
 					- Views = { IRPYRawContainer 
@@ -28682,8 +28599,8 @@ to Off;";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 2.28.2016::11:4:20;
-							- _lastModifiedTime = "2.28.2016::11:4:36";
+							- _modifiedTimeWeak = 2.28.2016::15:14:19;
+							- _lastModifiedTime = "2.28.2016::15:14:19";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 887751fe-fec3-4c0f-9c2d-f55152c41387;
 								- m_type = 0;
@@ -28707,7 +28624,7 @@ to Off;";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- elementList = 7;
+								- elementList = 6;
 								{ CGIState 
 									- _id = GUID b3853a20-0cbb-4b1b-9fcc-946dbc2ae7ed;
 									- m_type = 5;
@@ -28989,7 +28906,7 @@ to Off;";
 									- m_direction = ' ';
 									- m_rpn = { CGIText 
 										- m_str = "Pressed/getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
-genFiacre2();";
+genFiacre1();";
 										- m_style = "Arial" 10 0 0 0 1 ;
 										- m_color = { IColor 
 											- m_fgColor = 0;
@@ -29069,7 +28986,7 @@ genFiacre2();";
 									- m_targetType = 'T';
 									- m_direction = ' ';
 									- m_rpn = { CGIText 
-										- m_str = "tm(5)/genFiacre3();";
+										- m_str = "tm(5)/genFiacre2();";
 										- m_style = "Arial" 10 0 0 0 1 ;
 										- m_color = { IColor 
 											- m_fgColor = 0;
@@ -29089,86 +29006,6 @@ genFiacre2();";
 									- m_line_style = 1;
 									- m_SourcePort = 34 512 ;
 									- m_TargetPort = 11 353 ;
-									- m_pInheritsFrom = { IHandle 
-										- _m2Class = "";
-									}
-									- m_nInheritanceMask = 0;
-									- m_bShowName = 1;
-								}
-								{ CGITrans 
-									- _id = GUID d433b67d-e4b9-450f-9f47-45ef59ec0886;
-									- _properties = { IPropertyContainer 
-										- Subjects = { IRPYRawContainer 
-											- size = 1;
-											- value = 
-											{ IPropertySubject 
-												- _Name = "General";
-												- Metaclasses = { IRPYRawContainer 
-													- size = 1;
-													- value = 
-													{ IPropertyMetaclass 
-														- _Name = "Graphics";
-														- Properties = { IRPYRawContainer 
-															- size = 1;
-															- value = 
-															{ IProperty 
-																- _Name = "ShowLabels";
-																- _Value = "False";
-																- _Type = Bool;
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-									- m_type = 28;
-									- m_pModelObject = { IHandle 
-										- _m2Class = "ITransition";
-										- _id = GUID 5e2f7e08-de4e-45bd-ada5-c69d6f227433;
-									}
-									- m_pParent = ;
-									- m_name = { CGIText 
-										- m_str = "";
-										- m_style = "Arial" 10 0 0 0 1 ;
-										- m_color = { IColor 
-											- m_fgColor = 0;
-											- m_bgColor = 0;
-											- m_bgFlag = 0;
-										}
-										- m_position = 1 0 0  ;
-										- m_nIdent = 0;
-										- m_bImplicitSetRectPoints = 0;
-										- m_nOrientationCtrlPt = 8;
-									}
-									- m_drawBehavior = 4096;
-									- m_bIsPreferencesInitialized = 1;
-									- m_pSource = GUID 03dd832e-8a46-464f-8f5f-0a4f0524d70f;
-									- m_sourceType = 'F';
-									- m_pTarget = GUID 528c97d9-9646-487d-89d5-82c67dd5e054;
-									- m_targetType = 'T';
-									- m_direction = ' ';
-									- m_rpn = { CGIText 
-										- m_str = "arrive/genFiacre1();";
-										- m_style = "Arial" 10 0 0 0 1 ;
-										- m_color = { IColor 
-											- m_fgColor = 0;
-											- m_bgColor = 0;
-											- m_bgFlag = 0;
-										}
-										- m_position = 4 -53 -13  57 -13  57 1  -53 1  ;
-										- m_nIdent = 0;
-										- m_bImplicitSetRectPoints = 0;
-										- m_transform = 1 0 0 1 317 221 ;
-										- m_nHorizontalSpacing = -39;
-										- m_nVerticalSpacing = -28;
-										- m_nOrientationCtrlPt = 0;
-									}
-									- m_anglePoint1 = 0 0 ;
-									- m_anglePoint2 = 0 0 ;
-									- m_line_style = 1;
-									- m_SourcePort = 171 230 ;
-									- m_TargetPort = 240 742 ;
 									- m_pInheritsFrom = { IHandle 
 										- _m2Class = "";
 									}
@@ -29253,13 +29090,13 @@ genFiacre2();";
 				}
 			}
 			- _name = "ControllerSys";
-			- _modifiedTimeWeak = 2.28.2016::11:6:48;
+			- _modifiedTimeWeak = 2.28.2016::16:15:36;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
-			- _lastID = 43;
-			- weakCGTime = 2.28.2016::11:6:48;
+			- _lastID = 44;
+			- weakCGTime = 2.28.2016::16:15:36;
 			- strongCGTime = 11.23.2015::16:13:47;
 			- Ports = { IRPYRawContainer 
 				- size = 9;
@@ -29617,7 +29454,7 @@ genFiacre2();";
 				}
 			}
 			- Operations = { IRPYRawContainer 
-				- size = 30;
+				- size = 31;
 				- value = 
 				{ IReception 
 					- _id = GUID d3a0cde6-8f03-4ef2-ad7e-ab5b8b3195f9;
@@ -29937,32 +29774,13 @@ getP_con_win().gen(new stop());";
 					- _id = GUID dcdd681e-5380-46e6-8e81-4e2a63e11022;
 					- _myState = 8192;
 					- _name = "genFiacre1";
-					- _modifiedTimeWeak = 2.27.2016::22:3:3;
+					- _modifiedTimeWeak = 2.28.2016::15:32:2;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 select\\par
-              p_sen_con_detected;\\par
+              detected;\\par
               stopFromController;\\par
-              to cabinArrived_ControllerSys\\par
-          []\\par
-              p_sen_con_1_detected;\\par
-              stopFromController;\\par
-              to cabinArrived_ControllerSys\\par
-          []\\par
-              p_sen_con_2_detected;\\par
-              stopFromController;\\par
-              to cabinArrived_ControllerSys\\par
-          []\\par
-              p_sen_con_3_detected ;\\par
-              stopFromController;\\par
-              to cabinArrived_ControllerSys\\par
-          []\\par
-              p_sen_con_4_detected; \\par
-              stopFromController;\\par
-              to cabinArrived_ControllerSys\\par
-         \\par
-         \\par
-\\lang1036\\f1\\fs20\\par
+              to cabinArrived_ControllerSys\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -29989,12 +29807,12 @@ getP_con_win().gen(new stop());";
 					- _id = GUID 9888a1eb-680a-4c16-867a-3c88f4ddd9ea;
 					- _myState = 8192;
 					- _name = "genFiacre2";
-					- _modifiedTimeWeak = 2.27.2016::22:11:13;
+					- _modifiedTimeWeak = 2.28.2016::15:55:39;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 readyToOpenDoor;\\par
-          OpenDoor;\\par
-          to doorOpened_ControllerSys\\par
+         OpenDoor;\\par
+         to doorOpened_ControllerSys\\par
 \\lang1036\\f1\\fs20\\par
 }
 ";
@@ -30022,16 +29840,7 @@ getP_con_win().gen(new stop());";
 					- _id = GUID c3af9663-0042-4090-b2ee-3fc3c00685e0;
 					- _myState = 8192;
 					- _name = "genFiacre3";
-					- _modifiedTimeWeak = 2.27.2016::22:11:48;
-					- _description = { IDescription 
-						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
-\\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 targetFloor := 1;\\par
-          destFloor := targetFloor;\\par
-          closeDoor;\\par
-          to doorClosed_ControllerSys\\lang1036\\f1\\fs20\\par
-}
-";
-					}
+					- _modifiedTimeWeak = 2.28.2016::15:52:10;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
 						- size = 0;
@@ -30055,38 +29864,28 @@ getP_con_win().gen(new stop());";
 					- _id = GUID e1338621-1dc4-47e4-820f-9606ed879704;
 					- _myState = 8192;
 					- _name = "genFiacre4";
-					- _modifiedTimeWeak = 2.28.2016::10:10:20;
+					- _modifiedTimeWeak = 2.28.2016::16:13:0;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 readyToGo;\\par
-          if (currentFloor < targetFloor) then\\par
+         if (currentFloor < targetFloor) then\\par
               goUp;   \\par
               upordown := 1; \\par
-              case (targetFloor) of \\par
-                 0 ->  sendToMeasureSensor ! currentFloor, targetFloor\\par
-              | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor\\par
-              | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor\\par
-              | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor\\par
-              | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor\\par
-                end;\\par
-                to recievedRequestFromCabin_ControllerSys\\par
-          else\\par
-                if (currentFloor == targetFloor) then\\par
+              doublefloor := \\{first = currentFloor, second = targetFloor\\};\\par
+              toMeasure ! doublefloor;\\par
+              to recievedRequestFromCabin_ControllerSys\\par
+         else\\par
+                if (currentFloor = targetFloor) then\\par
                     openDoor;\\par
                     to doorOpened_ControllerSys\\par
                 else\\par
                      goDown; \\par
                      upordown := -1;  \\par
-                     case (targetFloor) of \\par
-                       0 ->  sendToMeasureSensor ! currentFloor, targetFloor\\par
-                    | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor\\par
-                    | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor\\par
-                    | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor\\par
-                    | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor\\par
-                     end;\\par
+                     doublefloor := \\{first = currentFloor, second = targetFloor\\};\\par
+                     toMeasure ! doublefloor\\par
                      to recievedRequestFromCabin_ControllerSys\\par
                 end\\par
-          end \\par
+         end \\par
 \\lang1036\\f1\\fs20\\par
 }
 ";
@@ -30114,36 +29913,26 @@ getP_con_win().gen(new stop());";
 					- _id = GUID db1259a9-b4f3-4e5c-8bf8-7746a60d7934;
 					- _myState = 8192;
 					- _name = "genFiacre5";
-					- _modifiedTimeWeak = 2.28.2016::9:57:21;
+					- _modifiedTimeWeak = 2.28.2016::16:9:50;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 receiveFromButton_Ex ?  exBtnFloor;\\par
-          destFloor := exBtnFloor;\\par
-          if (currentFloor < exBtnFloor) then\\par
+        destFloor := exBtnFloor;\\par
+        if (currentFloor < exBtnFloor) then\\par
               goUp;   \\par
               upordown :=1 ;  \\par
-          case (exBtnFloor) of \\par
-               0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor\\par
-            | 1 ->  sendToMeasureSensor_1 ! currentFloor, exBtnFloor\\par
-            | 2 ->  sendToMeasureSensor_2 ! currentFloor, exBtnFloor\\par
-            | 3 ->  sendToMeasureSensor_3 ! currentFloor, exBtnFloor\\par
-            | 4 ->  sendToMeasureSensor_4 ! currentFloor, exBtnFloor\\par
-           end;\\par
-                 to ReceiveRequestFromButtonEx_ControllerSys\\par
-            elseif (currentFloor > exBtnFloor) then \\tab\\par
-                 goDown; \\par
-                 upordown := -1;  \\par
-                 case (exBtnFloor) of \\par
-                   0 ->  sendToMeasureSensor !  currentFloor,  exBtnFloor\\par
-                | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor\\par
-                | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor\\par
-                | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor\\par
-                | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor\\par
-                end;\\par
+              doublefloor := \\{first = currentFloor, second = exBtnFloor\\};\\par
+              toMeasure ! doublefloor;\\par
+              to ReceiveRequestFromButtonEx_ControllerSys\\par
+        elsif (currentFloor > exBtnFloor) then \\tab\\par
+               goDown; \\par
+               upordown := -1;  \\par
+               doublefloor := \\{first = currentFloor, second = exBtnFloor\\};\\par
+               toMeasure !  doublefloor;\\par
+               to ReceiveRequestFromButtonEx\\par
+        else\\par
                 to ReceiveRequestFromButtonEx\\par
-            else\\par
-                to ReceiveRequestFromButtonEx\\par
-            end\\par
+        end\\par
 \\par
 \\lang1036\\f1\\fs20\\par
 }
@@ -30172,19 +29961,14 @@ getP_con_win().gen(new stop());";
 					- _id = GUID 6003e8c0-e53a-417a-84cf-593d6af5bfcb;
 					- _myState = 8192;
 					- _name = "genFiacre6";
-					- _modifiedTimeWeak = 2.28.2016::10:3:39;
+					- _modifiedTimeWeak = 2.28.2016::16:14:38;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 receiveCabinMoved;\\par
-          currentFloor := currentFloor + upordown;\\par
-          case (exBtnFloor) of \\par
-               0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor\\par
-            | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor\\par
-            | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor\\par
-            | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor\\par
-            | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor\\par
-           end;\\par
-           to cabinMoved_ControllerSys\\par
+         currentFloor := currentFloor + upordown;\\par
+         doublefloor := \\{first = currentFloor, second = destFloor\\}\\par
+         toMeasure ! doublefloor\\par
+         to cabinMoved_ControllerSys\\par
 \\par
 }
 ";
@@ -30212,12 +29996,12 @@ getP_con_win().gen(new stop());";
 					- _id = GUID ca4b5368-f0e6-4062-a755-ec29dba531fa;
 					- _myState = 8192;
 					- _name = "genFiacre7";
-					- _modifiedTimeWeak = 2.27.2016::22:10:48;
+					- _modifiedTimeWeak = 2.28.2016::15:49:13;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 braked;\\par
-          stop;\\par
-          to cabinBraked\\lang1036\\f1\\fs20\\par
+         stop;\\par
+         to cabinBraked\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -30278,33 +30062,14 @@ getP_con_win().gen(new stop());";
 					- _id = GUID d71702c4-ee5c-4a71-abcb-bc2defa43801;
 					- _myState = 8192;
 					- _name = "genFiacre9";
-					- _modifiedTimeWeak = 2.27.2016::22:9:50;
+					- _modifiedTimeWeak = 2.28.2016::16:10:42;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 []\\par
-              p_sen_con_continueToMove;\\par
+              continueToMove;\\par
               currentFloor = currentFloor +upordown; \\par
-              toMeasureSensor ! currentFloor, destfloor;\\par
-              to cabinMoved_ControllerSys\\par
-          []\\par
-              p_sen_con_1_continueToMove; \\par
-              currentFloor = currentFloor +upordown; \\par
-              sendToMeasureSensor_1 ! currentFloor, destfloor;\\par
-             to cabinMoved_ControllerSys\\par
-          []\\par
-              p_sen_con_2_continueToMove;\\par
-              currentFloor = currentFloor +upordown; \\par
-              sendToMeasureSensor_2 ! currentFloor, destfloor;\\par
-              to cabinMoved_ControllerSys\\par
-          []\\par
-              p_sen_con_3_continueToMove;\\par
-              currentFloor = currentFloor +upordown; \\par
-              sendToMeasureSensor_3 ! currentFloor, destfloor;\\par
-              to cabinMoved_ControllerSys\\par
-          []\\par
-              p_sen_con_4_continueToMove;\\par
-              currentFloor = currentFloor +upordown; \\par
-              sendToMeasureSensor_4 ! currentFloor, destfloor;\\par
+              doublefloor := \\{first = currentFloor, second = destfloor\\};\\par
+              toMeasure ! doublefloor := \\{first = currentFloor, second = destfloor\\};\\par
               to cabinMoved_ControllerSys\\par
          end;\\par
 \\par
@@ -30336,20 +30101,15 @@ getP_con_win().gen(new stop());";
 					- _id = GUID 474d59aa-df66-4c56-aeed-dc7a7a9e37d5;
 					- _myState = 8192;
 					- _name = "genFiacre10";
-					- _modifiedTimeWeak = 2.28.2016::10:6:3;
+					- _modifiedTimeWeak = 2.28.2016::16:15:36;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 receiveCabinMoved;\\par
-          currentFloor := currentFloor + upordown;\\par
-          loadedPassager := true;\\par
-          case (destFloor) of \\par
-               0 ->  sendToMeasureSensor ! currentFloor, destFloor\\par
-            | 1 ->  sendToMeasureSensor_1 ! currentFloor,destFloor\\par
-            | 2 ->  sendToMeasureSensor_2 ! currentFloor, destFloor\\par
-            | 3 ->  sendToMeasureSensor_3 ! currentFloor,destFloor\\par
-            | 4 ->  sendToMeasureSensor_4 ! currentFloor, destFloor\\par
-         end;\\par
-         to cabinMoved_ControllerSys\\par
+        currentFloor := currentFloor + upordown;\\par
+        loadedPassager := true;\\par
+        doublefloor := \\{first = currentFloor, second = destFloor\\};\\par
+        toMeasure ! doublefloor;\\par
+        to cabinMoved_ControllerSys\\par
 \\par
 }
 ";
@@ -30425,12 +30185,17 @@ getP_con_win().gen(new stop());";
 					- _id = GUID c875af0f-acde-4172-abed-a879d7b83f7c;
 					- _myState = 8192;
 					- _name = "genFiacre13";
-					- _modifiedTimeWeak = 2.28.2016::10:9:56;
+					- _modifiedTimeWeak = 2.28.2016::15:52:40;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 if (loadedPassager) then\\par
           CloseDoor;\\par
           to waitDoorClosed\\par
+        else\\par
+          targetFloor := 1;\\par
+          destFloor := targetFloor;\\par
+          closeDoor;\\par
+          to doorClosed_ControllerSys\\par
         end\\lang1036\\f1\\fs20\\par
 }
 ";
@@ -30458,15 +30223,48 @@ getP_con_win().gen(new stop());";
 					- _id = GUID beebe10c-c583-47d6-9dbe-3d0fb72058af;
 					- _myState = 8192;
 					- _name = "genFiacre14";
-					- _modifiedTimeWeak = 2.28.2016::10:6:28;
+					- _modifiedTimeWeak = 2.28.2016::15:57:31;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 readyToGo;\\par
-          loadedPassager := false;\\par
-          to Wait_ControllerSys\\par
+        loadedPassager := false;\\par
+        to Wait_ControllerSys\\par
 \\lang1036\\f1\\fs20\\par
 }
 ";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 42b052e1-8c39-44ad-8423-f61cfb7d104b;
+					- _myState = 8192;
+					- _name = "genOutPort";
+					- _modifiedTimeWeak = 2.28.2016::15:33:58;
+					- _description = { IDescription 
+						- _text = "  goUp : out  none,
+      goDown : out none,
+      toMeasure : out Double_Floor, 
+      stopFromController : out none,   
+      stop : out none,
+      OpenDoor : out none,
+      CloseDoor : out none";
 					}
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -33333,13 +33131,13 @@ genFiacre14();";
 				}
 			}
 			- _name = "Cabin";
-			- _modifiedTimeWeak = 2.27.2016::22:37:34;
+			- _modifiedTimeWeak = 2.28.2016::14:51:6;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
-			- _lastID = 22;
-			- weakCGTime = 2.27.2016::22:37:34;
+			- _lastID = 23;
+			- weakCGTime = 2.28.2016::14:51:6;
 			- strongCGTime = 11.23.2015::16:14:0;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -33424,7 +33222,7 @@ genFiacre14();";
 				}
 			}
 			- Operations = { IRPYRawContainer 
-				- size = 15;
+				- size = 16;
 				- value = 
 				{ IReception 
 					- _id = GUID c7aa8e13-c5a8-4083-90f6-68f1a01d155c;
@@ -33579,11 +33377,11 @@ getP_cab_con().gen (new braked());";
 					- _id = GUID 82117703-5bea-4d61-b4f1-c1279da614ac;
 					- _myState = 8192;
 					- _name = "genFiacre1";
-					- _modifiedTimeWeak = 2.27.2016::22:28:51;
+					- _modifiedTimeWeak = 2.28.2016::14:49:54;
 					- _description = { IDescription 
 						- _text = "braked;
-          p_cab_con_braked;
-          to Stop_Cabin";
+        braked;
+         to Stop_Cabin";
 					}
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -33674,12 +33472,12 @@ getP_cab_con().gen (new braked());";
 					- _id = GUID 70f37456-c3ea-4765-9e7a-0888049f1d75;
 					- _myState = 8192;
 					- _name = "genFiacre4";
-					- _modifiedTimeWeak = 2.27.2016::22:28:5;
+					- _modifiedTimeWeak = 2.28.2016::14:48:2;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 [] \\par
-         moveCabinDown;\\par
-          P_cab_con_braked;\\par
+          moveCabinDown;\\par
+          receiveCabinMoved;\\par
           to Down_Cabin\\lang1036\\f1\\fs20\\par
 }
 ";
@@ -33743,12 +33541,12 @@ getP_cab_con().gen (new braked());";
 					- _id = GUID f5bee2be-3f2d-4257-b37d-11d7c71d84da;
 					- _myState = 8192;
 					- _name = "genFiacre6";
-					- _modifiedTimeWeak = 2.27.2016::22:31:13;
+					- _modifiedTimeWeak = 2.28.2016::14:51:6;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 braked;\\par
-          braked;\\par
-          to Stop_Cabin\\par
+         braked;\\par
+         to Stop_Cabin\\par
 \\lang1036\\f1\\fs20\\par
 }
 ";
@@ -33786,6 +33584,35 @@ getP_cab_con().gen (new braked());";
         end\\lang1036\\f1\\fs20\\par
 }
 ";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 3043fd33-b48b-4f44-853b-f4797569e5c2;
+					- _myState = 8192;
+					- _name = "genOutPort";
+					- _modifiedTimeWeak = 2.28.2016::14:46:28;
+					- _description = { IDescription 
+						- _text = "  receiveFloorAndCloseDoor : out int,
+      braked : out none,
+      receiveCabinMoved : out none";
 					}
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -35269,13 +35096,13 @@ genFiacre7();";
 				}
 			}
 			- _name = "Winch";
-			- _modifiedTimeWeak = 2.28.2016::10:12:31;
+			- _modifiedTimeWeak = 2.28.2016::16:24:1;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
-			- _lastID = 17;
-			- weakCGTime = 2.28.2016::10:12:31;
+			- _lastID = 18;
+			- weakCGTime = 2.28.2016::16:24:1;
 			- strongCGTime = 11.23.2015::16:13:53;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -35360,7 +35187,7 @@ genFiacre7();";
 				}
 			}
 			- Operations = { IRPYRawContainer 
-				- size = 15;
+				- size = 16;
 				- value = 
 				{ IReception 
 					- _id = GUID 87729dfd-725b-4c1a-94cd-d26232c50e1a;
@@ -35558,12 +35385,12 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 484d655c-8a13-45f2-8b6d-5290d1d38a4f;
 					- _myState = 8192;
 					- _name = "genFiacre1";
-					- _modifiedTimeWeak = 2.28.2016::10:12:22;
+					- _modifiedTimeWeak = 2.28.2016::14:33:53;
 					- _description = { IDescription 
 						- _text = "select
           goUp;
           moveCabinUp;
-          to Going_Up";
+          to Going_Up_Winch";
 					}
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -35588,12 +35415,12 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 4e13e4e1-d29e-42da-adc5-d32525f70bf1;
 					- _myState = 8192;
 					- _name = "genFiacre2";
-					- _modifiedTimeWeak = 2.27.2016::20:58:41;
+					- _modifiedTimeWeak = 2.28.2016::14:40:14;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 stop;\\par
-          readyToOpenDoor;\\par
-          to Not_Going_Winch\\lang1036\\f1\\fs20\\par
+        readyToOpenDoor;\\par
+        to Not_Going_Winch\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -35620,13 +35447,13 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 5d6bcbf3-69a3-48ba-b111-c459a832d4a6;
 					- _myState = 8192;
 					- _name = "genFiacre3";
-					- _modifiedTimeWeak = 2.28.2016::10:12:31;
+					- _modifiedTimeWeak = 2.28.2016::14:34:2;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 []\\par
           goDown;\\par
           moveCabinDown;\\par
-          to Goinf_Down\\par
+          to Goinf_Down_Winch\\par
         end\\lang1036\\f1\\fs20\\par
 }
 ";
@@ -35654,12 +35481,12 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID f8b617e0-b46d-4f38-ba1a-cc759a1d45d0;
 					- _myState = 8192;
 					- _name = "genFiacre4";
-					- _modifiedTimeWeak = 2.27.2016::20:57:14;
+					- _modifiedTimeWeak = 2.28.2016::14:39:39;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 stopFromController;\\par
-          braked;\\par
-          to receiveCabinBrakedFromControllerSys\\lang1036\\f1\\fs20\\par
+        braked;\\par
+        to receiveCabinBrakedFromControllerSys\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -35686,12 +35513,12 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 83da0f44-015a-4593-90f8-150e7e6ee6ab;
 					- _myState = 8192;
 					- _name = "genFiacre5";
-					- _modifiedTimeWeak = 2.27.2016::22:33:5;
+					- _modifiedTimeWeak = 2.28.2016::14:39:55;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 stopFromController;\\par
-          braked;\\par
-          to receiveCabinBrakedFromControllerSys\\lang1036\\f1\\fs20\\par
+        braked;\\par
+        to receiveCabinBrakedFromControllerSys\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -35726,6 +35553,36 @@ getP_win_con().gen (new readyToOpenDoor());";
 						- _m2Class = "IEvent";
 						- _id = GUID a9051ed1-25bd-4c4a-89f6-8b23901fb7c9;
 					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ced1f281-86a1-4b57-a5f9-cf0bd730f324;
+					- _myState = 8192;
+					- _name = "genOutPort";
+					- _modifiedTimeWeak = 2.28.2016::16:24:1;
+					- _description = { IDescription 
+						- _text = "  moveCabinUp : out none,
+      moveCabinDown : out none,
+      braked : out none,
+      readyToOpenDoor : out none";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
 				}
 			}
 			- Attrs = { IRPYRawContainer 
@@ -37018,13 +36875,13 @@ genFiacre5();";
 				}
 			}
 			- _name = "Door";
-			- _modifiedTimeWeak = 2.27.2016::22:26:27;
+			- _modifiedTimeWeak = 2.28.2016::14:52:13;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
-			- _lastID = 9;
-			- weakCGTime = 2.27.2016::22:26:27;
+			- _lastID = 10;
+			- weakCGTime = 2.28.2016::14:52:13;
 			- strongCGTime = 11.23.2015::16:14:8;
 			- Ports = { IRPYRawContainer 
 				- size = 1;
@@ -37070,7 +36927,7 @@ genFiacre5();";
 				}
 			}
 			- Operations = { IRPYRawContainer 
-				- size = 6;
+				- size = 7;
 				- value = 
 				{ IReception 
 					- _id = GUID 1f2ca18d-6aca-48d0-982a-1c10e269789f;
@@ -37129,11 +36986,11 @@ genFiacre5();";
 					- _id = GUID fa5ed8ff-5212-4b47-8616-b439c230efa3;
 					- _myState = 8192;
 					- _name = "genFiacre1";
-					- _modifiedTimeWeak = 2.27.2016::22:26:27;
+					- _modifiedTimeWeak = 2.28.2016::14:52:13;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 OpenDoor;\\par
-           to Open_Door\\par
+        to Open_Door\\par
 \\lang1036\\f1\\fs20\\par
 }
 ";
@@ -37161,11 +37018,11 @@ genFiacre5();";
 					- _id = GUID f715f442-727f-4a7b-aaa3-316815ce1b49;
 					- _myState = 8192;
 					- _name = "genFiacre2";
-					- _modifiedTimeWeak = 2.27.2016::22:26:5;
+					- _modifiedTimeWeak = 2.28.2016::14:21:51;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 CloseDoor;\\par
-          to Closed_Door\\lang1036\\f1\\fs20\\par
+        to Closed_Door\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -37192,13 +37049,40 @@ genFiacre5();";
 					- _id = GUID 509b04b7-579c-42f3-b73d-57b29d995e00;
 					- _myState = 8192;
 					- _name = "genFiacre3";
-					- _modifiedTimeWeak = 2.27.2016::22:26:19;
+					- _modifiedTimeWeak = 2.28.2016::14:22:0;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fswiss\\fprq2\\fcharset0 Calibri;}}
 \\viewkind4\\uc1\\pard\\fs20 readyToGo;\\par
-          to Sleep\\lang2057\\f1\\fs22 _Door\\lang1036\\f0\\fs20\\par
+        to Sleep\\lang2057\\f1\\fs22 _Door\\lang1036\\f0\\fs20\\par
 }
 ";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c0b0d388-dc85-41d0-bc03-1d89a2726567;
+					- _myState = 8192;
+					- _name = "genOutPort";
+					- _modifiedTimeWeak = 2.28.2016::14:21:22;
+					- _description = { IDescription 
+						- _text = "  readyToGo : out none";
 					}
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -38033,13 +37917,13 @@ genFiacre3();";
 			- _id = GUID 969d671d-410e-4e58-8cd7-0d783043b3d9;
 			- _myState = 8192;
 			- _name = "Sensor";
-			- _modifiedTimeWeak = 2.27.2016::22:39:48;
+			- _modifiedTimeWeak = 2.28.2016::15:44:9;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID f8c66818-f1d6-4356-ac41-683dcbf56098;
 			}
-			- _lastID = 15;
-			- weakCGTime = 2.27.2016::22:39:48;
+			- _lastID = 16;
+			- weakCGTime = 2.28.2016::15:44:9;
 			- strongCGTime = 2.2.2016::22:43:41;
 			- Ports = { IRPYRawContainer 
 				- size = 5;
@@ -38241,7 +38125,7 @@ genFiacre3();";
 				}
 			}
 			- Operations = { IRPYRawContainer 
-				- size = 9;
+				- size = 10;
 				- value = 
 				{ IReception 
 					- _id = GUID 9d045e6e-e25e-4d0a-934c-d6268e84b5b8;
@@ -38352,7 +38236,7 @@ if (floor == cabinFloor)  {
 					- _id = GUID a12e1a89-8d0f-4755-aae1-325860c748d6;
 					- _myState = 8192;
 					- _name = "checkSensorFloor";
-					- _modifiedTimeWeak = 2.3.2016::15:23:53;
+					- _modifiedTimeWeak = 2.28.2016::13:47:48;
 					- _lastID = 1;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
@@ -38391,7 +38275,6 @@ if (floor == cabinFloor)  {
 					- _constant = 0;
 					- _itsBody = { IBody 
 						- _bodyData = "
-
 switch(sensorFloor){
 case 0: getP_sen_con().gen(new continueToMove());   
 		break; 
@@ -38425,11 +38308,11 @@ case 4:return getP_sen_con_4();
 					- _id = GUID a8ef4568-c5cf-4fb2-89c9-086f4f862a50;
 					- _myState = 8192;
 					- _name = "genFiacre0";
-					- _modifiedTimeWeak = 2.27.2016::22:20:49;
+					- _modifiedTimeWeak = 2.28.2016::15:43:37;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 toMeasure ?  floor, cabinFloor;\\par
-          to Detecting_Sensor\\par
+        to Detecting_Sensor\\par
 \\par
 }
 ";
@@ -38457,14 +38340,7 @@ case 4:return getP_sen_con_4();
 					- _id = GUID 7cc97344-2f45-4fef-a65d-fbc2a508a1ef;
 					- _myState = 8192;
 					- _name = "genFiacre1";
-					- _modifiedTimeWeak = 2.27.2016::22:24:58;
-					- _description = { IDescription 
-						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
-\\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22\\par
-\\lang1036\\f1\\fs20\\par
-}
-";
-					}
+					- _modifiedTimeWeak = 2.28.2016::15:43:9;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
 						- size = 0;
@@ -38518,30 +38394,48 @@ case 4:return getP_sen_con_4();
 					- _id = GUID e5329298-88a7-433a-95a7-e5e31df2523b;
 					- _myState = 8192;
 					- _name = "genFiacre4";
-					- _modifiedTimeWeak = 2.27.2016::22:39:48;
+					- _modifiedTimeWeak = 2.28.2016::15:44:9;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 toMeasure ? cabinFloor;\\par
-          if (floor = cabinFloor) then \\par
-            case (floor) of \\par
-          0 -> p_sen_con_detected; to Detected_Sensor \\par
-       | 1 -> P_sen_con_1_detected; to Detected_Sensor\\par
-       | 2 -> p_sen_con_2_detected; to Detected_Sensor   \\par
-       | 3 -> p_sen_con_3_detected; to Detected_Sensor \\par
-       | 4 -> p_sen_con_4_detected; to Detected_Sensor\\par
-          end\\par
-          else\\par
-            case (floor) of \\par
-               0 -> p_sen_con_continueToMove \\par
-            | 1 -> P_sen_con_1_continueToMove\\par
-            | 2 -> p_sen_con_2_continueToMove\\par
-            | 3 -> p_sen_con_3_continueToMove \\par
-            | 4 -> p_sen_con_4_continueToMove\\par
-           end;\\par
-           to Detected_Sensor\\par
-         end\\par
+        if (floor = cabinFloor) then \\par
+              detected;          \\par
+              to Detected_Sensor\\par
+        else\\par
+              continueToMove; \\par
+              to Detecting_Sensor\\par
+       end\\par
 \\lang1036\\f1\\fs20\\par
 }
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 27a655c9-2ad0-4930-b0d3-f9dc94dae151;
+					- _myState = 8192;
+					- _name = "genOutPort";
+					- _modifiedTimeWeak = 2.28.2016::15:42:37;
+					- _description = { IDescription 
+						- _text = "continueToMove : out none
+        
 ";
 					}
 					- _virtual = 0;
@@ -39532,7 +39426,7 @@ genFiacre4();";
 		}
 	}
 	- Events = { IRPYRawContainer 
-		- size = 31;
+		- size = 30;
 		- value = 
 		{ IEvent 
 			- _id = GUID 3291aa9a-5e3e-48a8-a882-9a32e30a999c;
@@ -39931,16 +39825,6 @@ genFiacre4();";
 			}
 		}
 		{ IEvent 
-			- _id = GUID 6f11ee66-e8a7-4e74-8664-a55c86ffacd0;
-			- _myState = 8192;
-			- _name = "arrive";
-			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _virtual = 0;
-			- Args = { IRPYRawContainer 
-				- size = 0;
-			}
-		}
-		{ IEvent 
 			- _id = GUID a9051ed1-25bd-4c4a-89f6-8b23901fb7c9;
 			- _myState = 8192;
 			- _name = "goUp2";
@@ -39951,6 +39835,6 @@ genFiacre4();";
 			}
 		}
 	}
-	- _configurationRelatedTime = 2.27.2016::21:13:59;
+	- _configurationRelatedTime = 2.28.2016::15:15:0;
 }
 

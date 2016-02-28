@@ -1,0 +1,5 @@
+[#package generateComponent]
+[#import generateUtile.*]
+[#template public genInstancierProcessPorts()]
+
+[/#template]

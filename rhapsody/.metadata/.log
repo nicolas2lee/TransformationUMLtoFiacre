@@ -8644,3 +8644,23 @@ HandlerActivation(commandId=org.eclipse.ui.edit.copy,
 HandlerActivation(commandId=org.eclipse.ui.edit.copy,
 	handler=ActionHandler(com.sodius.mdw.platform.model.actions.CopyInstanceAction@c2ceb54a),
 	expression=AndExpression(LegacyEditorActionBarExpression(com.sodius.mdw.platform.model.metamodelEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@bb3112f0)),sourcePriority=4210689)
+!SESSION 2016-02-28 17:15:57.706 -----------------------------------------------
+eclipse.buildId=unknown
+java.fullversion=JRE 1.7.0 IBM J9 2.7 Windows 8 x86-32 20131114_175264 (JIT enabled, AOT enabled)
+J9VM - R27_Java727_GA_20131114_0833_B175264
+JIT  - tr.r13.java_20131113_50523
+GC   - R27_Java727_GA_20131114_0833_B175264
+J9CL - 20131114_175264
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2016-02-28 17:20:32.867
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2016-02-28 17:20:32.867
+!MESSAGE Conflict for 'org.eclipse.ui.edit.paste':
+HandlerActivation(commandId=org.eclipse.ui.edit.paste,
+	handler=ActionHandler(com.sodius.mdw.platform.model.actions.PasteInstanceAction@5f13277f),
+	expression=AndExpression(LegacyEditorActionBarExpression(com.sodius.mdw.platform.model.metamodelEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@2b2033bb)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.ui.edit.paste,
+	handler=ActionHandler(com.sodius.mdw.platform.model.actions.PasteInstanceAction@5f13277f),
+	expression=AndExpression(LegacyEditorActionBarExpression(com.sodius.mdw.platform.model.metamodelEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@2b2033bb)),sourcePriority=4210689)

@@ -5,41 +5,13 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 8;
+		- size = 7;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 0;
 				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -31;
-				- m_nLeft = 52;
-				- m_nTop = 52;
-				- m_nRight = 535;
-				- m_nBottom = 475;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IMSC";
-				- _filename = "Ascenseur.sbs";
-				- _subsystem = "Ascenseur";
-				- _class = "";
-				- _name = "AnimatedInit0BtnEx3Cabin1";
-				- _id = GUID b8fe3bda-204c-423e-b0e7-f581391f4ad4;
-			}
-			- _UpLeft = 0 4084 ;
-			- _DownRight = 446 4427 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 0;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -58,10 +30,10 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID 3d0536d5-378c-4f21-93b2-dabd1bb4dab3;
 			}
-			- _UpLeft = 105 66 ;
-			- _DownRight = 827 676 ;
+			- _UpLeft = 178 40 ;
+			- _DownRight = 639 309 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 5;
+			- m_nDiagramIndex = 4;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -86,16 +58,16 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID 27c9c5ef-72b3-41cd-8ddf-6b46dda9b3bd;
 			}
-			- _UpLeft = 45 66 ;
-			- _DownRight = 608 394 ;
+			- _UpLeft = 10 -14 ;
+			- _DownRight = 546 298 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 3;
+			- m_nDiagramIndex = 2;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -114,10 +86,10 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID ec63a17e-639c-44f5-be9e-e4a19662be6e;
 			}
-			- _UpLeft = 37 0 ;
-			- _DownRight = 613 347 ;
+			- _UpLeft = 396 78 ;
+			- _DownRight = 985 644 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 7;
+			- m_nDiagramIndex = 6;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -142,10 +114,10 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID 8d9231e3-20af-4ea8-8f95-81b4f40ef3be;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 563 328 ;
+			- _UpLeft = 17 30 ;
+			- _DownRight = 580 358 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 2;
+			- m_nDiagramIndex = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -173,7 +145,7 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 			- _UpLeft = 0 0 ;
 			- _DownRight = 557 294 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 6;
+			- m_nDiagramIndex = 5;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -199,9 +171,9 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _id = GUID 69ee69ef-af59-4712-b598-8e69f22fcf2e;
 			}
 			- _UpLeft = 78 0 ;
-			- _DownRight = 573 288 ;
+			- _DownRight = 576 290 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -226,10 +198,10 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "StatechartDiagram";
 				- _id = GUID a1416477-c6ac-4977-b1e4-39c206dfc643;
 			}
-			- _UpLeft = 131 40 ;
-			- _DownRight = 694 368 ;
+			- _UpLeft = 17 0 ;
+			- _DownRight = 580 328 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 4;
+			- m_nDiagramIndex = 3;
 		}
 	}
 	- _fullName = "U:\\semestre5\\uv5.1\\TransformationUMLtoFiacre\\Ascenseur2.1\\Ascenseur2.1";

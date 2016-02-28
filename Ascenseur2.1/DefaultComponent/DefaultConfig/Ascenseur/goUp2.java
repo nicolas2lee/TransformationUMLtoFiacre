@@ -27,7 +27,7 @@ import com.ibm.rational.rhapsody.animcom.animMessages.*;
 //## event goUp2() 
 public class goUp2 extends RiJEvent implements AnimatedEvent {
     
-    public static final int goUp2_Ascenseur_id = 2646;		//## ignore 
+    public static final int goUp2_Ascenseur_id = 2645;		//## ignore 
     
     
     // Constructors

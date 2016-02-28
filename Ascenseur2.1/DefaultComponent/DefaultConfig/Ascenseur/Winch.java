@@ -196,7 +196,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
      * select
      *           goUp;
      *           moveCabinUp;
-     *           to Going_Up
+     *           to Going_Up_Winch
     */
     //## operation genFiacre1() 
     public void genFiacre1() {
@@ -216,8 +216,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * stop;
-     *           readyToOpenDoor;
-     *           to Not_Going_Winch
+     *         readyToOpenDoor;
+     *         to Not_Going_Winch
     */
     //## operation genFiacre2() 
     public void genFiacre2() {
@@ -239,7 +239,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
      * []
      *           goDown;
      *           moveCabinDown;
-     *           to Goinf_Down
+     *           to Goinf_Down_Winch
      *         end
     */
     //## operation genFiacre3() 
@@ -260,8 +260,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * stopFromController;
-     *           braked;
-     *           to receiveCabinBrakedFromControllerSys
+     *         braked;
+     *         to receiveCabinBrakedFromControllerSys
     */
     //## operation genFiacre4() 
     public void genFiacre4() {
@@ -281,8 +281,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * stopFromController;
-     *           braked;
-     *           to receiveCabinBrakedFromControllerSys
+     *         braked;
+     *         to receiveCabinBrakedFromControllerSys
     */
     //## operation genFiacre5() 
     public void genFiacre5() {
@@ -292,6 +292,28 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
                });
         
         //#[ operation genFiacre5() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     *   moveCabinUp : out none,
+     *       moveCabinDown : out none
+     *       braked : out none,
+     *       readyToOpenDoor : out none
+    */
+    //## operation genOutPort() 
+    public void genOutPort() {
+        try {
+            animInstance().notifyMethodEntered("genOutPort",
+               new ArgData[] {
+               });
+        
+        //#[ operation genOutPort() 
         //#]
         }
         finally {

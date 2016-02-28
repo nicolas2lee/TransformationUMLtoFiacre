@@ -1,0 +1,23 @@
+[#package generateComponent]
+[#import generateUtile.*]
+[#template public genInstancierProcessPorts()]
+[
+[#foreach uniqueTrigger in process.alluniqueTriggers]
+[#if uniqueTrigger.Name == "Pressed"]
+	
+[#else]
+	[#if uniqueTrigger.ArgSize == 0]
+	  ${uniqueTrigger.Name} : in none,	
+	[#else]
+		[#if (uniqueTrigger.ArgSize > 1)]
+	  ${uniqueTrigger.Name} : in Double_Floor,
+		[#else]
+	  ${uniqueTrigger.Name} : in int,
+		[/#if]
+	  
+	[/#if]
+[/#if]
+[/#foreach]
+	${process.outPorts.Name}
+    ]
+[/#template]

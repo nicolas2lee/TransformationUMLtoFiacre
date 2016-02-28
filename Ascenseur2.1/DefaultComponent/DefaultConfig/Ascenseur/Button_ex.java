@@ -162,9 +162,8 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * select
-     *           arrive;
-     *           to Off_Button_ex        
+     * receiveFromButton_Ex ! 3;
+     *         to On_Button_ex
     */
     //## operation genFiacre1() 
     public void genFiacre1() {
@@ -184,9 +183,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * receiveFromButton_Ex ! requestFloor;
-     *           to On_Button_ex
-     * 
+     * to Off_Button_ex
     */
     //## operation genFiacre2() 
     public void genFiacre2() {
@@ -205,19 +202,16 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * []
-     *           wait[4,5];
-     *           to Off_Button_ex
-     *           end;
+     *   receiveFromButton_Ex : out int
     */
-    //## operation genFiacre3() 
-    public void genFiacre3() {
+    //## operation genOutPort() 
+    public void genOutPort() {
         try {
-            animInstance().notifyMethodEntered("genFiacre3",
+            animInstance().notifyMethodEntered("genOutPort",
                new ArgData[] {
                });
         
-        //#[ operation genFiacre3() 
+        //#[ operation genOutPort() 
         //#]
         }
         finally {
@@ -421,7 +415,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
             Off_Button_ex_exit();
             //#[ transition 1 
             getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
-            genFiacre2();
+            genFiacre1();
             //#]
             On_Button_ex_entDef();
             animInstance().notifyTransitionEnded("1");
@@ -482,20 +476,6 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int On_Button_exTakearrive() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("3");
-            On_Button_ex_exit();
-            //#[ transition 3 
-            genFiacre1();
-            //#]
-            Off_Button_ex_entDef();
-            animInstance().notifyTransitionEnded("3");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
         public void rootStateExit() {
         }
         
@@ -505,10 +485,6 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
             if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
                 {
                     res = On_Button_exTakeRiJTimeout();
-                }
-            else if(event.isTypeOf(arrive.arrive_Ascenseur_id))
-                {
-                    res = On_Button_exTakearrive();
                 }
             
             return res;
@@ -526,7 +502,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
                     animInstance().notifyTransitionStarted("2");
                     On_Button_ex_exit();
                     //#[ transition 2 
-                    genFiacre3();
+                    genFiacre2();
                     //#]
                     Off_Button_ex_entDef();
                     animInstance().notifyTransitionEnded("2");

@@ -1,0 +1,18 @@
+[#package generateComponent]
+[#import generateUtile.*]
+[#template public genInstancierProcessPorts(process : fiacreMM.Process)]
+[
+[#foreach uniqueTrigger in process.alluniqueTriggers]
+[#if uniqueTrigger.Name == "Pressed"]
+	
+[#else]
+	[#if uniqueTrigger.ArgSize == 0]
+	  ${uniqueTrigger.Name}
+	[#else]
+	  ${uniqueTrigger.Name},
+	[/#if]
+[/#if]
+[/#foreach]
+	${process.outPorts.Name}
+    ]
+[/#template]

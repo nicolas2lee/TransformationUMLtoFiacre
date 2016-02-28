@@ -162,7 +162,7 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * OpenDoor;
-     *            to Open_Door
+     *         to Open_Door
      * 
     */
     //## operation genFiacre1() 
@@ -183,7 +183,7 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * CloseDoor;
-     *           to Closed_Door
+     *         to Closed_Door
     */
     //## operation genFiacre2() 
     public void genFiacre2() {
@@ -203,7 +203,7 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * readyToGo;
-     *           to Sleep_Door
+     *         to Sleep_Door
     */
     //## operation genFiacre3() 
     public void genFiacre3() {
@@ -213,6 +213,25 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
                });
         
         //#[ operation genFiacre3() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     *   readyToGo : out none
+    */
+    //## operation genOutPort() 
+    public void genOutPort() {
+        try {
+            animInstance().notifyMethodEntered("genOutPort",
+               new ArgData[] {
+               });
+        
+        //#[ operation genOutPort() 
         //#]
         }
         finally {

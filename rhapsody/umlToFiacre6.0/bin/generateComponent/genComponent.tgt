@@ -12,10 +12,17 @@
 	port 
 		[#foreach process in c.instances]
 			[#foreach uniqueTrigger in process.alluniqueTriggers]
-				[#if uniqueTrigger.ArgSize == 0]
-				${uniqueTrigger.Name} : none,	
+				[#if uniqueTrigger.Name == "Pressed"]
 				[#else]
-				${uniqueTrigger.Name} : ,
+					[#if uniqueTrigger.ArgSize == 0]
+	  			${uniqueTrigger.Name} : none,	
+					[#else]
+						[#if (uniqueTrigger.ArgSize > 1)]
+	  			${uniqueTrigger.Name} : Double_Floor,
+						[#else]
+	  			${uniqueTrigger.Name} : int,
+						[/#if]
+					[/#if]
 				[/#if]
 			[/#foreach]	
 		[/#foreach]
@@ -25,12 +32,12 @@
 [#set nbsensor = 0 ]
 [#foreach process in c.instances]
 	[#if c.ProcessSize==0]
-		${process.Name}
+		${process.Name} [#include genInstancierProcessPorts(process)]
 	[#else]
 		[#if nbProcess == 0]
-			${process.Name}
+			${process.Name} [#include genInstancierProcessPorts(process)]
 		[#else]
-			|| ${process.Name}
+			|| ${process.Name} [#include genInstancierProcessPorts(process)]
 		[/#if]
 		[#set nbProcess = nbProcess+1]
 	[/#if]

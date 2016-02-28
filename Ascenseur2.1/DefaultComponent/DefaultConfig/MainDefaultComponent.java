@@ -32,7 +32,6 @@ public class MainDefaultComponent {
       // Registering Events 
       try {
         
-            Class.forName("Ascenseur.arrive");
             Class.forName("Ascenseur.braked");
             Class.forName("Ascenseur.cabinArrived");
             Class.forName("Ascenseur.CloseDoor");

@@ -6,5 +6,5 @@
 		<library name="."/>
 	</bundle>
 	<bundle bundleID="329" localization="OSGI-INF/l10n/bundle" name="genDocHtmlV2" project="genDocHtmlV2"/>
-	<bundle bundleID="331" localization="OSGI-INF/l10n/bundle" name="umlToFiacre6.0" project="umlToFiacre6.0"/>
+	<bundle bundleID="330" localization="OSGI-INF/l10n/bundle" name="umlToFiacre6.0" project="umlToFiacre6.0"/>
 </map>

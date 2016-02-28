@@ -5,6 +5,11 @@
 [#template public generateFiacre( p: fiacreMM.Program)]
 [#file]generatedFiacre/${p.Name}.fcr[/#file]
 
+type Double_Floor is record
+	first : int,
+	second : int
+end
+
 [#foreach c : fiacreMM.Component in p.components]
 	/*process*/
 	[#set nb = 0]

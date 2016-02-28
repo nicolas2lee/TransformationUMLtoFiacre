@@ -1,0 +1,25 @@
+[#package generateProcess]
+[#import generateUtile.*]
+
+[#template public genPortArgs(process : fiacreMM.Process)]
+[
+[#foreach uniqueTrigger in process.alluniqueTriggers]
+[#if uniqueTrigger.Name == "Pressed"]
+	
+[#else]
+	[#if uniqueTrigger.ArgSize == 0]
+	  ${uniqueTrigger.Name} : in none,	
+	[#else]
+		[#if (uniqueTrigger.ArgSize > 1)]
+	  ${uniqueTrigger.Name} : in Double_Floor,
+		[#else]
+	  ${uniqueTrigger.Name} : in ${uniqueTrigger.arguments.datatype},
+		[/#if]
+	  
+	[/#if]
+[/#if]
+[/#foreach]
+	${process.outPorts.Name}
+    ]
+
+[/#template]

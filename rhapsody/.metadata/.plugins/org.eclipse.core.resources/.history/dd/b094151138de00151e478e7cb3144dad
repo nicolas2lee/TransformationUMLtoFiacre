@@ -1,0 +1,49 @@
+[#package generateComponent]
+[#import generateUtile.*]
+[#template public genComponent(c:fiacreMM.Component)]
+	Component ${c.Name} is 
+	var
+		sensor0 : int := 0,
+		sensor1 : int := 1,
+		sensor2 : int := 2,
+		sensor3 : int := 3,
+		sensor4 : int := 4
+		
+	port 
+		[#foreach process in c.instances]
+			[#foreach uniqueTrigger in process.alluniqueTriggers]
+				[#if condition]
+					
+				[#else]
+					
+				[/#if]
+				[#if uniqueTrigger.ArgSize == 0]
+	  			${uniqueTrigger.Name} : in none,	
+				[#else]
+					[#if (uniqueTrigger.ArgSize > 1)]
+	  			${uniqueTrigger.Name} : in Double_Floor,
+					[#else]
+	  			${uniqueTrigger.Name} : in int,
+					[/#if]
+				[/#if]
+			[/#foreach]	
+		[/#foreach]
+	par
+	
+[#set nbProcess = 0]
+[#set nbsensor = 0 ]
+[#foreach process in c.instances]
+	[#if c.ProcessSize==0]
+		${process.Name}
+	[#else]
+		[#if nbProcess == 0]
+			${process.Name}
+		[#else]
+			|| ${process.Name}
+		[/#if]
+		[#set nbProcess = nbProcess+1]
+	[/#if]
+[/#foreach]
+		
+	
+[/#template]

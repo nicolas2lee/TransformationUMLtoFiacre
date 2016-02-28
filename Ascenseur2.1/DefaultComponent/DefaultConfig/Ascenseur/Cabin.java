@@ -190,8 +190,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * braked;
-     *           p_cab_con_braked;
-     *           to Stop_Cabin
+     *         braked;
+     *          to Stop_Cabin
     */
     //## operation genFiacre1() 
     public void genFiacre1() {
@@ -255,8 +255,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * [] 
-     *          moveCabinDown;
-     *           P_cab_con_braked;
+     *           moveCabinDown;
+     *           receiveCabinMoved;
      *           to Down_Cabin
     */
     //## operation genFiacre4() 
@@ -302,8 +302,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * braked;
-     *           braked;
-     *           to Stop_Cabin
+     *          braked;
+     *          to Stop_Cabin
      * 
     */
     //## operation genFiacre6() 
@@ -337,6 +337,27 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
                });
         
         //#[ operation genFiacre7() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     *   receiveFloorAndCloseDoor : out int,
+     *       braked : out none,
+     *       receiveCabinMoved : out none
+    */
+    //## operation genOutPort() 
+    public void genOutPort() {
+        try {
+            animInstance().notifyMethodEntered("genOutPort",
+               new ArgData[] {
+               });
+        
+        //#[ operation genOutPort() 
         //#]
         }
         finally {
