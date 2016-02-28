@@ -2,7 +2,7 @@
 
 
 [#template public genProcess(process : fiacreMM.Process)]
-	process ${process.Name}
+	Process ${process.Name}
 	[#set isControllerSys = false]
 	[#if process.Name == "ControllerSys"]
 		[#set isControllerSys = true]

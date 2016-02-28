@@ -1,7 +1,7 @@
 [#package generateComponent]
 [#import generateUtile.*]
 [#template public genComponent(c:fiacreMM.Component)]
-	Component ${c.Name} is 
+	component ${c.Name} is 
 	var
 		sensor0 : int := 0,
 		sensor1 : int := 1,

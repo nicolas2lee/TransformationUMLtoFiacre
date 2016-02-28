@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 	- _myState = 8192;
 	- _name = "Ascenseur";
-	- _modifiedTimeWeak = 2.28.2016::16:24:1;
+	- _modifiedTimeWeak = 2.28.2016::22:7:35;
 	- _lastID = 10;
 	- Declaratives = { IRPYRawContainer 
 		- size = 5;
@@ -27775,7 +27775,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 		}
 	}
-	- weakCGTime = 2.28.2016::16:24:1;
+	- weakCGTime = 2.28.2016::22:7:35;
 	- strongCGTime = 2.3.2016::14:22:12;
 	- _defaultComposite = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 	- _eventsBaseID = 2616;
@@ -27786,8 +27786,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 2.28.2016::11:25:8;
-			- weakCGTime = 2.28.2016::11:25:8;
+			- _modifiedTimeWeak = 2.28.2016::16:24:1;
+			- weakCGTime = 2.28.2016::16:24:1;
 			- strongCGTime = 2.3.2016::14:22:12;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -29090,13 +29090,13 @@ genFiacre1();";
 				}
 			}
 			- _name = "ControllerSys";
-			- _modifiedTimeWeak = 2.28.2016::16:15:36;
+			- _modifiedTimeWeak = 2.28.2016::21:59:24;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 44;
-			- weakCGTime = 2.28.2016::16:15:36;
+			- weakCGTime = 2.28.2016::21:59:24;
 			- strongCGTime = 11.23.2015::16:13:47;
 			- Ports = { IRPYRawContainer 
 				- size = 9;
@@ -30062,16 +30062,16 @@ getP_con_win().gen(new stop());";
 					- _id = GUID d71702c4-ee5c-4a71-abcb-bc2defa43801;
 					- _myState = 8192;
 					- _name = "genFiacre9";
-					- _modifiedTimeWeak = 2.28.2016::16:10:42;
+					- _modifiedTimeWeak = 2.28.2016::21:56:53;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 []\\par
               continueToMove;\\par
               currentFloor = currentFloor +upordown; \\par
-              doublefloor := \\{first = currentFloor, second = destfloor\\};\\par
-              toMeasure ! doublefloor := \\{first = currentFloor, second = destfloor\\};\\par
+              doublefloor := \\{first = currentFloor, second = destFloor\\};\\par
+              toMeasure ! doublefloor ;\\par
               to cabinMoved_ControllerSys\\par
-         end;\\par
+         end\\par
 \\par
 \\par
 \\lang1036\\f1\\fs20\\par
@@ -30185,7 +30185,7 @@ getP_con_win().gen(new stop());";
 					- _id = GUID c875af0f-acde-4172-abed-a879d7b83f7c;
 					- _myState = 8192;
 					- _name = "genFiacre13";
-					- _modifiedTimeWeak = 2.28.2016::15:52:40;
+					- _modifiedTimeWeak = 2.28.2016::21:59:24;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 if (loadedPassager) then\\par
@@ -30194,7 +30194,7 @@ getP_con_win().gen(new stop());";
         else\\par
           targetFloor := 1;\\par
           destFloor := targetFloor;\\par
-          closeDoor;\\par
+          CloseDoor;\\par
           to doorClosed_ControllerSys\\par
         end\\lang1036\\f1\\fs20\\par
 }
@@ -33131,13 +33131,13 @@ genFiacre14();";
 				}
 			}
 			- _name = "Cabin";
-			- _modifiedTimeWeak = 2.28.2016::14:51:6;
+			- _modifiedTimeWeak = 2.28.2016::22:7:41;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
-			- _lastID = 23;
-			- weakCGTime = 2.28.2016::14:51:6;
+			- _lastID = 24;
+			- weakCGTime = 2.28.2016::22:7:41;
 			- strongCGTime = 11.23.2015::16:14:0;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -33635,7 +33635,7 @@ getP_cab_con().gen (new braked());";
 				}
 			}
 			- Attrs = { IRPYRawContainer 
-				- size = 1;
+				- size = 2;
 				- value = 
 				{ IAttribute 
 					- _id = GUID d2bb3eb8-20a1-4d44-8da9-c18908fd7826;
@@ -33651,6 +33651,25 @@ getP_cab_con().gen (new braked());";
 							- _value = "0";
 						}
 					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "int";
+						- _id = GUID 3b5a0555-e8e5-4b86-9ea1-95ae819b6564;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 1da93342-3e17-4451-92ff-5c745a930df6;
+					- _myState = 8192;
+					- _name = "targetFloor";
+					- _modifiedTimeWeak = 2.28.2016::22:7:41;
 					- _typeOf = { IHandle 
 						- _m2Class = "IType";
 						- _filename = "PredefinedTypesJava.sbs";
@@ -35096,13 +35115,13 @@ genFiacre7();";
 				}
 			}
 			- _name = "Winch";
-			- _modifiedTimeWeak = 2.28.2016::16:24:1;
+			- _modifiedTimeWeak = 2.28.2016::22:5:55;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 18;
-			- weakCGTime = 2.28.2016::16:24:1;
+			- weakCGTime = 2.28.2016::22:5:55;
 			- strongCGTime = 11.23.2015::16:13:53;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -35447,13 +35466,13 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 5d6bcbf3-69a3-48ba-b111-c459a832d4a6;
 					- _myState = 8192;
 					- _name = "genFiacre3";
-					- _modifiedTimeWeak = 2.28.2016::14:34:2;
+					- _modifiedTimeWeak = 2.28.2016::22:5:7;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 []\\par
           goDown;\\par
           moveCabinDown;\\par
-          to Goinf_Down_Winch\\par
+          to Going_Down_Winch\\par
         end\\lang1036\\f1\\fs20\\par
 }
 ";
@@ -35481,12 +35500,12 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID f8b617e0-b46d-4f38-ba1a-cc759a1d45d0;
 					- _myState = 8192;
 					- _name = "genFiacre4";
-					- _modifiedTimeWeak = 2.28.2016::14:39:39;
+					- _modifiedTimeWeak = 2.28.2016::22:5:45;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 stopFromController;\\par
         braked;\\par
-        to receiveCabinBrakedFromControllerSys\\lang1036\\f1\\fs20\\par
+        to receiveCabinBrakedFromControllerSys_Winch\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -35513,12 +35532,12 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 83da0f44-015a-4593-90f8-150e7e6ee6ab;
 					- _myState = 8192;
 					- _name = "genFiacre5";
-					- _modifiedTimeWeak = 2.28.2016::14:39:55;
+					- _modifiedTimeWeak = 2.28.2016::22:5:55;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 stopFromController;\\par
         braked;\\par
-        to receiveCabinBrakedFromControllerSys\\lang1036\\f1\\fs20\\par
+        to receiveCabinBrakedFromControllerSys_Winch\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -35583,94 +35602,6 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _protection = iPublic;
 					- _static = 0;
 					- _constant = 0;
-				}
-			}
-			- Attrs = { IRPYRawContainer 
-				- size = 3;
-				- value = 
-				{ IAttribute 
-					- _id = GUID 5f31057b-ccd7-42d0-bb3a-f509c41b2701;
-					- _myState = 8192;
-					- _name = "motor";
-					- _modifiedTimeWeak = 2.27.2016::14:33:27;
-					- ValueSpecifications = { IRPYRawContainer 
-						- size = 1;
-						- value = 
-						{ ILiteralSpecification 
-							- _id = GUID 7e152342-a894-4686-9029-56a134fb0c98;
-							- _modifiedTimeWeak = 2.27.2016::14:33:27;
-							- _value = "0";
-						}
-					}
-					- _typeOf = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "int";
-						- _id = GUID 3b5a0555-e8e5-4b86-9ea1-95ae819b6564;
-					}
-					- _isOrdered = 0;
-					- _protection = iPublic;
-					- _static = 0;
-					- _isReference = 0;
-					- _isConstant = 0;
-				}
-				{ IAttribute 
-					- _id = GUID 053914e7-62d0-438e-b0eb-a710d1a8674c;
-					- _myState = 8192;
-					- _name = "frein";
-					- _modifiedTimeWeak = 2.27.2016::14:33:24;
-					- ValueSpecifications = { IRPYRawContainer 
-						- size = 1;
-						- value = 
-						{ ILiteralSpecification 
-							- _id = GUID d9139e59-1640-454a-a027-74da3e148ab2;
-							- _modifiedTimeWeak = 2.27.2016::14:33:24;
-							- _value = "0";
-						}
-					}
-					- _typeOf = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "int";
-						- _id = GUID 3b5a0555-e8e5-4b86-9ea1-95ae819b6564;
-					}
-					- _isOrdered = 0;
-					- _protection = iPublic;
-					- _static = 0;
-					- _isReference = 0;
-					- _isConstant = 0;
-				}
-				{ IAttribute 
-					- _id = GUID a323a6bc-1939-48d8-95be-3bbee34d49ac;
-					- _myState = 8192;
-					- _name = "selector";
-					- _modifiedTimeWeak = 2.27.2016::14:33:32;
-					- ValueSpecifications = { IRPYRawContainer 
-						- size = 1;
-						- value = 
-						{ ILiteralSpecification 
-							- _id = GUID 248aac17-ea4c-4912-962b-dd7ca76fea97;
-							- _modifiedTimeWeak = 2.27.2016::14:33:32;
-							- _value = "0";
-						}
-					}
-					- _typeOf = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "int";
-						- _id = GUID 3b5a0555-e8e5-4b86-9ea1-95ae819b6564;
-					}
-					- _isOrdered = 0;
-					- _protection = iPublic;
-					- _static = 0;
-					- _isReference = 0;
-					- _isConstant = 0;
 				}
 			}
 			- _multiplicity = "";
