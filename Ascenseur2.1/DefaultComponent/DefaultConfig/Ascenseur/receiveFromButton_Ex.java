@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: receiveFromButton_Ex
-//!	Generated Date	: Thu, 25, Feb 2016 
+//!	Generated Date	: Sun, 28, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/receiveFromButton_Ex.java
 *********************************************************************/
 
@@ -29,16 +29,16 @@ public class receiveFromButton_Ex extends RiJEvent implements AnimatedEvent {
     
     public static final int receiveFromButton_Ex_Ascenseur_id = 2633;		//## ignore 
     
-    public int requestedFloor;
+    public int requestFloor;
     
     // Constructors
     
     public  receiveFromButton_Ex() {
         lId = receiveFromButton_Ex_Ascenseur_id;
     }
-    public  receiveFromButton_Ex(int p_requestedFloor) {
+    public  receiveFromButton_Ex(int p_requestFloor) {
         lId = receiveFromButton_Ex_Ascenseur_id;
-        requestedFloor = p_requestedFloor;
+        requestFloor = p_requestFloor;
     }
     
     public boolean isTypeOf(long id) {
@@ -61,11 +61,11 @@ public class receiveFromButton_Ex extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
-          msg.add("requestedFloor", requestedFloor);
+          msg.add("requestFloor", requestFloor);
     }
     public String toString() {
           String s="receiveFromButton_Ex(";      
-          s += "requestedFloor=" + AnimInstance.animToString(requestedFloor) + " ";
+          s += "requestFloor=" + AnimInstance.animToString(requestFloor) + " ";
           s += ")";
           return s;
     }

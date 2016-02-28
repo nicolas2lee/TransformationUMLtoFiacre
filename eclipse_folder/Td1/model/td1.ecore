@@ -25,8 +25,8 @@
         defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="VarSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ports" upperBound="-1"
-        eType="#//Port" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outPorts" eType="#//Port"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="alluniqueTriggers" upperBound="-1"
         eType="#//Trigger" containment="true"/>
   </eClassifiers>
@@ -105,7 +105,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Port">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="process" eType="#//Process"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//Component"/>
   </eClassifiers>

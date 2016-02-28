@@ -417,14 +417,14 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         public int Off_Button_exTakePressed() {
             Pressed params = (Pressed) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
+            animInstance().notifyTransitionStarted("1");
             Off_Button_ex_exit();
-            //#[ transition 2 
+            //#[ transition 1 
             getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
             genFiacre2();
             //#]
             On_Button_ex_entDef();
-            animInstance().notifyTransitionEnded("2");
+            animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -484,13 +484,13 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public int On_Button_exTakearrive() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
+            animInstance().notifyTransitionStarted("3");
             On_Button_ex_exit();
-            //#[ transition 1 
+            //#[ transition 3 
             genFiacre1();
             //#]
             Off_Button_ex_entDef();
-            animInstance().notifyTransitionEnded("1");
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -523,13 +523,13 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.getTimeoutId() == Button_ex_Timeout_On_Button_ex_id)
                 {
-                    animInstance().notifyTransitionStarted("3");
+                    animInstance().notifyTransitionStarted("2");
                     On_Button_ex_exit();
-                    //#[ transition 3 
+                    //#[ transition 2 
                     genFiacre3();
                     //#]
                     Off_Button_ex_entDef();
-                    animInstance().notifyTransitionEnded("3");
+                    animInstance().notifyTransitionEnded("2");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             return res;

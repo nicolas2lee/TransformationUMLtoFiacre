@@ -1639,7 +1639,7 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("5");
             Wait_ControllerSys_exit();
             //#[ transition 5 
-            exBtnFloor=params.requestedFloor;       
+            exBtnFloor=params.requestFloor;       
             destFloor=exBtnFloor;
             if (currentFloor < exBtnFloor){
             	getP_con_win().gen(new goUp());   
