@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Door
-//!	Generated Date	: Sat, 27, Feb 2016 
+//!	Generated Date	: Sun, 28, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Door.java
 *********************************************************************/
 
@@ -46,9 +46,9 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int Sleep=1;
-    public static final int Open=2;
-    public static final int Closed=3;
+    public static final int Sleep_Door=1;
+    public static final int Open_Door=2;
+    public static final int Closed_Door=3;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -162,7 +162,7 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * OpenDoor;
-     * to Open
+     *            to Open_Door
      * 
     */
     //## operation genFiacre1() 
@@ -183,7 +183,7 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * CloseDoor;
-     * to Closed
+     *           to Closed_Door
     */
     //## operation genFiacre2() 
     public void genFiacre2() {
@@ -202,9 +202,8 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * //getP_door_con().gen (new readyToGo());
-     * p_door_con_readyToGo;
-     * to Sleep
+     * readyToGo;
+     *           to Sleep_Door
     */
     //## operation genFiacre3() 
     public void genFiacre3() {
@@ -333,19 +332,19 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
-                case Open:
+                case Open_Door:
                 {
-                    Open_add(animStates);
+                    Open_Door_add(animStates);
                 }
                 break;
-                case Closed:
+                case Closed_Door:
                 {
-                    Closed_add(animStates);
+                    Closed_Door_add(animStates);
                 }
                 break;
-                case Sleep:
+                case Sleep_Door:
                 {
-                    Sleep_add(animStates);
+                    Sleep_Door_add(animStates);
                 }
                 break;
                 default:
@@ -365,19 +364,19 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
-                case Open:
+                case Open_Door:
                 {
-                    res = Open_takeEvent(id);
+                    res = Open_Door_takeEvent(id);
                 }
                 break;
-                case Closed:
+                case Closed_Door:
                 {
-                    res = Closed_takeEvent(id);
+                    res = Closed_Door_takeEvent(id);
                 }
                 break;
-                case Sleep:
+                case Sleep_Door:
                 {
-                    res = Sleep_takeEvent(id);
+                    res = Sleep_Door_takeEvent(id);
                 }
                 break;
                 default:
@@ -387,18 +386,18 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Sleep_add(AnimStates animStates) {
-            animStates.add("ROOT.Sleep");
+        public void Sleep_Door_add(AnimStates animStates) {
+            animStates.add("ROOT.Sleep_Door");
         }
         
         //## statechart_method 
-        public void Open_add(AnimStates animStates) {
-            animStates.add("ROOT.Open");
+        public void Open_Door_add(AnimStates animStates) {
+            animStates.add("ROOT.Open_Door");
         }
         
         //## statechart_method 
-        public void Closed_add(AnimStates animStates) {
-            animStates.add("ROOT.Closed");
+        public void Closed_Door_add(AnimStates animStates) {
+            animStates.add("ROOT.Closed_Door");
         }
         
         //## auto_generated 
@@ -408,58 +407,55 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Open_exit() {
-            OpenExit();
-            animInstance().notifyStateExited("ROOT.Open");
+        public void Closed_DoorEnter() {
         }
         
         //## statechart_method 
-        public void OpenExit() {
+        public void Open_Door_entDef() {
+            Open_Door_enter();
         }
         
         //## statechart_method 
-        public void Closed_exit() {
+        public void Closed_Door_exit() {
             popNullConfig();
-            ClosedExit();
-            animInstance().notifyStateExited("ROOT.Closed");
+            Closed_DoorExit();
+            animInstance().notifyStateExited("ROOT.Closed_Door");
         }
         
         //## statechart_method 
-        public int Closed_takeEvent(short id) {
+        public void Open_Door_enter() {
+            animInstance().notifyStateEntered("ROOT.Open_Door");
+            rootState_subState = Open_Door;
+            rootState_active = Open_Door;
+            Open_DoorEnter();
+        }
+        
+        //## statechart_method 
+        public void Closed_Door_entDef() {
+            Closed_Door_enter();
+        }
+        
+        //## statechart_method 
+        public void Closed_Door_enter() {
+            animInstance().notifyStateEntered("ROOT.Closed_Door");
+            pushNullConfig();
+            rootState_subState = Closed_Door;
+            rootState_active = Closed_Door;
+            Closed_DoorEnter();
+        }
+        
+        //## statechart_method 
+        public int Sleep_DoorTakeOpenDoor() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
-                {
-                    res = ClosedTakeNull();
-                }
-            
+            animInstance().notifyTransitionStarted("1");
+            Sleep_Door_exit();
+            //#[ transition 1 
+            genFiacre1();
+            //#]
+            Open_Door_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
-        }
-        
-        //## statechart_method 
-        public void SleepExit() {
-        }
-        
-        //## statechart_method 
-        public void SleepEnter() {
-        }
-        
-        //## statechart_method 
-        public void Sleep_entDef() {
-            Sleep_enter();
-        }
-        
-        //## statechart_method 
-        public void Sleep_exit() {
-            SleepExit();
-            animInstance().notifyStateExited("ROOT.Sleep");
-        }
-        
-        //## statechart_method 
-        public void Sleep_enter() {
-            animInstance().notifyStateEntered("ROOT.Sleep");
-            rootState_subState = Sleep;
-            rootState_active = Sleep;
-            SleepEnter();
         }
         
         //## statechart_method 
@@ -469,26 +465,11 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int ClosedTakeNull() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("3");
-            Closed_exit();
-            //#[ transition 3 
-            goSleep();
-            genFiacre3();
-            //#]
-            Sleep_entDef();
-            animInstance().notifyTransitionEnded("3");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
+        public void Closed_DoorExit() {
         }
         
         //## statechart_method 
-        public void Open_enter() {
-            animInstance().notifyStateEntered("ROOT.Open");
-            rootState_subState = Open;
-            rootState_active = Open;
-            OpenEnter();
+        public void Sleep_DoorEnter() {
         }
         
         //## statechart_method 
@@ -502,87 +483,87 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Closed_entDef() {
-            Closed_enter();
+        public int Closed_DoorTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
+            Closed_Door_exit();
+            //#[ transition 3 
+            goSleep();
+            genFiacre3();
+            //#]
+            Sleep_Door_entDef();
+            animInstance().notifyTransitionEnded("3");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
-        public int Sleep_takeEvent(short id) {
+        public int Open_Door_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(OpenDoor.OpenDoor_Ascenseur_id))
+            if(event.isTypeOf(CloseDoor.CloseDoor_Ascenseur_id))
                 {
-                    res = SleepTakeOpenDoor();
+                    res = Open_DoorTakeCloseDoor();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public int OpenTakeCloseDoor() {
+        public int Sleep_Door_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
-            Open_exit();
-            //#[ transition 2 
-            genFiacre2();
-            //#]
-            Closed_entDef();
-            animInstance().notifyTransitionEnded("2");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            if(event.isTypeOf(OpenDoor.OpenDoor_Ascenseur_id))
+                {
+                    res = Sleep_DoorTakeOpenDoor();
+                }
+            
             return res;
         }
         
         //## statechart_method 
-        public void ClosedExit() {
+        public void Sleep_Door_exit() {
+            Sleep_DoorExit();
+            animInstance().notifyStateExited("ROOT.Sleep_Door");
         }
         
         //## statechart_method 
-        public void Open_entDef() {
-            Open_enter();
+        public void Open_DoorEnter() {
         }
         
         //## statechart_method 
         public void rootStateEntDef() {
             animInstance().notifyTransitionStarted("0");
-            Sleep_entDef();
+            Sleep_Door_entDef();
             animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
-        public void Closed_enter() {
-            animInstance().notifyStateEntered("ROOT.Closed");
-            pushNullConfig();
-            rootState_subState = Closed;
-            rootState_active = Closed;
-            ClosedEnter();
-        }
-        
-        //## statechart_method 
-        public int Open_takeEvent(short id) {
+        public int Closed_Door_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(CloseDoor.CloseDoor_Ascenseur_id))
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
                 {
-                    res = OpenTakeCloseDoor();
+                    res = Closed_DoorTakeNull();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public int SleepTakeOpenDoor() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            Sleep_exit();
-            //#[ transition 1 
-            genFiacre1();
-            //#]
-            Open_entDef();
-            animInstance().notifyTransitionEnded("1");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
+        public void Open_Door_exit() {
+            Open_DoorExit();
+            animInstance().notifyStateExited("ROOT.Open_Door");
         }
         
         //## statechart_method 
-        public void OpenEnter() {
+        public void Sleep_Door_enter() {
+            animInstance().notifyStateEntered("ROOT.Sleep_Door");
+            rootState_subState = Sleep_Door;
+            rootState_active = Sleep_Door;
+            Sleep_DoorEnter();
+        }
+        
+        //## statechart_method 
+        public void Sleep_Door_entDef() {
+            Sleep_Door_enter();
         }
         
         //## statechart_method 
@@ -590,7 +571,25 @@ public class Door implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void ClosedEnter() {
+        public void Sleep_DoorExit() {
+        }
+        
+        //## statechart_method 
+        public int Open_DoorTakeCloseDoor() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
+            Open_Door_exit();
+            //#[ transition 2 
+            genFiacre2();
+            //#]
+            Closed_Door_entDef();
+            animInstance().notifyTransitionEnded("2");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Open_DoorExit() {
         }
         
         /**  methods added just for design level debugging instrumentation */

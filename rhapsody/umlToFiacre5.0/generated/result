@@ -1,0 +1,1533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:fiacreMM="http://www.mdworkbench.com/fiacreMM">
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="boolean"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="boolean"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:DataType Name="int"/>
+  <fiacreMM:Program Name="Ascenseur" ComponentSize="1">
+    <components Name="InstanceClsDiag" ProcessSize="10">
+      <instances Name="Button_ex" initState="/117/@components.0/@instances.0/@states.0" StateSize="2">
+        <transitions source="/131" target="/132" Name="1">
+          <guard/>
+          <trigger Body="arrive"/>
+          <action Body="genFiacre1();"/>
+        </transitions>
+        <transitions source="/133" target="/134" Name="2">
+          <guard/>
+          <trigger Body="Pressed">
+            <arguments datatype="/3" Name="requestFloor"/>
+          </trigger>
+          <action Body="getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));&#xD;&#xA;genFiacre2();"/>
+        </transitions>
+        <transitions source="/135" target="/136" Name="3">
+          <guard/>
+          <trigger Body="tm(5)"/>
+          <action Body="genFiacre3();"/>
+        </transitions>
+        <states Name="Off_Button_ex" outTransitions="/443" inTransitions="/440 /441 /442" process="/117/@components.0/@instances.0"/>
+        <states Name="On_Button_ex" outTransitions="/445 /446" inTransitions="/444"/>
+        <ports Name="p_btn_con"/>
+        <alluniqueTriggers Name="arrive"/>
+        <alluniqueTriggers Name="Pressed" ArgSize="1">
+          <arguments datatype="/0" Name="requestFloor"/>
+        </alluniqueTriggers>
+      </instances>
+      <instances variables="/554 /555 /556 /557 /558 /559 /560" Name="ControllerSys" initState="/117/@components.0/@instances.1/@states.0" StateSize="9" VarSize="7">
+        <transitions source="/194" target="/195" Name="1">
+          <guard/>
+          <trigger Body="detected"/>
+          <action Body="sendStopToWinch();   &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/196" target="/197" Name="2">
+          <guard/>
+          <trigger Body="readyToOpenDoor"/>
+          <action Body=" openDoor();&#xD;&#xA; genFiacre2();"/>
+        </transitions>
+        <transitions source="/198" target="/199" Name="3">
+          <guard/>
+          <trigger Body="receiveFloorAndCloseDoor">
+            <arguments datatype="/10" Name="requestedTargetFloor"/>
+          </trigger>
+          <action Body="closeDoor();&#xD;&#xA;targetFloor=params.requestedTargetFloor;    &#xD;&#xA;destFloor=targetFloor;     &#xD;&#xA;genFiacre3();"/>
+        </transitions>
+        <transitions source="/200" target="/201" Name="4">
+          <guard/>
+          <trigger Body="readyToGo"/>
+          <action Body="if (currentFloor &lt; targetFloor){&#xD;&#xA;&#x9;getP_con_win().gen(new goUp());   &#xD;&#xA;&#x9;upordown=1; &#xD;&#xA;&#x9;&#xD;&#xA;&#x9;sendToMeasureSensor(targetFloor);&#xD;&#xA;}else{&#xD;&#xA;&#x9;if (currentFloor == targetFloor) {&#xD;&#xA;&#x9;&#x9;//open the door         &#xD;&#xA;&#x9;&#x9;gen (new gotoOpenDoorDirectly());&#xD;&#xA;&#x9;}else{&#xD;&#xA;&#x9;&#x9;getP_con_win().gen(new goDown()); &#xD;&#xA;&#x9;&#x9;upordown=-1;  &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;sendToMeasureSensor(targetFloor);&#xD;&#xA;&#x9;}&#xD;&#xA;} &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <transitions source="/202" target="/203" Name="5">
+          <guard/>
+          <trigger Body="receiveFromButton_Ex">
+            <arguments datatype="/11" Name="requestedFloor"/>
+          </trigger>
+          <action Body="exBtnFloor=params.requestedFloor;       &#xD;&#xA;destFloor=exBtnFloor;&#xD;&#xA;if (currentFloor &lt; exBtnFloor){&#xD;&#xA;&#x9;getP_con_win().gen(new goUp());   &#xD;&#xA;&#x9;upordown=1;  &#xD;&#xA;&#x9;sendToMeasureSensor(exBtnFloor);&#xD;&#xA;}else{&#xD;&#xA;&#x9;if (currentFloor == exBtnFloor) {&#xD;&#xA;&#x9;&#x9;//open the door         &#xD;&#xA;&#x9;&#x9;gen (new gotoOpenDoorDirectly());&#xD;&#xA;&#x9;}else{&#xD;&#xA;&#x9;&#x9;getP_con_win().gen(new goDown()); &#xD;&#xA;&#x9;&#x9;upordown=-1;  &#xD;&#xA;&#x9;&#x9;sendToMeasureSensor(exBtnFloor);&#xD;&#xA;&#x9;}&#xD;&#xA;}    &#xD;&#xA;genFiacre5();"/>
+        </transitions>
+        <transitions source="/204" target="/205" Name="6">
+          <guard/>
+          <trigger Body="receiveCabinMoved"/>
+          <action Body="currentFloor+=upordown;   &#xD;&#xA;sendToMeasureSensor(destFloor);       &#xD;&#xA;genFiacre6();"/>
+        </transitions>
+        <transitions source="/206" target="/207" Name="7">
+          <guard/>
+          <trigger Body="braked"/>
+          <action Body="sendToWinchToStop();     &#xD;&#xA;genFiacre7();"/>
+        </transitions>
+        <transitions source="/208" target="/209" Name="8">
+          <guard/>
+          <trigger Body="gotoOpenDoorDirectly"/>
+          <action Body="gen (new readyToOpenDoor());    &#xD;&#xA;genFiacre8();"/>
+        </transitions>
+        <transitions source="/210" target="/211" Name="9">
+          <guard/>
+          <trigger Body="continueToMove"/>
+          <action Body="currentFloor+=upordown;   &#xD;&#xA;sendToMeasureSensor(destFloor);     &#xD;&#xA;genFiacre9();"/>
+        </transitions>
+        <transitions source="/212" target="/213" Name="10">
+          <guard/>
+          <trigger Body="receiveCabinMoved"/>
+          <action Body="currentFloor+=upordown;   &#xD;&#xA;loadedPassager=true;        &#xD;&#xA;sendToMeasureSensor(destFloor);      &#xD;&#xA;genFiacre10();"/>
+        </transitions>
+        <transitions source="/214" target="/215" Name="11">
+          <guard/>
+          <trigger Body="gotoOpenDoorDirectly"/>
+          <action Body="gen(new readyToOpenDoor());                 &#xD;&#xA;genFiacre11();"/>
+        </transitions>
+        <transitions source="/216" target="/217" Name="12">
+          <guard/>
+          <trigger Body="doneTask"/>
+          <action Body="loadedPassager=false;         &#xD;&#xA;genFiacre12();"/>
+        </transitions>
+        <transitions source="/218" target="/219" Name="13">
+          <guard Body="loadedPassager"/>
+          <trigger/>
+          <action Body="closeDoor();     &#xD;&#xA;genFiacre13();"/>
+        </transitions>
+        <transitions source="/220" target="/221" Name="14">
+          <guard/>
+          <trigger Body="readyToGo"/>
+          <action Body="gen(new doneTask());       &#xD;&#xA;genFiacre14();"/>
+        </transitions>
+        <states Name="Wait_ControllerSys" outTransitions="/449" inTransitions="/447 /448" process="/117/@components.0/@instances.1"/>
+        <states Name="cabinMoved_ControllerSys" outTransitions="/453 /454" inTransitions="/450 /451 /452"/>
+        <states Name="cabinArrived_ControllerSys" outTransitions="/456" inTransitions="/455"/>
+        <states Name="doorOpened_ControllerSys" outTransitions="/458 /459" inTransitions="/457"/>
+        <states Name="doorClosed_ControllerSys" outTransitions="/462 /463" inTransitions="/460 /461"/>
+        <states Name="receiveRequestFromButtonEx_ControllerSys" outTransitions="/465 /466" inTransitions="/464"/>
+        <states Name="cabinBraked_ControllerSys" outTransitions="/470" inTransitions="/467 /468 /469"/>
+        <states Name="recievedRequestFromCabin_ControllerSys" outTransitions="/472 /473" inTransitions="/471"/>
+        <states Name="waitDoorClosed_ControllerSys" outTransitions="/475" inTransitions="/474"/>
+        <ports Name="p_con_btn"/>
+        <ports Name="p_con_sen"/>
+        <ports Name="p_con_door"/>
+        <ports Name="p_con_win"/>
+        <ports Name="p_con_cab"/>
+        <ports Name="p_con_sen_1"/>
+        <ports Name="p_con_sen_2"/>
+        <ports Name="p_con_sen_3"/>
+        <ports Name="p_con_sen_4"/>
+        <alluniqueTriggers Name="detected"/>
+        <alluniqueTriggers Name="readyToOpenDoor"/>
+        <alluniqueTriggers Name="receiveFloorAndCloseDoor" ArgSize="1">
+          <arguments datatype="/4" Name="requestedTargetFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="readyToGo"/>
+        <alluniqueTriggers Name="receiveFromButton_Ex" ArgSize="1">
+          <arguments datatype="/5" Name="requestedFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="receiveCabinMoved"/>
+        <alluniqueTriggers Name="braked"/>
+        <alluniqueTriggers Name="gotoOpenDoorDirectly"/>
+        <alluniqueTriggers Name="continueToMove"/>
+        <alluniqueTriggers Name="doneTask"/>
+      </instances>
+      <instances variables="/561 /562 /563" Name="Winch" initState="/117/@components.0/@instances.2/@states.0" StateSize="4" VarSize="3">
+        <transitions source="/243" target="/244" Name="1">
+          <guard/>
+          <trigger Body="goUp"/>
+          <action Body="sendGoUpToCabin();   &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/245" target="/246" Name="2">
+          <guard/>
+          <trigger Body="stop"/>
+          <action Body="receiveStopFromController();      &#xD;&#xA;genFiacre2();"/>
+        </transitions>
+        <transitions source="/247" target="/248" Name="3">
+          <guard/>
+          <trigger Body="goDown"/>
+          <action Body="sendGoDownToCabin();  &#xD;&#xA;genFiacre3();"/>
+        </transitions>
+        <transitions source="/249" target="/250" Name="4">
+          <guard/>
+          <trigger Body="stopFromController"/>
+          <action Body="sendBrakeToCabin();   &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <transitions source="/251" target="/252" Name="5">
+          <guard/>
+          <trigger Body="stopFromController"/>
+          <action Body="sendBrakeToCabin();        &#xD;&#xA;genFiacre5();"/>
+        </transitions>
+        <states Name="Not_Going_Winch" outTransitions="/478 /479" inTransitions="/476 /477" process="/117/@components.0/@instances.2"/>
+        <states Name="Going_Up_Winch" outTransitions="/481" inTransitions="/480"/>
+        <states Name="Going_Down_Winch" outTransitions="/483" inTransitions="/482"/>
+        <states Name="receiveCabinBrakedFromControllerSys_Winch" outTransitions="/486" inTransitions="/484 /485"/>
+        <ports Name="p_win_con"/>
+        <ports Name="p_win_cab"/>
+        <alluniqueTriggers Name="goUp"/>
+        <alluniqueTriggers Name="stop"/>
+        <alluniqueTriggers Name="goDown"/>
+        <alluniqueTriggers Name="stopFromController"/>
+      </instances>
+      <instances variables="/564" Name="Cabin" initState="/117/@components.0/@instances.3/@states.0" StateSize="4" VarSize="1">
+        <transitions source="/282" target="/283" Name="1">
+          <guard/>
+          <trigger Body="braked"/>
+          <action Body="sendCabinBrakedToController();                 &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/284" target="/285" Name="2">
+          <guard/>
+          <trigger Body="sendFloorAndCloseDoor">
+            <arguments datatype="/25" Name="targetFloor"/>
+          </trigger>
+          <action Body="getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    &#xD;&#xA;genFiacre2();"/>
+        </transitions>
+        <transitions source="/286" target="/287" Name="3">
+          <guard/>
+          <trigger Body="moveCabinDown"/>
+          <action Body="sendMovedDownToController();      &#xD;&#xA;genFiacre3();"/>
+        </transitions>
+        <transitions source="/288" target="/289" Name="4">
+          <guard/>
+          <trigger Body="moveCabinDown"/>
+          <action Body="sendMovedDownToController();       &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <transitions source="/290" target="/291" Name="5">
+          <guard/>
+          <trigger Body="moveCabinUp"/>
+          <action Body="sendMovedUpToController();   &#xD;&#xA;genFiacre5();"/>
+        </transitions>
+        <transitions source="/292" target="/293" Name="6">
+          <guard/>
+          <trigger Body="braked"/>
+          <action Body="sendCabinBrakedToController();  &#xD;&#xA;genFiacre6();"/>
+        </transitions>
+        <transitions source="/294" target="/295" Name="7">
+          <guard/>
+          <trigger Body="moveCabinUp"/>
+          <action Body="sendMovedUpToController();         &#xD;&#xA;genFiacre7();"/>
+        </transitions>
+        <states Name="Stop_Cabin" outTransitions="/490 /491 /492" inTransitions="/487 /488 /489" process="/117/@components.0/@instances.3"/>
+        <states Name="Down_Cabin" outTransitions="/495" inTransitions="/493 /494"/>
+        <states Name="sentInfo_Cabin" outTransitions="/497 /498" inTransitions="/496"/>
+        <states Name="Up_Cabin" outTransitions="/501" inTransitions="/499 /500"/>
+        <ports Name="p_cab_con"/>
+        <ports Name="p_cab_win"/>
+        <alluniqueTriggers Name="braked"/>
+        <alluniqueTriggers Name="sendFloorAndCloseDoor" ArgSize="1">
+          <arguments datatype="/22" Name="targetFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="moveCabinDown"/>
+        <alluniqueTriggers Name="moveCabinUp"/>
+      </instances>
+      <instances Name="Door" initState="/117/@components.0/@instances.4/@states.2" StateSize="3">
+        <transitions source="/309" target="/310" Name="1">
+          <guard/>
+          <trigger Body="OpenDoor"/>
+          <action Body="genFiacre1();"/>
+        </transitions>
+        <transitions source="/311" target="/312" Name="2">
+          <guard/>
+          <trigger Body="CloseDoor"/>
+          <action Body="genFiacre2();"/>
+        </transitions>
+        <transitions source="/313" target="/314" Name="3">
+          <guard/>
+          <trigger/>
+          <action Body="goSleep();&#xD;&#xA;genFiacre3();"/>
+        </transitions>
+        <states Name="Open_Door" outTransitions="/503" inTransitions="/502"/>
+        <states Name="Closed_Door" outTransitions="/505" inTransitions="/504"/>
+        <states Name="Sleep_Door" outTransitions="/508" inTransitions="/506 /507" process="/117/@components.0/@instances.4"/>
+        <ports Name="p_door_con"/>
+        <alluniqueTriggers Name="OpenDoor"/>
+        <alluniqueTriggers Name="CloseDoor"/>
+      </instances>
+      <instances variables="/565 /566" Name="Sensor" initState="/117/@components.0/@instances.5/@states.0" StateSize="3" VarSize="2">
+        <transitions source="/332" target="/333" Name="0">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/39" Name="currentFloor"/>
+            <arguments datatype="/40" Name="sensorFloor"/>
+          </trigger>
+          <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+        </transitions>
+        <transitions source="/334" target="/335" Name="1">
+          <guard/>
+          <trigger Body="cabinArrived"/>
+          <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/336" target="/337" Name="2">
+          <guard/>
+          <trigger Body="tm(1)"/>
+          <action Body="genFiacre2();"/>
+        </transitions>
+        <transitions source="/338" target="/339" Name="4">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/41" Name="currentFloor"/>
+            <arguments datatype="/42" Name="sensorFloor"/>
+          </trigger>
+          <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <states Name="Idle_Sensor" outTransitions="/511" inTransitions="/509 /510" process="/117/@components.0/@instances.5"/>
+        <states Name="Detecting_Sensor" outTransitions="/514 /515" inTransitions="/512 /513"/>
+        <states Name="Detected_Sensor" outTransitions="/517" inTransitions="/516"/>
+        <ports Name="p_sen_con"/>
+        <ports Name="p_sen_con_1"/>
+        <ports Name="p_sen_con_2"/>
+        <ports Name="p_sen_con_3"/>
+        <ports Name="p_sen_con_4"/>
+        <alluniqueTriggers Name="toMeasure" ArgSize="4">
+          <arguments datatype="/27" Name="currentFloor"/>
+          <arguments datatype="/28" Name="sensorFloor"/>
+          <arguments datatype="/29" Name="currentFloor"/>
+          <arguments datatype="/30" Name="sensorFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="cabinArrived"/>
+      </instances>
+      <instances variables="/567 /568" Name="Sensor" initState="/117/@components.0/@instances.6/@states.0" StateSize="3" VarSize="2">
+        <transitions source="/357" target="/358" Name="0">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/57" Name="currentFloor"/>
+            <arguments datatype="/58" Name="sensorFloor"/>
+          </trigger>
+          <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+        </transitions>
+        <transitions source="/359" target="/360" Name="1">
+          <guard/>
+          <trigger Body="cabinArrived"/>
+          <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/361" target="/362" Name="2">
+          <guard/>
+          <trigger Body="tm(1)"/>
+          <action Body="genFiacre2();"/>
+        </transitions>
+        <transitions source="/363" target="/364" Name="4">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/59" Name="currentFloor"/>
+            <arguments datatype="/60" Name="sensorFloor"/>
+          </trigger>
+          <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <states Name="Idle_Sensor" outTransitions="/520" inTransitions="/518 /519" process="/117/@components.0/@instances.6"/>
+        <states Name="Detecting_Sensor" outTransitions="/523 /524" inTransitions="/521 /522"/>
+        <states Name="Detected_Sensor" outTransitions="/526" inTransitions="/525"/>
+        <ports Name="p_sen_con"/>
+        <ports Name="p_sen_con_1"/>
+        <ports Name="p_sen_con_2"/>
+        <ports Name="p_sen_con_3"/>
+        <ports Name="p_sen_con_4"/>
+        <alluniqueTriggers Name="toMeasure" ArgSize="4">
+          <arguments datatype="/45" Name="currentFloor"/>
+          <arguments datatype="/46" Name="sensorFloor"/>
+          <arguments datatype="/47" Name="currentFloor"/>
+          <arguments datatype="/48" Name="sensorFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="cabinArrived"/>
+      </instances>
+      <instances variables="/569 /570" Name="Sensor" initState="/117/@components.0/@instances.7/@states.0" StateSize="3" VarSize="2">
+        <transitions source="/382" target="/383" Name="0">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/75" Name="currentFloor"/>
+            <arguments datatype="/76" Name="sensorFloor"/>
+          </trigger>
+          <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+        </transitions>
+        <transitions source="/384" target="/385" Name="1">
+          <guard/>
+          <trigger Body="cabinArrived"/>
+          <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/386" target="/387" Name="2">
+          <guard/>
+          <trigger Body="tm(1)"/>
+          <action Body="genFiacre2();"/>
+        </transitions>
+        <transitions source="/388" target="/389" Name="4">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/77" Name="currentFloor"/>
+            <arguments datatype="/78" Name="sensorFloor"/>
+          </trigger>
+          <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <states Name="Idle_Sensor" outTransitions="/529" inTransitions="/527 /528" process="/117/@components.0/@instances.7"/>
+        <states Name="Detecting_Sensor" outTransitions="/532 /533" inTransitions="/530 /531"/>
+        <states Name="Detected_Sensor" outTransitions="/535" inTransitions="/534"/>
+        <ports Name="p_sen_con"/>
+        <ports Name="p_sen_con_1"/>
+        <ports Name="p_sen_con_2"/>
+        <ports Name="p_sen_con_3"/>
+        <ports Name="p_sen_con_4"/>
+        <alluniqueTriggers Name="toMeasure" ArgSize="4">
+          <arguments datatype="/63" Name="currentFloor"/>
+          <arguments datatype="/64" Name="sensorFloor"/>
+          <arguments datatype="/65" Name="currentFloor"/>
+          <arguments datatype="/66" Name="sensorFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="cabinArrived"/>
+      </instances>
+      <instances variables="/571 /572" Name="Sensor" initState="/117/@components.0/@instances.8/@states.0" StateSize="3" VarSize="2">
+        <transitions source="/407" target="/408" Name="0">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/93" Name="currentFloor"/>
+            <arguments datatype="/94" Name="sensorFloor"/>
+          </trigger>
+          <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+        </transitions>
+        <transitions source="/409" target="/410" Name="1">
+          <guard/>
+          <trigger Body="cabinArrived"/>
+          <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/411" target="/412" Name="2">
+          <guard/>
+          <trigger Body="tm(1)"/>
+          <action Body="genFiacre2();"/>
+        </transitions>
+        <transitions source="/413" target="/414" Name="4">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/95" Name="currentFloor"/>
+            <arguments datatype="/96" Name="sensorFloor"/>
+          </trigger>
+          <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <states Name="Idle_Sensor" outTransitions="/538" inTransitions="/536 /537" process="/117/@components.0/@instances.8"/>
+        <states Name="Detecting_Sensor" outTransitions="/541 /542" inTransitions="/539 /540"/>
+        <states Name="Detected_Sensor" outTransitions="/544" inTransitions="/543"/>
+        <ports Name="p_sen_con"/>
+        <ports Name="p_sen_con_1"/>
+        <ports Name="p_sen_con_2"/>
+        <ports Name="p_sen_con_3"/>
+        <ports Name="p_sen_con_4"/>
+        <alluniqueTriggers Name="toMeasure" ArgSize="4">
+          <arguments datatype="/81" Name="currentFloor"/>
+          <arguments datatype="/82" Name="sensorFloor"/>
+          <arguments datatype="/83" Name="currentFloor"/>
+          <arguments datatype="/84" Name="sensorFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="cabinArrived"/>
+      </instances>
+      <instances variables="/573 /574" Name="Sensor" initState="/117/@components.0/@instances.9/@states.0" StateSize="3" VarSize="2">
+        <transitions source="/432" target="/433" Name="0">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/111" Name="currentFloor"/>
+            <arguments datatype="/112" Name="sensorFloor"/>
+          </trigger>
+          <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+        </transitions>
+        <transitions source="/434" target="/435" Name="1">
+          <guard/>
+          <trigger Body="cabinArrived"/>
+          <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+        </transitions>
+        <transitions source="/436" target="/437" Name="2">
+          <guard/>
+          <trigger Body="tm(1)"/>
+          <action Body="genFiacre2();"/>
+        </transitions>
+        <transitions source="/438" target="/439" Name="4">
+          <guard/>
+          <trigger Body="toMeasure">
+            <arguments datatype="/113" Name="currentFloor"/>
+            <arguments datatype="/114" Name="sensorFloor"/>
+          </trigger>
+          <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+        </transitions>
+        <states Name="Idle_Sensor" outTransitions="/547" inTransitions="/545 /546" process="/117/@components.0/@instances.9"/>
+        <states Name="Detecting_Sensor" outTransitions="/550 /551" inTransitions="/548 /549"/>
+        <states Name="Detected_Sensor" outTransitions="/553" inTransitions="/552"/>
+        <ports Name="p_sen_con"/>
+        <ports Name="p_sen_con_1"/>
+        <ports Name="p_sen_con_2"/>
+        <ports Name="p_sen_con_3"/>
+        <ports Name="p_sen_con_4"/>
+        <alluniqueTriggers Name="toMeasure" ArgSize="4">
+          <arguments datatype="/99" Name="currentFloor"/>
+          <arguments datatype="/100" Name="sensorFloor"/>
+          <arguments datatype="/101" Name="currentFloor"/>
+          <arguments datatype="/102" Name="sensorFloor"/>
+        </alluniqueTriggers>
+        <alluniqueTriggers Name="cabinArrived"/>
+      </instances>
+    </components>
+  </fiacreMM:Program>
+  <fiacreMM:State Name="Off_Button_ex"/>
+  <fiacreMM:State Name="On_Button_ex" outTransitions="/441"/>
+  <fiacreMM:State Name="Off_Button_ex"/>
+  <fiacreMM:State Name="On_Button_ex" outTransitions="/442"/>
+  <fiacreMM:State Name="Off_Button_ex"/>
+  <fiacreMM:State Name="Off_Button_ex"/>
+  <fiacreMM:State Name="On_Button_ex" inTransitions="/443"/>
+  <fiacreMM:State Name="Off_Button_ex" outTransitions="/444"/>
+  <fiacreMM:State Name="On_Button_ex"/>
+  <fiacreMM:State Name="On_Button_ex"/>
+  <fiacreMM:State Name="Off_Button_ex" inTransitions="/445"/>
+  <fiacreMM:State Name="On_Button_ex"/>
+  <fiacreMM:State Name="Off_Button_ex" inTransitions="/446"/>
+  <fiacreMM:State Name="On_Button_ex" outTransitions="/117/@components.0/@instances.0/@transitions.0"/>
+  <fiacreMM:State Name="Off_Button_ex" inTransitions="/117/@components.0/@instances.0/@transitions.0"/>
+  <fiacreMM:State Name="Off_Button_ex" outTransitions="/117/@components.0/@instances.0/@transitions.1"/>
+  <fiacreMM:State Name="On_Button_ex" inTransitions="/117/@components.0/@instances.0/@transitions.1"/>
+  <fiacreMM:State Name="On_Button_ex" outTransitions="/117/@components.0/@instances.0/@transitions.2"/>
+  <fiacreMM:State Name="Off_Button_ex" inTransitions="/117/@components.0/@instances.0/@transitions.2"/>
+  <fiacreMM:State Name="Wait_ControllerSys"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" outTransitions="/448"/>
+  <fiacreMM:State Name="Wait_ControllerSys"/>
+  <fiacreMM:State Name="Wait_ControllerSys"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys" inTransitions="/449"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys" outTransitions="/450"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" outTransitions="/451"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys" outTransitions="/452"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys"/>
+  <fiacreMM:State Name="cabinArrived_ControllerSys" inTransitions="/453"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" inTransitions="/454"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" outTransitions="/455"/>
+  <fiacreMM:State Name="cabinArrived_ControllerSys"/>
+  <fiacreMM:State Name="cabinArrived_ControllerSys"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" inTransitions="/456"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" outTransitions="/457"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" inTransitions="/458"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys"/>
+  <fiacreMM:State Name="waitDoorClosed_ControllerSys" inTransitions="/459"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys" outTransitions="/460"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys"/>
+  <fiacreMM:State Name="waitDoorClosed_ControllerSys" outTransitions="/461"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys" inTransitions="/462"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys"/>
+  <fiacreMM:State Name="Wait_ControllerSys" inTransitions="/463"/>
+  <fiacreMM:State Name="Wait_ControllerSys" outTransitions="/464"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" inTransitions="/465"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" inTransitions="/466"/>
+  <fiacreMM:State Name="cabinArrived_ControllerSys" outTransitions="/467"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys" outTransitions="/468"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys" outTransitions="/469"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys" inTransitions="/470"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" outTransitions="/471"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" inTransitions="/472"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" inTransitions="/473"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys" outTransitions="/474"/>
+  <fiacreMM:State Name="waitDoorClosed_ControllerSys"/>
+  <fiacreMM:State Name="waitDoorClosed_ControllerSys"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" inTransitions="/475"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.0"/>
+  <fiacreMM:State Name="cabinArrived_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.0"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.1"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.1"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.2"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.2"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.3"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.3"/>
+  <fiacreMM:State Name="Wait_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.4"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.4"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.5"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.5"/>
+  <fiacreMM:State Name="cabinArrived_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.6"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.6"/>
+  <fiacreMM:State Name="receiveRequestFromButtonEx_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.7"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.7"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.8"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.8"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.9"/>
+  <fiacreMM:State Name="cabinMoved_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.9"/>
+  <fiacreMM:State Name="recievedRequestFromCabin_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.10"/>
+  <fiacreMM:State Name="cabinBraked_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.10"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.11"/>
+  <fiacreMM:State Name="Wait_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.11"/>
+  <fiacreMM:State Name="doorOpened_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.12"/>
+  <fiacreMM:State Name="waitDoorClosed_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.12"/>
+  <fiacreMM:State Name="waitDoorClosed_ControllerSys" outTransitions="/117/@components.0/@instances.1/@transitions.13"/>
+  <fiacreMM:State Name="doorClosed_ControllerSys" inTransitions="/117/@components.0/@instances.1/@transitions.13"/>
+  <fiacreMM:State Name="Not_Going_Winch"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch" outTransitions="/477"/>
+  <fiacreMM:State Name="Not_Going_Winch"/>
+  <fiacreMM:State Name="Not_Going_Winch"/>
+  <fiacreMM:State Name="Going_Up_Winch" inTransitions="/478"/>
+  <fiacreMM:State Name="Not_Going_Winch"/>
+  <fiacreMM:State Name="Going_Down_Winch" inTransitions="/479"/>
+  <fiacreMM:State Name="Not_Going_Winch" outTransitions="/480"/>
+  <fiacreMM:State Name="Going_Up_Winch"/>
+  <fiacreMM:State Name="Going_Up_Winch"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch" inTransitions="/481"/>
+  <fiacreMM:State Name="Not_Going_Winch" outTransitions="/482"/>
+  <fiacreMM:State Name="Going_Down_Winch"/>
+  <fiacreMM:State Name="Going_Down_Winch"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch" inTransitions="/483"/>
+  <fiacreMM:State Name="Going_Up_Winch" outTransitions="/484"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch"/>
+  <fiacreMM:State Name="Going_Down_Winch" outTransitions="/485"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch"/>
+  <fiacreMM:State Name="Not_Going_Winch" inTransitions="/486"/>
+  <fiacreMM:State Name="Not_Going_Winch" outTransitions="/117/@components.0/@instances.2/@transitions.0"/>
+  <fiacreMM:State Name="Going_Up_Winch" inTransitions="/117/@components.0/@instances.2/@transitions.0"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch" outTransitions="/117/@components.0/@instances.2/@transitions.1"/>
+  <fiacreMM:State Name="Not_Going_Winch" inTransitions="/117/@components.0/@instances.2/@transitions.1"/>
+  <fiacreMM:State Name="Not_Going_Winch" outTransitions="/117/@components.0/@instances.2/@transitions.2"/>
+  <fiacreMM:State Name="Going_Down_Winch" inTransitions="/117/@components.0/@instances.2/@transitions.2"/>
+  <fiacreMM:State Name="Going_Up_Winch" outTransitions="/117/@components.0/@instances.2/@transitions.3"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch" inTransitions="/117/@components.0/@instances.2/@transitions.3"/>
+  <fiacreMM:State Name="Going_Down_Winch" outTransitions="/117/@components.0/@instances.2/@transitions.4"/>
+  <fiacreMM:State Name="receiveCabinBrakedFromControllerSys_Winch" inTransitions="/117/@components.0/@instances.2/@transitions.4"/>
+  <fiacreMM:State Name="Stop_Cabin"/>
+  <fiacreMM:State Name="Down_Cabin" outTransitions="/488"/>
+  <fiacreMM:State Name="Stop_Cabin"/>
+  <fiacreMM:State Name="Up_Cabin" outTransitions="/489"/>
+  <fiacreMM:State Name="Stop_Cabin"/>
+  <fiacreMM:State Name="Stop_Cabin"/>
+  <fiacreMM:State Name="sentInfo_Cabin" inTransitions="/490"/>
+  <fiacreMM:State Name="Stop_Cabin"/>
+  <fiacreMM:State Name="Down_Cabin" inTransitions="/491"/>
+  <fiacreMM:State Name="Stop_Cabin"/>
+  <fiacreMM:State Name="Up_Cabin" inTransitions="/492"/>
+  <fiacreMM:State Name="sentInfo_Cabin" outTransitions="/493"/>
+  <fiacreMM:State Name="Down_Cabin"/>
+  <fiacreMM:State Name="Stop_Cabin" outTransitions="/494"/>
+  <fiacreMM:State Name="Down_Cabin"/>
+  <fiacreMM:State Name="Down_Cabin"/>
+  <fiacreMM:State Name="Stop_Cabin" inTransitions="/495"/>
+  <fiacreMM:State Name="Stop_Cabin" outTransitions="/496"/>
+  <fiacreMM:State Name="sentInfo_Cabin"/>
+  <fiacreMM:State Name="sentInfo_Cabin"/>
+  <fiacreMM:State Name="Down_Cabin" inTransitions="/497"/>
+  <fiacreMM:State Name="sentInfo_Cabin"/>
+  <fiacreMM:State Name="Up_Cabin" inTransitions="/498"/>
+  <fiacreMM:State Name="Stop_Cabin" outTransitions="/499"/>
+  <fiacreMM:State Name="Up_Cabin"/>
+  <fiacreMM:State Name="sentInfo_Cabin" outTransitions="/500"/>
+  <fiacreMM:State Name="Up_Cabin"/>
+  <fiacreMM:State Name="Up_Cabin"/>
+  <fiacreMM:State Name="Stop_Cabin" inTransitions="/501"/>
+  <fiacreMM:State Name="Down_Cabin" outTransitions="/117/@components.0/@instances.3/@transitions.0"/>
+  <fiacreMM:State Name="Stop_Cabin" inTransitions="/117/@components.0/@instances.3/@transitions.0"/>
+  <fiacreMM:State Name="Stop_Cabin" outTransitions="/117/@components.0/@instances.3/@transitions.1"/>
+  <fiacreMM:State Name="sentInfo_Cabin" inTransitions="/117/@components.0/@instances.3/@transitions.1"/>
+  <fiacreMM:State Name="sentInfo_Cabin" outTransitions="/117/@components.0/@instances.3/@transitions.2"/>
+  <fiacreMM:State Name="Down_Cabin" inTransitions="/117/@components.0/@instances.3/@transitions.2"/>
+  <fiacreMM:State Name="Stop_Cabin" outTransitions="/117/@components.0/@instances.3/@transitions.3"/>
+  <fiacreMM:State Name="Down_Cabin" inTransitions="/117/@components.0/@instances.3/@transitions.3"/>
+  <fiacreMM:State Name="Stop_Cabin" outTransitions="/117/@components.0/@instances.3/@transitions.4"/>
+  <fiacreMM:State Name="Up_Cabin" inTransitions="/117/@components.0/@instances.3/@transitions.4"/>
+  <fiacreMM:State Name="Up_Cabin" outTransitions="/117/@components.0/@instances.3/@transitions.5"/>
+  <fiacreMM:State Name="Stop_Cabin" inTransitions="/117/@components.0/@instances.3/@transitions.5"/>
+  <fiacreMM:State Name="sentInfo_Cabin" outTransitions="/117/@components.0/@instances.3/@transitions.6"/>
+  <fiacreMM:State Name="Up_Cabin" inTransitions="/117/@components.0/@instances.3/@transitions.6"/>
+  <fiacreMM:State Name="Sleep_Door"/>
+  <fiacreMM:State Name="Sleep_Door" outTransitions="/502"/>
+  <fiacreMM:State Name="Open_Door"/>
+  <fiacreMM:State Name="Open_Door"/>
+  <fiacreMM:State Name="Closed_Door" inTransitions="/503"/>
+  <fiacreMM:State Name="Open_Door" outTransitions="/504"/>
+  <fiacreMM:State Name="Closed_Door"/>
+  <fiacreMM:State Name="Closed_Door"/>
+  <fiacreMM:State Name="Sleep_Door" inTransitions="/505"/>
+  <fiacreMM:State Name="Closed_Door" outTransitions="/507"/>
+  <fiacreMM:State Name="Sleep_Door"/>
+  <fiacreMM:State Name="Sleep_Door"/>
+  <fiacreMM:State Name="Open_Door" inTransitions="/508"/>
+  <fiacreMM:State Name="Sleep_Door" outTransitions="/117/@components.0/@instances.4/@transitions.0"/>
+  <fiacreMM:State Name="Open_Door" inTransitions="/117/@components.0/@instances.4/@transitions.0"/>
+  <fiacreMM:State Name="Open_Door" outTransitions="/117/@components.0/@instances.4/@transitions.1"/>
+  <fiacreMM:State Name="Closed_Door" inTransitions="/117/@components.0/@instances.4/@transitions.1"/>
+  <fiacreMM:State Name="Closed_Door" outTransitions="/117/@components.0/@instances.4/@transitions.2"/>
+  <fiacreMM:State Name="Sleep_Door" inTransitions="/117/@components.0/@instances.4/@transitions.2"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/509"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/511"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/512"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/513"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/514"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/515"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/516"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/517"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/117/@components.0/@instances.5/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.5/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.5/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/117/@components.0/@instances.5/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/117/@components.0/@instances.5/@transitions.2"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/117/@components.0/@instances.5/@transitions.2"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.5/@transitions.3"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.5/@transitions.3"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/518"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/520"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/521"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/522"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/523"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/524"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/525"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/526"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/117/@components.0/@instances.6/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.6/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.6/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/117/@components.0/@instances.6/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/117/@components.0/@instances.6/@transitions.2"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/117/@components.0/@instances.6/@transitions.2"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.6/@transitions.3"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.6/@transitions.3"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/527"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/529"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/530"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/531"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/532"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/533"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/534"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/535"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/117/@components.0/@instances.7/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.7/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.7/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/117/@components.0/@instances.7/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/117/@components.0/@instances.7/@transitions.2"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/117/@components.0/@instances.7/@transitions.2"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.7/@transitions.3"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.7/@transitions.3"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/536"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/538"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/539"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/540"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/541"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/542"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/543"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/544"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/117/@components.0/@instances.8/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.8/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.8/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/117/@components.0/@instances.8/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/117/@components.0/@instances.8/@transitions.2"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/117/@components.0/@instances.8/@transitions.2"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.8/@transitions.3"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.8/@transitions.3"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/545"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/547"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/548"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/549"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/550"/>
+  <fiacreMM:State Name="Detecting_Sensor"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/551"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/552"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Detected_Sensor"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/553"/>
+  <fiacreMM:State Name="Idle_Sensor" outTransitions="/117/@components.0/@instances.9/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.9/@transitions.0"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.9/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" inTransitions="/117/@components.0/@instances.9/@transitions.1"/>
+  <fiacreMM:State Name="Detected_Sensor" outTransitions="/117/@components.0/@instances.9/@transitions.2"/>
+  <fiacreMM:State Name="Idle_Sensor" inTransitions="/117/@components.0/@instances.9/@transitions.2"/>
+  <fiacreMM:State Name="Detecting_Sensor" outTransitions="/117/@components.0/@instances.9/@transitions.3"/>
+  <fiacreMM:State Name="Detecting_Sensor" inTransitions="/117/@components.0/@instances.9/@transitions.3"/>
+  <fiacreMM:Transition target="/117/@components.0/@instances.0/@states.0" Name="0"/>
+  <fiacreMM:Transition source="/119" target="/117/@components.0/@instances.0/@states.0" Name="1">
+    <guard/>
+    <trigger Body="arrive"/>
+    <action Body="genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/121" target="/117/@components.0/@instances.0/@states.0" Name="3">
+    <guard/>
+    <trigger Body="tm(5)"/>
+    <action Body="genFiacre3();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.0/@states.0" target="/124" Name="2">
+    <guard/>
+    <trigger Body="Pressed">
+      <arguments datatype="/1" Name="requestFloor"/>
+    </trigger>
+    <action Body="getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));&#xD;&#xA;genFiacre2();" codeFiacre="Pressed;&#xD;&#xA;          receiveFromButton_Ex ! requestFloor;&#xD;&#xA;          to On_Button_ex&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/125" target="/117/@components.0/@instances.0/@states.1" Name="2">
+    <guard/>
+    <trigger Body="Pressed">
+      <arguments datatype="/2" Name="requestFloor"/>
+    </trigger>
+    <action Body="getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));&#xD;&#xA;genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.0/@states.1" target="/128" Name="1">
+    <guard/>
+    <trigger Body="arrive"/>
+    <action Body="genFiacre1();" codeFiacre="select&#xD;&#xA;          arrive;&#xD;&#xA;          to Off_Button_ex        "/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.0/@states.1" target="/130" Name="3">
+    <guard/>
+    <trigger Body="tm(5)"/>
+    <action Body="genFiacre3();" codeFiacre="[]&#xD;&#xA;          wait[4,5];&#xD;&#xA;          to Off_Button_ex&#xD;&#xA;          end;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.1/@states.0" Name="0"/>
+  <fiacreMM:Transition source="/138" target="/117/@components.0/@instances.1/@states.0" Name="12">
+    <guard/>
+    <trigger Body="doneTask"/>
+    <action Body="loadedPassager=false;         &#xD;&#xA;genFiacre12();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.0" target="/141" Name="5">
+    <guard/>
+    <trigger Body="receiveFromButton_Ex">
+      <arguments datatype="/6" Name="requestedFloor"/>
+    </trigger>
+    <action Body="exBtnFloor=params.requestedFloor;       &#xD;&#xA;destFloor=exBtnFloor;&#xD;&#xA;if (currentFloor &lt; exBtnFloor){&#xD;&#xA;&#x9;getP_con_win().gen(new goUp());   &#xD;&#xA;&#x9;upordown=1;  &#xD;&#xA;&#x9;sendToMeasureSensor(exBtnFloor);&#xD;&#xA;}else{&#xD;&#xA;&#x9;if (currentFloor == exBtnFloor) {&#xD;&#xA;&#x9;&#x9;//open the door         &#xD;&#xA;&#x9;&#x9;gen (new gotoOpenDoorDirectly());&#xD;&#xA;&#x9;}else{&#xD;&#xA;&#x9;&#x9;getP_con_win().gen(new goDown()); &#xD;&#xA;&#x9;&#x9;upordown=-1;  &#xD;&#xA;&#x9;&#x9;sendToMeasureSensor(exBtnFloor);&#xD;&#xA;&#x9;}&#xD;&#xA;}    &#xD;&#xA;genFiacre5();" codeFiacre="receiveFromButton_Ex ?  exBtnFloor;&#xD;&#xA;          destFloor := exBtnFloor;&#xD;&#xA;          if (currentFloor &lt; exBtnFloor) then&#xD;&#xA;              goUp;   &#xD;&#xA;              upordown :=1 ;  &#xD;&#xA;          case (exBtnFloor) of &#xD;&#xA;               0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor&#xD;&#xA;            | 1 ->  sendToMeasureSensor_1 ! currentFloor, exBtnFloor&#xD;&#xA;            | 2 ->  sendToMeasureSensor_2 ! currentFloor, exBtnFloor&#xD;&#xA;            | 3 ->  sendToMeasureSensor_3 ! currentFloor, exBtnFloor&#xD;&#xA;            | 4 ->  sendToMeasureSensor_4 ! currentFloor, exBtnFloor&#xD;&#xA;           end;&#xD;&#xA;                 to ReceiveRequestFromButtonEx_ControllerSys&#xD;&#xA;            elseif (currentFloor > exBtnFloor) then &#x9;&#xD;&#xA;                 goDown; &#xD;&#xA;                 upordown := -1;  &#xD;&#xA;                 case (exBtnFloor) of &#xD;&#xA;                   0 ->  sendToMeasureSensor !  currentFloor,  exBtnFloor&#xD;&#xA;                | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor&#xD;&#xA;                | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor&#xD;&#xA;                | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor&#xD;&#xA;                | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor&#xD;&#xA;                end;&#xD;&#xA;                to ReceiveRequestFromButtonEx&#xD;&#xA;            else&#xD;&#xA;                to ReceiveRequestFromButtonEx&#xD;&#xA;            end&#xD;&#xA;&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/142" target="/117/@components.0/@instances.1/@states.1" Name="6">
+    <guard/>
+    <trigger Body="receiveCabinMoved"/>
+    <action Body="currentFloor+=upordown;   &#xD;&#xA;sendToMeasureSensor(destFloor);       &#xD;&#xA;genFiacre6();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/144" target="/117/@components.0/@instances.1/@states.1" Name="9">
+    <guard/>
+    <trigger Body="continueToMove"/>
+    <action Body="currentFloor+=upordown;   &#xD;&#xA;sendToMeasureSensor(destFloor);     &#xD;&#xA;genFiacre9();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/146" target="/117/@components.0/@instances.1/@states.1" Name="10">
+    <guard/>
+    <trigger Body="receiveCabinMoved"/>
+    <action Body="currentFloor+=upordown;   &#xD;&#xA;loadedPassager=true;        &#xD;&#xA;sendToMeasureSensor(destFloor);      &#xD;&#xA;genFiacre10();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.1" target="/149" Name="1">
+    <guard/>
+    <trigger Body="detected"/>
+    <action Body="sendStopToWinch();   &#xD;&#xA;genFiacre1();" codeFiacre="select&#xD;&#xA;              p_sen_con_detected;&#xD;&#xA;              stopFromController;&#xD;&#xA;              to cabinArrived_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_1_detected;&#xD;&#xA;              stopFromController;&#xD;&#xA;              to cabinArrived_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_2_detected;&#xD;&#xA;              stopFromController;&#xD;&#xA;              to cabinArrived_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_3_detected ;&#xD;&#xA;              stopFromController;&#xD;&#xA;              to cabinArrived_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_4_detected; &#xD;&#xA;              stopFromController;&#xD;&#xA;              to cabinArrived_ControllerSys&#xD;&#xA;         &#xD;&#xA;         &#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.1" target="/151" Name="9">
+    <guard/>
+    <trigger Body="continueToMove"/>
+    <action Body="currentFloor+=upordown;   &#xD;&#xA;sendToMeasureSensor(destFloor);     &#xD;&#xA;genFiacre9();" codeFiacre="[]&#xD;&#xA;              p_sen_con_continueToMove;&#xD;&#xA;              currentFloor = currentFloor +upordown; &#xD;&#xA;              toMeasureSensor ! currentFloor, destfloor;&#xD;&#xA;              to cabinMoved_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_1_continueToMove; &#xD;&#xA;              currentFloor = currentFloor +upordown; &#xD;&#xA;              sendToMeasureSensor_1 ! currentFloor, destfloor;&#xD;&#xA;             to cabinMoved_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_2_continueToMove;&#xD;&#xA;              currentFloor = currentFloor +upordown; &#xD;&#xA;              sendToMeasureSensor_2 ! currentFloor, destfloor;&#xD;&#xA;              to cabinMoved_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_3_continueToMove;&#xD;&#xA;              currentFloor = currentFloor +upordown; &#xD;&#xA;              sendToMeasureSensor_3 ! currentFloor, destfloor;&#xD;&#xA;              to cabinMoved_ControllerSys&#xD;&#xA;          []&#xD;&#xA;              p_sen_con_4_continueToMove;&#xD;&#xA;              currentFloor = currentFloor +upordown; &#xD;&#xA;              sendToMeasureSensor_4 ! currentFloor, destfloor;&#xD;&#xA;              to cabinMoved_ControllerSys&#xD;&#xA;         end;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/152" target="/117/@components.0/@instances.1/@states.2" Name="1">
+    <guard/>
+    <trigger Body="detected"/>
+    <action Body="sendStopToWinch();   &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.2" target="/155" Name="7">
+    <guard/>
+    <trigger Body="braked"/>
+    <action Body="sendToWinchToStop();     &#xD;&#xA;genFiacre7();" codeFiacre="braked;&#xD;&#xA;          stop;&#xD;&#xA;          to cabinBraked"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/156" target="/117/@components.0/@instances.1/@states.3" Name="2">
+    <guard/>
+    <trigger Body="readyToOpenDoor"/>
+    <action Body=" openDoor();&#xD;&#xA; genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.3" target="/159" Name="3">
+    <guard/>
+    <trigger Body="receiveFloorAndCloseDoor">
+      <arguments datatype="/7" Name="requestedTargetFloor"/>
+    </trigger>
+    <action Body="closeDoor();&#xD;&#xA;targetFloor=params.requestedTargetFloor;    &#xD;&#xA;destFloor=targetFloor;     &#xD;&#xA;genFiacre3();" codeFiacre="targetFloor := 1;&#xD;&#xA;          destFloor := targetFloor;&#xD;&#xA;          closeDoor;&#xD;&#xA;          to doorClosed_ControllerSys"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.3" target="/161" Name="13">
+    <guard Body="loadedPassager"/>
+    <trigger/>
+    <action Body="closeDoor();     &#xD;&#xA;genFiacre13();" codeFiacre="if (loadedPassager) then&#xD;&#xA;          CloseDoor;&#xD;&#xA;          to waitDoorClosed&#xD;&#xA;        end"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/162" target="/117/@components.0/@instances.1/@states.4" Name="3">
+    <guard/>
+    <trigger Body="receiveFloorAndCloseDoor">
+      <arguments datatype="/8" Name="requestedTargetFloor"/>
+    </trigger>
+    <action Body="closeDoor();&#xD;&#xA;targetFloor=params.requestedTargetFloor;    &#xD;&#xA;destFloor=targetFloor;     &#xD;&#xA;genFiacre3();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/164" target="/117/@components.0/@instances.1/@states.4" Name="14">
+    <guard/>
+    <trigger Body="readyToGo"/>
+    <action Body="gen(new doneTask());       &#xD;&#xA;genFiacre14();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.4" target="/167" Name="4">
+    <guard/>
+    <trigger Body="readyToGo"/>
+    <action Body="if (currentFloor &lt; targetFloor){&#xD;&#xA;&#x9;getP_con_win().gen(new goUp());   &#xD;&#xA;&#x9;upordown=1; &#xD;&#xA;&#x9;&#xD;&#xA;&#x9;sendToMeasureSensor(targetFloor);&#xD;&#xA;}else{&#xD;&#xA;&#x9;if (currentFloor == targetFloor) {&#xD;&#xA;&#x9;&#x9;//open the door         &#xD;&#xA;&#x9;&#x9;gen (new gotoOpenDoorDirectly());&#xD;&#xA;&#x9;}else{&#xD;&#xA;&#x9;&#x9;getP_con_win().gen(new goDown()); &#xD;&#xA;&#x9;&#x9;upordown=-1;  &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;sendToMeasureSensor(targetFloor);&#xD;&#xA;&#x9;}&#xD;&#xA;} &#xD;&#xA;genFiacre4();" codeFiacre="readyToGo;&#xD;&#xA;          if (currentFloor &lt; targetFloor) then&#xD;&#xA;              goUp;   &#xD;&#xA;              upordown := 1; &#xD;&#xA;              case (targetFloor) of &#xD;&#xA;                 0 ->  sendToMeasureSensor ! currentFloor, targetFloor&#xD;&#xA;              | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor&#xD;&#xA;              | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor&#xD;&#xA;              | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor&#xD;&#xA;              | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor&#xD;&#xA;                end;&#xD;&#xA;                to recievedRequestFromCabin_ControllerSys&#xD;&#xA;          else&#xD;&#xA;                if (currentFloor == targetFloor) then&#xD;&#xA;                    openDoor;&#xD;&#xA;                    to doorOpened_ControllerSys&#xD;&#xA;                else&#xD;&#xA;                     goDown; &#xD;&#xA;                     upordown := -1;  &#xD;&#xA;                     case (targetFloor) of &#xD;&#xA;                       0 ->  sendToMeasureSensor ! currentFloor, targetFloor&#xD;&#xA;                    | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor&#xD;&#xA;                    | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor&#xD;&#xA;                    | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor&#xD;&#xA;                    | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor&#xD;&#xA;                     end;&#xD;&#xA;                     to recievedRequestFromCabin_ControllerSys&#xD;&#xA;                end&#xD;&#xA;          end &#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.4" target="/169" Name="12">
+    <guard/>
+    <trigger Body="doneTask"/>
+    <action Body="loadedPassager=false;         &#xD;&#xA;genFiacre12();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/170" target="/117/@components.0/@instances.1/@states.5" Name="5">
+    <guard/>
+    <trigger Body="receiveFromButton_Ex">
+      <arguments datatype="/9" Name="requestedFloor"/>
+    </trigger>
+    <action Body="exBtnFloor=params.requestedFloor;       &#xD;&#xA;destFloor=exBtnFloor;&#xD;&#xA;if (currentFloor &lt; exBtnFloor){&#xD;&#xA;&#x9;getP_con_win().gen(new goUp());   &#xD;&#xA;&#x9;upordown=1;  &#xD;&#xA;&#x9;sendToMeasureSensor(exBtnFloor);&#xD;&#xA;}else{&#xD;&#xA;&#x9;if (currentFloor == exBtnFloor) {&#xD;&#xA;&#x9;&#x9;//open the door         &#xD;&#xA;&#x9;&#x9;gen (new gotoOpenDoorDirectly());&#xD;&#xA;&#x9;}else{&#xD;&#xA;&#x9;&#x9;getP_con_win().gen(new goDown()); &#xD;&#xA;&#x9;&#x9;upordown=-1;  &#xD;&#xA;&#x9;&#x9;sendToMeasureSensor(exBtnFloor);&#xD;&#xA;&#x9;}&#xD;&#xA;}    &#xD;&#xA;genFiacre5();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.5" target="/173" Name="6">
+    <guard/>
+    <trigger Body="receiveCabinMoved"/>
+    <action Body="currentFloor+=upordown;   &#xD;&#xA;sendToMeasureSensor(destFloor);       &#xD;&#xA;genFiacre6();" codeFiacre="receiveCabinMoved;&#xD;&#xA;          currentFloor := currentFloor + upordown;&#xD;&#xA;          case (exBtnFloor) of &#xD;&#xA;               0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor&#xD;&#xA;            | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor&#xD;&#xA;            | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor&#xD;&#xA;            | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor&#xD;&#xA;            | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor&#xD;&#xA;           end;&#xD;&#xA;           to cabinMoved_ControllerSys&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.5" target="/175" Name="8">
+    <guard/>
+    <trigger Body="gotoOpenDoorDirectly"/>
+    <action Body="gen (new readyToOpenDoor());    &#xD;&#xA;genFiacre8();" codeFiacre="if (currentFloor = exBtnFloor) then   &#xD;&#xA;                p_con_door_OpenDoor;&#xD;&#xA;                to doorOpened&#xD;&#xA;          end;&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/176" target="/117/@components.0/@instances.1/@states.6" Name="7">
+    <guard/>
+    <trigger Body="braked"/>
+    <action Body="sendToWinchToStop();     &#xD;&#xA;genFiacre7();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/178" target="/117/@components.0/@instances.1/@states.6" Name="8">
+    <guard/>
+    <trigger Body="gotoOpenDoorDirectly"/>
+    <action Body="gen (new readyToOpenDoor());    &#xD;&#xA;genFiacre8();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/180" target="/117/@components.0/@instances.1/@states.6" Name="11">
+    <guard/>
+    <trigger Body="gotoOpenDoorDirectly"/>
+    <action Body="gen(new readyToOpenDoor());                 &#xD;&#xA;genFiacre11();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.6" target="/183" Name="2">
+    <guard/>
+    <trigger Body="readyToOpenDoor"/>
+    <action Body=" openDoor();&#xD;&#xA; genFiacre2();" codeFiacre="readyToOpenDoor;&#xD;&#xA;          OpenDoor;&#xD;&#xA;          to doorOpened_ControllerSys&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/184" target="/117/@components.0/@instances.1/@states.7" Name="4">
+    <guard/>
+    <trigger Body="readyToGo"/>
+    <action Body="if (currentFloor &lt; targetFloor){&#xD;&#xA;&#x9;getP_con_win().gen(new goUp());   &#xD;&#xA;&#x9;upordown=1; &#xD;&#xA;&#x9;&#xD;&#xA;&#x9;sendToMeasureSensor(targetFloor);&#xD;&#xA;}else{&#xD;&#xA;&#x9;if (currentFloor == targetFloor) {&#xD;&#xA;&#x9;&#x9;//open the door         &#xD;&#xA;&#x9;&#x9;gen (new gotoOpenDoorDirectly());&#xD;&#xA;&#x9;}else{&#xD;&#xA;&#x9;&#x9;getP_con_win().gen(new goDown()); &#xD;&#xA;&#x9;&#x9;upordown=-1;  &#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;sendToMeasureSensor(targetFloor);&#xD;&#xA;&#x9;}&#xD;&#xA;} &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.7" target="/187" Name="10">
+    <guard/>
+    <trigger Body="receiveCabinMoved"/>
+    <action Body="currentFloor+=upordown;   &#xD;&#xA;loadedPassager=true;        &#xD;&#xA;sendToMeasureSensor(destFloor);      &#xD;&#xA;genFiacre10();" codeFiacre="receiveCabinMoved;&#xD;&#xA;          currentFloor := currentFloor + upordown;&#xD;&#xA;          loadedPassager := true;&#xD;&#xA;          case (destFloor) of &#xD;&#xA;               0 ->  sendToMeasureSensor ! currentFloor, destFloor&#xD;&#xA;            | 1 ->  sendToMeasureSensor_1 ! currentFloor,destFloor&#xD;&#xA;            | 2 ->  sendToMeasureSensor_2 ! currentFloor, destFloor&#xD;&#xA;            | 3 ->  sendToMeasureSensor_3 ! currentFloor,destFloor&#xD;&#xA;            | 4 ->  sendToMeasureSensor_4 ! currentFloor, destFloor&#xD;&#xA;         end;&#xD;&#xA;         to cabinMoved_ControllerSys&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.7" target="/189" Name="11">
+    <guard/>
+    <trigger Body="gotoOpenDoorDirectly"/>
+    <action Body="gen(new readyToOpenDoor());                 &#xD;&#xA;genFiacre11();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/190" target="/117/@components.0/@instances.1/@states.8" Name="13">
+    <guard Body="loadedPassager"/>
+    <trigger/>
+    <action Body="closeDoor();     &#xD;&#xA;genFiacre13();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.1/@states.8" target="/193" Name="14">
+    <guard/>
+    <trigger Body="readyToGo"/>
+    <action Body="gen(new doneTask());       &#xD;&#xA;genFiacre14();" codeFiacre="readyToGo;&#xD;&#xA;          loadedPassager := false;&#xD;&#xA;          to Wait_ControllerSys&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.2/@states.0" Name="0"/>
+  <fiacreMM:Transition source="/223" target="/117/@components.0/@instances.2/@states.0" Name="2">
+    <guard/>
+    <trigger Body="stop"/>
+    <action Body="receiveStopFromController();      &#xD;&#xA;genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.2/@states.0" target="/226" Name="1">
+    <guard/>
+    <trigger Body="goUp"/>
+    <action Body="sendGoUpToCabin();   &#xD;&#xA;genFiacre1();" codeFiacre="select&#xD;&#xA;          goUp;&#xD;&#xA;          moveCabinUp;&#xD;&#xA;          to Going_Up"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.2/@states.0" target="/228" Name="3">
+    <guard/>
+    <trigger Body="goDown"/>
+    <action Body="sendGoDownToCabin();  &#xD;&#xA;genFiacre3();" codeFiacre="[]&#xD;&#xA;          goDown;&#xD;&#xA;          moveCabinDown;&#xD;&#xA;          to Goinf_Down&#xD;&#xA;        end"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/229" target="/117/@components.0/@instances.2/@states.1" Name="1">
+    <guard/>
+    <trigger Body="goUp"/>
+    <action Body="sendGoUpToCabin();   &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.2/@states.1" target="/232" Name="4">
+    <guard/>
+    <trigger Body="stopFromController"/>
+    <action Body="sendBrakeToCabin();   &#xD;&#xA;genFiacre4();" codeFiacre="stopFromController;&#xD;&#xA;          braked;&#xD;&#xA;          to receiveCabinBrakedFromControllerSys"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/233" target="/117/@components.0/@instances.2/@states.2" Name="3">
+    <guard/>
+    <trigger Body="goDown"/>
+    <action Body="sendGoDownToCabin();  &#xD;&#xA;genFiacre3();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.2/@states.2" target="/236" Name="5">
+    <guard/>
+    <trigger Body="stopFromController"/>
+    <action Body="sendBrakeToCabin();        &#xD;&#xA;genFiacre5();" codeFiacre="stopFromController;&#xD;&#xA;          braked;&#xD;&#xA;          to receiveCabinBrakedFromControllerSys"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/237" target="/117/@components.0/@instances.2/@states.3" Name="4">
+    <guard/>
+    <trigger Body="stopFromController"/>
+    <action Body="sendBrakeToCabin();   &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/239" target="/117/@components.0/@instances.2/@states.3" Name="5">
+    <guard/>
+    <trigger Body="stopFromController"/>
+    <action Body="sendBrakeToCabin();        &#xD;&#xA;genFiacre5();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.2/@states.3" target="/242" Name="2">
+    <guard/>
+    <trigger Body="stop"/>
+    <action Body="receiveStopFromController();      &#xD;&#xA;genFiacre2();" codeFiacre="stop;&#xD;&#xA;          readyToOpenDoor;&#xD;&#xA;          to Not_Going_Winch"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.3/@states.0" Name="0"/>
+  <fiacreMM:Transition source="/254" target="/117/@components.0/@instances.3/@states.0" Name="1">
+    <guard/>
+    <trigger Body="braked"/>
+    <action Body="sendCabinBrakedToController();                 &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/256" target="/117/@components.0/@instances.3/@states.0" Name="6">
+    <guard/>
+    <trigger Body="braked"/>
+    <action Body="sendCabinBrakedToController();  &#xD;&#xA;genFiacre6();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.3/@states.0" target="/259" Name="2">
+    <guard/>
+    <trigger Body="sendFloorAndCloseDoor">
+      <arguments datatype="/23" Name="targetFloor"/>
+    </trigger>
+    <action Body="getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    &#xD;&#xA;genFiacre2();" codeFiacre="select&#xD;&#xA;          sendFloorAndCloseDoor  ?  targetFloor;&#xD;&#xA;          receiveFloorAndCloseDoor !  targetFloor;&#xD;&#xA;          to sentInfo_Cabin"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.3/@states.0" target="/261" Name="4">
+    <guard/>
+    <trigger Body="moveCabinDown"/>
+    <action Body="sendMovedDownToController();       &#xD;&#xA;genFiacre4();" codeFiacre="[] &#xD;&#xA;         moveCabinDown;&#xD;&#xA;          P_cab_con_braked;&#xD;&#xA;          to Down_Cabin"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.3/@states.0" target="/263" Name="5">
+    <guard/>
+    <trigger Body="moveCabinUp"/>
+    <action Body="sendMovedUpToController();   &#xD;&#xA;genFiacre5();" codeFiacre="[]&#xD;&#xA;          moveCabinUp;&#xD;&#xA;          receiveCabinMoved;&#xD;&#xA;          to Up_Cabin&#xD;&#xA;        end&#xD;&#xA;&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/264" target="/117/@components.0/@instances.3/@states.1" Name="3">
+    <guard/>
+    <trigger Body="moveCabinDown"/>
+    <action Body="sendMovedDownToController();      &#xD;&#xA;genFiacre3();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/266" target="/117/@components.0/@instances.3/@states.1" Name="4">
+    <guard/>
+    <trigger Body="moveCabinDown"/>
+    <action Body="sendMovedDownToController();       &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.3/@states.1" target="/269" Name="1">
+    <guard/>
+    <trigger Body="braked"/>
+    <action Body="sendCabinBrakedToController();                 &#xD;&#xA;genFiacre1();" codeFiacre="braked;&#xD;&#xA;          p_cab_con_braked;&#xD;&#xA;          to Stop_Cabin"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/270" target="/117/@components.0/@instances.3/@states.2" Name="2">
+    <guard/>
+    <trigger Body="sendFloorAndCloseDoor">
+      <arguments datatype="/24" Name="targetFloor"/>
+    </trigger>
+    <action Body="getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    &#xD;&#xA;genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.3/@states.2" target="/273" Name="3">
+    <guard/>
+    <trigger Body="moveCabinDown"/>
+    <action Body="sendMovedDownToController();      &#xD;&#xA;genFiacre3();" codeFiacre="select&#xD;&#xA;          moveCabinDown ;&#xD;&#xA;          receiveCabinMoved;&#xD;&#xA;          to Down_Cabin"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.3/@states.2" target="/275" Name="7">
+    <guard/>
+    <trigger Body="moveCabinUp"/>
+    <action Body="sendMovedUpToController();         &#xD;&#xA;genFiacre7();" codeFiacre="[]&#xD;&#xA;          moveCabinUp;&#xD;&#xA;          receiveCabinMoved;&#xD;&#xA;          to Up_Cabin&#xD;&#xA;        end"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/276" target="/117/@components.0/@instances.3/@states.3" Name="5">
+    <guard/>
+    <trigger Body="moveCabinUp"/>
+    <action Body="sendMovedUpToController();   &#xD;&#xA;genFiacre5();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/278" target="/117/@components.0/@instances.3/@states.3" Name="7">
+    <guard/>
+    <trigger Body="moveCabinUp"/>
+    <action Body="sendMovedUpToController();         &#xD;&#xA;genFiacre7();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.3/@states.3" target="/281" Name="6">
+    <guard/>
+    <trigger Body="braked"/>
+    <action Body="sendCabinBrakedToController();  &#xD;&#xA;genFiacre6();" codeFiacre="braked;&#xD;&#xA;          braked;&#xD;&#xA;          to Stop_Cabin&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/297" target="/117/@components.0/@instances.4/@states.0" Name="1">
+    <guard/>
+    <trigger Body="OpenDoor"/>
+    <action Body="genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.4/@states.0" target="/300" Name="2">
+    <guard/>
+    <trigger Body="CloseDoor"/>
+    <action Body="genFiacre2();" codeFiacre="CloseDoor;&#xD;&#xA;          to Closed_Door"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/301" target="/117/@components.0/@instances.4/@states.1" Name="2">
+    <guard/>
+    <trigger Body="CloseDoor"/>
+    <action Body="genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.4/@states.1" target="/304" Name="3">
+    <guard/>
+    <trigger/>
+    <action Body="goSleep();&#xD;&#xA;genFiacre3();" codeFiacre="readyToGo;&#xD;&#xA;          to Sleep_Door"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.4/@states.2" Name="0"/>
+  <fiacreMM:Transition source="/305" target="/117/@components.0/@instances.4/@states.2" Name="3">
+    <guard/>
+    <trigger/>
+    <action Body="goSleep();&#xD;&#xA;genFiacre3();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.4/@states.2" target="/308" Name="1">
+    <guard/>
+    <trigger Body="OpenDoor"/>
+    <action Body="genFiacre1();" codeFiacre="OpenDoor;&#xD;&#xA;           to Open_Door&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/316" target="/117/@components.0/@instances.5/@states.0" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.5/@states.0" Name="3"/>
+  <fiacreMM:Transition source="/117/@components.0/@instances.5/@states.0" target="/319" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/31" Name="currentFloor"/>
+      <arguments datatype="/32" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();" codeFiacre="toMeasure ?  floor, cabinFloor;&#xD;&#xA;          to Detecting_Sensor&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/320" target="/117/@components.0/@instances.5/@states.1" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/33" Name="currentFloor"/>
+      <arguments datatype="/34" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/322" target="/117/@components.0/@instances.5/@states.1" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/35" Name="currentFloor"/>
+      <arguments datatype="/36" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.5/@states.1" target="/325" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();" codeFiacre="&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.5/@states.1" target="/327" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/37" Name="currentFloor"/>
+      <arguments datatype="/38" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();" codeFiacre="toMeasure ? cabinFloor;&#xD;&#xA;          if (floor = cabinFloor) then &#xD;&#xA;            case (floor) of &#xD;&#xA;          0 -> p_sen_con_detected; to Detected_Sensor &#xD;&#xA;       | 1 -> P_sen_con_1_detected; to Detected_Sensor&#xD;&#xA;       | 2 -> p_sen_con_2_detected; to Detected_Sensor   &#xD;&#xA;       | 3 -> p_sen_con_3_detected; to Detected_Sensor &#xD;&#xA;       | 4 -> p_sen_con_4_detected; to Detected_Sensor&#xD;&#xA;          end&#xD;&#xA;          else&#xD;&#xA;            case (floor) of &#xD;&#xA;               0 -> p_sen_con_continueToMove &#xD;&#xA;            | 1 -> P_sen_con_1_continueToMove&#xD;&#xA;            | 2 -> p_sen_con_2_continueToMove&#xD;&#xA;            | 3 -> p_sen_con_3_continueToMove &#xD;&#xA;            | 4 -> p_sen_con_4_continueToMove&#xD;&#xA;           end;&#xD;&#xA;           to Detected_Sensor&#xD;&#xA;         end&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/328" target="/117/@components.0/@instances.5/@states.2" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.5/@states.2" target="/331" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();" codeFiacre="to Idle_Sensor"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/341" target="/117/@components.0/@instances.6/@states.0" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.6/@states.0" Name="3"/>
+  <fiacreMM:Transition source="/117/@components.0/@instances.6/@states.0" target="/344" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/49" Name="currentFloor"/>
+      <arguments datatype="/50" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();" codeFiacre="toMeasure ?  floor, cabinFloor;&#xD;&#xA;          to Detecting_Sensor&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/345" target="/117/@components.0/@instances.6/@states.1" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/51" Name="currentFloor"/>
+      <arguments datatype="/52" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/347" target="/117/@components.0/@instances.6/@states.1" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/53" Name="currentFloor"/>
+      <arguments datatype="/54" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.6/@states.1" target="/350" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();" codeFiacre="&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.6/@states.1" target="/352" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/55" Name="currentFloor"/>
+      <arguments datatype="/56" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();" codeFiacre="toMeasure ? cabinFloor;&#xD;&#xA;          if (floor = cabinFloor) then &#xD;&#xA;            case (floor) of &#xD;&#xA;          0 -> p_sen_con_detected; to Detected_Sensor &#xD;&#xA;       | 1 -> P_sen_con_1_detected; to Detected_Sensor&#xD;&#xA;       | 2 -> p_sen_con_2_detected; to Detected_Sensor   &#xD;&#xA;       | 3 -> p_sen_con_3_detected; to Detected_Sensor &#xD;&#xA;       | 4 -> p_sen_con_4_detected; to Detected_Sensor&#xD;&#xA;          end&#xD;&#xA;          else&#xD;&#xA;            case (floor) of &#xD;&#xA;               0 -> p_sen_con_continueToMove &#xD;&#xA;            | 1 -> P_sen_con_1_continueToMove&#xD;&#xA;            | 2 -> p_sen_con_2_continueToMove&#xD;&#xA;            | 3 -> p_sen_con_3_continueToMove &#xD;&#xA;            | 4 -> p_sen_con_4_continueToMove&#xD;&#xA;           end;&#xD;&#xA;           to Detected_Sensor&#xD;&#xA;         end&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/353" target="/117/@components.0/@instances.6/@states.2" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.6/@states.2" target="/356" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();" codeFiacre="to Idle_Sensor"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/366" target="/117/@components.0/@instances.7/@states.0" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.7/@states.0" Name="3"/>
+  <fiacreMM:Transition source="/117/@components.0/@instances.7/@states.0" target="/369" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/67" Name="currentFloor"/>
+      <arguments datatype="/68" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();" codeFiacre="toMeasure ?  floor, cabinFloor;&#xD;&#xA;          to Detecting_Sensor&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/370" target="/117/@components.0/@instances.7/@states.1" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/69" Name="currentFloor"/>
+      <arguments datatype="/70" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/372" target="/117/@components.0/@instances.7/@states.1" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/71" Name="currentFloor"/>
+      <arguments datatype="/72" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.7/@states.1" target="/375" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();" codeFiacre="&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.7/@states.1" target="/377" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/73" Name="currentFloor"/>
+      <arguments datatype="/74" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();" codeFiacre="toMeasure ? cabinFloor;&#xD;&#xA;          if (floor = cabinFloor) then &#xD;&#xA;            case (floor) of &#xD;&#xA;          0 -> p_sen_con_detected; to Detected_Sensor &#xD;&#xA;       | 1 -> P_sen_con_1_detected; to Detected_Sensor&#xD;&#xA;       | 2 -> p_sen_con_2_detected; to Detected_Sensor   &#xD;&#xA;       | 3 -> p_sen_con_3_detected; to Detected_Sensor &#xD;&#xA;       | 4 -> p_sen_con_4_detected; to Detected_Sensor&#xD;&#xA;          end&#xD;&#xA;          else&#xD;&#xA;            case (floor) of &#xD;&#xA;               0 -> p_sen_con_continueToMove &#xD;&#xA;            | 1 -> P_sen_con_1_continueToMove&#xD;&#xA;            | 2 -> p_sen_con_2_continueToMove&#xD;&#xA;            | 3 -> p_sen_con_3_continueToMove &#xD;&#xA;            | 4 -> p_sen_con_4_continueToMove&#xD;&#xA;           end;&#xD;&#xA;           to Detected_Sensor&#xD;&#xA;         end&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/378" target="/117/@components.0/@instances.7/@states.2" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.7/@states.2" target="/381" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();" codeFiacre="to Idle_Sensor"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/391" target="/117/@components.0/@instances.8/@states.0" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.8/@states.0" Name="3"/>
+  <fiacreMM:Transition source="/117/@components.0/@instances.8/@states.0" target="/394" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/85" Name="currentFloor"/>
+      <arguments datatype="/86" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();" codeFiacre="toMeasure ?  floor, cabinFloor;&#xD;&#xA;          to Detecting_Sensor&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/395" target="/117/@components.0/@instances.8/@states.1" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/87" Name="currentFloor"/>
+      <arguments datatype="/88" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/397" target="/117/@components.0/@instances.8/@states.1" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/89" Name="currentFloor"/>
+      <arguments datatype="/90" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.8/@states.1" target="/400" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();" codeFiacre="&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.8/@states.1" target="/402" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/91" Name="currentFloor"/>
+      <arguments datatype="/92" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();" codeFiacre="toMeasure ? cabinFloor;&#xD;&#xA;          if (floor = cabinFloor) then &#xD;&#xA;            case (floor) of &#xD;&#xA;          0 -> p_sen_con_detected; to Detected_Sensor &#xD;&#xA;       | 1 -> P_sen_con_1_detected; to Detected_Sensor&#xD;&#xA;       | 2 -> p_sen_con_2_detected; to Detected_Sensor   &#xD;&#xA;       | 3 -> p_sen_con_3_detected; to Detected_Sensor &#xD;&#xA;       | 4 -> p_sen_con_4_detected; to Detected_Sensor&#xD;&#xA;          end&#xD;&#xA;          else&#xD;&#xA;            case (floor) of &#xD;&#xA;               0 -> p_sen_con_continueToMove &#xD;&#xA;            | 1 -> P_sen_con_1_continueToMove&#xD;&#xA;            | 2 -> p_sen_con_2_continueToMove&#xD;&#xA;            | 3 -> p_sen_con_3_continueToMove &#xD;&#xA;            | 4 -> p_sen_con_4_continueToMove&#xD;&#xA;           end;&#xD;&#xA;           to Detected_Sensor&#xD;&#xA;         end&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/403" target="/117/@components.0/@instances.8/@states.2" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.8/@states.2" target="/406" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();" codeFiacre="to Idle_Sensor"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/416" target="/117/@components.0/@instances.9/@states.0" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition target="/117/@components.0/@instances.9/@states.0" Name="3"/>
+  <fiacreMM:Transition source="/117/@components.0/@instances.9/@states.0" target="/419" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/103" Name="currentFloor"/>
+      <arguments datatype="/104" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();" codeFiacre="toMeasure ?  floor, cabinFloor;&#xD;&#xA;          to Detecting_Sensor&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/420" target="/117/@components.0/@instances.9/@states.1" Name="0">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/105" Name="currentFloor"/>
+      <arguments datatype="/106" Name="sensorFloor"/>
+    </trigger>
+    <action Body="floor=params.sensorFloor;&#xD;&#xA;cabinFloor=params.currentFloor;      &#xD;&#xA;genFiacre0();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/422" target="/117/@components.0/@instances.9/@states.1" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/107" Name="currentFloor"/>
+      <arguments datatype="/108" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.9/@states.1" target="/425" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();" codeFiacre="&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.9/@states.1" target="/427" Name="4">
+    <guard/>
+    <trigger Body="toMeasure">
+      <arguments datatype="/109" Name="currentFloor"/>
+      <arguments datatype="/110" Name="sensorFloor"/>
+    </trigger>
+    <action Body="cabinFloor=params.currentFloor; &#xD;&#xA;checkArrived();   &#xD;&#xA;genFiacre4();" codeFiacre="toMeasure ? cabinFloor;&#xD;&#xA;          if (floor = cabinFloor) then &#xD;&#xA;            case (floor) of &#xD;&#xA;          0 -> p_sen_con_detected; to Detected_Sensor &#xD;&#xA;       | 1 -> P_sen_con_1_detected; to Detected_Sensor&#xD;&#xA;       | 2 -> p_sen_con_2_detected; to Detected_Sensor   &#xD;&#xA;       | 3 -> p_sen_con_3_detected; to Detected_Sensor &#xD;&#xA;       | 4 -> p_sen_con_4_detected; to Detected_Sensor&#xD;&#xA;          end&#xD;&#xA;          else&#xD;&#xA;            case (floor) of &#xD;&#xA;               0 -> p_sen_con_continueToMove &#xD;&#xA;            | 1 -> P_sen_con_1_continueToMove&#xD;&#xA;            | 2 -> p_sen_con_2_continueToMove&#xD;&#xA;            | 3 -> p_sen_con_3_continueToMove &#xD;&#xA;            | 4 -> p_sen_con_4_continueToMove&#xD;&#xA;           end;&#xD;&#xA;           to Detected_Sensor&#xD;&#xA;         end&#xD;&#xA;"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/428" target="/117/@components.0/@instances.9/@states.2" Name="1">
+    <guard/>
+    <trigger Body="cabinArrived"/>
+    <action Body="sendCabinArrived();     &#xD;&#xA;genFiacre1();"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Transition source="/117/@components.0/@instances.9/@states.2" target="/431" Name="2">
+    <guard/>
+    <trigger Body="tm(1)"/>
+    <action Body="genFiacre2();" codeFiacre="to Idle_Sensor"/>
+  </fiacreMM:Transition>
+  <fiacreMM:Variable datatype="/12" processes="/117/@components.0/@instances.1" Name="exBtnFloor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/13" processes="/117/@components.0/@instances.1" Name="currentFloor" initVal="0"/>
+  <fiacreMM:Variable datatype="/14" processes="/117/@components.0/@instances.1" Name="isBusy" initVal="false"/>
+  <fiacreMM:Variable datatype="/15" processes="/117/@components.0/@instances.1" Name="upordown" initVal="0"/>
+  <fiacreMM:Variable datatype="/16" processes="/117/@components.0/@instances.1" Name="targetFloor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/17" processes="/117/@components.0/@instances.1" Name="destFloor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/18" processes="/117/@components.0/@instances.1" Name="loadedPassager" initVal="false"/>
+  <fiacreMM:Variable datatype="/19" processes="/117/@components.0/@instances.2" Name="motor" initVal="0"/>
+  <fiacreMM:Variable datatype="/20" processes="/117/@components.0/@instances.2" Name="frein" initVal="0"/>
+  <fiacreMM:Variable datatype="/21" processes="/117/@components.0/@instances.2" Name="selector" initVal="0"/>
+  <fiacreMM:Variable datatype="/26" processes="/117/@components.0/@instances.3" Name="currentFloor" initVal="0"/>
+  <fiacreMM:Variable datatype="/43" processes="/117/@components.0/@instances.5" Name="floor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/44" processes="/117/@components.0/@instances.5" Name="cabinFloor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/61" processes="/117/@components.0/@instances.6" Name="floor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/62" processes="/117/@components.0/@instances.6" Name="cabinFloor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/79" processes="/117/@components.0/@instances.7" Name="floor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/80" processes="/117/@components.0/@instances.7" Name="cabinFloor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/97" processes="/117/@components.0/@instances.8" Name="floor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/98" processes="/117/@components.0/@instances.8" Name="cabinFloor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/115" processes="/117/@components.0/@instances.9" Name="floor" initVal="-1"/>
+  <fiacreMM:Variable datatype="/116" processes="/117/@components.0/@instances.9" Name="cabinFloor" initVal="-1"/>
+</xmi:XMI>

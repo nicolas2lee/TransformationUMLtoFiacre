@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: ControllerSys
-//!	Generated Date	: Sat, 27, Feb 2016 
+//!	Generated Date	: Sun, 28, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/ControllerSys.java
 *********************************************************************/
 
@@ -82,15 +82,15 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int waitDoorClosed=1;
-    public static final int Wait=2;
-    public static final int recievedRequestFromCabin=3;
-    public static final int receiveRequestFromButtonEx=4;
-    public static final int doorOpened=5;
-    public static final int doorClosed=6;
-    public static final int cabinMoved=7;
-    public static final int cabinBraked=8;
-    public static final int cabinArrived=9;
+    public static final int waitDoorClosed_ControllerSys=1;
+    public static final int Wait_ControllerSys=2;
+    public static final int recievedRequestFromCabin_ControllerSys=3;
+    public static final int receiveRequestFromButtonEx_ControllerSys=4;
+    public static final int doorOpened_ControllerSys=5;
+    public static final int doorClosed_ControllerSys=6;
+    public static final int cabinMoved_ControllerSys=7;
+    public static final int cabinBraked_ControllerSys=8;
+    public static final int cabinArrived_ControllerSys=9;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -389,7 +389,29 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * detected 
+     * select
+     *               p_sen_con_detected;
+     *               stopFromController;
+     *               to cabinArrived_ControllerSys
+     *           []
+     *               p_sen_con_1_detected;
+     *               stopFromController;
+     *               to cabinArrived_ControllerSys
+     *           []
+     *               p_sen_con_2_detected;
+     *               stopFromController;
+     *               to cabinArrived_ControllerSys
+     *           []
+     *               p_sen_con_3_detected ;
+     *               stopFromController;
+     *               to cabinArrived_ControllerSys
+     *           []
+     *               p_sen_con_4_detected; 
+     *               stopFromController;
+     *               to cabinArrived_ControllerSys
+     *          
+     *          
+     * 
     */
     //## operation genFiacre1() 
     public void genFiacre1() {
@@ -408,7 +430,18 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * receiveCabinMoved    (s: recievedRequestFromCabin, t: cabinMoved)
+     * receiveCabinMoved;
+     *           currentFloor := currentFloor + upordown;
+     *           loadedPassager := true;
+     *           case (destFloor) of 
+     *                0 ->  sendToMeasureSensor ! currentFloor, destFloor
+     *             | 1 ->  sendToMeasureSensor_1 ! currentFloor,destFloor
+     *             | 2 ->  sendToMeasureSensor_2 ! currentFloor, destFloor
+     *             | 3 ->  sendToMeasureSensor_3 ! currentFloor,destFloor
+     *             | 4 ->  sendToMeasureSensor_4 ! currentFloor, destFloor
+     *          end;
+     *          to cabinMoved_ControllerSys
+     * 
     */
     //## operation genFiacre10() 
     public void genFiacre10() {
@@ -426,9 +459,6 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
     }
     
-    /**
-     * gotoOpenDoorDirectly    (s: recievedRequestFromCabin, t: cabinBraked )
-    */
     //## operation genFiacre11() 
     public void genFiacre11() {
         try {
@@ -445,9 +475,6 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
     }
     
-    /**
-     * doneTask
-    */
     //## operation genFiacre12() 
     public void genFiacre12() {
         try {
@@ -465,7 +492,10 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * [loadedPassager]
+     * if (loadedPassager) then
+     *           CloseDoor;
+     *           to waitDoorClosed
+     *         end
     */
     //## operation genFiacre13() 
     public void genFiacre13() {
@@ -484,7 +514,10 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * readyToGo      (s: waitDoorClosed, t:  doorClosed)
+     * readyToGo;
+     *           loadedPassager := false;
+     *           to Wait_ControllerSys
+     * 
     */
     //## operation genFiacre14() 
     public void genFiacre14() {
@@ -503,7 +536,10 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * readyToOpenDoor
+     * readyToOpenDoor;
+     *           OpenDoor;
+     *           to doorOpened_ControllerSys
+     * 
     */
     //## operation genFiacre2() 
     public void genFiacre2() {
@@ -522,7 +558,10 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     *  receiveFloorAndCloseDoor
+     * targetFloor := 1;
+     *           destFloor := targetFloor;
+     *           closeDoor;
+     *           to doorClosed_ControllerSys
     */
     //## operation genFiacre3() 
     public void genFiacre3() {
@@ -541,7 +580,36 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * readyToGo    (s : doorClosed, t : recievedRequestFromCabin) 
+     * readyToGo;
+     *           if (currentFloor < targetFloor) then
+     *               goUp;   
+     *               upordown := 1; 
+     *               case (targetFloor) of 
+     *                  0 ->  sendToMeasureSensor ! currentFloor, targetFloor
+     *               | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor
+     *               | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor
+     *               | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor
+     *               | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor
+     *                 end;
+     *                 to recievedRequestFromCabin_ControllerSys
+     *           else
+     *                 if (currentFloor == targetFloor) then
+     *                     openDoor;
+     *                     to doorOpened_ControllerSys
+     *                 else
+     *                      goDown; 
+     *                      upordown := -1;  
+     *                      case (targetFloor) of 
+     *                        0 ->  sendToMeasureSensor ! currentFloor, targetFloor
+     *                     | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor
+     *                     | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor
+     *                     | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor
+     *                     | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor
+     *                      end;
+     *                      to recievedRequestFromCabin_ControllerSys
+     *                 end
+     *           end 
+     * 
     */
     //## operation genFiacre4() 
     public void genFiacre4() {
@@ -560,20 +628,34 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * receiveFromButton_Ex !  requestFloor;
-     * exBtnFloor := requestFloor;
-     * destFloor := exBtnFloor;
-     * if (currentFloor < exBtnFloor) then
-     * 	p_con_win_ goUp;   
-     * 	upordown :=1 ;  
-     * 	sendToMeasureSensor ! exBtnFloor;
-     * else
-     * 	
-     * 	getP_con_win().gen(new goDown()); 
-     * 	upordown :=-1;  
-     *                sendToMeasureSensor ! exBtnFloor;
-     * end;
-     * to ReceiveRequestFromButtonEx
+     * receiveFromButton_Ex ?  exBtnFloor;
+     *           destFloor := exBtnFloor;
+     *           if (currentFloor < exBtnFloor) then
+     *               goUp;   
+     *               upordown :=1 ;  
+     *           case (exBtnFloor) of 
+     *                0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor
+     *             | 1 ->  sendToMeasureSensor_1 ! currentFloor, exBtnFloor
+     *             | 2 ->  sendToMeasureSensor_2 ! currentFloor, exBtnFloor
+     *             | 3 ->  sendToMeasureSensor_3 ! currentFloor, exBtnFloor
+     *             | 4 ->  sendToMeasureSensor_4 ! currentFloor, exBtnFloor
+     *            end;
+     *                  to ReceiveRequestFromButtonEx_ControllerSys
+     *             elseif (currentFloor > exBtnFloor) then 	
+     *                  goDown; 
+     *                  upordown := -1;  
+     *                  case (exBtnFloor) of 
+     *                    0 ->  sendToMeasureSensor !  currentFloor,  exBtnFloor
+     *                 | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor
+     *                 | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor
+     *                 | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor
+     *                 | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor
+     *                 end;
+     *                 to ReceiveRequestFromButtonEx
+     *             else
+     *                 to ReceiveRequestFromButtonEx
+     *             end
+     * 
      * 
     */
     //## operation genFiacre5() 
@@ -593,7 +675,17 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * receiveCabinMoved     (s: receiveRequestFromButtonEx, t: cabinMoved )
+     * receiveCabinMoved;
+     *           currentFloor := currentFloor + upordown;
+     *           case (exBtnFloor) of 
+     *                0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor
+     *             | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor
+     *             | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor
+     *             | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor
+     *             | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor
+     *            end;
+     *            to cabinMoved_ControllerSys
+     * 
     */
     //## operation genFiacre6() 
     public void genFiacre6() {
@@ -612,7 +704,9 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * braked
+     * braked;
+     *           stop;
+     *           to cabinBraked
     */
     //## operation genFiacre7() 
     public void genFiacre7() {
@@ -632,10 +726,9 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * if (currentFloor = exBtnFloor) then   
-     * //getP_con_door().gen (new OpenDoor());
      *                 p_con_door_OpenDoor;
-     * 	to doorOpened
-     * end;
+     *                 to doorOpened
+     *           end;
      * 
     */
     //## operation genFiacre8() 
@@ -655,7 +748,35 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * continueToMove
+     * []
+     *               p_sen_con_continueToMove;
+     *               currentFloor = currentFloor +upordown; 
+     *               toMeasureSensor ! currentFloor, destfloor;
+     *               to cabinMoved_ControllerSys
+     *           []
+     *               p_sen_con_1_continueToMove; 
+     *               currentFloor = currentFloor +upordown; 
+     *               sendToMeasureSensor_1 ! currentFloor, destfloor;
+     *              to cabinMoved_ControllerSys
+     *           []
+     *               p_sen_con_2_continueToMove;
+     *               currentFloor = currentFloor +upordown; 
+     *               sendToMeasureSensor_2 ! currentFloor, destfloor;
+     *               to cabinMoved_ControllerSys
+     *           []
+     *               p_sen_con_3_continueToMove;
+     *               currentFloor = currentFloor +upordown; 
+     *               sendToMeasureSensor_3 ! currentFloor, destfloor;
+     *               to cabinMoved_ControllerSys
+     *           []
+     *               p_sen_con_4_continueToMove;
+     *               currentFloor = currentFloor +upordown; 
+     *               sendToMeasureSensor_4 ! currentFloor, destfloor;
+     *               to cabinMoved_ControllerSys
+     *          end;
+     * 
+     * 
+     * 
     */
     //## operation genFiacre9() 
     public void genFiacre9() {
@@ -1076,49 +1197,49 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
-                case Wait:
+                case Wait_ControllerSys:
                 {
-                    Wait_add(animStates);
+                    Wait_ControllerSys_add(animStates);
                 }
                 break;
-                case cabinMoved:
+                case cabinMoved_ControllerSys:
                 {
-                    cabinMoved_add(animStates);
+                    cabinMoved_ControllerSys_add(animStates);
                 }
                 break;
-                case cabinArrived:
+                case cabinArrived_ControllerSys:
                 {
-                    cabinArrived_add(animStates);
+                    cabinArrived_ControllerSys_add(animStates);
                 }
                 break;
-                case doorOpened:
+                case doorOpened_ControllerSys:
                 {
-                    doorOpened_add(animStates);
+                    doorOpened_ControllerSys_add(animStates);
                 }
                 break;
-                case doorClosed:
+                case doorClosed_ControllerSys:
                 {
-                    doorClosed_add(animStates);
+                    doorClosed_ControllerSys_add(animStates);
                 }
                 break;
-                case receiveRequestFromButtonEx:
+                case receiveRequestFromButtonEx_ControllerSys:
                 {
-                    receiveRequestFromButtonEx_add(animStates);
+                    receiveRequestFromButtonEx_ControllerSys_add(animStates);
                 }
                 break;
-                case cabinBraked:
+                case cabinBraked_ControllerSys:
                 {
-                    cabinBraked_add(animStates);
+                    cabinBraked_ControllerSys_add(animStates);
                 }
                 break;
-                case recievedRequestFromCabin:
+                case recievedRequestFromCabin_ControllerSys:
                 {
-                    recievedRequestFromCabin_add(animStates);
+                    recievedRequestFromCabin_ControllerSys_add(animStates);
                 }
                 break;
-                case waitDoorClosed:
+                case waitDoorClosed_ControllerSys:
                 {
-                    waitDoorClosed_add(animStates);
+                    waitDoorClosed_ControllerSys_add(animStates);
                 }
                 break;
                 default:
@@ -1138,49 +1259,49 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
-                case Wait:
+                case Wait_ControllerSys:
                 {
-                    res = Wait_takeEvent(id);
+                    res = Wait_ControllerSys_takeEvent(id);
                 }
                 break;
-                case cabinMoved:
+                case cabinMoved_ControllerSys:
                 {
-                    res = cabinMoved_takeEvent(id);
+                    res = cabinMoved_ControllerSys_takeEvent(id);
                 }
                 break;
-                case cabinArrived:
+                case cabinArrived_ControllerSys:
                 {
-                    res = cabinArrived_takeEvent(id);
+                    res = cabinArrived_ControllerSys_takeEvent(id);
                 }
                 break;
-                case doorOpened:
+                case doorOpened_ControllerSys:
                 {
-                    res = doorOpened_takeEvent(id);
+                    res = doorOpened_ControllerSys_takeEvent(id);
                 }
                 break;
-                case doorClosed:
+                case doorClosed_ControllerSys:
                 {
-                    res = doorClosed_takeEvent(id);
+                    res = doorClosed_ControllerSys_takeEvent(id);
                 }
                 break;
-                case receiveRequestFromButtonEx:
+                case receiveRequestFromButtonEx_ControllerSys:
                 {
-                    res = receiveRequestFromButtonEx_takeEvent(id);
+                    res = receiveRequestFromButtonEx_ControllerSys_takeEvent(id);
                 }
                 break;
-                case cabinBraked:
+                case cabinBraked_ControllerSys:
                 {
-                    res = cabinBraked_takeEvent(id);
+                    res = cabinBraked_ControllerSys_takeEvent(id);
                 }
                 break;
-                case recievedRequestFromCabin:
+                case recievedRequestFromCabin_ControllerSys:
                 {
-                    res = recievedRequestFromCabin_takeEvent(id);
+                    res = recievedRequestFromCabin_ControllerSys_takeEvent(id);
                 }
                 break;
-                case waitDoorClosed:
+                case waitDoorClosed_ControllerSys:
                 {
-                    res = waitDoorClosed_takeEvent(id);
+                    res = waitDoorClosed_ControllerSys_takeEvent(id);
                 }
                 break;
                 default:
@@ -1190,48 +1311,48 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void waitDoorClosed_add(AnimStates animStates) {
-            animStates.add("ROOT.waitDoorClosed");
+        public void waitDoorClosed_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.waitDoorClosed_ControllerSys");
         }
         
         //## statechart_method 
-        public void Wait_add(AnimStates animStates) {
-            animStates.add("ROOT.Wait");
+        public void Wait_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.Wait_ControllerSys");
         }
         
         //## statechart_method 
-        public void recievedRequestFromCabin_add(AnimStates animStates) {
-            animStates.add("ROOT.recievedRequestFromCabin");
+        public void recievedRequestFromCabin_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.recievedRequestFromCabin_ControllerSys");
         }
         
         //## statechart_method 
-        public void receiveRequestFromButtonEx_add(AnimStates animStates) {
-            animStates.add("ROOT.receiveRequestFromButtonEx");
+        public void receiveRequestFromButtonEx_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.receiveRequestFromButtonEx_ControllerSys");
         }
         
         //## statechart_method 
-        public void doorOpened_add(AnimStates animStates) {
-            animStates.add("ROOT.doorOpened");
+        public void doorOpened_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.doorOpened_ControllerSys");
         }
         
         //## statechart_method 
-        public void doorClosed_add(AnimStates animStates) {
-            animStates.add("ROOT.doorClosed");
+        public void doorClosed_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.doorClosed_ControllerSys");
         }
         
         //## statechart_method 
-        public void cabinMoved_add(AnimStates animStates) {
-            animStates.add("ROOT.cabinMoved");
+        public void cabinMoved_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.cabinMoved_ControllerSys");
         }
         
         //## statechart_method 
-        public void cabinBraked_add(AnimStates animStates) {
-            animStates.add("ROOT.cabinBraked");
+        public void cabinBraked_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.cabinBraked_ControllerSys");
         }
         
         //## statechart_method 
-        public void cabinArrived_add(AnimStates animStates) {
-            animStates.add("ROOT.cabinArrived");
+        public void cabinArrived_ControllerSys_add(AnimStates animStates) {
+            animStates.add("ROOT.cabinArrived_ControllerSys");
         }
         
         //## auto_generated 
@@ -1241,316 +1362,282 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int doorClosedTakereadyToGo() {
+        public int cabinArrived_ControllerSys_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("4");
-            doorClosed_exit();
-            //#[ transition 4 
-            if (currentFloor < targetFloor){
-            	getP_con_win().gen(new goUp());   
-            	upordown=1; 
-            	
-            	sendToMeasureSensor(targetFloor);
-            }else{
-            	if (currentFloor == targetFloor) {
-            		//open the door         
-            		gen (new gotoOpenDoorDirectly());
-            	}else{
-            		getP_con_win().gen(new goDown()); 
-            		upordown=-1;  
-            		
-            		sendToMeasureSensor(targetFloor);
-            	}
-            } 
-            genFiacre4();
+            if(event.isTypeOf(braked.braked_Ascenseur_id))
+                {
+                    res = cabinArrived_ControllerSysTakebraked();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void cabinArrived_ControllerSys_exit() {
+            cabinArrived_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.cabinArrived_ControllerSys");
+        }
+        
+        //## statechart_method 
+        public int cabinMoved_ControllerSys_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(continueToMove.continueToMove_Ascenseur_id))
+                {
+                    res = cabinMoved_ControllerSysTakecontinueToMove();
+                }
+            else if(event.isTypeOf(detected.detected_Ascenseur_id))
+                {
+                    res = cabinMoved_ControllerSysTakedetected();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int cabinMoved_ControllerSysTakedetected() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            cabinMoved_ControllerSys_exit();
+            //#[ transition 1 
+            sendStopToWinch();   
+            genFiacre1();
             //#]
-            recievedRequestFromCabin_entDef();
-            animInstance().notifyTransitionEnded("4");
+            cabinArrived_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void doorOpenedEnter() {
+        public void cabinMoved_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.cabinMoved_ControllerSys");
+            rootState_subState = cabinMoved_ControllerSys;
+            rootState_active = cabinMoved_ControllerSys;
+            cabinMoved_ControllerSysEnter();
         }
         
         //## statechart_method 
-        public void recievedRequestFromCabin_entDef() {
-            recievedRequestFromCabin_enter();
+        public void doorClosed_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.doorClosed_ControllerSys");
+            rootState_subState = doorClosed_ControllerSys;
+            rootState_active = doorClosed_ControllerSys;
+            doorClosed_ControllerSysEnter();
         }
         
         //## statechart_method 
-        public int waitDoorClosed_takeEvent(short id) {
+        public void recievedRequestFromCabin_ControllerSysExit() {
+        }
+        
+        //## statechart_method 
+        public void waitDoorClosed_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public void doorClosed_ControllerSys_entDef() {
+            doorClosed_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public void receiveRequestFromButtonEx_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.receiveRequestFromButtonEx_ControllerSys");
+            rootState_subState = receiveRequestFromButtonEx_ControllerSys;
+            rootState_active = receiveRequestFromButtonEx_ControllerSys;
+            receiveRequestFromButtonEx_ControllerSysEnter();
+        }
+        
+        //## statechart_method 
+        public int recievedRequestFromCabin_ControllerSysTakegotoOpenDoorDirectly() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(readyToGo.readyToGo_Ascenseur_id))
-                {
-                    res = waitDoorClosedTakereadyToGo();
-                }
-            
-            return res;
-        }
-        
-        //## statechart_method 
-        public void cabinMoved_entDef() {
-            cabinMoved_enter();
-        }
-        
-        //## statechart_method 
-        public int receiveRequestFromButtonExTakegotoOpenDoorDirectly() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("8");
-            receiveRequestFromButtonEx_exit();
-            //#[ transition 8 
-            System.out.println("ready to open"); 
-            gen (new readyToOpenDoor());    
-            genFiacre8();
+            animInstance().notifyTransitionStarted("11");
+            recievedRequestFromCabin_ControllerSys_exit();
+            //#[ transition 11 
+            gen(new readyToOpenDoor());                 
+            genFiacre11();
             //#]
-            cabinBraked_entDef();
-            animInstance().notifyTransitionEnded("8");
+            cabinBraked_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("11");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void receiveRequestFromButtonExEnter() {
-        }
-        
-        //## statechart_method 
-        public void receiveRequestFromButtonEx_entDef() {
-            receiveRequestFromButtonEx_enter();
-        }
-        
-        //## statechart_method 
-        public void recievedRequestFromCabin_exit() {
-            recievedRequestFromCabinExit();
-            animInstance().notifyStateExited("ROOT.recievedRequestFromCabin");
-        }
-        
-        //## statechart_method 
-        public void recievedRequestFromCabin_enter() {
-            animInstance().notifyStateEntered("ROOT.recievedRequestFromCabin");
-            rootState_subState = recievedRequestFromCabin;
-            rootState_active = recievedRequestFromCabin;
-            recievedRequestFromCabinEnter();
-        }
-        
-        //## statechart_method 
-        public void cabinArrived_exit() {
-            cabinArrivedExit();
-            animInstance().notifyStateExited("ROOT.cabinArrived");
-        }
-        
-        //## statechart_method 
-        public int receiveRequestFromButtonEx_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(receiveCabinMoved.receiveCabinMoved_Ascenseur_id))
-                {
-                    res = receiveRequestFromButtonExTakereceiveCabinMoved();
-                }
-            else if(event.isTypeOf(gotoOpenDoorDirectly.gotoOpenDoorDirectly_Ascenseur_id))
-                {
-                    res = receiveRequestFromButtonExTakegotoOpenDoorDirectly();
-                }
-            
-            return res;
-        }
-        
-        //## statechart_method 
-        public void waitDoorClosed_exit() {
-            waitDoorClosedExit();
-            animInstance().notifyStateExited("ROOT.waitDoorClosed");
-        }
-        
-        //## statechart_method 
-        public int doorClosed_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(doneTask.doneTask_Ascenseur_id))
-                {
-                    res = doorClosedTakedoneTask();
-                }
-            else if(event.isTypeOf(readyToGo.readyToGo_Ascenseur_id))
-                {
-                    res = doorClosedTakereadyToGo();
-                }
-            
-            return res;
-        }
-        
-        //## statechart_method 
-        public void doorOpened_exit() {
-            popNullConfig();
-            doorOpenedExit();
-            animInstance().notifyStateExited("ROOT.doorOpened");
-        }
-        
-        //## statechart_method 
-        public void waitDoorClosed_entDef() {
-            waitDoorClosed_enter();
-        }
-        
-        //## statechart_method 
-        public int cabinBraked_takeEvent(short id) {
+        public int cabinBraked_ControllerSys_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(readyToOpenDoor.readyToOpenDoor_Ascenseur_id))
                 {
-                    res = cabinBrakedTakereadyToOpenDoor();
+                    res = cabinBraked_ControllerSysTakereadyToOpenDoor();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public void cabinMovedExit() {
+        public int receiveRequestFromButtonEx_ControllerSys_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(receiveCabinMoved.receiveCabinMoved_Ascenseur_id))
+                {
+                    res = receiveRequestFromButtonEx_ControllerSysTakereceiveCabinMoved();
+                }
+            else if(event.isTypeOf(gotoOpenDoorDirectly.gotoOpenDoorDirectly_Ascenseur_id))
+                {
+                    res = receiveRequestFromButtonEx_ControllerSysTakegotoOpenDoorDirectly();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
-        public void doorOpened_entDef() {
-            doorOpened_enter();
-        }
-        
-        //## statechart_method 
-        public void receiveRequestFromButtonEx_exit() {
-            receiveRequestFromButtonExExit();
-            animInstance().notifyStateExited("ROOT.receiveRequestFromButtonEx");
-        }
-        
-        //## statechart_method 
-        public void recievedRequestFromCabinExit() {
-        }
-        
-        //## statechart_method 
-        public int Wait_takeEvent(short id) {
+        public int Wait_ControllerSys_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(receiveFromButton_Ex.receiveFromButton_Ex_Ascenseur_id))
                 {
-                    res = WaitTakereceiveFromButton_Ex();
+                    res = Wait_ControllerSysTakereceiveFromButton_Ex();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public int cabinBrakedTakereadyToOpenDoor() {
+        public int waitDoorClosed_ControllerSys_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
-            cabinBraked_exit();
-            //#[ transition 2 
-             openDoor();
-             genFiacre2();
-            //#]
-            doorOpened_entDef();
-            animInstance().notifyTransitionEnded("2");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            if(event.isTypeOf(readyToGo.readyToGo_Ascenseur_id))
+                {
+                    res = waitDoorClosed_ControllerSysTakereadyToGo();
+                }
+            
             return res;
         }
         
         //## statechart_method 
-        public void doorClosed_entDef() {
-            doorClosed_enter();
+        public void cabinMoved_ControllerSysExit() {
         }
         
         //## statechart_method 
-        public int receiveRequestFromButtonExTakereceiveCabinMoved() {
+        public int receiveRequestFromButtonEx_ControllerSysTakereceiveCabinMoved() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("6");
-            receiveRequestFromButtonEx_exit();
+            receiveRequestFromButtonEx_ControllerSys_exit();
             //#[ transition 6 
             currentFloor+=upordown;   
             sendToMeasureSensor(destFloor);       
             genFiacre6();
             //#]
-            cabinMoved_entDef();
+            cabinMoved_ControllerSys_entDef();
             animInstance().notifyTransitionEnded("6");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public int cabinArrivedTakebraked() {
+        public void Wait_ControllerSys_entDef() {
+            Wait_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public void waitDoorClosed_ControllerSys_exit() {
+            waitDoorClosed_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.waitDoorClosed_ControllerSys");
+        }
+        
+        //## statechart_method 
+        public void cabinMoved_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public int doorClosed_ControllerSys_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("7");
-            cabinArrived_exit();
-            //#[ transition 7 
-            sendToWinchToStop();     
-            genFiacre7();
-            //#]
-            cabinBraked_entDef();
-            animInstance().notifyTransitionEnded("7");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void cabinBrakedEnter() {
-        }
-        
-        //## statechart_method 
-        public void receiveRequestFromButtonEx_enter() {
-            animInstance().notifyStateEntered("ROOT.receiveRequestFromButtonEx");
-            rootState_subState = receiveRequestFromButtonEx;
-            rootState_active = receiveRequestFromButtonEx;
-            receiveRequestFromButtonExEnter();
-        }
-        
-        //## statechart_method 
-        public int recievedRequestFromCabinTakereceiveCabinMoved() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("10");
-            recievedRequestFromCabin_exit();
-            //#[ transition 10 
-            currentFloor+=upordown;   
-            loadedPassager=true;        
-            sendToMeasureSensor(destFloor);      
-            genFiacre10();
-            //#]
-            cabinMoved_entDef();
-            animInstance().notifyTransitionEnded("10");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void WaitExit() {
-        }
-        
-        //## statechart_method 
-        public int rootState_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            return res;
-        }
-        
-        //## statechart_method 
-        public int cabinArrived_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(braked.braked_Ascenseur_id))
+            if(event.isTypeOf(doneTask.doneTask_Ascenseur_id))
                 {
-                    res = cabinArrivedTakebraked();
+                    res = doorClosed_ControllerSysTakedoneTask();
+                }
+            else if(event.isTypeOf(readyToGo.readyToGo_Ascenseur_id))
+                {
+                    res = doorClosed_ControllerSysTakereadyToGo();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public int cabinMoved_takeEvent(short id) {
+        public void Wait_ControllerSysExit() {
+        }
+        
+        //## statechart_method 
+        public void cabinArrived_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.cabinArrived_ControllerSys");
+            rootState_subState = cabinArrived_ControllerSys;
+            rootState_active = cabinArrived_ControllerSys;
+            cabinArrived_ControllerSysEnter();
+        }
+        
+        //## statechart_method 
+        public void cabinBraked_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public int doorOpened_ControllerSysTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(continueToMove.continueToMove_Ascenseur_id))
+            //## transition 13 
+            if(loadedPassager)
                 {
-                    res = cabinMovedTakecontinueToMove();
+                    animInstance().notifyTransitionStarted("13");
+                    doorOpened_ControllerSys_exit();
+                    //#[ transition 13 
+                    closeDoor();     
+                    genFiacre13();
+                    //#]
+                    waitDoorClosed_ControllerSys_entDef();
+                    animInstance().notifyTransitionEnded("13");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
-            else if(event.isTypeOf(detected.detected_Ascenseur_id))
-                {
-                    res = cabinMovedTakedetected();
-                }
-            
             return res;
         }
         
         //## statechart_method 
-        public int WaitTakereceiveFromButton_Ex() {
+        public void Wait_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.Wait_ControllerSys");
+            rootState_subState = Wait_ControllerSys;
+            rootState_active = Wait_ControllerSys;
+            Wait_ControllerSysEnter();
+        }
+        
+        //## statechart_method 
+        public int doorClosed_ControllerSysTakedoneTask() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("12");
+            doorClosed_ControllerSys_exit();
+            //#[ transition 12 
+            loadedPassager=false;         
+            genFiacre12();
+            //#]
+            Wait_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("12");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void doorClosed_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public void doorOpened_ControllerSysExit() {
+        }
+        
+        //## statechart_method 
+        public void receiveRequestFromButtonEx_ControllerSysExit() {
+        }
+        
+        //## statechart_method 
+        public void recievedRequestFromCabin_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public int Wait_ControllerSysTakereceiveFromButton_Ex() {
             receiveFromButton_Ex params = (receiveFromButton_Ex) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("5");
-            Wait_exit();
+            Wait_ControllerSys_exit();
             //#[ transition 5 
             exBtnFloor=params.requestedFloor;       
             destFloor=exBtnFloor;
@@ -1570,37 +1657,65 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
             }    
             genFiacre5();
             //#]
-            receiveRequestFromButtonEx_entDef();
+            receiveRequestFromButtonEx_ControllerSys_entDef();
             animInstance().notifyTransitionEnded("5");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void waitDoorClosedExit() {
-        }
-        
-        //## statechart_method 
-        public void cabinMovedEnter() {
-        }
-        
-        //## statechart_method 
-        public void doorClosedEnter() {
-        }
-        
-        //## statechart_method 
-        public int recievedRequestFromCabinTakegotoOpenDoorDirectly() {
+        public int rootState_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("11");
-            recievedRequestFromCabin_exit();
-            //#[ transition 11 
-            gen(new readyToOpenDoor());                 
-            genFiacre11();
-            //#]
-            cabinBraked_entDef();
-            animInstance().notifyTransitionEnded("11");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
+        }
+        
+        //## statechart_method 
+        public void cabinMoved_ControllerSys_exit() {
+            cabinMoved_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.cabinMoved_ControllerSys");
+        }
+        
+        //## statechart_method 
+        public int doorOpened_ControllerSys_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(receiveFloorAndCloseDoor.receiveFloorAndCloseDoor_Ascenseur_id))
+                {
+                    res = doorOpened_ControllerSysTakereceiveFloorAndCloseDoor();
+                }
+            else if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = doorOpened_ControllerSysTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void doorOpened_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public void cabinBraked_ControllerSys_exit() {
+            cabinBraked_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.cabinBraked_ControllerSys");
+        }
+        
+        //## statechart_method 
+        public void cabinMoved_ControllerSys_entDef() {
+            cabinMoved_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public void doorOpened_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.doorOpened_ControllerSys");
+            pushNullConfig();
+            rootState_subState = doorOpened_ControllerSys;
+            rootState_active = doorOpened_ControllerSys;
+            doorOpened_ControllerSysEnter();
+        }
+        
+        //## statechart_method 
+        public void waitDoorClosed_ControllerSysExit() {
         }
         
         //## statechart_method 
@@ -1614,224 +1729,208 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void cabinArrivedExit() {
+        public void cabinBraked_ControllerSys_entDef() {
+            cabinBraked_ControllerSys_enter();
         }
         
         //## statechart_method 
-        public void cabinBraked_exit() {
-            cabinBrakedExit();
-            animInstance().notifyStateExited("ROOT.cabinBraked");
+        public void doorClosed_ControllerSys_exit() {
+            doorClosed_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.doorClosed_ControllerSys");
         }
         
         //## statechart_method 
-        public void cabinBraked_entDef() {
-            cabinBraked_enter();
+        public void recievedRequestFromCabin_ControllerSys_exit() {
+            recievedRequestFromCabin_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.recievedRequestFromCabin_ControllerSys");
         }
         
         //## statechart_method 
-        public void Wait_enter() {
-            animInstance().notifyStateEntered("ROOT.Wait");
-            rootState_subState = Wait;
-            rootState_active = Wait;
-            WaitEnter();
-        }
-        
-        //## statechart_method 
-        public int waitDoorClosedTakereadyToGo() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("14");
-            waitDoorClosed_exit();
-            //#[ transition 14 
-            gen(new doneTask());       
-            genFiacre14();
-            //#]
-            doorClosed_entDef();
-            animInstance().notifyTransitionEnded("14");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void cabinArrived_entDef() {
-            cabinArrived_enter();
-        }
-        
-        //## statechart_method 
-        public int cabinMovedTakedetected() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            cabinMoved_exit();
-            //#[ transition 1 
-            sendStopToWinch();   
-            genFiacre1();
-            //#]
-            cabinArrived_entDef();
-            animInstance().notifyTransitionEnded("1");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void cabinMoved_exit() {
-            cabinMovedExit();
-            animInstance().notifyStateExited("ROOT.cabinMoved");
-        }
-        
-        //## statechart_method 
-        public void cabinMoved_enter() {
-            animInstance().notifyStateEntered("ROOT.cabinMoved");
-            rootState_subState = cabinMoved;
-            rootState_active = cabinMoved;
-            cabinMovedEnter();
-        }
-        
-        //## statechart_method 
-        public int doorClosedTakedoneTask() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("12");
-            doorClosed_exit();
-            //#[ transition 12 
-            loadedPassager=false;         
-            genFiacre12();
-            //#]
-            Wait_entDef();
-            animInstance().notifyTransitionEnded("12");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void doorClosed_exit() {
-            doorClosedExit();
-            animInstance().notifyStateExited("ROOT.doorClosed");
-        }
-        
-        //## statechart_method 
-        public int doorOpenedTakeNull() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            //## transition 13 
-            if(loadedPassager)
-                {
-                    animInstance().notifyTransitionStarted("13");
-                    doorOpened_exit();
-                    //#[ transition 13 
-                    closeDoor();     
-                    genFiacre13();
-                    //#]
-                    waitDoorClosed_entDef();
-                    animInstance().notifyTransitionEnded("13");
-                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-                }
-            return res;
-        }
-        
-        //## statechart_method 
-        public void doorOpenedExit() {
-        }
-        
-        //## statechart_method 
-        public void WaitEnter() {
-        }
-        
-        //## statechart_method 
-        public void rootStateEntDef() {
-            animInstance().notifyTransitionStarted("0");
-            Wait_entDef();
-            animInstance().notifyTransitionEnded("0");
-        }
-        
-        //## statechart_method 
-        public void cabinBrakedExit() {
-        }
-        
-        //## statechart_method 
-        public void doorClosedExit() {
-        }
-        
-        //## statechart_method 
-        public int doorOpenedTakereceiveFloorAndCloseDoor() {
-            receiveFloorAndCloseDoor params = (receiveFloorAndCloseDoor) event;
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("3");
-            doorOpened_exit();
-            //#[ transition 3 
-            closeDoor();
-            targetFloor=params.requestedTargetFloor;    
-            destFloor=targetFloor;     
-            genFiacre3();
-            //#]
-            doorClosed_entDef();
-            animInstance().notifyTransitionEnded("3");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void waitDoorClosed_enter() {
-            animInstance().notifyStateEntered("ROOT.waitDoorClosed");
-            rootState_subState = waitDoorClosed;
-            rootState_active = waitDoorClosed;
-            waitDoorClosedEnter();
-        }
-        
-        //## statechart_method 
-        public int cabinMovedTakecontinueToMove() {
+        public int cabinMoved_ControllerSysTakecontinueToMove() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("9");
-            cabinMoved_exit();
+            cabinMoved_ControllerSys_exit();
             //#[ transition 9 
             currentFloor+=upordown;   
             sendToMeasureSensor(destFloor);     
             genFiacre9();
             //#]
-            cabinMoved_entDef();
+            cabinMoved_ControllerSys_entDef();
             animInstance().notifyTransitionEnded("9");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void doorClosed_enter() {
-            animInstance().notifyStateEntered("ROOT.doorClosed");
-            rootState_subState = doorClosed;
-            rootState_active = doorClosed;
-            doorClosedEnter();
-        }
-        
-        //## statechart_method 
-        public int doorOpened_takeEvent(short id) {
+        public int doorOpened_ControllerSysTakereceiveFloorAndCloseDoor() {
+            receiveFloorAndCloseDoor params = (receiveFloorAndCloseDoor) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(receiveFloorAndCloseDoor.receiveFloorAndCloseDoor_Ascenseur_id))
-                {
-                    res = doorOpenedTakereceiveFloorAndCloseDoor();
-                }
-            else if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
-                {
-                    res = doorOpenedTakeNull();
-                }
-            
+            animInstance().notifyTransitionStarted("3");
+            doorOpened_ControllerSys_exit();
+            //#[ transition 3 
+            closeDoor();
+            targetFloor=params.requestedTargetFloor;    
+            destFloor=targetFloor;     
+            genFiacre3();
+            //#]
+            doorClosed_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("3");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public int recievedRequestFromCabin_takeEvent(short id) {
+        public void doorOpened_ControllerSys_exit() {
+            popNullConfig();
+            doorOpened_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.doorOpened_ControllerSys");
+        }
+        
+        //## statechart_method 
+        public void receiveRequestFromButtonEx_ControllerSys_entDef() {
+            receiveRequestFromButtonEx_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public int recievedRequestFromCabin_ControllerSys_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(receiveCabinMoved.receiveCabinMoved_Ascenseur_id))
                 {
-                    res = recievedRequestFromCabinTakereceiveCabinMoved();
+                    res = recievedRequestFromCabin_ControllerSysTakereceiveCabinMoved();
                 }
             else if(event.isTypeOf(gotoOpenDoorDirectly.gotoOpenDoorDirectly_Ascenseur_id))
                 {
-                    res = recievedRequestFromCabinTakegotoOpenDoorDirectly();
+                    res = recievedRequestFromCabin_ControllerSysTakegotoOpenDoorDirectly();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public void Wait_exit() {
-            WaitExit();
-            animInstance().notifyStateExited("ROOT.Wait");
+        public void waitDoorClosed_ControllerSys_entDef() {
+            waitDoorClosed_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public void receiveRequestFromButtonEx_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public void recievedRequestFromCabin_ControllerSys_entDef() {
+            recievedRequestFromCabin_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public int waitDoorClosed_ControllerSysTakereadyToGo() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("14");
+            waitDoorClosed_ControllerSys_exit();
+            //#[ transition 14 
+            gen(new doneTask());       
+            genFiacre14();
+            //#]
+            doorClosed_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("14");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
+            Wait_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("0");
+        }
+        
+        //## statechart_method 
+        public void cabinBraked_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.cabinBraked_ControllerSys");
+            rootState_subState = cabinBraked_ControllerSys;
+            rootState_active = cabinBraked_ControllerSys;
+            cabinBraked_ControllerSysEnter();
+        }
+        
+        //## statechart_method 
+        public int doorClosed_ControllerSysTakereadyToGo() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("4");
+            doorClosed_ControllerSys_exit();
+            //#[ transition 4 
+            if (currentFloor < targetFloor){
+            	getP_con_win().gen(new goUp());   
+            	upordown=1; 
+            	
+            	sendToMeasureSensor(targetFloor);
+            }else{
+            	if (currentFloor == targetFloor) {
+            		//open the door         
+            		gen (new gotoOpenDoorDirectly());
+            	}else{
+            		getP_con_win().gen(new goDown()); 
+            		upordown=-1;  
+            		
+            		sendToMeasureSensor(targetFloor);
+            	}
+            } 
+            genFiacre4();
+            //#]
+            recievedRequestFromCabin_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("4");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void recievedRequestFromCabin_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.recievedRequestFromCabin_ControllerSys");
+            rootState_subState = recievedRequestFromCabin_ControllerSys;
+            rootState_active = recievedRequestFromCabin_ControllerSys;
+            recievedRequestFromCabin_ControllerSysEnter();
+        }
+        
+        //## statechart_method 
+        public void cabinArrived_ControllerSysExit() {
+        }
+        
+        //## statechart_method 
+        public void cabinArrived_ControllerSys_entDef() {
+            cabinArrived_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public void doorOpened_ControllerSys_entDef() {
+            doorOpened_ControllerSys_enter();
+        }
+        
+        //## statechart_method 
+        public void receiveRequestFromButtonEx_ControllerSys_exit() {
+            receiveRequestFromButtonEx_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.receiveRequestFromButtonEx_ControllerSys");
+        }
+        
+        //## statechart_method 
+        public void Wait_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public void cabinArrived_ControllerSysEnter() {
+        }
+        
+        //## statechart_method 
+        public int recievedRequestFromCabin_ControllerSysTakereceiveCabinMoved() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("10");
+            recievedRequestFromCabin_ControllerSys_exit();
+            //#[ transition 10 
+            currentFloor+=upordown;   
+            loadedPassager=true;        
+            sendToMeasureSensor(destFloor);      
+            genFiacre10();
+            //#]
+            cabinMoved_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("10");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -1839,49 +1938,70 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void cabinBraked_enter() {
-            animInstance().notifyStateEntered("ROOT.cabinBraked");
-            rootState_subState = cabinBraked;
-            rootState_active = cabinBraked;
-            cabinBrakedEnter();
+        public int cabinBraked_ControllerSysTakereadyToOpenDoor() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
+            cabinBraked_ControllerSys_exit();
+            //#[ transition 2 
+             openDoor();
+             genFiacre2();
+            //#]
+            doorOpened_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("2");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
-        public void receiveRequestFromButtonExExit() {
+        public void cabinBraked_ControllerSysExit() {
         }
         
         //## statechart_method 
-        public void recievedRequestFromCabinEnter() {
+        public int receiveRequestFromButtonEx_ControllerSysTakegotoOpenDoorDirectly() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("8");
+            receiveRequestFromButtonEx_ControllerSys_exit();
+            //#[ transition 8 
+            gen (new readyToOpenDoor());    
+            genFiacre8();
+            //#]
+            cabinBraked_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("8");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
-        public void cabinArrived_enter() {
-            animInstance().notifyStateEntered("ROOT.cabinArrived");
-            rootState_subState = cabinArrived;
-            rootState_active = cabinArrived;
-            cabinArrivedEnter();
+        public void waitDoorClosed_ControllerSys_enter() {
+            animInstance().notifyStateEntered("ROOT.waitDoorClosed_ControllerSys");
+            rootState_subState = waitDoorClosed_ControllerSys;
+            rootState_active = waitDoorClosed_ControllerSys;
+            waitDoorClosed_ControllerSysEnter();
         }
         
         //## statechart_method 
-        public void cabinArrivedEnter() {
+        public int cabinArrived_ControllerSysTakebraked() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("7");
+            cabinArrived_ControllerSys_exit();
+            //#[ transition 7 
+            sendToWinchToStop();     
+            genFiacre7();
+            //#]
+            cabinBraked_ControllerSys_entDef();
+            animInstance().notifyTransitionEnded("7");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
-        public void doorOpened_enter() {
-            animInstance().notifyStateEntered("ROOT.doorOpened");
-            pushNullConfig();
-            rootState_subState = doorOpened;
-            rootState_active = doorOpened;
-            doorOpenedEnter();
+        public void doorClosed_ControllerSysExit() {
         }
         
         //## statechart_method 
-        public void Wait_entDef() {
-            Wait_enter();
-        }
-        
-        //## statechart_method 
-        public void waitDoorClosedEnter() {
+        public void Wait_ControllerSys_exit() {
+            Wait_ControllerSysExit();
+            animInstance().notifyStateExited("ROOT.Wait_ControllerSys");
         }
         
         /**  methods added just for design level debugging instrumentation */

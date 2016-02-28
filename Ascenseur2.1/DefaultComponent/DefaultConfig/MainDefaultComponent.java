@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.1.1
-	Login		: guoxi
+	Login		: zhengta
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Wed, 3, Feb 2016 
+//!	Generated Date	: Sun, 28, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
 *********************************************************************/
 
@@ -43,6 +43,7 @@ public class MainDefaultComponent {
             Class.forName("Ascenseur.GoSleep");
             Class.forName("Ascenseur.gotoOpenDoorDirectly");
             Class.forName("Ascenseur.goUp");
+            Class.forName("Ascenseur.goUp2");
             Class.forName("Ascenseur.moveCabin");
             Class.forName("Ascenseur.moveCabinDown");
             Class.forName("Ascenseur.moveCabinUp");

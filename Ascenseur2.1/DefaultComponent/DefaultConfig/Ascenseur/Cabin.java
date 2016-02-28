@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Cabin
-//!	Generated Date	: Sat, 27, Feb 2016 
+//!	Generated Date	: Sun, 28, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Cabin.java
 *********************************************************************/
 
@@ -52,10 +52,10 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int Up=1;
-    public static final int Stop=2;
-    public static final int sentInfo=3;
-    public static final int Down=4;
+    public static final int Up_Cabin=1;
+    public static final int Stop_Cabin=2;
+    public static final int sentInfo_Cabin=3;
+    public static final int Down_Cabin=4;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -190,8 +190,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * braked;
-     * p_cab_con_braked;
-     * to Stop
+     *           p_cab_con_braked;
+     *           to Stop_Cabin
     */
     //## operation genFiacre1() 
     public void genFiacre1() {
@@ -210,9 +210,10 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * sendFloorAndCloseDoor  ?  targetFloor;
-     * receiveFloorAndCloseDoor !  targetFloor;
-     * to sentInfo
+     * select
+     *           sendFloorAndCloseDoor  ?  targetFloor;
+     *           receiveFloorAndCloseDoor !  targetFloor;
+     *           to sentInfo_Cabin
     */
     //## operation genFiacre2() 
     public void genFiacre2() {
@@ -231,8 +232,10 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * moveCabinDown ;
-     * p_cab_con_receiveCabinMoved;
+     * select
+     *           moveCabinDown ;
+     *           receiveCabinMoved;
+     *           to Down_Cabin
     */
     //## operation genFiacre3() 
     public void genFiacre3() {
@@ -251,9 +254,10 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * moveCabinDown;
-     * P_cab_con_braked;
-     * to Down
+     * [] 
+     *          moveCabinDown;
+     *           P_cab_con_braked;
+     *           to Down_Cabin
     */
     //## operation genFiacre4() 
     public void genFiacre4() {
@@ -272,9 +276,11 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * moveCabinUp;
-     * receiveCabinMoved;
-     * to Up
+     * []
+     *           moveCabinUp;
+     *           receiveCabinMoved;
+     *           to Up_Cabin
+     *         end
      * 
      * 
     */
@@ -296,8 +302,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * braked;
-     * p_cab_con_braked;
-     * to Stop
+     *           braked;
+     *           to Stop_Cabin
      * 
     */
     //## operation genFiacre6() 
@@ -317,9 +323,11 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * moveCabinUp;
-     * p_cab_con_receiveCabinMoved;
-     * to Up
+     * []
+     *           moveCabinUp;
+     *           receiveCabinMoved;
+     *           to Up_Cabin
+     *         end
     */
     //## operation genFiacre7() 
     public void genFiacre7() {
@@ -540,24 +548,24 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
-                case Stop:
+                case Stop_Cabin:
                 {
-                    Stop_add(animStates);
+                    Stop_Cabin_add(animStates);
                 }
                 break;
-                case Down:
+                case Down_Cabin:
                 {
-                    Down_add(animStates);
+                    Down_Cabin_add(animStates);
                 }
                 break;
-                case sentInfo:
+                case sentInfo_Cabin:
                 {
-                    sentInfo_add(animStates);
+                    sentInfo_Cabin_add(animStates);
                 }
                 break;
-                case Up:
+                case Up_Cabin:
                 {
-                    Up_add(animStates);
+                    Up_Cabin_add(animStates);
                 }
                 break;
                 default:
@@ -577,24 +585,24 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
-                case Stop:
+                case Stop_Cabin:
                 {
-                    res = Stop_takeEvent(id);
+                    res = Stop_Cabin_takeEvent(id);
                 }
                 break;
-                case Down:
+                case Down_Cabin:
                 {
-                    res = Down_takeEvent(id);
+                    res = Down_Cabin_takeEvent(id);
                 }
                 break;
-                case sentInfo:
+                case sentInfo_Cabin:
                 {
-                    res = sentInfo_takeEvent(id);
+                    res = sentInfo_Cabin_takeEvent(id);
                 }
                 break;
-                case Up:
+                case Up_Cabin:
                 {
-                    res = Up_takeEvent(id);
+                    res = Up_Cabin_takeEvent(id);
                 }
                 break;
                 default:
@@ -604,23 +612,23 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Up_add(AnimStates animStates) {
-            animStates.add("ROOT.Up");
+        public void Up_Cabin_add(AnimStates animStates) {
+            animStates.add("ROOT.Up_Cabin");
         }
         
         //## statechart_method 
-        public void Stop_add(AnimStates animStates) {
-            animStates.add("ROOT.Stop");
+        public void Stop_Cabin_add(AnimStates animStates) {
+            animStates.add("ROOT.Stop_Cabin");
         }
         
         //## statechart_method 
-        public void sentInfo_add(AnimStates animStates) {
-            animStates.add("ROOT.sentInfo");
+        public void sentInfo_Cabin_add(AnimStates animStates) {
+            animStates.add("ROOT.sentInfo_Cabin");
         }
         
         //## statechart_method 
-        public void Down_add(AnimStates animStates) {
-            animStates.add("ROOT.Down");
+        public void Down_Cabin_add(AnimStates animStates) {
+            animStates.add("ROOT.Down_Cabin");
         }
         
         //## auto_generated 
@@ -630,80 +638,102 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int sentInfo_takeEvent(short id) {
+        public void Down_CabinExit() {
+        }
+        
+        //## statechart_method 
+        public void sentInfo_CabinEnter() {
+        }
+        
+        //## statechart_method 
+        public void Stop_Cabin_enter() {
+            animInstance().notifyStateEntered("ROOT.Stop_Cabin");
+            rootState_subState = Stop_Cabin;
+            rootState_active = Stop_Cabin;
+            Stop_CabinEnter();
+        }
+        
+        //## statechart_method 
+        public void Stop_CabinEnter() {
+        }
+        
+        //## statechart_method 
+        public void Stop_Cabin_entDef() {
+            Stop_Cabin_enter();
+        }
+        
+        //## statechart_method 
+        public void sentInfo_CabinExit() {
+        }
+        
+        //## statechart_method 
+        public void sentInfo_Cabin_exit() {
+            sentInfo_CabinExit();
+            animInstance().notifyStateExited("ROOT.sentInfo_Cabin");
+        }
+        
+        //## statechart_method 
+        public int Stop_CabinTakemoveCabinDown() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(moveCabinDown.moveCabinDown_Ascenseur_id))
+            animInstance().notifyTransitionStarted("4");
+            Stop_Cabin_exit();
+            //#[ transition 4 
+            sendMovedDownToController();       
+            genFiacre4();
+            //#]
+            Down_Cabin_entDef();
+            animInstance().notifyTransitionEnded("4");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Stop_Cabin_exit() {
+            Stop_CabinExit();
+            animInstance().notifyStateExited("ROOT.Stop_Cabin");
+        }
+        
+        //## statechart_method 
+        public void Up_CabinEnter() {
+        }
+        
+        //## statechart_method 
+        public int sentInfo_CabinTakemoveCabinDown() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
+            sentInfo_Cabin_exit();
+            //#[ transition 3 
+            sendMovedDownToController();      
+            genFiacre3();
+            //#]
+            Down_Cabin_entDef();
+            animInstance().notifyTransitionEnded("3");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void sentInfo_Cabin_entDef() {
+            sentInfo_Cabin_enter();
+        }
+        
+        //## statechart_method 
+        public int Stop_Cabin_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(sendFloorAndCloseDoor.sendFloorAndCloseDoor_Ascenseur_id))
                 {
-                    res = sentInfoTakemoveCabinDown();
+                    res = Stop_CabinTakesendFloorAndCloseDoor();
+                }
+            else if(event.isTypeOf(moveCabinDown.moveCabinDown_Ascenseur_id))
+                {
+                    res = Stop_CabinTakemoveCabinDown();
                 }
             else if(event.isTypeOf(moveCabinUp.moveCabinUp_Ascenseur_id))
                 {
-                    res = sentInfoTakemoveCabinUp();
+                    res = Stop_CabinTakemoveCabinUp();
                 }
             
             return res;
-        }
-        
-        //## statechart_method 
-        public int sentInfoTakemoveCabinUp() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("7");
-            sentInfo_exit();
-            //#[ transition 7 
-            sendMovedUpToController();         
-            genFiacre7();
-            //#]
-            Up_entDef();
-            animInstance().notifyTransitionEnded("7");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void UpEnter() {
-        }
-        
-        //## statechart_method 
-        public void StopExit() {
-        }
-        
-        //## statechart_method 
-        public void sentInfoExit() {
-        }
-        
-        //## statechart_method 
-        public void Stop_entDef() {
-            Stop_enter();
-        }
-        
-        //## statechart_method 
-        public void Down_entDef() {
-            Down_enter();
-        }
-        
-        //## statechart_method 
-        public int StopTakemoveCabinUp() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("5");
-            Stop_exit();
-            //#[ transition 5 
-            sendMovedUpToController();   
-            genFiacre5();
-            //#]
-            Up_entDef();
-            animInstance().notifyTransitionEnded("5");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void Up_exit() {
-            UpExit();
-            animInstance().notifyStateExited("ROOT.Up");
-        }
-        
-        //## statechart_method 
-        public void UpExit() {
         }
         
         //## statechart_method 
@@ -713,89 +743,49 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void DownEnter() {
-        }
-        
-        //## statechart_method 
-        public int Stop_takeEvent(short id) {
+        public int Stop_CabinTakemoveCabinUp() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(sendFloorAndCloseDoor.sendFloorAndCloseDoor_Ascenseur_id))
-                {
-                    res = StopTakesendFloorAndCloseDoor();
-                }
-            else if(event.isTypeOf(moveCabinDown.moveCabinDown_Ascenseur_id))
-                {
-                    res = StopTakemoveCabinDown();
-                }
-            else if(event.isTypeOf(moveCabinUp.moveCabinUp_Ascenseur_id))
-                {
-                    res = StopTakemoveCabinUp();
-                }
-            
-            return res;
-        }
-        
-        //## statechart_method 
-        public int UpTakebraked() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("6");
-            Up_exit();
-            //#[ transition 6 
-            sendCabinBrakedToController();  
-            genFiacre6();
+            animInstance().notifyTransitionStarted("5");
+            Stop_Cabin_exit();
+            //#[ transition 5 
+            sendMovedUpToController();   
+            genFiacre5();
             //#]
-            Stop_entDef();
-            animInstance().notifyTransitionEnded("6");
+            Up_Cabin_entDef();
+            animInstance().notifyTransitionEnded("5");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void Up_enter() {
-            animInstance().notifyStateEntered("ROOT.Up");
-            rootState_subState = Up;
-            rootState_active = Up;
-            UpEnter();
+        public void Up_Cabin_exit() {
+            Up_CabinExit();
+            animInstance().notifyStateExited("ROOT.Up_Cabin");
         }
         
         //## statechart_method 
-        public void Up_entDef() {
-            Up_enter();
+        public void sentInfo_Cabin_enter() {
+            animInstance().notifyStateEntered("ROOT.sentInfo_Cabin");
+            rootState_subState = sentInfo_Cabin;
+            rootState_active = sentInfo_Cabin;
+            sentInfo_CabinEnter();
         }
         
         //## statechart_method 
-        public int StopTakesendFloorAndCloseDoor() {
-            sendFloorAndCloseDoor params = (sendFloorAndCloseDoor) event;
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
-            Stop_exit();
-            //#[ transition 2 
-            getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    
-            genFiacre2();
-            //#]
-            sentInfo_entDef();
-            animInstance().notifyTransitionEnded("2");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
+        public void Stop_CabinExit() {
         }
         
         //## statechart_method 
-        public void Stop_enter() {
-            animInstance().notifyStateEntered("ROOT.Stop");
-            rootState_subState = Stop;
-            rootState_active = Stop;
-            StopEnter();
+        public void Up_Cabin_enter() {
+            animInstance().notifyStateEntered("ROOT.Up_Cabin");
+            rootState_subState = Up_Cabin;
+            rootState_active = Up_Cabin;
+            Up_CabinEnter();
         }
         
         //## statechart_method 
-        public int Up_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(braked.braked_Ascenseur_id))
-                {
-                    res = UpTakebraked();
-                }
-            
-            return res;
+        public void Up_Cabin_entDef() {
+            Up_Cabin_enter();
         }
         
         //## statechart_method 
@@ -809,121 +799,139 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int sentInfoTakemoveCabinDown() {
+        public void Down_CabinEnter() {
+        }
+        
+        //## statechart_method 
+        public void Up_CabinExit() {
+        }
+        
+        //## statechart_method 
+        public int Up_CabinTakebraked() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("3");
-            sentInfo_exit();
-            //#[ transition 3 
-            sendMovedDownToController();      
-            genFiacre3();
+            animInstance().notifyTransitionStarted("6");
+            Up_Cabin_exit();
+            //#[ transition 6 
+            sendCabinBrakedToController();  
+            genFiacre6();
             //#]
-            Down_entDef();
-            animInstance().notifyTransitionEnded("3");
+            Stop_Cabin_entDef();
+            animInstance().notifyTransitionEnded("6");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void Down_exit() {
-            DownExit();
-            animInstance().notifyStateExited("ROOT.Down");
+        public void Down_Cabin_entDef() {
+            Down_Cabin_enter();
         }
         
         //## statechart_method 
-        public void sentInfoEnter() {
-        }
-        
-        //## statechart_method 
-        public void rootStateEntDef() {
-            animInstance().notifyTransitionStarted("0");
-            Stop_entDef();
-            animInstance().notifyTransitionEnded("0");
-        }
-        
-        //## statechart_method 
-        public void StopEnter() {
-        }
-        
-        //## statechart_method 
-        public void sentInfo_exit() {
-            sentInfoExit();
-            animInstance().notifyStateExited("ROOT.sentInfo");
-        }
-        
-        //## statechart_method 
-        public int StopTakemoveCabinDown() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("4");
-            Stop_exit();
-            //#[ transition 4 
-            sendMovedDownToController();       
-            genFiacre4();
-            //#]
-            Down_entDef();
-            animInstance().notifyTransitionEnded("4");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void rootStateExit() {
-        }
-        
-        //## statechart_method 
-        public void Down_enter() {
-            animInstance().notifyStateEntered("ROOT.Down");
-            rootState_subState = Down;
-            rootState_active = Down;
-            DownEnter();
-        }
-        
-        //## statechart_method 
-        public void sentInfo_entDef() {
-            sentInfo_enter();
-        }
-        
-        //## statechart_method 
-        public void Stop_exit() {
-            StopExit();
-            animInstance().notifyStateExited("ROOT.Stop");
-        }
-        
-        //## statechart_method 
-        public int Down_takeEvent(short id) {
+        public int Up_Cabin_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(braked.braked_Ascenseur_id))
                 {
-                    res = DownTakebraked();
+                    res = Up_CabinTakebraked();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public int DownTakebraked() {
+        public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
+            Stop_Cabin_entDef();
+            animInstance().notifyTransitionEnded("0");
+        }
+        
+        //## statechart_method 
+        public int Down_Cabin_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(braked.braked_Ascenseur_id))
+                {
+                    res = Down_CabinTakebraked();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int Down_CabinTakebraked() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("1");
-            Down_exit();
+            Down_Cabin_exit();
             //#[ transition 1 
             sendCabinBrakedToController();                 
             genFiacre1();
             //#]
-            Stop_entDef();
+            Stop_Cabin_entDef();
             animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void DownExit() {
+        public void Down_Cabin_exit() {
+            Down_CabinExit();
+            animInstance().notifyStateExited("ROOT.Down_Cabin");
         }
         
         //## statechart_method 
-        public void sentInfo_enter() {
-            animInstance().notifyStateEntered("ROOT.sentInfo");
-            rootState_subState = sentInfo;
-            rootState_active = sentInfo;
-            sentInfoEnter();
+        public int sentInfo_CabinTakemoveCabinUp() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("7");
+            sentInfo_Cabin_exit();
+            //#[ transition 7 
+            sendMovedUpToController();         
+            genFiacre7();
+            //#]
+            Up_Cabin_entDef();
+            animInstance().notifyTransitionEnded("7");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int Stop_CabinTakesendFloorAndCloseDoor() {
+            sendFloorAndCloseDoor params = (sendFloorAndCloseDoor) event;
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
+            Stop_Cabin_exit();
+            //#[ transition 2 
+            getP_cab_con().gen (new receiveFloorAndCloseDoor(params.targetFloor));    
+            genFiacre2();
+            //#]
+            sentInfo_Cabin_entDef();
+            animInstance().notifyTransitionEnded("2");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Down_Cabin_enter() {
+            animInstance().notifyStateEntered("ROOT.Down_Cabin");
+            rootState_subState = Down_Cabin;
+            rootState_active = Down_Cabin;
+            Down_CabinEnter();
+        }
+        
+        //## statechart_method 
+        public int sentInfo_Cabin_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(moveCabinDown.moveCabinDown_Ascenseur_id))
+                {
+                    res = sentInfo_CabinTakemoveCabinDown();
+                }
+            else if(event.isTypeOf(moveCabinUp.moveCabinUp_Ascenseur_id))
+                {
+                    res = sentInfo_CabinTakemoveCabinUp();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void rootStateExit() {
         }
         
         /**  methods added just for design level debugging instrumentation */

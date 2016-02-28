@@ -4,8 +4,8 @@
 <stringAttribute key="com.sodius.mdw.ide.MAIN_ELEMENT_ATTR" value="generateFiacreMain.toFiacre.main"/>
 <listAttribute key="com.sodius.mdw.ide.PARAMETERS_ATTR">
 <listEntry value="mdw:model:Rhapsody Application||in"/>
-<listEntry value="mdw:model:XMI 2.1|${project_loc:umlToFiacre3.0}\generated\result|out"/>
+<listEntry value="mdw:model:XMI 2.1|${project_loc:umlToFiacre5.0}\generated\result|out"/>
 </listAttribute>
 <intAttribute key="com.sodius.mdw.ide.TEMPLATE_PARAMETER_COUNT_ATTR" value="2"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="umlToFiacre3.0"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="umlToFiacre5.0"/>
 </launchConfiguration>

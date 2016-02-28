@@ -1,0 +1,17 @@
+[#package generateProcess]
+[#import generateUtile.*]
+
+[#template public genPortArgs(process : fiacreMM.Process)]
+[
+[#foreach uniqueTrigger in process.alluniqueTriggers]
+ ${uniqueTrigger.ArgSize}
+[#if uniqueTrigger.arguments == null]
+	  ${uniqueTrigger.Name} : out none,	
+	
+[#else]
+	  ${uniqueTrigger.Name} : out,
+[/#if]
+[/#foreach]
+    ]
+
+[/#template]

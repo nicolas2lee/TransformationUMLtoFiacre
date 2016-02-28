@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 852e0fc5-6221-44f5-9d4d-9afcb6d4a5cb;
 	- _myState = 8192;
 	- _name = "Ascenseur";
-	- _modifiedTimeWeak = 2.27.2016::22:39:48;
+	- _modifiedTimeWeak = 2.28.2016::10:54:5;
 	- _lastID = 10;
 	- Declaratives = { IRPYRawContainer 
 		- size = 5;
@@ -27777,7 +27777,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 		}
 	}
-	- weakCGTime = 2.27.2016::22:39:48;
+	- weakCGTime = 2.28.2016::10:54:5;
 	- strongCGTime = 2.3.2016::14:22:12;
 	- _defaultComposite = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 	- _eventsBaseID = 2616;
@@ -27788,8 +27788,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 07a4d160-d239-4620-8d30-dac6b831ac86;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 2.27.2016::21:13:59;
-			- weakCGTime = 2.27.2016::21:13:59;
+			- _modifiedTimeWeak = 2.27.2016::22:39:48;
+			- weakCGTime = 2.27.2016::22:39:48;
 			- strongCGTime = 2.3.2016::14:22:12;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -28245,13 +28245,13 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 			}
 			- _name = "Button_ex";
-			- _modifiedTimeWeak = 2.27.2016::20:25:59;
+			- _modifiedTimeWeak = 2.28.2016::10:54:5;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 9;
-			- weakCGTime = 2.27.2016::20:25:59;
+			- weakCGTime = 2.28.2016::10:54:5;
 			- strongCGTime = 11.23.2015::16:13:41;
 			- Ports = { IRPYRawContainer 
 				- size = 1;
@@ -28364,11 +28364,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- _id = GUID 1c0bbe2d-122b-4060-9ea5-ff7cf133be35;
 					- _myState = 8192;
 					- _name = "genFiacre2";
-					- _modifiedTimeWeak = 2.27.2016::20:25:56;
+					- _modifiedTimeWeak = 2.28.2016::10:54:5;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
-\\viewkind4\\uc1\\pard\\f0\\fs22 Pressed;\\par
-          receiveFromButton_Ex ! requestFloor;\\par
+\\viewkind4\\uc1\\pard\\f0\\fs22 receiveFromButton_Ex ! requestFloor;\\par
           to On\\f1\\fs20 _Button_ex\\f0\\fs22\\par
 \\f1\\fs20\\par
 }
@@ -29227,13 +29226,13 @@ genFiacre2();";
 				}
 			}
 			- _name = "ControllerSys";
-			- _modifiedTimeWeak = 2.27.2016::22:11:48;
+			- _modifiedTimeWeak = 2.28.2016::10:11:16;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 43;
-			- weakCGTime = 2.27.2016::22:11:48;
+			- weakCGTime = 2.28.2016::10:11:16;
 			- strongCGTime = 11.23.2015::16:13:47;
 			- Ports = { IRPYRawContainer 
 				- size = 9;
@@ -30029,38 +30028,38 @@ getP_con_win().gen(new stop());";
 					- _id = GUID e1338621-1dc4-47e4-820f-9606ed879704;
 					- _myState = 8192;
 					- _name = "genFiacre4";
-					- _modifiedTimeWeak = 2.27.2016::21:48:51;
+					- _modifiedTimeWeak = 2.28.2016::10:10:20;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 readyToGo;\\par
-if (currentFloor < targetFloor) then\\par
-\\tab goUp;   \\par
-\\tab upordown := 1; \\par
-\\tab case (targetFloor) of \\par
-               0 ->  sendToMeasureSensor ! currentFloor, targetFloor\\par
-            | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor\\par
-            | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor\\par
-            | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor\\par
-            | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor\\par
-                end\\par
+          if (currentFloor < targetFloor) then\\par
+              goUp;   \\par
+              upordown := 1; \\par
+              case (targetFloor) of \\par
+                 0 ->  sendToMeasureSensor ! currentFloor, targetFloor\\par
+              | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor\\par
+              | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor\\par
+              | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor\\par
+              | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor\\par
+                end;\\par
                 to recievedRequestFromCabin_ControllerSys\\par
-else\\par
-\\tab if (currentFloor == targetFloor) then\\par
-                                openDoor;\\par
-\\tab\\tab to doorOpened_ControllerSys\\par
-\\tab else\\par
-\\tab\\tab goDown; \\par
-\\tab\\tab upordown := -1;  \\par
-\\tab\\tab case (targetFloor) of \\par
-                                0 ->  sendToMeasureSensor ! currentFloor, targetFloor\\par
-                             | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor\\par
-                             | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor\\par
-                             | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor\\par
-                             | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor\\par
-                                end;\\par
-                                to recievedRequestFromCabin_ControllerSys\\par
-\\tab end\\par
-end \\par
+          else\\par
+                if (currentFloor == targetFloor) then\\par
+                    openDoor;\\par
+                    to doorOpened_ControllerSys\\par
+                else\\par
+                     goDown; \\par
+                     upordown := -1;  \\par
+                     case (targetFloor) of \\par
+                       0 ->  sendToMeasureSensor ! currentFloor, targetFloor\\par
+                    | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor\\par
+                    | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor\\par
+                    | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor\\par
+                    | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor\\par
+                     end;\\par
+                     to recievedRequestFromCabin_ControllerSys\\par
+                end\\par
+          end \\par
 \\lang1036\\f1\\fs20\\par
 }
 ";
@@ -30088,7 +30087,7 @@ end \\par
 					- _id = GUID db1259a9-b4f3-4e5c-8bf8-7746a60d7934;
 					- _myState = 8192;
 					- _name = "genFiacre5";
-					- _modifiedTimeWeak = 2.27.2016::21:59:11;
+					- _modifiedTimeWeak = 2.28.2016::9:57:21;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 receiveFromButton_Ex ?  exBtnFloor;\\par
@@ -30103,20 +30102,20 @@ end \\par
             | 3 ->  sendToMeasureSensor_3 ! currentFloor, exBtnFloor\\par
             | 4 ->  sendToMeasureSensor_4 ! currentFloor, exBtnFloor\\par
            end;\\par
-                to ReceiveRequestFromButtonEx_ControllerSys\\par
+                 to ReceiveRequestFromButtonEx_ControllerSys\\par
             elseif (currentFloor > exBtnFloor) then \\tab\\par
-\\tab goDown; \\par
-\\tab upordown := -1;  \\par
-                case (exBtnFloor) of \\par
-               0 ->  sendToMeasureSensor !  currentFloor,  exBtnFloor\\par
-            | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor\\par
-            | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor\\par
-            | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor\\par
-            | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor\\par
-               end;\\par
-               to ReceiveRequestFromButtonEx\\par
+                 goDown; \\par
+                 upordown := -1;  \\par
+                 case (exBtnFloor) of \\par
+                   0 ->  sendToMeasureSensor !  currentFloor,  exBtnFloor\\par
+                | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor\\par
+                | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor\\par
+                | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor\\par
+                | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor\\par
+                end;\\par
+                to ReceiveRequestFromButtonEx\\par
             else\\par
-               to ReceiveRequestFromButtonEx\\par
+                to ReceiveRequestFromButtonEx\\par
             end\\par
 \\par
 \\lang1036\\f1\\fs20\\par
@@ -30146,19 +30145,19 @@ end \\par
 					- _id = GUID 6003e8c0-e53a-417a-84cf-593d6af5bfcb;
 					- _myState = 8192;
 					- _name = "genFiacre6";
-					- _modifiedTimeWeak = 2.27.2016::20:43:39;
+					- _modifiedTimeWeak = 2.28.2016::10:3:39;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 receiveCabinMoved;\\par
-currentFloor := currentFloor + upordown;\\par
-case (exBtnFloor) of \\par
+          currentFloor := currentFloor + upordown;\\par
+          case (exBtnFloor) of \\par
                0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor\\par
             | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor\\par
             | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor\\par
             | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor\\par
             | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor\\par
- end;\\par
-to cabinMoved_ControllerSys\\par
+           end;\\par
+           to cabinMoved_ControllerSys\\par
 \\par
 }
 ";
@@ -30218,14 +30217,13 @@ to cabinMoved_ControllerSys\\par
 					- _id = GUID 68a5ce26-940c-47f2-b1bb-d006d5791ffd;
 					- _myState = 8192;
 					- _name = "genFiacre8";
-					- _modifiedTimeWeak = 2.27.2016::15:5:39;
+					- _modifiedTimeWeak = 2.28.2016::10:11:16;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 if (currentFloor = exBtnFloor) then   \\par
-//getP_con_door().gen (new OpenDoor());\\par
                 p_con_door_OpenDoor;\\par
-\\tab to doorOpened\\par
-end;\\par
+                to doorOpened\\par
+          end;\\par
 \\par
 }
 ";
@@ -30311,19 +30309,20 @@ end;\\par
 					- _id = GUID 474d59aa-df66-4c56-aeed-dc7a7a9e37d5;
 					- _myState = 8192;
 					- _name = "genFiacre10";
-					- _modifiedTimeWeak = 2.27.2016::21:52:12;
+					- _modifiedTimeWeak = 2.28.2016::10:6:3;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 receiveCabinMoved;\\par
-currentFloor := currentFloor + upordown;\\par
-loadedPassager := true;\\par
-case (destFloor) of \\par
+          currentFloor := currentFloor + upordown;\\par
+          loadedPassager := true;\\par
+          case (destFloor) of \\par
                0 ->  sendToMeasureSensor ! currentFloor, destFloor\\par
             | 1 ->  sendToMeasureSensor_1 ! currentFloor,destFloor\\par
             | 2 ->  sendToMeasureSensor_2 ! currentFloor, destFloor\\par
             | 3 ->  sendToMeasureSensor_3 ! currentFloor,destFloor\\par
             | 4 ->  sendToMeasureSensor_4 ! currentFloor, destFloor\\par
- end\\par
+         end;\\par
+         to cabinMoved_ControllerSys\\par
 \\par
 }
 ";
@@ -30375,13 +30374,7 @@ case (destFloor) of \\par
 					- _id = GUID 908625f8-87a0-4db5-a1ab-0469a92d769f;
 					- _myState = 8192;
 					- _name = "genFiacre12";
-					- _modifiedTimeWeak = 2.22.2016::22:35:3;
-					- _description = { IDescription 
-						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
-\\viewkind4\\uc1\\pard\\ltrpar\\lang2057\\f0\\fs22 doneTask\\lang1036\\f1\\fs20\\par
-}
-";
-					}
+					- _modifiedTimeWeak = 2.28.2016::10:1:41;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
 						- size = 0;
@@ -30405,13 +30398,13 @@ case (destFloor) of \\par
 					- _id = GUID c875af0f-acde-4172-abed-a879d7b83f7c;
 					- _myState = 8192;
 					- _name = "genFiacre13";
-					- _modifiedTimeWeak = 2.27.2016::15:24:21;
+					- _modifiedTimeWeak = 2.28.2016::10:9:56;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 if (loadedPassager) then\\par
           CloseDoor;\\par
           to waitDoorClosed\\par
-end\\lang1036\\f1\\fs20\\par
+        end\\lang1036\\f1\\fs20\\par
 }
 ";
 					}
@@ -30438,12 +30431,12 @@ end\\lang1036\\f1\\fs20\\par
 					- _id = GUID beebe10c-c583-47d6-9dbe-3d0fb72058af;
 					- _myState = 8192;
 					- _name = "genFiacre14";
-					- _modifiedTimeWeak = 2.27.2016::21:54:6;
+					- _modifiedTimeWeak = 2.28.2016::10:6:28;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 readyToGo;\\par
-loadedPassager := false;\\par
-to Wait_ControllerSys\\par
+          loadedPassager := false;\\par
+          to Wait_ControllerSys\\par
 \\lang1036\\f1\\fs20\\par
 }
 ";
@@ -35249,13 +35242,13 @@ genFiacre7();";
 				}
 			}
 			- _name = "Winch";
-			- _modifiedTimeWeak = 2.27.2016::22:36:18;
+			- _modifiedTimeWeak = 2.28.2016::10:12:31;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _id = GUID ec217373-7260-465d-9364-90bc7fcb452f;
 			}
 			- _lastID = 17;
-			- weakCGTime = 2.27.2016::22:36:18;
+			- weakCGTime = 2.28.2016::10:12:31;
 			- strongCGTime = 11.23.2015::16:13:53;
 			- Ports = { IRPYRawContainer 
 				- size = 2;
@@ -35538,7 +35531,7 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 484d655c-8a13-45f2-8b6d-5290d1d38a4f;
 					- _myState = 8192;
 					- _name = "genFiacre1";
-					- _modifiedTimeWeak = 2.27.2016::22:32:8;
+					- _modifiedTimeWeak = 2.28.2016::10:12:22;
 					- _description = { IDescription 
 						- _text = "select
           goUp;
@@ -35600,14 +35593,14 @@ getP_win_con().gen (new readyToOpenDoor());";
 					- _id = GUID 5d6bcbf3-69a3-48ba-b111-c459a832d4a6;
 					- _myState = 8192;
 					- _name = "genFiacre3";
-					- _modifiedTimeWeak = 2.27.2016::22:36:18;
+					- _modifiedTimeWeak = 2.28.2016::10:12:31;
 					- _description = { IDescription 
 						- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\fswiss\\fprq2\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\lang2057\\f0\\fs22 []\\par
           goDown;\\par
           moveCabinDown;\\par
           to Goinf_Down\\par
-          end\\lang1036\\f1\\fs20\\par
+        end\\lang1036\\f1\\fs20\\par
 }
 ";
 					}

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Button_ex
-//!	Generated Date	: Sat, 27, Feb 2016 
+//!	Generated Date	: Sun, 28, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Button_ex.java
 *********************************************************************/
 
@@ -46,14 +46,14 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int On=1;
-    public static final int Off=2;
+    public static final int On_Button_ex=1;
+    public static final int Off_Button_ex=2;
     //#]
     protected int rootState_subState;		//## ignore 
     
     protected int rootState_active;		//## ignore 
     
-    public static final int Button_ex_Timeout_On_id = 1;		//## ignore 
+    public static final int Button_ex_Timeout_On_Button_ex_id = 1;		//## ignore 
     
     
     //## statechart_method 
@@ -164,7 +164,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     /**
      * select
      *           arrive;
-     *           to Off_Button_ex         
+     *           to Off_Button_ex        
     */
     //## operation genFiacre1() 
     public void genFiacre1() {
@@ -184,8 +184,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * Pressed;
-     *           receiveFromButton_Ex ! requestFloor;
+     * receiveFromButton_Ex ! requestFloor;
      *           to On_Button_ex
      * 
     */
@@ -208,7 +207,7 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
     /**
      * []
      *           wait[4,5];
-     *           to Off_Button_Ex
+     *           to Off_Button_ex
      *           end;
     */
     //## operation genFiacre3() 
@@ -321,14 +320,14 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
-                case Off:
+                case Off_Button_ex:
                 {
-                    Off_add(animStates);
+                    Off_Button_ex_add(animStates);
                 }
                 break;
-                case On:
+                case On_Button_ex:
                 {
-                    On_add(animStates);
+                    On_Button_ex_add(animStates);
                 }
                 break;
                 default:
@@ -348,14 +347,14 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
-                case Off:
+                case Off_Button_ex:
                 {
-                    res = Off_takeEvent(id);
+                    res = Off_Button_ex_takeEvent(id);
                 }
                 break;
-                case On:
+                case On_Button_ex:
                 {
-                    res = On_takeEvent(id);
+                    res = On_Button_ex_takeEvent(id);
                 }
                 break;
                 default:
@@ -365,13 +364,13 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void On_add(AnimStates animStates) {
-            animStates.add("ROOT.On");
+        public void On_Button_ex_add(AnimStates animStates) {
+            animStates.add("ROOT.On_Button_ex");
         }
         
         //## statechart_method 
-        public void Off_add(AnimStates animStates) {
-            animStates.add("ROOT.Off");
+        public void Off_Button_ex_add(AnimStates animStates) {
+            animStates.add("ROOT.Off_Button_ex");
         }
         
         //## auto_generated 
@@ -381,65 +380,70 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Off_enter() {
-            animInstance().notifyStateEntered("ROOT.Off");
-            rootState_subState = Off;
-            rootState_active = Off;
-            OffEnter();
+        public void On_Button_ex_entDef() {
+            On_Button_ex_enter();
         }
         
         //## statechart_method 
-        public void On_exit() {
-            OnExit();
-            animInstance().notifyStateExited("ROOT.On");
+        public void On_Button_ex_enter() {
+            animInstance().notifyStateEntered("ROOT.On_Button_ex");
+            rootState_subState = On_Button_ex;
+            rootState_active = On_Button_ex;
+            On_Button_exEnter();
         }
         
         //## statechart_method 
-        public void On_enter() {
-            animInstance().notifyStateEntered("ROOT.On");
-            rootState_subState = On;
-            rootState_active = On;
-            OnEnter();
+        public void On_Button_exEnter() {
+            itsRiJThread.schedTimeout(5, Button_ex_Timeout_On_Button_ex_id, this, "ROOT.On_Button_ex");
         }
         
         //## statechart_method 
-        public int rootState_takeEvent(short id) {
+        public void Off_Button_ex_exit() {
+            Off_Button_exExit();
+            animInstance().notifyStateExited("ROOT.Off_Button_ex");
+        }
+        
+        //## statechart_method 
+        public void Off_Button_exExit() {
+        }
+        
+        //## statechart_method 
+        public void On_Button_ex_exit() {
+            On_Button_exExit();
+            animInstance().notifyStateExited("ROOT.On_Button_ex");
+        }
+        
+        //## statechart_method 
+        public int Off_Button_exTakePressed() {
+            Pressed params = (Pressed) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
+            Off_Button_ex_exit();
+            //#[ transition 2 
+            getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
+            genFiacre2();
+            //#]
+            On_Button_ex_entDef();
+            animInstance().notifyTransitionEnded("2");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public int On_takeEvent(short id) {
+        public int Off_Button_ex_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+            if(event.isTypeOf(Pressed.Pressed_Ascenseur_id))
                 {
-                    res = OnTakeRiJTimeout();
-                }
-            else if(event.isTypeOf(arrive.arrive_Ascenseur_id))
-                {
-                    res = OnTakearrive();
+                    res = Off_Button_exTakePressed();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public int OnTakearrive() {
+        public int rootState_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            On_exit();
-            //#[ transition 1 
-            genFiacre1();
-            //#]
-            Off_entDef();
-            animInstance().notifyTransitionEnded("1");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
-        }
-        
-        //## statechart_method 
-        public void OnExit() {
-            itsRiJThread.unschedTimeout(Button_ex_Timeout_On_id, this);
         }
         
         //## statechart_method 
@@ -453,58 +457,42 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int OffTakePressed() {
-            Pressed params = (Pressed) event;
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
-            Off_exit();
-            //#[ transition 2 
-            getP_btn_con().gen(new receiveFromButton_Ex(params.requestFloor));
-            genFiacre2();
-            //#]
-            On_entDef();
-            animInstance().notifyTransitionEnded("2");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void Off_entDef() {
-            Off_enter();
-        }
-        
-        //## statechart_method 
-        public int OnTakeRiJTimeout() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.getTimeoutId() == Button_ex_Timeout_On_id)
-                {
-                    animInstance().notifyTransitionStarted("3");
-                    On_exit();
-                    //#[ transition 3 
-                    genFiacre3();
-                    //#]
-                    Off_entDef();
-                    animInstance().notifyTransitionEnded("3");
-                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-                }
-            return res;
-        }
-        
-        //## statechart_method 
-        public void OffEnter() {
+        public void Off_Button_ex_enter() {
+            animInstance().notifyStateEntered("ROOT.Off_Button_ex");
+            rootState_subState = Off_Button_ex;
+            rootState_active = Off_Button_ex;
+            Off_Button_exEnter();
         }
         
         //## statechart_method 
         public void rootStateEntDef() {
             animInstance().notifyTransitionStarted("0");
-            Off_entDef();
+            Off_Button_ex_entDef();
             animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
-        public void Off_exit() {
-            OffExit();
-            animInstance().notifyStateExited("ROOT.Off");
+        public void Off_Button_ex_entDef() {
+            Off_Button_ex_enter();
+        }
+        
+        //## statechart_method 
+        public void On_Button_exExit() {
+            itsRiJThread.unschedTimeout(Button_ex_Timeout_On_Button_ex_id, this);
+        }
+        
+        //## statechart_method 
+        public int On_Button_exTakearrive() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            On_Button_ex_exit();
+            //#[ transition 1 
+            genFiacre1();
+            //#]
+            Off_Button_ex_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -512,28 +500,39 @@ public class Button_ex implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void OffExit() {
-        }
-        
-        //## statechart_method 
-        public int Off_takeEvent(short id) {
+        public int On_Button_ex_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(Pressed.Pressed_Ascenseur_id))
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
                 {
-                    res = OffTakePressed();
+                    res = On_Button_exTakeRiJTimeout();
+                }
+            else if(event.isTypeOf(arrive.arrive_Ascenseur_id))
+                {
+                    res = On_Button_exTakearrive();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public void OnEnter() {
-            itsRiJThread.schedTimeout(5, Button_ex_Timeout_On_id, this, "ROOT.On");
+        public void Off_Button_exEnter() {
         }
         
         //## statechart_method 
-        public void On_entDef() {
-            On_enter();
+        public int On_Button_exTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Button_ex_Timeout_On_Button_ex_id)
+                {
+                    animInstance().notifyTransitionStarted("3");
+                    On_Button_ex_exit();
+                    //#[ transition 3 
+                    genFiacre3();
+                    //#]
+                    Off_Button_ex_entDef();
+                    animInstance().notifyTransitionEnded("3");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
         }
         
         /**  methods added just for design level debugging instrumentation */

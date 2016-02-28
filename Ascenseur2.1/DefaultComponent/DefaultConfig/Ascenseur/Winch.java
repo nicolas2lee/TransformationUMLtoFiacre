@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Winch
-//!	Generated Date	: Sat, 27, Feb 2016 
+//!	Generated Date	: Sun, 28, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Winch.java
 *********************************************************************/
 
@@ -56,10 +56,10 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int receiveCabinBrakedFromControllerSys=1;
-    public static final int Not_Going=2;
-    public static final int Going_Up=3;
-    public static final int Going_Down=4;
+    public static final int receiveCabinBrakedFromControllerSys_Winch=1;
+    public static final int Not_Going_Winch=2;
+    public static final int Going_Up_Winch=3;
+    public static final int Going_Down_Winch=4;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -193,9 +193,9 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * goUp;
-     * //getP_win_cab().gen(new moveCabinUp());
-     *           p_win_cab_moveCabinUp;
+     * select
+     *           goUp;
+     *           moveCabinUp;
      *           to Going_Up
     */
     //## operation genFiacre1() 
@@ -217,7 +217,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     /**
      * stop;
      *           readyToOpenDoor;
-     *           to Not_Going
+     *           to Not_Going_Winch
     */
     //## operation genFiacre2() 
     public void genFiacre2() {
@@ -236,10 +236,11 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     }
     
     /**
-     * goDown;
+     * []
+     *           goDown;
      *           moveCabinDown;
-     * //getP_win_cab().gen(new moveCabinDown());
      *           to Goinf_Down
+     *         end
     */
     //## operation genFiacre3() 
     public void genFiacre3() {
@@ -259,8 +260,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * stopFromController;
-     * //getP_win_cab().gen(new braked());
-     *           p_win_cab_braked;
+     *           braked;
      *           to receiveCabinBrakedFromControllerSys
     */
     //## operation genFiacre4() 
@@ -281,9 +281,8 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * stopFromController;
-     * //getP_win_cab().gen(new braked());
-     *           p_win_cab_braked;
-     *            to receiveCabinBrakedFromControllerSys
+     *           braked;
+     *           to receiveCabinBrakedFromControllerSys
     */
     //## operation genFiacre5() 
     public void genFiacre5() {
@@ -560,24 +559,24 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
-                case Not_Going:
+                case Not_Going_Winch:
                 {
-                    Not_Going_add(animStates);
+                    Not_Going_Winch_add(animStates);
                 }
                 break;
-                case Going_Up:
+                case Going_Up_Winch:
                 {
-                    Going_Up_add(animStates);
+                    Going_Up_Winch_add(animStates);
                 }
                 break;
-                case Going_Down:
+                case Going_Down_Winch:
                 {
-                    Going_Down_add(animStates);
+                    Going_Down_Winch_add(animStates);
                 }
                 break;
-                case receiveCabinBrakedFromControllerSys:
+                case receiveCabinBrakedFromControllerSys_Winch:
                 {
-                    receiveCabinBrakedFromControllerSys_add(animStates);
+                    receiveCabinBrakedFromControllerSys_Winch_add(animStates);
                 }
                 break;
                 default:
@@ -597,24 +596,24 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
-                case Not_Going:
+                case Not_Going_Winch:
                 {
-                    res = Not_Going_takeEvent(id);
+                    res = Not_Going_Winch_takeEvent(id);
                 }
                 break;
-                case Going_Up:
+                case Going_Up_Winch:
                 {
-                    res = Going_Up_takeEvent(id);
+                    res = Going_Up_Winch_takeEvent(id);
                 }
                 break;
-                case Going_Down:
+                case Going_Down_Winch:
                 {
-                    res = Going_Down_takeEvent(id);
+                    res = Going_Down_Winch_takeEvent(id);
                 }
                 break;
-                case receiveCabinBrakedFromControllerSys:
+                case receiveCabinBrakedFromControllerSys_Winch:
                 {
-                    res = receiveCabinBrakedFromControllerSys_takeEvent(id);
+                    res = receiveCabinBrakedFromControllerSys_Winch_takeEvent(id);
                 }
                 break;
                 default:
@@ -624,23 +623,23 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void receiveCabinBrakedFromControllerSys_add(AnimStates animStates) {
-            animStates.add("ROOT.receiveCabinBrakedFromControllerSys");
+        public void receiveCabinBrakedFromControllerSys_Winch_add(AnimStates animStates) {
+            animStates.add("ROOT.receiveCabinBrakedFromControllerSys_Winch");
         }
         
         //## statechart_method 
-        public void Not_Going_add(AnimStates animStates) {
-            animStates.add("ROOT.Not_Going");
+        public void Not_Going_Winch_add(AnimStates animStates) {
+            animStates.add("ROOT.Not_Going_Winch");
         }
         
         //## statechart_method 
-        public void Going_Up_add(AnimStates animStates) {
-            animStates.add("ROOT.Going_Up");
+        public void Going_Up_Winch_add(AnimStates animStates) {
+            animStates.add("ROOT.Going_Up_Winch");
         }
         
         //## statechart_method 
-        public void Going_Down_add(AnimStates animStates) {
-            animStates.add("ROOT.Going_Down");
+        public void Going_Down_Winch_add(AnimStates animStates) {
+            animStates.add("ROOT.Going_Down_Winch");
         }
         
         //## auto_generated 
@@ -650,68 +649,98 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Going_Up_entDef() {
-            Going_Up_enter();
-        }
-        
-        //## statechart_method 
-        public void Going_DownEnter() {
-        }
-        
-        //## statechart_method 
-        public void Not_GoingEnter() {
-        }
-        
-        //## statechart_method 
-        public void Going_DownExit() {
-        }
-        
-        //## statechart_method 
-        public int Going_DownTakestopFromController() {
+        public int Going_Down_Winch_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("5");
-            Going_Down_exit();
-            //#[ transition 5 
-            sendBrakeToCabin();        
-            genFiacre5();
+            if(event.isTypeOf(stopFromController.stopFromController_Ascenseur_id))
+                {
+                    res = Going_Down_WinchTakestopFromController();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int Going_Up_WinchTakestopFromController() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("4");
+            Going_Up_Winch_exit();
+            //#[ transition 4 
+            sendBrakeToCabin();   
+            genFiacre4();
             //#]
-            receiveCabinBrakedFromControllerSys_entDef();
-            animInstance().notifyTransitionEnded("5");
+            receiveCabinBrakedFromControllerSys_Winch_entDef();
+            animInstance().notifyTransitionEnded("4");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void Going_Down_exit() {
-            Going_DownExit();
-            animInstance().notifyStateExited("ROOT.Going_Down");
+        public void receiveCabinBrakedFromControllerSys_Winch_enter() {
+            animInstance().notifyStateEntered("ROOT.receiveCabinBrakedFromControllerSys_Winch");
+            rootState_subState = receiveCabinBrakedFromControllerSys_Winch;
+            rootState_active = receiveCabinBrakedFromControllerSys_Winch;
+            receiveCabinBrakedFromControllerSys_WinchEnter();
         }
         
         //## statechart_method 
-        public void Not_Going_exit() {
-            Not_GoingExit();
-            animInstance().notifyStateExited("ROOT.Not_Going");
+        public void Going_Up_WinchEnter() {
         }
         
         //## statechart_method 
-        public void Not_Going_enter() {
-            animInstance().notifyStateEntered("ROOT.Not_Going");
-            rootState_subState = Not_Going;
-            rootState_active = Not_Going;
-            Not_GoingEnter();
+        public void Going_Down_WinchExit() {
         }
         
         //## statechart_method 
-        public void receiveCabinBrakedFromControllerSysEnter() {
+        public void Going_Down_WinchEnter() {
         }
         
         //## statechart_method 
-        public void receiveCabinBrakedFromControllerSysExit() {
+        public void Going_Up_Winch_entDef() {
+            Going_Up_Winch_enter();
         }
         
         //## statechart_method 
-        public void receiveCabinBrakedFromControllerSys_entDef() {
-            receiveCabinBrakedFromControllerSys_enter();
+        public void Going_Up_WinchExit() {
+        }
+        
+        //## statechart_method 
+        public void Not_Going_WinchEnter() {
+        }
+        
+        //## statechart_method 
+        public int receiveCabinBrakedFromControllerSys_Winch_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(stop.stop_Ascenseur_id))
+                {
+                    res = receiveCabinBrakedFromControllerSys_WinchTakestop();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Going_Down_Winch_entDef() {
+            Going_Down_Winch_enter();
+        }
+        
+        //## statechart_method 
+        public void Going_Up_Winch_exit() {
+            Going_Up_WinchExit();
+            animInstance().notifyStateExited("ROOT.Going_Up_Winch");
+        }
+        
+        //## statechart_method 
+        public void Going_Down_Winch_exit() {
+            Going_Down_WinchExit();
+            animInstance().notifyStateExited("ROOT.Going_Down_Winch");
+        }
+        
+        //## statechart_method 
+        public void Going_Up_Winch_enter() {
+            animInstance().notifyStateEntered("ROOT.Going_Up_Winch");
+            rootState_subState = Going_Up_Winch;
+            rootState_active = Going_Up_Winch;
+            Going_Up_WinchEnter();
         }
         
         //## statechart_method 
@@ -721,66 +750,24 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Going_UpExit() {
-        }
-        
-        //## statechart_method 
-        public void Going_UpEnter() {
-        }
-        
-        //## statechart_method 
-        public int Not_Going_takeEvent(short id) {
+        public int Going_Down_WinchTakestopFromController() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(goUp.goUp_Ascenseur_id))
-                {
-                    res = Not_GoingTakegoUp();
-                }
-            else if(event.isTypeOf(goDown.goDown_Ascenseur_id))
-                {
-                    res = Not_GoingTakegoDown();
-                }
-            
-            return res;
-        }
-        
-        //## statechart_method 
-        public int Not_GoingTakegoDown() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("3");
-            Not_Going_exit();
-            //#[ transition 3 
-            sendGoDownToCabin();  
-            genFiacre3();
+            animInstance().notifyTransitionStarted("5");
+            Going_Down_Winch_exit();
+            //#[ transition 5 
+            sendBrakeToCabin();        
+            genFiacre5();
             //#]
-            Going_Down_entDef();
-            animInstance().notifyTransitionEnded("3");
+            receiveCabinBrakedFromControllerSys_Winch_entDef();
+            animInstance().notifyTransitionEnded("5");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void Not_GoingExit() {
-        }
-        
-        //## statechart_method 
-        public int receiveCabinBrakedFromControllerSysTakestop() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
-            receiveCabinBrakedFromControllerSys_exit();
-            //#[ transition 2 
-            receiveStopFromController();      
-            genFiacre2();
-            //#]
-            Not_Going_entDef();
-            animInstance().notifyTransitionEnded("2");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void receiveCabinBrakedFromControllerSys_exit() {
-            receiveCabinBrakedFromControllerSysExit();
-            animInstance().notifyStateExited("ROOT.receiveCabinBrakedFromControllerSys");
+        public void Not_Going_Winch_exit() {
+            Not_Going_WinchExit();
+            animInstance().notifyStateExited("ROOT.Not_Going_Winch");
         }
         
         //## statechart_method 
@@ -794,55 +781,24 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void Going_Up_exit() {
-            Going_UpExit();
-            animInstance().notifyStateExited("ROOT.Going_Up");
+        public void Not_Going_Winch_enter() {
+            animInstance().notifyStateEntered("ROOT.Not_Going_Winch");
+            rootState_subState = Not_Going_Winch;
+            rootState_active = Not_Going_Winch;
+            Not_Going_WinchEnter();
         }
         
         //## statechart_method 
-        public int Going_UpTakestopFromController() {
+        public void receiveCabinBrakedFromControllerSys_Winch_entDef() {
+            receiveCabinBrakedFromControllerSys_Winch_enter();
+        }
+        
+        //## statechart_method 
+        public int Going_Up_Winch_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("4");
-            Going_Up_exit();
-            //#[ transition 4 
-            sendBrakeToCabin();   
-            genFiacre4();
-            //#]
-            receiveCabinBrakedFromControllerSys_entDef();
-            animInstance().notifyTransitionEnded("4");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void Going_Up_enter() {
-            animInstance().notifyStateEntered("ROOT.Going_Up");
-            rootState_subState = Going_Up;
-            rootState_active = Going_Up;
-            Going_UpEnter();
-        }
-        
-        //## statechart_method 
-        public int Not_GoingTakegoUp() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            Not_Going_exit();
-            //#[ transition 1 
-            sendGoUpToCabin();   
-            genFiacre1();
-            //#]
-            Going_Up_entDef();
-            animInstance().notifyTransitionEnded("1");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public int receiveCabinBrakedFromControllerSys_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(stop.stop_Ascenseur_id))
+            if(event.isTypeOf(stopFromController.stopFromController_Ascenseur_id))
                 {
-                    res = receiveCabinBrakedFromControllerSysTakestop();
+                    res = Going_Up_WinchTakestopFromController();
                 }
             
             return res;
@@ -851,45 +807,89 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public void rootStateEntDef() {
             animInstance().notifyTransitionStarted("0");
-            Not_Going_entDef();
+            Not_Going_Winch_entDef();
             animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
-        public void Not_Going_entDef() {
-            Not_Going_enter();
-        }
-        
-        //## statechart_method 
-        public void receiveCabinBrakedFromControllerSys_enter() {
-            animInstance().notifyStateEntered("ROOT.receiveCabinBrakedFromControllerSys");
-            rootState_subState = receiveCabinBrakedFromControllerSys;
-            rootState_active = receiveCabinBrakedFromControllerSys;
-            receiveCabinBrakedFromControllerSysEnter();
-        }
-        
-        //## statechart_method 
-        public void Going_Down_entDef() {
-            Going_Down_enter();
-        }
-        
-        //## statechart_method 
-        public int Going_Down_takeEvent(short id) {
+        public int Not_Going_WinchTakegoUp() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(stopFromController.stopFromController_Ascenseur_id))
+            animInstance().notifyTransitionStarted("1");
+            Not_Going_Winch_exit();
+            //#[ transition 1 
+            sendGoUpToCabin();   
+            genFiacre1();
+            //#]
+            Going_Up_Winch_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void Not_Going_Winch_entDef() {
+            Not_Going_Winch_enter();
+        }
+        
+        //## statechart_method 
+        public int Not_Going_WinchTakegoDown() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
+            Not_Going_Winch_exit();
+            //#[ transition 3 
+            sendGoDownToCabin();  
+            genFiacre3();
+            //#]
+            Going_Down_Winch_entDef();
+            animInstance().notifyTransitionEnded("3");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void receiveCabinBrakedFromControllerSys_WinchEnter() {
+        }
+        
+        //## statechart_method 
+        public void Going_Down_Winch_enter() {
+            animInstance().notifyStateEntered("ROOT.Going_Down_Winch");
+            rootState_subState = Going_Down_Winch;
+            rootState_active = Going_Down_Winch;
+            Going_Down_WinchEnter();
+        }
+        
+        //## statechart_method 
+        public int Not_Going_Winch_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(goUp.goUp_Ascenseur_id))
                 {
-                    res = Going_DownTakestopFromController();
+                    res = Not_Going_WinchTakegoUp();
+                }
+            else if(event.isTypeOf(goDown.goDown_Ascenseur_id))
+                {
+                    res = Not_Going_WinchTakegoDown();
                 }
             
             return res;
         }
         
         //## statechart_method 
-        public void Going_Down_enter() {
-            animInstance().notifyStateEntered("ROOT.Going_Down");
-            rootState_subState = Going_Down;
-            rootState_active = Going_Down;
-            Going_DownEnter();
+        public void Not_Going_WinchExit() {
+        }
+        
+        //## statechart_method 
+        public int receiveCabinBrakedFromControllerSys_WinchTakestop() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
+            receiveCabinBrakedFromControllerSys_Winch_exit();
+            //#[ transition 2 
+            receiveStopFromController();      
+            genFiacre2();
+            //#]
+            Not_Going_Winch_entDef();
+            animInstance().notifyTransitionEnded("2");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -897,14 +897,13 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int Going_Up_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(stopFromController.stopFromController_Ascenseur_id))
-                {
-                    res = Going_UpTakestopFromController();
-                }
-            
-            return res;
+        public void receiveCabinBrakedFromControllerSys_Winch_exit() {
+            receiveCabinBrakedFromControllerSys_WinchExit();
+            animInstance().notifyStateExited("ROOT.receiveCabinBrakedFromControllerSys_Winch");
+        }
+        
+        //## statechart_method 
+        public void receiveCabinBrakedFromControllerSys_WinchExit() {
         }
         
         /**  methods added just for design level debugging instrumentation */
