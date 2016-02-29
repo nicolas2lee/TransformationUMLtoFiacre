@@ -1,0 +1,61 @@
+predicate Bouton_3_on is {{Button_ex}1:exBtn=3}
+predicate Bouton_on is {{Button_ex}1@On_Button_ex}
+predicate Bouton_off is {{Button_ex}1@Off_Button_ex}
+
+event evt_bouton_3_on is {Bouton_3_on becomes true}
+event evt_bouton_on is {Bouton_on becomes true}
+event evt_bouton_off is {Bouton_off becomes true}
+
+predicate Sensor_3_on is {{Sensor}3@Checkingposition_Sensor}
+predicate Sensor_on is {{Sensor}1@Checking_Sensor}
+predicate Sensor_detected is {{Sensor}1@Detected_Sensor}
+
+event evt_sensor_3_checking is {Sensor_3_on becomes true}
+event evt_sensor_on is {Sensor_on becomes true}
+event evt_sensor_detected is {Sensor_detected becomes true}
+
+predicate ControllerSys_sensorDetected is {{ControllerSys}1@detectedAndStop_ControllerSys}
+event evt_controllersys_stop is {ControllerSys_sensorDetected becomes true}
+
+predicate Door_Open is {{Door}1@Open_Door}
+predicate Door_Closed is {{Door}1@Closed_Door}
+
+event evt_door_opened is {Door_Open becomes true}
+event evt_door_closed is {Door_Closed becomes true}
+
+property pte_target3_opendoor is
+{
+	start--/ / evt_bouton_3_on / -> wait0;
+	wait0--/ / evt_sensor_3_checking / -> wait1;
+	wait1--/ / evt_controllersys_stop / -> wait2;
+	wait3--/ / evt_door_opened / -> success
+}
+
+property pte_button is
+{
+	start--/ / evt_bouton_off / -> wait0;
+	wait0--/ / evt_bouton_on / -> success
+}
+
+property pte_door is
+{
+	start--/ / evt_door_opened / -> wait0;
+	wait0--/ / evt_door_closed / -> success
+}
+
+
+property pte_sensor is
+{
+	start--/ / evt_sensor_on / -> wait0;
+	wait0--/ /evt_sensor_detected / -> success
+}
+/*------------------ CDL --------------------------*/
+cdl cdl1 is
+{
+	properties  pte_target3_opendoor,
+				pte_button,
+				pte_door,
+				pte_sensor
+				
+	main is { skip }
+}

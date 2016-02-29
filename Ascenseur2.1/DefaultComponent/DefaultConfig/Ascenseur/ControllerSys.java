@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: ControllerSys
-//!	Generated Date	: Sun, 28, Feb 2016 
+//!	Generated Date	: Mon, 29, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/ControllerSys.java
 *********************************************************************/
 
@@ -390,28 +390,9 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * select
-     *               p_sen_con_detected;
+     *               detected;
      *               stopFromController;
      *               to cabinArrived_ControllerSys
-     *           []
-     *               p_sen_con_1_detected;
-     *               stopFromController;
-     *               to cabinArrived_ControllerSys
-     *           []
-     *               p_sen_con_2_detected;
-     *               stopFromController;
-     *               to cabinArrived_ControllerSys
-     *           []
-     *               p_sen_con_3_detected ;
-     *               stopFromController;
-     *               to cabinArrived_ControllerSys
-     *           []
-     *               p_sen_con_4_detected; 
-     *               stopFromController;
-     *               to cabinArrived_ControllerSys
-     *          
-     *          
-     * 
     */
     //## operation genFiacre1() 
     public void genFiacre1() {
@@ -431,16 +412,11 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * receiveCabinMoved;
-     *           currentFloor := currentFloor + upordown;
-     *           loadedPassager := true;
-     *           case (destFloor) of 
-     *                0 ->  sendToMeasureSensor ! currentFloor, destFloor
-     *             | 1 ->  sendToMeasureSensor_1 ! currentFloor,destFloor
-     *             | 2 ->  sendToMeasureSensor_2 ! currentFloor, destFloor
-     *             | 3 ->  sendToMeasureSensor_3 ! currentFloor,destFloor
-     *             | 4 ->  sendToMeasureSensor_4 ! currentFloor, destFloor
-     *          end;
-     *          to cabinMoved_ControllerSys
+     *         currentFloor := currentFloor + upordown;
+     *         loadedPassager := true;
+     *         doublefloor := {first = currentFloor, second = destFloor};
+     *         toMeasure ! doublefloor;
+     *         to cabinMoved_ControllerSys
      * 
     */
     //## operation genFiacre10() 
@@ -495,6 +471,11 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
      * if (loadedPassager) then
      *           CloseDoor;
      *           to waitDoorClosed
+     *         else
+     *           targetFloor := 1;
+     *           destFloor := targetFloor;
+     *           CloseDoor;
+     *           to doorClosed_ControllerSys
      *         end
     */
     //## operation genFiacre13() 
@@ -515,8 +496,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * readyToGo;
-     *           loadedPassager := false;
-     *           to Wait_ControllerSys
+     *         loadedPassager := false;
+     *         to Wait_ControllerSys
      * 
     */
     //## operation genFiacre14() 
@@ -537,8 +518,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * readyToOpenDoor;
-     *           OpenDoor;
-     *           to doorOpened_ControllerSys
+     *          OpenDoor;
+     *          to doorOpened_ControllerSys
      * 
     */
     //## operation genFiacre2() 
@@ -557,12 +538,6 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
         
     }
     
-    /**
-     * targetFloor := 1;
-     *           destFloor := targetFloor;
-     *           closeDoor;
-     *           to doorClosed_ControllerSys
-    */
     //## operation genFiacre3() 
     public void genFiacre3() {
         try {
@@ -581,34 +556,24 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * readyToGo;
-     *           if (currentFloor < targetFloor) then
+     *          if (currentFloor < targetFloor) then
      *               goUp;   
      *               upordown := 1; 
-     *               case (targetFloor) of 
-     *                  0 ->  sendToMeasureSensor ! currentFloor, targetFloor
-     *               | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor
-     *               | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor
-     *               | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor
-     *               | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor
-     *                 end;
-     *                 to recievedRequestFromCabin_ControllerSys
-     *           else
-     *                 if (currentFloor == targetFloor) then
+     *               doublefloor := {first = currentFloor, second = targetFloor};
+     *               toMeasure ! doublefloor;
+     *               to recievedRequestFromCabin_ControllerSys
+     *          else
+     *                 if (currentFloor = targetFloor) then
      *                     openDoor;
      *                     to doorOpened_ControllerSys
      *                 else
      *                      goDown; 
      *                      upordown := -1;  
-     *                      case (targetFloor) of 
-     *                        0 ->  sendToMeasureSensor ! currentFloor, targetFloor
-     *                     | 1 ->  sendToMeasureSensor_1 ! currentFloor, targetFloor
-     *                     | 2 ->  sendToMeasureSensor_2 ! currentFloor, targetFloor
-     *                     | 3 ->  sendToMeasureSensor_3 ! currentFloor, targetFloor
-     *                     | 4 ->  sendToMeasureSensor_4 ! currentFloor, targetFloor
-     *                      end;
+     *                      doublefloor := {first = currentFloor, second = targetFloor};
+     *                      toMeasure ! doublefloor
      *                      to recievedRequestFromCabin_ControllerSys
      *                 end
-     *           end 
+     *          end 
      * 
     */
     //## operation genFiacre4() 
@@ -629,32 +594,22 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * receiveFromButton_Ex ?  exBtnFloor;
-     *          destFloor := exBtnFloor;
-     *          if (currentFloor < exBtnFloor) then
+     *         destFloor := exBtnFloor;
+     *         if (currentFloor < exBtnFloor) then
      *               goUp;   
      *               upordown :=1 ;  
-     *               case (exBtnFloor) of 
-     *                  0 ->  toMeasure ! currentFloor, exBtnFloor
-     *               | 1 ->  toMeasure_1 ! currentFloor, exBtnFloor
-     *               | 2 ->  toMeasure_2 ! currentFloor, exBtnFloor
-     *               | 3 ->  toMeasure_3 ! currentFloor, exBtnFloor
-     *               | 4 ->  toMeasure_4 ! currentFloor, exBtnFloor
-     *               end;
+     *               doublefloor := {first = currentFloor, second = exBtnFloor};
+     *               toMeasure ! doublefloor;
      *               to ReceiveRequestFromButtonEx_ControllerSys
-     *          elsif (currentFloor > exBtnFloor) then 	
-     *                  goDown; 
-     *                  upordown := -1;  
-     *                  case (exBtnFloor) of 
-     *                     0 ->  toMeasure !  currentFloor,  exBtnFloor
-     *                  | 1 -> toMeasure_1 !  currentFloor, exBtnFloor
-     *                  | 2 ->  toMeasure_2 !  currentFloor, exBtnFloor
-     *                  | 3 ->  toMeasure_3 !  currentFloor, exBtnFloor
-     *                  | 4 ->  toMeasure_4 !  currentFloor, exBtnFloor
-     *                  end;
-     *                  to ReceiveRequestFromButtonEx
-     *          else
+     *         elsif (currentFloor > exBtnFloor) then 	
+     *                goDown; 
+     *                upordown := -1;  
+     *                doublefloor := {first = currentFloor, second = exBtnFloor};
+     *                toMeasure !  doublefloor;
+     *                to ReceiveRequestFromButtonEx
+     *         else
      *                 to ReceiveRequestFromButtonEx
-     *          end
+     *         end
      * 
      * 
     */
@@ -676,15 +631,10 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * receiveCabinMoved;
-     *           currentFloor := currentFloor + upordown;
-     *           case (exBtnFloor) of 
-     *                0 ->  sendToMeasureSensor ! currentFloor, exBtnFloor
-     *             | 1 ->  sendToMeasureSensor_1 !  currentFloor, exBtnFloor
-     *             | 2 ->  sendToMeasureSensor_2 !  currentFloor, exBtnFloor
-     *             | 3 ->  sendToMeasureSensor_3 !  currentFloor, exBtnFloor
-     *             | 4 ->  sendToMeasureSensor_4 !  currentFloor, exBtnFloor
-     *            end;
-     *            to cabinMoved_ControllerSys
+     *          currentFloor := currentFloor + upordown;
+     *          doublefloor := {first = currentFloor, second = destFloor}
+     *          toMeasure ! doublefloor
+     *          to cabinMoved_ControllerSys
      * 
     */
     //## operation genFiacre6() 
@@ -705,8 +655,8 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * braked;
-     *           stop;
-     *           to cabinBraked
+     *          stop;
+     *          to cabinBraked
     */
     //## operation genFiacre7() 
     public void genFiacre7() {
@@ -749,31 +699,12 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     
     /**
      * []
-     *               p_sen_con_continueToMove;
+     *               continueToMove;
      *               currentFloor = currentFloor +upordown; 
-     *               toMeasureSensor ! currentFloor, destfloor;
+     *               doublefloor := {first = currentFloor, second = destFloor};
+     *               toMeasure ! doublefloor ;
      *               to cabinMoved_ControllerSys
-     *           []
-     *               p_sen_con_1_continueToMove; 
-     *               currentFloor = currentFloor +upordown; 
-     *               sendToMeasureSensor_1 ! currentFloor, destfloor;
-     *              to cabinMoved_ControllerSys
-     *           []
-     *               p_sen_con_2_continueToMove;
-     *               currentFloor = currentFloor +upordown; 
-     *               sendToMeasureSensor_2 ! currentFloor, destfloor;
-     *               to cabinMoved_ControllerSys
-     *           []
-     *               p_sen_con_3_continueToMove;
-     *               currentFloor = currentFloor +upordown; 
-     *               sendToMeasureSensor_3 ! currentFloor, destfloor;
-     *               to cabinMoved_ControllerSys
-     *           []
-     *               p_sen_con_4_continueToMove;
-     *               currentFloor = currentFloor +upordown; 
-     *               sendToMeasureSensor_4 ! currentFloor, destfloor;
-     *               to cabinMoved_ControllerSys
-     *          end;
+     *          end
      * 
      * 
      * 
@@ -797,18 +728,11 @@ public class ControllerSys implements RiJActive, RiJStateConcept, Animated {
     /**
      *   goUp : out  none,
      *       goDown : out none,
-     *       p_con_sen_toMeasure : out Double_Floor 
-     *       p_con_sen_1_toMeasure : out Double_Floor,   
-     *       p_con_sen_2_toMeasure : out  Double_Floor,   
-     *       p_con_sen_3_toMeasure : out  Double_Floor,   
-     *       p_con_sen_4_toMeasure : out  Double_Floor,
+     *       toMeasure : out Double_Floor, 
      *       stopFromController : out none,   
      *       stop : out none,
      *       OpenDoor : out none,
      *       CloseDoor : out none
-     * 
-     * 
-     * 
     */
     //## operation genOutPort() 
     public void genOutPort() {

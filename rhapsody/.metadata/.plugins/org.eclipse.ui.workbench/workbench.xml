@@ -24,12 +24,12 @@
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.sodius.mdw.platform.rdt.ml.MQLScriptEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.sodius.mdw.platform.model.modelEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.emf.ecore.presentation.EcoreEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.sodius.mdw.platform.model.metamodelEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -44,43 +44,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" partName="toFiacre.mqr" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre6.0/src/generateFiacreMain/toFiacre.mqr" title="toFiacre.mqr" tooltip="umlToFiacre6.0/src/generateFiacreMain/toFiacre.mqr" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre6.0/src/generateFiacreMain/toFiacre.mqr"/>
-<editorState selectionHorizontalPixel="0" selectionLength="43" selectionOffset="1716" selectionTopPixel="960"/>
-</editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="Ascenseur.fcr" partName="Ascenseur.fcr" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre6.0/generatedFiacre/Ascenseur.fcr" title="Ascenseur.fcr" tooltip="umlToFiacre6.0/generatedFiacre/Ascenseur.fcr" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre6.0/generatedFiacre/Ascenseur.fcr"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9274" selectionTopPixel="8372"/>
-</editor>
-<editor activePart="true" focus="true" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genProcess.tgt" partName="genProcess.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre6.0/src/generateProcess/genProcess.tgt" title="genProcess.tgt" tooltip="umlToFiacre6.0/src/generateProcess/genProcess.tgt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre6.0/src/generateProcess/genProcess.tgt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="93" selectionTopPixel="56"/>
-</editor>
-<editor id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genPortArgs.tgt" partName="genPortArgs.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre6.0/src/generateProcess/genPortArgs.tgt" title="genPortArgs.tgt" tooltip="umlToFiacre6.0/src/generateProcess/genPortArgs.tgt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre6.0/src/generateProcess/genPortArgs.tgt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="27" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genVarDecl.tgt" partName="genVarDecl.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre6.0/src/generateProcess/genVarDecl.tgt" title="genVarDecl.tgt" tooltip="umlToFiacre6.0/src/generateProcess/genVarDecl.tgt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre6.0/src/generateProcess/genVarDecl.tgt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="236" selectionTopPixel="0"/>
-</editor>
-<editor id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="generateFiacre.tgt" partName="generateFiacre.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre6.0/src/generateFiacreMain/generateFiacre.tgt" title="generateFiacre.tgt" tooltip="umlToFiacre6.0/src/generateFiacreMain/generateFiacre.tgt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre6.0/src/generateFiacreMain/generateFiacre.tgt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="30" selectionOffset="474" selectionTopPixel="47"/>
-</editor>
-<editor id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genInstancierProcessPorts.tgt" partName="genInstancierProcessPorts.tgt" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre6.0/src/generateComponent/genInstancierProcessPorts.tgt" title="genInstancierProcessPorts.tgt" tooltip="umlToFiacre6.0/src/generateComponent/genInstancierProcessPorts.tgt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre6.0/src/generateComponent/genInstancierProcessPorts.tgt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="53" selectionOffset="75" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" partName="toFiacre.mqr" path="U:/semestre5/uv5.1/TransformationUMLtoFiacre/rhapsody/umlToFiacre7.0/src/generateFiacreMain/toFiacre.mqr" title="toFiacre.mqr" tooltip="umlToFiacre7.0/src/generateFiacreMain/toFiacre.mqr" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/umlToFiacre7.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -97,7 +67,8 @@
 </view>
 <view id="com.sodius.mdw.ide.ui.modelView" partName="Models">
 <viewState>
-<node expanded="true" id="fiacreMM" selected="true"/>
+<node id="fiacreMM.XMI 2.1.false.${project_loc:umlToFiacre7.0}\generated\result" selected="true"/>
+<node expanded="true" id="fiacreMM"/>
 <node expanded="true" id="rhapsody"/>
 <linking enable="false"/>
 </viewState>
@@ -110,9 +81,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (29 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -159,7 +127,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" activePerspective="com.sodius.mdw.ide.ui.mdwperspective">
+<perspectives activePart="com.sodius.mdw.platform.rdt.ml.rulesetEditor" activePerspective="com.sodius.mdw.ide.ui.mdwperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.sodius.mdw.ext.platform.rdt.ui.MDWPerspectiveFactory" id="com.sodius.mdw.ide.ui.mdwperspective" label="RulesComposer"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -468,164 +436,173 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre6.0/generatedFiacre/Ascenseur.fcr"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateProcess/genPortArgs.tgt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateProcess/genVarDecl.tgt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" path="/umlToFiacre6.0/src/generateFiacreMain/toFiacre.mqr"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateProcess/genProcess.tgt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateComponent/genComponent.tgt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateFiacreMain/generateFiacre.tgt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateComponent/genInstancierProcessPorts.tgt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateProcess/genProcess.tgt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateComponent/genComponent.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" path="/umlToFiacre6.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateComponent/genComponent.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" path="/umlToFiacre6.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre6.0/generatedFiacre/Ascenseur.fcr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateProcess/genProcess.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateProcess/genPortArgs.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateProcess/genVarDecl.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateFiacreMain/generateFiacre.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" path="/umlToFiacre6.0/src/generateComponent/genInstancierProcessPorts.tgt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" path="/umlToFiacre7.0/src/generateFiacreMain/toFiacre.mqr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/umlToFiacre7.0/generatedFiacre/Ascenseur.fcr"/>
 </editors>
-<item historyLabel="genPortArgs.tgt" index="1">
-<position/>
-</item>
-<item historyLabel="Ascenseur.fcr" index="0">
-<position info="not_deleted" x="8861" y="0"/>
-</item>
-<item historyLabel="toFiacre.mqr" index="3">
-<position info="not_deleted" x="2006" y="0"/>
-</item>
-<item historyLabel="genPortArgs.tgt" index="1">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="genVarDecl.tgt" index="2">
-<position info="not_deleted" x="236" y="0"/>
-</item>
-<item historyLabel="genPortArgs.tgt" index="1">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="Ascenseur.fcr" index="0">
-<position info="not_deleted" x="8861" y="0"/>
-</item>
-<item historyLabel="genProcess.tgt" index="4">
-<position info="not_deleted" x="453" y="0"/>
-</item>
-<item historyLabel="Ascenseur.fcr" index="0">
-<position info="not_deleted" x="5160" y="0"/>
-</item>
-<item historyLabel="toFiacre.mqr" index="3">
-<position info="not_deleted" x="2006" y="0"/>
-</item>
-<item historyLabel="genProcess.tgt" index="4">
-<position info="not_deleted" x="453" y="0"/>
-</item>
-<item historyLabel="genPortArgs.tgt" index="1">
-<position info="not_deleted" x="224" y="229"/>
-</item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position/>
 </item>
 <item historyLabel="genPortArgs.tgt" index="1">
 <position info="not_deleted" x="175" y="47"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position/>
 </item>
 <item historyLabel="Ascenseur.fcr" index="0">
 <position info="not_deleted" x="5159" y="0"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="684" y="0"/>
 </item>
 <item historyLabel="Ascenseur.fcr" index="0">
 <position info="not_deleted" x="9274" y="0"/>
 </item>
-<item historyLabel="generateFiacre.tgt" index="6">
+<item historyLabel="generateFiacre.tgt" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="643" y="0"/>
 </item>
 <item historyLabel="genPortArgs.tgt" index="1">
 <position info="not_deleted" x="117" y="391"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="848" y="0"/>
 </item>
 <item historyLabel="genPortArgs.tgt" index="1">
 <position info="not_deleted" x="117" y="391"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="30" y="80"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="55" y="0"/>
 </item>
 <item historyLabel="genPortArgs.tgt" index="1">
 <position info="not_deleted" x="117" y="391"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="400" y="0"/>
 </item>
 <item historyLabel="genPortArgs.tgt" index="1">
 <position info="not_deleted" x="87" y="27"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="336" y="0"/>
 </item>
-<item historyLabel="toFiacre.mqr" index="3">
+<item historyLabel="toFiacre.mqr" index="2">
 <position info="not_deleted" x="2006" y="0"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="30" y="80"/>
 </item>
-<item historyLabel="toFiacre.mqr" index="3">
+<item historyLabel="toFiacre.mqr" index="2">
 <position info="not_deleted" x="1716" y="43"/>
 </item>
 <item historyLabel="Ascenseur.fcr" index="0">
 <position info="not_deleted" x="9274" y="0"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="75" y="53"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="894" y="0"/>
 </item>
-<item historyLabel="generateFiacre.tgt" index="6">
+<item historyLabel="generateFiacre.tgt" index="4">
 <position info="not_deleted" x="474" y="30"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="75" y="53"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="894" y="0"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="75" y="53"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="894" y="0"/>
 </item>
-<item historyLabel="genInstancierProcessPorts.tgt" index="7">
+<item historyLabel="genInstancierProcessPorts.tgt" index="5">
 <position info="not_deleted" x="75" y="53"/>
 </item>
-<item historyLabel="genComponent.tgt" index="5">
+<item historyLabel="genComponent.tgt" index="3">
 <position info="not_deleted" x="894" y="0"/>
 </item>
 <item historyLabel="Ascenseur.fcr" index="0">
 <position info="not_deleted" x="9274" y="0"/>
 </item>
-<item historyLabel="toFiacre.mqr" index="3">
+<item historyLabel="toFiacre.mqr" index="2">
 <position info="not_deleted" x="1716" y="43"/>
 </item>
 <item historyLabel="Ascenseur.fcr" index="0">
 <position info="not_deleted" x="9274" y="0"/>
 </item>
-<item historyLabel="genProcess.tgt" index="8">
+<item historyLabel="genProcess.tgt" index="6">
 <position info="not_deleted" x="453" y="0"/>
 </item>
-<item historyLabel="genComponent.tgt" index="9">
+<item historyLabel="genComponent.tgt" index="7">
 <position info="not_deleted" x="114" y="0"/>
 </item>
-<item active="true" historyLabel="genProcess.tgt" index="8">
+<item historyLabel="genProcess.tgt" index="6">
 <position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="8">
+<position info="not_deleted" x="1716" y="43"/>
+</item>
+<item historyLabel="genComponent.tgt" index="9">
+<position info="not_deleted" x="716" y="0"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="10">
+<position info="not_deleted" x="1716" y="43"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="11">
+<position info="not_deleted" x="9274" y="0"/>
+</item>
+<item historyLabel="genProcess.tgt" index="12">
+<position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="genPortArgs.tgt" index="13">
+<position info="not_deleted" x="87" y="27"/>
+</item>
+<item historyLabel="genVarDecl.tgt" index="14">
+<position info="not_deleted" x="236" y="0"/>
+</item>
+<item historyLabel="generateFiacre.tgt" index="15">
+<position info="not_deleted" x="474" y="30"/>
+</item>
+<item historyLabel="genInstancierProcessPorts.tgt" index="16">
+<position info="not_deleted" x="75" y="53"/>
+</item>
+<item historyLabel="toFiacre.mqr" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Ascenseur.fcr" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="toFiacre.mqr" index="17">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -647,6 +624,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Ascenseur.fcr" tooltip="umlToFiacre7.0/generatedFiacre/Ascenseur.fcr">
+<persistable path="/umlToFiacre7.0/generatedFiacre/Ascenseur.fcr"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.rulesetEditor" name="toFiacre.mqr" tooltip="umlToFiacre7.0/src/generateFiacreMain/toFiacre.mqr">
+<persistable path="/umlToFiacre7.0/src/generateFiacreMain/toFiacre.mqr"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genComponent.tgt" tooltip="umlToFiacre6.0/src/generateComponent/genComponent.tgt">
 <persistable path="/umlToFiacre6.0/src/generateComponent/genComponent.tgt"/>
 </file>
@@ -685,12 +668,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genComponent.tgt" tooltip="umlToFiacre5.0/src/generateComponent/genComponent.tgt">
 <persistable path="/umlToFiacre5.0/src/generateComponent/genComponent.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genPortArgs.tgt" tooltip="umlToFiacre5.0/src/generateProcess/genPortArgs.tgt">
-<persistable path="/umlToFiacre5.0/src/generateProcess/genPortArgs.tgt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.sodius.mdw.platform.rdt.ml.textTemplateEditor" name="genProcess.tgt" tooltip="umlToFiacre5.0/src/generateProcess/genProcess.tgt">
-<persistable path="/umlToFiacre5.0/src/generateProcess/genProcess.tgt"/>
 </file>
 </mruList>
 </workbench>

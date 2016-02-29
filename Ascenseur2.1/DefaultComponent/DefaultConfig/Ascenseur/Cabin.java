@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Cabin
-//!	Generated Date	: Sun, 28, Feb 2016 
+//!	Generated Date	: Mon, 29, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Cabin.java
 *********************************************************************/
 
@@ -45,6 +45,8 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     protected Cabin.p_cab_win_C p_cab_win;		//## ignore 
     
     protected int currentFloor = 0;		//## attribute currentFloor 
+    
+    protected int targetFloor;		//## attribute targetFloor 
     
     protected ControllerSys itsControllerSys;		//## link itsControllerSys 
     
@@ -428,6 +430,16 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     //## auto_generated 
     public void setCurrentFloor(int p_currentFloor) {
         currentFloor = p_currentFloor;
+    }
+    
+    //## auto_generated 
+    public int getTargetFloor() {
+        return targetFloor;
+    }
+    
+    //## auto_generated 
+    public void setTargetFloor(int p_targetFloor) {
+        targetFloor = p_targetFloor;
     }
     
     //## auto_generated 
@@ -1065,6 +1077,7 @@ public class Cabin implements RiJActive, RiJStateConcept, Animated {
     public void addAttributes(AnimAttributes msg) {
         
         msg.add("currentFloor", currentFloor);
+        msg.add("targetFloor", targetFloor);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {

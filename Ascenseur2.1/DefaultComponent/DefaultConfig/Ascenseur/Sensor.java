@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Sensor
-//!	Generated Date	: Sun, 28, Feb 2016 
+//!	Generated Date	: Mon, 29, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Sensor.java
 *********************************************************************/
 
@@ -317,7 +317,7 @@ public class Sensor implements RiJStateConcept, Animated {
     
     /**
      * toMeasure ?  floor, cabinFloor;
-     *          to Detecting_Sensor
+     *         to Detecting_Sensor
      * 
     */
     //## operation genFiacre0() 
@@ -336,10 +336,6 @@ public class Sensor implements RiJStateConcept, Animated {
         
     }
     
-    /**
-     * 
-     * 
-    */
     //## operation genFiacre1() 
     public void genFiacre1() {
         try {
@@ -377,24 +373,13 @@ public class Sensor implements RiJStateConcept, Animated {
     
     /**
      * toMeasure ? cabinFloor;
-     *           if (floor = cabinFloor) then 
-     *             case (floor) of 
-     *           0 -> p_sen_con_detected; to Detected_Sensor 
-     *        | 1 -> P_sen_con_1_detected; to Detected_Sensor
-     *        | 2 -> p_sen_con_2_detected; to Detected_Sensor   
-     *        | 3 -> p_sen_con_3_detected; to Detected_Sensor 
-     *        | 4 -> p_sen_con_4_detected; to Detected_Sensor
-     *           end
-     *           else
-     *             case (floor) of 
-     *                0 -> p_sen_con_continueToMove 
-     *             | 1 -> P_sen_con_1_continueToMove
-     *             | 2 -> p_sen_con_2_continueToMove
-     *             | 3 -> p_sen_con_3_continueToMove 
-     *             | 4 -> p_sen_con_4_continueToMove
-     *            end;
-     *            to Detected_Sensor
-     *          end
+     *         if (floor = cabinFloor) then 
+     *               detected;          
+     *               to Detected_Sensor
+     *         else
+     *               continueToMove; 
+     *               to Detecting_Sensor
+     *        end
      * 
     */
     //## operation genFiacre4() 
@@ -414,11 +399,8 @@ public class Sensor implements RiJStateConcept, Animated {
     }
     
     /**
-     *   p_sen_con_continueToMove : out none,  
-     *        p_sen_con_1_continueToMove : out none,   
-     *        p_sen_con_2_continueToMove : out none,
-     *        p_sen_con_3_continueToMove : out none,
-     *        p_sen_con_4_continueToMove : out none       
+     * continueToMove : out none
+     *         
      * 
     */
     //## operation genOutPort() 

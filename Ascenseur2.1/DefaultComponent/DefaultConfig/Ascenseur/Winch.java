@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Winch
-//!	Generated Date	: Sun, 28, Feb 2016 
+//!	Generated Date	: Mon, 29, Feb 2016 
 	File Path	: DefaultComponent/DefaultConfig/Ascenseur/Winch.java
 *********************************************************************/
 
@@ -43,12 +43,6 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     protected Winch.p_win_con_C p_win_con;		//## ignore 
     
     protected Winch.p_win_cab_C p_win_cab;		//## ignore 
-    
-    protected int frein = 0;		//## attribute frein 
-    
-    protected int motor = 0;		//## attribute motor 
-    
-    protected int selector = 0;		//## attribute selector 
     
     protected Cabin itsCabin;		//## link itsCabin 
     
@@ -239,7 +233,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
      * []
      *           goDown;
      *           moveCabinDown;
-     *           to Goinf_Down_Winch
+     *           to Going_Down_Winch
      *         end
     */
     //## operation genFiacre3() 
@@ -261,7 +255,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     /**
      * stopFromController;
      *         braked;
-     *         to receiveCabinBrakedFromControllerSys
+     *         to receiveCabinBrakedFromControllerSys_Winch
     */
     //## operation genFiacre4() 
     public void genFiacre4() {
@@ -282,7 +276,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     /**
      * stopFromController;
      *         braked;
-     *         to receiveCabinBrakedFromControllerSys
+     *         to receiveCabinBrakedFromControllerSys_Winch
     */
     //## operation genFiacre5() 
     public void genFiacre5() {
@@ -302,7 +296,7 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     
     /**
      *   moveCabinUp : out none,
-     *       moveCabinDown : out none
+     *       moveCabinDown : out none,
      *       braked : out none,
      *       readyToOpenDoor : out none
     */
@@ -410,36 +404,6 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
             animInstance().notifyMethodExit();
         }
         
-    }
-    
-    //## auto_generated 
-    public int getFrein() {
-        return frein;
-    }
-    
-    //## auto_generated 
-    public void setFrein(int p_frein) {
-        frein = p_frein;
-    }
-    
-    //## auto_generated 
-    public int getMotor() {
-        return motor;
-    }
-    
-    //## auto_generated 
-    public void setMotor(int p_motor) {
-        motor = p_motor;
-    }
-    
-    //## auto_generated 
-    public int getSelector() {
-        return selector;
-    }
-    
-    //## auto_generated 
-    public void setSelector(int p_selector) {
-        selector = p_selector;
     }
     
     //## auto_generated 
@@ -1037,9 +1001,6 @@ public class Winch implements RiJActive, RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
-        msg.add("motor", motor);
-        msg.add("frein", frein);
-        msg.add("selector", selector);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {

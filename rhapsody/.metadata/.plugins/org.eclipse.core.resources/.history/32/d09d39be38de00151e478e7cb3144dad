@@ -1,6 +1,0 @@
-[#package generateComponent]
-
-[#template public genInstancierProcessPorts()]
-[#file]file.txt[/#file]
-generated text
-[/#template]
